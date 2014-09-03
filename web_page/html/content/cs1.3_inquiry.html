@@ -1,0 +1,79 @@
+<section id="contents" class="inquiry">
+	<h1>고객센터</h1><!-- depth 1 heading -->
+	<!--<nav></nav>-->
+	<section class="container clearfix">
+		
+		<article class="location">
+			<h1 class="hide">location</h1>
+			<em class="home"><a href="#">Home</a></em>
+			<em>></em>
+			<em><a href="#">고객센터</a></em>
+			<em>></em>
+			<em class="current">1:1상담</em>
+		</article>
+			
+		<!-- [D] 활성화된 탭의 a태그에 on클래스 추가 -->
+		<ul class="tab clearfix">
+			<li class="tab_1"><a href="#"><strong>공지사항</strong></a></li>
+			<li class="tab_2"><a href="#"><strong>FAQ</strong></a></li>
+			<li class="tab_3"><a href="#" class="on"><strong>1:1상담</strong></a></li>
+		</ul>
+		
+		<h1 class="hide">1:1상담</h1><!-- depth 2 heading -->
+		
+		<!-- detail section : S -->
+		<section>
+			<h1>1:1상담작성</h1><!-- contents heading -->
+			
+			<p class="inquiry_info"><span>(*)</span>필수 입력항목</p>
+			<table class="inquiry_table type_horizon" summary="메이크온 1:1상담">
+				<caption>1:1상담 작성</caption>
+				<colgroup>
+					<col style="width:185px;" />
+					<col style="width:auto;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row"><label for="inquiry_type">항목</label><span>(*)</span></th>
+						<td>
+							<select id="inquiry_type">
+								<option>사이트이용</option>
+								<option>회원관련</option>
+								<option>상품/주문/결제</option>
+								<option>취소/환불/교환/반품</option>
+								<option>제품문의</option>
+								<option>제품AS</option>
+								<option>기타</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="inquiry_title">제목</label><span>(*)</span></th>
+						<td>
+							<input type="text" id="inquiry_title" class="inquiry_title" />
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="inquiry_text">내용</label><span>(*)</span></th>
+						<td>
+							<textarea cols="30" rows="10" id="inquiry_text" class="inquiry_text"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="inquiry_file">파일 첨부</label></th>
+						<td class="attach_file">
+							<input type="file" id="inquiry_file" />
+							<p>※파일용량 최대 5MB</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="btns_wrap">
+				<input type="submit" value="등록" class="btns large black" />
+				<a href="#" class="btns large white">취소</a>
+			</div>
+		</section>
+		<!-- detail section : E -->
+		
+	</section>
+</section>

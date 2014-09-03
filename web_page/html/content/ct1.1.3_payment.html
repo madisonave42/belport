@@ -1,0 +1,208 @@
+<section id="contents" class="payment_sheet">
+	<h1>장바구니</h1><!-- depth 1 heading -->
+	<!--<nav></nav>-->
+	<section class="container clearfix">
+			
+		<article class="location">
+			<h1 class="hide">location</h1>
+			<em class="home">Home</em>
+			<em>></em>
+			<em class="current">장바구니</em>
+		</article>
+
+		<p class="hide">주문진행 단계 안내</p>
+		<!-- [D] 현재 단계 li태그에 on 클래스 추가 -->
+		<ul class="step clearfix">
+			<li class="step_1">
+				<strong><span class="num">01</span>장바구니</strong>
+			</li>
+			<li class="step_2">
+				<strong><span class="num">02</span>주문서작성</strong>
+			</li>
+			<li class="step_3 on">
+				<strong><span class="num">03</span>결제하기</strong>
+			</li>
+			<li class="step_4">
+				<strong><span class="num">04</span>주문완료</strong>
+			</li>
+		</ul>
+				
+		<h1 class="hide">주문하실 상품 내역</h1><!-- depth 2 heading -->
+		
+		<!-- detail section : S -->
+		<section>
+			<h1 class="hide">주문할 상품</h1>
+			<table summary="주문할 상품 상세" class="list_table">
+				<caption class="hide">주문할 상품</caption>
+				<colgroup>
+					<col style="width:95px;" />
+					<col style="width:auto;" />
+					<col style="width:120px;" />
+					<col style="width:220px;" />
+					<col style="width:170px;" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col" colspan="2">상품정보</th>
+						<th scope="col">수량</th>
+						<th scope="col">판매가</th>
+						<th scope="col">결제금액</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="purchase">
+						<td class="product_image">
+							<img src="../images/temp/order_product_img_01.jpg" alt="제품이미지 대체텍스트" />
+						</td>
+						<td class="product_info">
+							<p class="name"><strong>시크릿 무코타 이지케어 컬러 트리트먼트</strong></p>
+							<p class="option">선택옵션:애플브라운</p>
+						</td>
+						<td class="amount">2</td>
+						<td class="discount">
+							<p class="price"><strong>83,000원</strong></p>
+						</td>
+						<td class="purchase_price">
+							<strong>56,000원</strong>
+						</td>
+					</tr>
+					<tr class="purchase">
+						<td class="product_image">
+							<img src="../images/temp/order_product_img_01.jpg" alt="제품이미지 대체텍스트" />
+						</td>
+						<td class="product_info">
+							<p class="name"><strong>시크릿 무코타 이지케어 컬러 트리트먼트</strong></p>
+							<p class="option">선택옵션:애플브라운</p>
+						</td>
+						<td class="amount">2</td>
+						<td class="discount">
+							<p class="price"><strong>83,000원</strong></p>
+						</td>
+						<td class="purchase_price">
+							<strong>56,000원</strong>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+				
+		<section class="payment">
+			<h1 class="hide">최종 결제 금액</h1>
+			
+			<table summary="결제 금액표">
+				<caption class="hide">예상결제금액표</caption>
+				<colgroup>
+					<col style="width:245px;" />
+					<col style="width:180px;" />
+					<col style="width:250px;" />
+					<col style="width:auto;" />
+				</colgroup>
+				<thead>
+					<th scope="col">총 정립예정 벨포인트</th>
+					<th scope="col">결제 금액</th>
+					<th scope="col">배송비</th>
+					<th scope="col">최종결제금액</th>
+				</thead>
+				<tbody>
+					<td class="point_sum"><strong>2,983P</strong></td>
+					<td><strong>332,000원</strong></td>
+					<td><strong>3,000원</strong></td>
+					<td class="payment_price"><strong>335,000<span>won</span></strong></td>
+				</tbody>
+			</table>
+		</section>
+		
+		<section class="info_table">
+			<h1>주문내역확인</h1>
+			<table class="type_horizon" summary="주문내역 상세">
+				<caption style="display:none;">주문내역확인</caption>
+				<colgroup>
+					<col style="width:185px;" />
+					<col style="width:751px;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row"><label for="customer">주문하시는 분</label></th>
+						<td>홍길동</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="order_phone">자택전화</label></th>
+						<td class="order_phone">010-1234-5678</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="order_phone">휴대폰번호</label></th>
+						<td class="order_phone">010-1234-5678</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="email">이메일주소</label></th>
+						<td class="email">belport1234@belport.co.kr</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		
+		<section class="destination_info info_table">
+			<h1>배송지 정보</h1>
+			<table class="type_horizon" summary="배송지 상세 정보">
+				<caption style="display:none;">배송지 정보</caption>
+				<colgroup>
+					<col style="width:185px;" />
+					<col style="width:751px;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">받으시는분</th>
+						<td>홍길동</td>
+					</tr>
+					<tr>
+						<th scope="row">자택전화</th>
+						<td>02-1111-2222</td>
+					</tr>
+					<tr>
+						<th scope="row">휴대폰번호</th>
+						<td>02-1111-2222</td>
+					</tr>
+						<th scope="row">주소</th>
+						<td>서울특별시 서대문구 남가좌동 8-290</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		
+		<section class="pay_info info_table">
+			<h1>결제 정보</h1>
+			<table class="type_horizon" summary="결제 상세 정보">
+				<caption style="display:none;">결제정보</caption>
+				<colgroup>
+					<col style="width:185px;" />
+					<col style="width:751px;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">주문금액</th>
+						<td><strong>332,000원</strong></td>
+					</tr>
+					<tr>
+						<th scope="row">배송비</th>
+						<td>3,000원</td>
+					</tr>
+					<tr>
+						<th scope="row">사용적립금</th>
+						<td>-</td>
+					</tr>
+					<tr>
+						<th scope="row">결제금액</th>
+						<td class="total_price"><strong><span>332,000</span>원</strong></td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</section>
+		
+		<div class="btns_wrap clearfix">
+			<a href="#" class="btns black large">결제하기</a>
+			<a href="#" class="btns white large">취소</a>
+		</div>
+		<!-- detail section : E -->
+	</section>
+</section>

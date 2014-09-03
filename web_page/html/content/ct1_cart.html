@@ -1,0 +1,192 @@
+<section id="contents" class="cart">
+	<h1>장바구니</h1><!-- depth 1 heading -->
+	<!--<nav></nav>-->
+	<section class="container clearfix">
+			
+		<article class="location">
+			<h1 class="hide">location</h1>
+			<em class="home">Home</em>
+			<em>></em>
+			<em class="current">장바구니</em>
+		</article>
+
+		<p class="hide">주문진행 단계 안내</p>
+		<!-- [D] 현재 단계 li태그에 on 클래스 추가 -->
+		<ul class="step clearfix">
+			<li class="step_1 on">
+				<strong><span class="num">01</span>장바구니</strong>
+			</li>
+			<li class="step_2">
+				<strong><span class="num">02</span>주문서작성</strong>
+			</li>
+			<li class="step_3">
+				<strong><span class="num">03</span>결제하기</strong>
+			</li>
+			<li class="step_4">
+				<strong><span class="num">04</span>주문완료</strong>
+			</li>
+		</ul>
+				
+		<h1 class="hide">장바구니에 담긴 상품 내역</h1><!-- depth 2 heading -->
+		
+		<!-- detail section : S -->
+		<section>
+			<h1 class="hide">결제할 상품 선택</h1>
+			<table summary="장바구니 내역" class="list_table">
+				<caption class="hide">장바구니 내역</caption>
+				<colgroup>
+					<col style="width:50px;" />
+					<col style="width:60px;" />
+					<col style="width:auto;" />
+					<col style="width:120px;" />
+					<col style="width:95px;" />
+					<col style="width:95px;" />
+					<col style="width:95px;" />
+					<col style="width:190px;" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col" class="chk"><input type="checkbox" title="상품전체선택" /></th>
+						<th scope="col" colspan="2">상품정보</th>
+						<th scope="col">수량</th>
+						<th scope="col">판매가</th>
+						<th scope="col">결제금액</th>
+						<th scope="col">적립예정<br />벨 포인트</th>
+						<th scope="col">선택</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="purchase">
+						<td class="chk">
+							<input type="checkbox" title="상품선택" />
+						</td>
+						<td class="product_image">
+							<img src="../images/temp/order_product_img_01.jpg" alt="제품이미지 대체텍스트" />
+						</td>
+						<td class="product_info">
+							<p class="name"><strong>시크릿 무코타 이지케어 컬러 트리트먼트</strong></p>
+							<p class="option">선택옵션:애플브라운</p>
+							<a href="#" class="btn_change">옵션변경</a>
+						</td>
+						<td class="amount">
+							<div>
+								<span class="select-numb">
+									<input type="text" value="1" maxlength="2" title="수량증감표시">
+									<button type="button" class="minus">감소</button>
+									<button type="button" class="plus">추가</button>
+								</span>
+							</div>
+							<a href="#" class="btn_change">변경</a>
+						</td>
+						<td class="discount">
+							<p class="original"><del>98,000원</del></p>
+							<p class="price"><strong>83,000원</strong></p>
+						</td>
+						<td class="purchase_price">
+							<strong>56,000원</strong>
+						</td>
+						<td class="save_point">
+							26p
+						</td>
+						<td class="order_price">
+							<div class="btns_buy">
+								<a href="#" class="btn buy_now">바로구매</a>
+								<a href="#" class="btn wishlist">바로구매</a>
+								<a href="#" class="btn del">삭제</a>
+							</div>
+						</td>
+					</tr>
+					<tr class="purchase">
+						<td class="chk">
+							<input type="checkbox" title="상품선택" />
+						</td>
+						<td class="product_image">
+							<img src="../images/temp/order_product_img_01.jpg" alt="제품이미지 대체텍스트" />
+						</td>
+						<td class="product_info">
+							<p class="name"><strong>시크릿 무코타 이지케어 컬러 트리트먼트</strong></p>
+							<p class="option">선택옵션:애플브라운</p>
+							<a href="#" class="btn_change">옵션변경</a>
+						</td>
+						<td class="amount">
+							<div>
+								<span class="select-numb">
+									<input type="text" value="1" maxlength="2" title="수량증감표시">
+									<button type="button" class="minus">감소</button>
+									<button type="button" class="plus">추가</button>
+								</span>
+							</div>
+							<a href="#" class="btn_change">변경</a>
+						</td>
+						<td class="discount">
+							<p class="original"><del>98,000원</del></p>
+							<p class="price"><strong>83,000원</strong></p>
+						</td>
+						<td class="purchase_price">
+							<strong>56,000원</strong>
+						</td>
+						<td class="save_point">
+							26p
+						</td>
+						<td class="order_price">
+							<div class="btns_buy">
+								<a href="#" class="btn buy_now">바로구매</a>
+								<a href="#" class="btn wishlist">바로구매</a>
+								<a href="#" class="btn del">삭제</a>
+							</div>
+						</td>
+					</tr>
+					<!-- [D] 상품이 없을 경우 -->
+					<tr>
+						<td colspan="8" class="no_items">
+							<strong>쇼핑백에 담긴 상품이 없습니다.</strong>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<div class="btns_msg clearfix">
+				<a href="#" class="btns black small ">전체삭제</a>
+				<a href="#" class="btns white small">선택삭제</a>
+				<p class="msg_shopping_bag">장바구니는 30일 동안 보관되며, 세일 중인 상품과 포인트 전용 상품의 경우 쿠폰 사용이 불가합니다.</p>
+			</div>
+		</section>
+				
+		<section class="payment">
+			<h1 class="hide">예상 결제 금액</h1>
+			
+			<table summary="장바구니에 담긴 품목 예상 결제 금액표">
+				<caption class="hide">예상결제금액표</caption>
+				<colgroup>
+					<col style="width:210px;" />
+					<col style="width:130px;" />
+					<col style="width:200px;" />
+					<col style="width:150px;" />
+					<col style="width:auto;" />
+				</colgroup>
+				<thead>
+					<th scope="col">총 금액</th>
+					<th scope="col">판매가</th>
+					<th scope="col">총 정립예정<br />벨 포인트</th>
+					<th scope="col">배송비</th>
+					<th scope="col">최종결제금액</th>
+				</thead>
+				<tbody>
+					<td><strong>140,000원</strong></td>
+					<td><strong>74,000원</strong></td>
+					<td class="point_sum"><strong>52P</strong></td>
+					<td><strong>무료</strong></td>
+					<td class="payment_price"><strong>335,000<span>won</span></strong></td>
+				</tbody>
+			</table>
+			<p class="msg_price">실제 총 결제 금액은 고객님의 쿠폰/할인 정보에 따라 변경될 수 있습니다.</p>
+		</section>
+		
+		<div class="btns_wrap clearfix">
+			<a href="#" class="btns black large">선택주문하기</a>
+			<a href="#" class="btns gray large">전체주문하기</a>
+			<a href="#" class="btns white large">쇼핑계속하기</a>
+		</div>
+		<!-- detail section : E -->
+	</section>
+</section>

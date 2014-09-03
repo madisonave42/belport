@@ -1,0 +1,65 @@
+/*==================================================
+ * 로그인 스타일
+ ===================================================*/
+
+/* 공통 스타일 */
+hgroup{padding-top:128px; height:95px; text-align:center;}
+hgroup>h1{font-size:45px; margin-bottom:25px;}
+hgroup>p{color:#666; line-height:1.8;}
+
+.form_area {margin:30px auto 0; padding-top:60px; width:780px; height:130px; border-top:2px solid #000; border-bottom:1px solid #d3d0cf;}
+.form_area fieldset {display:block; margin:0 auto; width:574px; position:relative;}
+.form_area .input_area{margin-bottom:10px;}
+.form_area .input_area>label{float:left; display:block; margin-top:9px; width:68px;}
+.form_area .input_area>input{float:left; width:363px; height:28px; margin:0; border:1px solid #d3d0cf; padding:0;}
+.form_area .btn_submit{position:absolute; top:0; right:0;}
+.form_area .btn_submit>input[type=submit]{
+	width:131px; height:70px; font-weight:400; font-size:15px;
+	color:#f3f3f4; text-align:center; line-height:71px; margin-left:5px; background:#231f20;
+}
+.btn_area{margin:0 auto; padding:35px 0; width:780px; border-bottom:1px solid #231f20; text-align:center;}
+
+/* 로그인 페이지 */
+.login hgroup>h1 {font-size:60px;}
+.login .form_area .check_area{margin-left:68px; font-size:12px;}
+.login .form_area .check_area input[type=checkbox]{margin:-4px\9; margin-right:3px;}
+.login .form_area .btn_login{position:absolute; top:0; right:0;}
+.login .form_area .btn_login>*{display:block; float:left;}
+.login .form_area .btn_login .login,
+.login .form_area .btn_login>a{
+	width:131px; height:70px; font-weight:400; font-size:15px;
+	color:#f3f3f4; text-align:center; line-height:71px; margin-left:5px;
+}
+.login .form_area .btn_login .login {background:#231f20;}
+.login .form_area .btn_login .fb_login {padding-left:54px; width:77px; background:#3b589c url(../images/login/btn_login_facebook.gif) no-repeat 31px 24px; text-align:left;}
+.login .form_area .input_area>input {width:227px;}
+.login .btn_area .find_idpw{width:390px; height:66px; float:left;}
+.login .btn_area .btns_wrap {margin-top:19px;}
+.login .btn_area .unity_membership {float:left; width:389px; border-left:1px solid #d3d0cf;}
+
+/* 아이디, 비밀번호 찾기 */
+.find_id .btn_area .btns_wrap {margin-top:0;}
+
+/* 아이디, 비밀번호 찾기 결과*/
+.result_area {margin:30px auto 0; width:780px; height:190px; border-top:2px solid #000; border-bottom:1px solid #d3d0cf;}
+
+.find_id .success > p {margin-top:77px; font-size:26px; text-align:center;}
+.find_id .success > p span {color:#ed6851;}
+
+.find_id .fail > p {margin-top:7px; font-size:16px; text-align:center;}
+.find_id .fail > p:first-child {margin-top:70px;}
+
+.find_pw .auth > p {margin-top:57px; font-size:34px; text-align:center;}
+.find_pw .auth > div {margin-top:30px; text-align:center;}
+.find_pw .auth > div input[type=text] {display:inline-block; padding:0 2px; width:260px; height:28px; border:1px solid #d3d0cf;}
+.find_pw .auth > div input[type=submit] {float:none; display:inline-block; margin-left:5px; width:118px; height:28px; color:#f3f3f4 ;background:#231f20; }
+
+/* 비밀번호 찾기 레이어팝업 */
+.popup.find_pw {position:fixed; top:35%; left:50%; margin-left:-188px; width:376px; background:#fff;}
+.popup.find_pw .pop_contents {padding-top:35px; padding-bottom:35px;}
+.popup.find_pw p {text-align:center; line-height:1.6;}
+
+.popup.find_pw .input_new_pw {margin-top:30px; padding-left:10px;}
+.popup.find_pw .input_new_pw > div:first-child {margin-bottom:9px;}
+.popup.find_pw .input_new_pw > div label {float:left; margin-top:9px; width:100px;}
+.popup.find_pw .input_new_pw > div input[type=text] {float:left; width:219px; height:28px; border:1px solid #d3d0cf;}

@@ -1,0 +1,163 @@
+/*==================================================
+ * 주문 결제 공통 스타일
+ ===================================================*/
+
+ /* 주문진행 단계 스타일 */
+.step {margin:0 auto; margin-bottom:80px; padding:128px 0 20px; width:936px; border-bottom:1px solid #d3d0cf;}
+.step li {float:left; margin-left:49px; width:188px; background:url(../images/cart/bg_step_arrow.gif) no-repeat 171px 40px;}
+.step li strong {display:block; padding-left:76px; height:65px; background:url(../images/cart/bg_step.gif) no-repeat; font-size:16px; color:#d5d5d4;}
+.step li strong .num {display:block; margin-bottom:7px; padding-bottom:7px; background:url(../images/cart/bg_step_num.gif) no-repeat 0 19px;}
+.step li.step_4 {width:145px; background:none;}
+.step li.step_1 strong {background-position:0 0;}
+.step li.step_1.on strong {background-position:0 -183px;}
+.step li.step_2 strong {background-position:-230px 0;}
+.step li.step_2.on strong {background-position:-230px -183px;}
+.step li.step_3 strong {background-position:-460px 0;}
+.step li.step_3.on strong {background-position:-460px -183px;}
+.step li.step_4 strong {background-position:-694px 0;}
+.step li.step_4.on strong {background-position:-694px -183px;}
+
+.step li.on {background-position:-66px 40px;}
+.step li.on strong {color:#20221f;}
+.step li.on strong .num {background-position:0 bottom;}
+ 
+/* 제품 목록 테이블 스타일 */
+.list_table{border-top:2px solid #000; border-bottom:1px solid #000; color:#231f20;}
+.list_table th{height:39px; border-bottom:1px solid #000;}
+.list_table th img{margin:0 auto;}
+
+.list_table td{padding:15px 0; vertical-align:middle; text-align:center; font-size:12px; border-top:1px solid #d3d0cf;}
+.list_table tr:first-child td{border-top:0;}
+.list_table td.chk{ color:#e5a680;}
+.list_table td.product_image img{margin:0 auto; width:60px; height:60px;}
+.list_table td.product_info{text-align:left; padding-left:3px;}
+.list_table td.product_info .name{margin-bottom:5px;}
+.list_table td.product_info .option{font-size:11px; color:#999; margin-bottom:5px; line-height:1.6; font-weight:normal;}
+.list_table td.amount>div{margin:0 auto;}
+
+.list_table td .btn_change {display:block; width:70px; height:22px; line-height:22px; border:1px solid #231f20; text-align:center; color:#231f20; font-size:12px;}
+.list_table td.amount .btn_change {margin:10px auto 0;}
+
+.list_table td .select-numb{display:inline-block; width:70px; height:22px; position:relative; border:1px solid #ccc; margin:0 auto;}
+.list_table td .select-numb input{width:30px; margin:0 0 0 21px; padding:0; border:0; font-size:12px; }
+.list_table td .select-numb button{
+	position:absolute; top:0; border:0; padding:0; width:20px; height:22px; text-indent:-99999em;
+	background:url(../images/cart/btn_plus_minus.gif) no-repeat;
+}
+.list_table td .select-numb button.minus{left:0; border-right:1px solid #ccc; background-position:-20px 0;}
+.list_table td .select-numb button.plus{right:0; border-left:1px solid #ccc;}
+.list_table td.discount .name{color:#666; margin-bottom:8px;}
+.list_table td.discount .price {margin-top:7px;}
+.list_table td.save_point{color:#ed6851;}
+.list_table td.save_point>div{margin:0 auto; width:43px;}
+.list_table td.save_point>div>p{float:left; color:#000; margin:0 2px;}
+.list_table td.order_price .btns_buy:after{content:""; display:block; clear:both;}
+.list_table td.order_price .btns_buy a{display:block; padding:6px 10px; float:left;}
+.list_table td.order_price .btns_buy a.buy_now{color:#fff; background:#000;}
+.list_table td.order_price .btns_buy a.wishlist{color:#fff; background:#828282; margin-left:3px;}
+.list_table td.order_price .btns_buy a.del{color:#fff; background:#828282; margin-left:3px;}
+.list_table td.add_pay{color:#e5a680; }
+.list_table td.add_pay>.point_use{padding-left:59px; margin-top:8px;}
+.list_table td.add_pay>.point_use:after{content:""; display:block; clear:both;}
+.list_table td.add_pay>div>p{float:left; color:#000;}
+.list_table td.add_pay>div>p.use_chk{margin-right:5px;}
+.list_table td.add_pay>div>p input[type=checkbox]{margin:0px; padding:0px;}
+.list_table td.add_pay select{color:#e5a680;  border:1px solid #ccc; font-size:12px;}
+.list_table .msg_order_sheet{height:24px; margin-top:10px; text-align:right; color:#666;}
+
+.list_table td.no_items{padding:40px 0;}
+
+/* 결제 금액 테이블 스타일 */
+#contents .container .payment{position:relative; margin-top:50px;}
+.payment table{border-top:2px solid #000; border-bottom:1px solid #000; background:url(../images/cart/bg_cart_payment.gif) no-repeat 0 98px;}
+.payment th{border-bottom:1px solid #000; height:52px; color:#231f20;}
+.payment td{font-size:15px; text-align:center; height:98px;}
+.payment td strong {color:#777; font-weight:500;}
+.payment td.point_sum strong {color:#ed6851;}
+.payment td.payment_price{font-size:40px; font-family:'Alegreya', serif; font-style:italic;}
+.payment td.payment_price strong {position:relative;top:-5px;color:#231f20;}
+.payment td.payment_price strong span {font-weight:500; font-size:19px;}
+.payment .msg_price{text-align:right; color:#888; margin-top:10px; font-size:12px;}
+
+/*==================================================
+ * 장바구니 스타일
+ ===================================================*/
+
+/* 삭제 버튼 & 메세지 */
+.btns_msg{margin-top:10px; height:24px;}
+.btns_msg .btns {position:static; margin-left:0;}
+.btns_msg .msg_shopping_bag{float:right; color:#666; font-size:12px;}
+
+/*==================================================
+ * 주문서 작성 테이블 공통 스타일
+ ===================================================*/
+.info_table input[type=text]{
+	width:127px; border:1px solid #ccc; color:#666; margin:0;	*margin-top:-1px; 
+}
+.info_table select{height:24px; line-height:24px; border:1px solid #ccc; color:#666; font-size:12px;}
+.info_table input[type=checkbox]{margin-right:2px;}
+.info_table .phone>div{float:left; height:24px; line-height:24px; margin-right:5px;}
+.info_table .phone input, .info_table .phone select{width:55px;}
+.info_table .email>div{float:left; height:24px; line-height:24px; margin-right:5px;}
+.info_table .email input,.customer_info .email select{width:135px;}
+
+.destination_info .address>div{height:24px; line-height:24px; position:relative;}
+.destination_info .address>div>div{float:left; margin-right:5px;}
+.destination_info .address>div>div input[type=checkbox]{position:relative; top:3px;}
+.destination_info .address>div>a{display:block; float:left; position:relative; top:4px;}
+.destination_info .address .zip_code{margin-bottom:10px;}
+.destination_info .address .zip_code>div{float:left; height:24px; line-height:24px; margin-right:5px;}
+.destination_info .address .zip_code>div .btn_find_addr {
+	display:inline-block; width:118px; height:24px; text-align:center; line-height:24px;
+	background:#777; color:#f3f3f4; vertical-align:middle;
+}
+.destination_info .address .detail_address{margin-bottom:10px;}
+.destination_info .address .detail_address>input{margin-right:2px;width:270px;}
+.destination_info .msg_delivery input[type=text]{width:547px;}
+
+.pay_info .use_point .unit {margin-left:2px;}
+.pay_info .use_point .total_point {margin-left:10px; font-size:12px;}
+.pay_info .use_point .total_point span {color:#231f20;}
+.pay_info .use_point p {margin-top:10px; font-size:12px;}
+.pay_info .coupon_price .btn_use_coupon {
+	display:inline-block; margin-left:5px; width:118px; height:24px; text-align:center; line-height:24px;
+	background:#777; color:#f3f3f4; vertical-align:middle;
+}
+.pay_info .total_price strong span {color:#ed6851;}
+
+.payment_info td > div {float:left; width:150px;}
+.payment_info td > div input,
+.payment_info td > div label {vertical-align:middle;}
+.payment_info td > div label {margin-left:2px;}
+
+/* 비회원 개인정보 취급방침 */
+.order_terms > div {border:1px solid #d3d0cf;}
+.order_terms > div textarea {margin:0; padding:5px; width:924px; height:99px; border:0;}
+.order_terms > div > div {padding-left:20px; line-height:46px; border-top:1px solid #d3d0cf;}
+.order_terms > div > div input,
+.order_terms > div > div label {vertical-align:middle;}
+.order_terms > div > div label {margin-left:2px;}
+
+ /*==================================================
+ * 주문서작성 스타일
+ ===================================================*/
+.order_sheet .payment table{background:url(../images/cart/bg_pay_payment.gif) no-repeat 0 98px;}
+
+/*==================================================
+ * 결제하기 스타일
+ ===================================================*/
+.payment_sheet .payment table{background:url(../images/cart/bg_pay_payment.gif) no-repeat 0 98px;}
+
+ /*==================================================
+ * 주문완료 스타일
+ ===================================================*/
+
+.complete .msg_top {padding-bottom:60px; text-align:center;}
+.complete .msg_top>.msg_1{font-size:20px;}
+.complete .msg_top>.msg_2{margin-top:10px; font-size:35px;}
+.complete .msg_top>.msg_order_num{display:inline-block; margin-top:30px; padding:15px 65px; font-size:28px; background-color:#231f20;}
+.complete .msg_top>.msg_order_num strong {color:#f3f3f4;}
+.complete .msg_top>.msg_3{margin-top:30px;}
+
+#contents.complete .complete_table {margin-top:30px;}
+.complete .complete_table table td strong {color:#ed6851;}

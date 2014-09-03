@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>우편번호검색</title>
+	
+	<!-- For old IE -->
+	<!--[if lt IE 9]>
+	<script src="../../js/lib/html5shiv.js"></script>
+	<![endif]-->
+	<!--// For old IE -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Alegreya:400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../css/style.css" />
+	
+	<script src="../js/lib/jquery-1.11.0.min.js"></script>
+	<script src="../js/function.js"></script>
+	<script src="../js/event.js"></script>
+</head>
+<body>
+<section class="popup find_addr">
+	<h1>우편번호 찾기</h1>
+	<div class="pop_contents clearfix">
+		<div class="search_box">
+			<p>도로명주소(도로명 + 건물번호) 또는<br />지번주소(동(리)명+지번)를 입력해 주세요. </p>
+			<div class="clearfix">
+				<input type="text" title="검색할 주소지 입력" />
+				<input type="submit" value="검색" />
+			</div>
+		</div>
+		
+		<p class="result_info">검색어 표시 아래 주소에서 해당되는 주소를 선택하세요.</p>  
+		
+		<ul class="result_heading clearfix">
+			<li>검색 주소 결과</li>
+			<li>우편번호</li>
+		</ul>
+		<div class="result_wrap">
+			<table summary="검색된 주소지" class="pop_table addr_result">
+				<caption class="hide">주소 검색 결과</caption>
+				<colgroup>
+					<col style="width:64px;" />
+					<col style="width:auto;" />
+					<col style="width:25%;" />
+				</colgroup>
+				<thead>
+					<th scope="col" colspan="2">검색 주소 결과</th>
+					<th scope="col">우편번호</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="select_addr">
+							<a href="#">도로명</a>
+							<a href="#">구주소</a>
+						</td>
+						<td class="addr_type">
+							<a href="#">서울특별시 강남구 영동대로 513 (삼성동, 코엑스(COEX))</a>
+							<a href="#">서울특별시 강남구 삼성동 159 코엑스(COEX)</a>
+						</td>
+						<td class="zip_code">135-731</td>
+					</tr>
+					<tr>
+						<td class="select_addr">
+							<a href="#">도로명</a>
+							<a href="#">구주소</a>
+						</td>
+						<td class="addr_type">
+							<a href="#">서울특별시 강남구 영동대로 513 (삼성동, 코엑스(COEX))</a>
+							<a href="#">서울특별시 강남구 삼성동 159 코엑스(COEX)</a>
+						</td>
+						<td class="zip_code">135-731</td>
+					</tr>
+					<tr>
+						<td class="select_addr">
+							<a href="#">도로명</a>
+							<a href="#">구주소</a>
+						</td>
+						<td class="addr_type">
+							<a href="#">서울특별시 강남구 영동대로 513 (삼성동, 코엑스(COEX))</a>
+							<a href="#">서울특별시 강남구 삼성동 159 코엑스(COEX)</a>
+						</td>
+						<td class="zip_code">135-731</td>
+					</tr>
+					<tr>
+						<td class="select_addr">
+							<a href="#">도로명</a>
+							<a href="#">구주소</a>
+						</td>
+						<td class="addr_type">
+							<a href="#">서울특별시 강남구 영동대로 513 (삼성동, 코엑스(COEX))</a>
+							<a href="#">서울특별시 강남구 삼성동 159 코엑스(COEX)</a>
+						</td>
+						<td class="zip_code">135-731</td>
+					</tr>
+					<tr>
+						<td class="select_addr">
+							<a href="#">도로명</a>
+							<a href="#">구주소</a>
+						</td>
+						<td class="addr_type">
+							<a href="#">서울특별시 강남구 영동대로 513 (삼성동, 코엑스(COEX))</a>
+							<a href="#">서울특별시 강남구 삼성동 159 코엑스(COEX)</a>
+						</td>
+						<td class="zip_code">135-731</td>
+					</tr>
+					<tr>
+						<td class="select_addr">
+							<a href="#">도로명</a>
+							<a href="#">구주소</a>
+						</td>
+						<td class="addr_type">
+							<a href="#">서울특별시 강남구 영동대로 513 (삼성동, 코엑스(COEX))</a>
+							<a href="#">서울특별시 강남구 삼성동 159 코엑스(COEX)</a>
+						</td>
+						<td class="zip_code">135-731</td>
+					</tr>
+					<!-- [D] 검새결과가 없을경우 -->
+					<tr>
+						<td colspan="3" class="no_result">검색 결과가 없습니다.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section>
+</body>
+</html>
