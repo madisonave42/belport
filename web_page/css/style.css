@@ -124,7 +124,7 @@ input {
 	padding:0;
 	font-family:'ns', sans-serif; font-size:13px; font-weight:300; color:#777;
 }
-input[type=text] {height:22px;line-height:22px;}
+input[type=text] {height:32px;line-height:22px;}
 input[type=submit], input[type=image], button{
 	cursor: pointer;
 	border:0;
@@ -732,13 +732,12 @@ footer .copyright {
 .paging>a.last:before {content:'\00BB';}
 
 /* 각 정보 테이블 제목 스타일 */
-#contents .container > .info_table{margin-top:50px;}
 #contents .container > .info_table>h1{font-size:15px; margin-bottom:10px;}
 
 /* 가로형 테이블 공통 스타일 */
 .type_horizon{border-top:2px solid #000;}
-.type_horizon th{background:#f3f3f3; height:19px; border-bottom:1px solid #d3d0cf; text-align:left; padding-left:15px; color:#231f20;}
-.type_horizon td{background:#fff; height:19px; border-bottom:1px solid #d3d0cf; text-align:left; padding:10px 0 10px 15px;}
+.type_horizon th{height:24px; background:#f3f3f3; border-bottom:1px solid #d3d0cf; text-align:left; padding-left:15px; color:#231f20;}
+.type_horizon td{height:24px; background:#fff; border-bottom:1px solid #d3d0cf; text-align:left; padding:10px 0 10px 15px;}
 .type_horizon strong{color:#231f20;}
 
 /* buttons */

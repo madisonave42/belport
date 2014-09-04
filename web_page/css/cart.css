@@ -3,24 +3,28 @@
  ===================================================*/
 
  /* 주문진행 단계 스타일 */
-.step {margin:0 auto; margin-bottom:80px; padding:128px 0 20px; width:936px; border-bottom:1px solid #d3d0cf;}
-.step li {float:left; margin-left:49px; width:188px; background:url(../images/cart/bg_step_arrow.gif) no-repeat 171px 40px;}
+.step {margin:0 auto; margin-bottom:80px; padding:128px 50px 20px; width:836px; border-bottom:1px solid #d3d0cf;}
+.step li {float:left; margin-right:42px; width:191px; background:url(../images/cart/bg_step_arrow.gif) no-repeat 180px 25px;}
 .step li strong {display:block; padding-left:76px; height:65px; background:url(../images/cart/bg_step.gif) no-repeat; font-size:16px; color:#d5d5d4;}
 .step li strong .num {display:block; margin-bottom:7px; padding-bottom:7px; background:url(../images/cart/bg_step_num.gif) no-repeat 0 19px;}
-.step li.step_4 {width:145px; background:none;}
-.step li.step_1 strong {background-position:0 0;}
-.step li.step_1.on strong {background-position:0 -183px;}
-.step li.step_2 strong {background-position:-230px 0;}
-.step li.step_2.on strong {background-position:-230px -183px;}
-.step li.step_3 strong {background-position:-460px 0;}
-.step li.step_3.on strong {background-position:-460px -183px;}
-.step li.step_4 strong {background-position:-694px 0;}
-.step li.step_4.on strong {background-position:-694px -183px;}
 
-.step li.on {background-position:-66px 40px;}
+.step li.on {background-position:180px -165px;}
 .step li.on strong {color:#20221f;}
 .step li.on strong .num {background-position:0 bottom;}
- 
+
+.step li.step_1 strong {background-position:0 0;}
+.step li.step_1.on strong {background-position:0 -183px;}
+
+.step li.step_2 strong {background-position:-230px 0;}
+.step li.step_2.on strong {background-position:-230px -183px;}
+
+.step li.step_3 strong {background-position:-460px 0;}
+.step li.step_3.on strong {background-position:-460px -183px;}
+
+.step li.step_4 strong {background-position:-694px 0;}
+.step li.step_4.on strong {background-position:-694px -183px;}
+.step li.step_4 {width:137px; background:none; margin:0;}
+
 /* 제품 목록 테이블 스타일 */
 .list_table{border-top:2px solid #000; border-bottom:1px solid #000; color:#231f20;}
 .list_table th{height:39px; border-bottom:1px solid #000;}
