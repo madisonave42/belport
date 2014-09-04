@@ -57,7 +57,7 @@
 			</section>
 						
 			<table summary="1:1상담 항목, 제목, 내용, 답변 등 제공" class="toggle_list inquiry_list">
-				<caption>문의한 1:1상담 내역</caption>
+				<caption class="hide">문의한 1:1상담 내역</caption>
 				<colgroup>
 					<col style="width:100px;" />
 					<col style="width:50px;" />
@@ -66,84 +66,84 @@
 				</colgroup>
 				<tbody>
 					<tr class="title">
-						<td><strong>사이트이용</strong></td>
+						<th scope="row">사이트이용</th>
 						<td class="answer_chk">
 							<!-- [D] 답변이 있을경우 출력 -->
-							<img src="../images/mypage/answer_check.png" alt="답변완료" />
+							<img src="../images/mypage/answer_check.png" alt="답변완료" title="답변완료" />
 						</td>
 						<td class="link">
-							<a href="#"><strong>사이트 접속이 안되요!!</strong></a>
+							<a href="#">사이트 접속이 안되요!!</a>
 						</td>
-						<td class="date"><strong>2014.07.23</strong></td>
+						<td class="date">2014.07.23</td>
 					</tr>
 					<tr class="detail">
 						<td colspan="4">
 							<!-- [D] 문의내용 -->
 							<article class="detail_view">
 								<p>사이트 접속이 안됩니다!! 해결방법 좀 알려주세요</p>
+								<!-- [D] 첨부파일이 있을경우 -->
+								<p class="attached"><strong>첨부파일</strong><a href="#">belport.doc</a></p>
 							</article>
-							<!-- [D] 첨부파일이 있을경우 -->
-							<p class="attached">첨부파일 <a href="#">belport.doc</a></p>
 							<!-- [D] 답변이 있을경우 -->
 							<article class="answer_view">
-								<p><strong>고객님 안녕하세요?  벨포트입니다.</strong></p>
+								<p class="admin">고객님 안녕하세요?  벨포트입니다.</p>
 								<p>현재 사용하고 계신 브라우저의 버전을 확인해보시고 최상위 버전의 브라우저도 접속이 안되신다면<br />
 									고객센터 080-508-6631번으로 전화주시기 바랍니다.</p>
 							</article>
-							<div class="btns_wrap clearfix">
-								<a href="#" class="btns white small">삭제</a>
-							</div>
-						</td>
-					</tr>
-					
-					<tr class="link">
-						<td><strong>쿠폰/포인트</strong></td>
-						<td class="answer_chk"></td>
-						<td class="link">
-							<a href="#"><strong>포인트 사용법이 궁금합니다.</strong></a>
-						</td>
-						<td class="date"><strong>2014.07.23</strong></td>
-					</tr>
-					<tr class="detail">
-						<td colspan="4">
-							<article class="detail_view">
-								<p>사이트 접속이 안됩니다!! 해결방법 좀 알려주세요</p>
-							</article>
-							<p class="attached">첨부파일 <a href="#">belport.doc</a></p>
-							<div class="btns_wrap clearfix">
-								<a href="#" class="btns white small">삭제</a>
-							</div>
-						</td>
-					</tr>
-					
-					<tr class="link">
-						<td><strong>상품/주문/결제</strong></td>
-						<td class="answer_chk"></td>
-						<td class="link">
-							<a href="#"><strong>비회원도 주문이 가능한가요?</strong></a>
-						</td>
-						<td class="date"><strong>2014.07.23</strong></td>
-					</tr>
-					<tr class="detail">
-						<td colspan="4">
-							<article class="detail_view">
-								<p>사이트 접속이 안됩니다!! 해결방법 좀 알려주세요</p>
-							</article>
-							<div class="btns_wrap clearfix">
-								<a href="#" class="btns white small">삭제</a>
+							<div class="btns_article">
+								<a href="#" class="btn">삭제</a>
 							</div>
 						</td>
 					</tr>
 					
 					<tr class="title">
-						<td><strong>회원관리</strong></td>
+						<th scope="row">쿠폰/포인트</th>
+						<td class="answer_chk"></td>
+						<td class="link">
+							<a href="#">포인트 사용법이 궁금합니다.</a>
+						</td>
+						<td class="date">2014.07.23</td>
+					</tr>
+					<tr class="detail">
+						<td colspan="4">
+							<article class="detail_view">
+								<p>사이트 접속이 안됩니다!! 해결방법 좀 알려주세요</p>
+								<p class="attached"><strong>첨부파일</strong><a href="#">belport.doc</a></p>
+							</article>
+							<div class="btns_article">
+								<a href="#" class="btn">삭제</a>
+							</div>
+						</td>
+					</tr>
+					
+					<tr class="title">
+						<th scope="row">상품/주문/결제</th>
+						<td class="answer_chk"></td>
+						<td class="link">
+							<a href="#">비회원도 주문이 가능한가요?</a>
+						</td>
+						<td class="date">2014.07.23</td>
+					</tr>
+					<tr class="detail">
+						<td colspan="4">
+							<article class="detail_view">
+								<p>사이트 접속이 안됩니다!! 해결방법 좀 알려주세요</p>
+							</article>
+							<div class="btns_article">
+								<a href="#" class="btn">삭제</a>
+							</div>
+						</td>
+					</tr>
+					
+					<tr class="title">
+						<th scope="row">회원관리</th>
 						<td class="answer_chk">
-							<img src="../images/mypage/answer_check.png" alt="답변완료" />
+							<img src="../images/mypage/answer_check.png" alt="답변완료" title="답변완료" />
 						</td>
 						<td class="link">
-							<a href="#"><strong>핸드폰 인증번호 받기가 되지 않습니다.</strong></a>
+							<a href="#">핸드폰 인증번호 받기가 되지 않습니다.</a>
 						</td>
-						<td class="date"><strong>2014.07.23</strong></td>
+						<td class="date">2014.07.23</td>
 					</tr>
 					<tr class="detail">
 						<td colspan="4">
@@ -151,12 +151,12 @@
 								<p>사이트 접속이 안됩니다!! 해결방법 좀 알려주세요</p>
 							</article>
 							<article class="answer_view">
-								<p><strong>고객님 안녕하세요?  벨포트입니다.</strong></p>
+								<p class="admin">고객님 안녕하세요?  벨포트입니다.</p>
 								<p>현재 사용하고 계신 브라우저의 버전을 확인해보시고 최상위 버전의 브라우저도 접속이 안되신다면<br />
 									고객센터 080-508-6631번으로 전화주시기 바랍니다.</p>
 							</article>
-							<div class="btns_wrap clearfix">
-								<a href="#" class="btns white small">삭제</a>
+							<div class="btns_article">
+								<a href="#" class="btn">삭제</a>
 							</div>
 						</td>
 					</tr>

@@ -59,3 +59,27 @@ var bottomNavAction = (function(){
 	
 	};
 })();
+
+/**
+ * 마이페이지용 함수들
+ * @namespace 
+ * 
+ */
+var toggleListAction = (function(){
+	
+	return{
+		/**
+		 * 상세보기 토글
+		 * 
+		 */
+		detailView : function( details, idx ) {
+			var crtDetail = details.eq( idx );
+			if( crtDetail.is(':visible') ) {
+				crtDetail.hide();
+			} else {
+				details.hide();
+				details.eq( idx ).show();
+			}
+		}
+	};
+})();

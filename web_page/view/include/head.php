@@ -66,6 +66,7 @@
 			case 'mp1.4.1.1': $subTitle = '비밀번호 확인 |'; break;
 			case 'mp1.4.1.1.1'  : $subTitle = '개인정보 수정 |'; break;
 			case 'mp1.4.1.1.1.1': $subTitle = '회원탈퇴 |'; break;
+			case 'mp1.4.1.1.1.1.1': $subTitle = '회원탈퇴 완료 |'; break;
 			case 'mp1.4.2'  : $subTitle = '피부타입설정 |'; break;
 			
 			

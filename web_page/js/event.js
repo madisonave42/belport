@@ -54,9 +54,10 @@ $(function(){
 		
 	})();
 	
-	/*============================================================
-	 * 달력 컨트롤
-	 =============================================================*/
+ /*============================================================
+  * 마이페이지
+  =============================================================*/
+	/* 달력컨트롤 */
 	(function(){
 		$('#date_picker_1, #date_picker_2').datepicker({
 			duration: 'fast',
@@ -70,6 +71,20 @@ $(function(){
 		});
 		$('.btn_end_date').on('click',function() {
 			$('#date_picker_2').datepicker('show');
+		});
+	})();
+	
+	/* 나의활통 게시판 */
+	(function() {
+		var list = $( '.toggle_list' ),
+			titleLinks = list.find( '.link' ),
+			detailViews = list.find( '.detail' );
+			
+		titleLinks.on( 'click', function( e ){
+			e.preventDefault();
+			
+			var idx = titleLinks.index( this );
+			toggleListAction.detailView( detailViews, idx );
 		});
 	})();
 	
