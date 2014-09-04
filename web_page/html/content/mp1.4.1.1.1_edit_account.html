@@ -44,7 +44,7 @@
 				<li><a href="#">나의 피부 타입</a></li>
 			</ul>
 			
-			<section class="edit_table info_table">
+			<section class="info_table">
 				<h1>개인 정보 수정</h1>
 				<table class="type_horizon" summary="회원 개인정보 수정 양식">
 					<caption style="display:none;">개인정보 수정 양식</caption>
@@ -128,26 +128,26 @@
 							</td>
 						</tr>
 						<tr>
-							<th scope="row">주소</th>
-							<td class="address">
-								<div class="zip_code">
-									<div>
-										<input type="text" title="우편번호 앞자리" />
-									</div>
-									<div>-</div>
-									<div>
-										<input type="text" title="우편번호 뒷자리" />
-									</div>
-									<div>
-										<a href="#" class="btn_find_addr">우편번호찾기</a>
-									</div>
+						<th scope="row"><label for="receiver_address">주소</label></th>
+						<td class="address">
+							<div class="zip_code clearfix">
+								<div>
+									<input type="text" id="receiver_address" title="우편번호 앞자리" />
 								</div>
-								<div class="detail_address">
-									<input type="text" title="지역주소" />
-									<input type="text" title="상세주소" />
+								<div>-</div>
+								<div>
+									<input type="text" title="우편번호 뒷자리" />
 								</div>
-							</td>
-						</tr>
+								<div>
+									<a href="#" class="btn">우편번호검색</a>
+								</div>
+							</div>
+							<div class="detail_address clearfix">
+								<input type="text" title="지역주소" />
+								<input type="text" title="상세주소" />
+							</div>
+						</td>
+					</tr>
 						<tr>
 							<th scope="row"><label for="input_birth">생년월일</label></th>
 							<td class="birthday">
