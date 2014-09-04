@@ -15,7 +15,7 @@
 		<p class="hide">추가정보 단계 안내</p>
 		<!-- [D] 현재 단계 li태그에 on 클래스 추가 -->
 		<ul class="step survey clearfix">
-			<li class="step_1 on">
+			<li class="step_1">
 				<strong><span class="num">01</span>피부타입</strong>
 			</li>
 			<li class="step_2">
@@ -33,7 +33,7 @@
 			<li class="step_6">
 				<strong><span class="num">06</span>메이크업</strong>
 			</li>
-			<li class="step_7">
+			<li class="step_7 on">
 				<strong><span class="num">07</span>생년월일</strong>
 			</li>
 		</ul>
@@ -43,35 +43,24 @@
 		<!-- detail section : S -->
 		<section>
 			<hgroup>
-				<h1><span>1</span>당신의 피부 타입은 어떤가요?</h1>
-				<p>기초화장품 선택에 중요한 요소로 적용됩니다.</p>	
+				<h1><span>7</span>생년월일을 알려주세요.</h1>
+				<p>당신의 연령대에 맞는 제품 추천에 중요한 요소로 적용됩니다. (입력하신 날짜에 생일쿠폰이 지급됩니다.)</p>
 			</hgroup>
-			<ul class="select_section num_1">
-				<li class="clearfix">
-					<input type='radio' id="sel_1" name="skin_type" />
-					<label for="sel_1">지성</label>
-				</li>
-				<li class="clearfix">
-					<input type='radio' id="sel_2" name="skin_type" />
-					<label for="sel_2">건성</label>
-				</li>
-				<li class="clearfix">
-					<input type='radio' id="sel_3" name="skin_type" />
-					<label for="sel_3">복합성</label>
-				</li>
-				<li class="clearfix">
-					<input type='radio' id="sel_4" name="skin_type" />
-					<label for="sel_4">민감성</label>
-				</li>
-				<li class="clearfix">
-					<input type='radio' id="sel_5" name="skin_type" />
-					<label for="sel_5">트러블성</label>
-				</li>
-			</ul>
+			<div class="select_section num_7">
+				<select>
+					<option>년도</option>
+				</select>
+				<select>
+					<option>월</option>
+				</select>
+				<select>
+					<option>일</option>
+				</select>
+			</div>
 		</section>
 		
 		<div class="btns_wrap">
-			<a href="#" class="btns black large">다음문항</a>
+			<a href="#" class="btns black large">완료</a>
 			<a href="#" class="btns white large">건너뛰기</a>
 		</div>
 		<!-- detail section : E -->

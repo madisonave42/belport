@@ -133,7 +133,47 @@
 .survey hgroup>h1 span{display:block; width:43px; height:43px; position:absolute; top:0; left:0; color:#fff; text-align:center; line-height:43px;}
 .survey hgroup>p{line-height:1.8;}
 
-.survey .select_section{padding-left:240px;}
+.survey .select_section{padding:21px 0 0 240px; margin:45px 0 0 50px; height:242px; border-bottom:1px solid #d3d0cf;}
+.survey .select_section .left_col{float:left; margin-right:70px;}
+.survey .select_section .right_col{float:left;}
+.survey .select_section li{margin-bottom:20px;}
+.survey .select_section li>*{display:block; float:left;}
+.survey .select_section li>input{margin-right:10px;}
+
+.survey .select_section select{width:180px; height:34px; border:1px solid #d3d0cf;}
+
+.survey .select_section.num_1{background:url(../images/member/bg_survey_1.gif) no-repeat;}
+.survey .select_section.num_2{background:url(../images/member/bg_survey_2.gif) no-repeat;}
+.survey .select_section.num_3{background:url(../images/member/bg_survey_3.gif) no-repeat;}
+.survey .select_section.num_4{background:url(../images/member/bg_survey_4.gif) no-repeat;}
+.survey .select_section.num_5{background:url(../images/member/bg_survey_5.gif) no-repeat;}
+.survey .select_section.num_6{background:url(../images/member/bg_survey_6.gif) no-repeat;}
+.survey .select_section.num_7{background:url(../images/member/bg_survey_7.gif) no-repeat;}
+
+/*==================================================
+ * 설문완료
+ ===================================================*/
+.survey_complete .complete_message{padding-top:128px; margin-top:0!important;}
+.survey_complete .complete_message .border_area{height:347px; border:1px solid #d3d0cf; padding:40px 100px;}
+.survey_complete .complete_message hgroup{height:70px;}
+.survey_complete .complete_message .table_area{padding:30px 40px; background:#f3f3f4;}
+
+.survey_complete hgroup{text-align:center; margin-bottom:40px;}
+.survey_complete hgroup>h1{font-size:24px; margin-bottom:10px; font-weight:700;}
+.survey_complete hgroup>h1 span{font-weight:700;}
+.survey_complete hgroup>p{line-height:1.4;}
+
+.survey_complete .complete_message table th{padding:6px 0; text-align:left; color:#231f20;}
+.survey_complete .complete_message table td{padding:6px 0; text-align:left;}
+.survey_complete .complete_message span{color:#ed6851;}
+
+.survey_complete .complete_message.coupon .border_area{height:auto; padding:92px 54px;}
+.survey_complete .complete_message.coupon img{float:left; margin-right:40px;}
+.survey_complete .complete_message.coupon hgroup{text-align:left; width:393px; height:auto; float:left;}
+.survey_complete .complete_message.coupon hgroup h1{font-size:42px;}
+.survey_complete .complete_message.coupon hgroup p{font-size:28px; color:#231f20;}
+
+
 
 
 
