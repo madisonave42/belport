@@ -100,7 +100,7 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 .regist_coupon label,
 .regist_coupon input {display:inline-block;}
 .regist_coupon label {width:110px; color:#231f20; font-weight:400;}
-.regist_coupon input[type=text] {width:400px; border:1px solid #d3d0cf;}
+.regist_coupon input[type=text] {width:400px;}
 .regist_coupon input[type=submit] {margin-left:8px; width:47px; height:24px; text-align:center; line-height:24px; color:#f3f3f4; background:#231f20;}
 
 /*=====================================================
@@ -133,7 +133,7 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 .search_box {margin-bottom:10px;}
 .search_box .search_box_wrap {float:right;}
 .search_box select,
-.search_box input {float:left; margin-right:3px; border:1px solid #d3d0cf;}
+.search_box input {float:left; margin-right:3px;}
 .search_box select {height:24px;}
 .search_box input[type=text] {width:185px; height:22px; line-height:22px;}
 .search_box input[type=submit] { margin:0; width:47px; height:24px; line-height:22px; color:#fff; background-color:#000; border:0; font-weight:bold; text-align:center; }
@@ -157,7 +157,7 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 .check_pw .chk_info .input_area {margin-top:45px; padding:75px 0; padding-left:172px; border-top:2px solid #231f20; border-bottom:1px solid #d3d0cf;}
 .check_pw .chk_info .input_area > div:first-child {margin-bottom:20px;}
 .check_pw .chk_info .input_area > div strong {display:inline-block; width:57px;}
-.check_pw .chk_info .input_area > div input[type=text] {width:240px; border:1px solid #d3d0cf;}
+.check_pw .chk_info .input_area > div input[type=text] {width:240px;}
 .check_pw .chk_info .input_area > div input[type=submit] {margin-left:8px; width:131px; height:34px; background:#231f20; color:#f3f3f4;}
 
 /* 나의피부타입 */
@@ -170,6 +170,14 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 .chk_type li > div {margin-top:25px;}
 .chk_type li > div input {margin-right:10px;}
 .chk_type li > div label {margin-right:30px;}
+
+/* 회원정보 수정 */
+.info_table select{height:24px; line-height:24px; border:1px solid #ccc; color:#666; font-size:12px;}
+.info_table input[type=checkbox]{margin-right:2px;}
+.info_table .phone>div{float:left; height:24px; line-height:24px; margin-right:5px;}
+.info_table .phone input, .info_table .phone select{width:55px;}
+.info_table .email>div{float:left; height:24px; line-height:24px; margin-right:5px;}
+.info_table .email input,.customer_info .email select{width:135px;}
 
 /* 회원탈퇴 */
 .caution_msg ul {margin:20px 0;}

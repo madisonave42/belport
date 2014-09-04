@@ -124,7 +124,8 @@ input {
 	padding:0;
 	font-family:'ns', sans-serif; font-size:13px; font-weight:300; color:#777;
 }
-input[type=text] {height:32px;line-height:22px;}
+input[type=text],
+input[type=password] {height:32px;line-height:22px; border:1px solid #d3d0cf;}
 input[type=submit], input[type=image], button{
 	cursor: pointer;
 	border:0;
