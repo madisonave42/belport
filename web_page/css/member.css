@@ -70,6 +70,11 @@
  * 회원정보입력
  ===================================================*/
 
+.member_info hgroup{text-align:center; margin-bottom:60px;}
+.member_info hgroup>h1{font-size:44px; margin-bottom:10px; font-weight:bold; font-weight:300;}
+.member_info hgroup>h1 span{font-weight:700;}
+.member_info hgroup>p{line-height:1.8;}
+
 .info_table input[type=text]{
 	width:274px; border:1px solid #ccc; color:#666; margin:0;	*margin-top:-1px; 
 }
