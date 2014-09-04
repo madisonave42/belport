@@ -1,0 +1,159 @@
+<section id="contents" class="member_info">
+	<h1>회원가입</h1><!-- depth 1 heading -->
+	<!--<nav></nav>-->
+	<section class="container clearfix">
+		
+		<article class="location">
+			<h1 class="hide">location</h1>
+			<em class="home"><a href="#">Home</a></em>
+			<em>></em>
+			<em><a href="#">회원가입</a></em>
+			<em>></em>
+			<em class="current">회원정보입력</em>
+		</article>
+			
+		<p class="hide">회원가입 단계 안내</p>
+		<!-- [D] 현재 단계 li태그에 on 클래스 추가 -->
+		<ul class="step clearfix">
+			<li class="step_1">
+				<strong><span class="num">01</span>가입여부확인</strong>
+			</li>
+			<li class="step_2 on">
+				<strong><span class="num">02</span>회원정보입력</strong>
+			</li>
+			<li class="step_3">
+				<strong><span class="num">03</span>가입완료</strong>
+			</li>
+		</ul>
+		
+		<h1 class="hide">회원정보입력</h1><!-- depth 2 heading -->
+		
+		<!-- detail section : S -->
+		<section class="info_table">
+			<hgroup>
+				<h1>거의 다 됐습니다!</h1>
+				<p>간단한 필수 정보만 넣어 주세요.</p>
+			</hgroup>
+			<table class="type_horizon" summary="회원정보">
+				<caption style="display:none;">회원정보</caption>
+				<colgroup>
+					<col style="width:185px;" />
+					<col style="width:795px;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row"><label for="email">아이디(이메일)</label></th>
+						<td class="email">
+							<div><input type="text" id="email" title="이메일아이디" /></div>
+							<div>@</div>
+							<div><input type="text" title="이메일주소" /></div>
+							<div>
+								<select title="이메일주소 선택">
+									<option>직접입력</option>
+									<option>직접입력</option>
+									<option>직접입력</option>
+								</select>
+							</div>
+							<div>
+								<input type="checkbox" id="receive" />
+								<label for="receive">수신동의</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="name">이름</label></th>
+						<td>
+							<input type="text" id="name" />
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="gender">성별</label></th>
+						<td class="gender">
+							<div><input type="radio" id="female" name="gender" /><label>여성</label></div>
+							<div><input type="radio" id="male" name="gender" /><label>남성</label></div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="nick">닉네임</label></th>
+						<td class="nick">
+							<div><input type="text" id="nick" /></div>
+							<div><a href="#" class="duplication">중복확인</a></div>
+							<p>* 리뷰 등에 실명 대신 사용합니다.</p>
+						</td>
+					</tr>
+					<tr class="pwd">
+						<th scope="row"><label for="pwd">비밀번호</label></th>
+						<td>
+							<div><input type="text" id="pwd" /></div>
+						</td>
+					</tr>
+					<tr class="pwd_confirm">
+						<th scope="row"><label for="pwd_confirm">비밀번호확인</label></th>
+						<td>
+							<div><input type="text" id="pwd_confirm" /></div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="order_phone">휴대폰번호</label></th>
+						<td class="phone">
+							<div>
+								<select id="cell_phone" title="지역번호">
+									<option>010</option>
+									<option>010</option>
+									<option>010</option>
+								</select>
+							</div>
+							<div>-</div>
+							<div>
+								<input type="text" title="국번" />
+							</div>
+							<div>-</div>
+							<div>
+								<input type="text" title="가입자번호" />
+							</div>
+							<div><a href="#" class="duplication">중복확인</a></div>
+						</td>
+					</tr>
+					<tr class="auth_num">
+						<th scope="row"><label for="auth_num">인증번호</label></th>
+						<td>
+							<div><input type="text" id="auth_num" /></div>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		
+			<div class="accept clearfix">
+				<div class="accept_1">
+					<input type="checkbox" />
+					<label>14세 이상입니다.</label>
+				</div>
+				<div class="accept_2">
+					<input type="checkbox" />
+					<label>약관동의</label>
+				</div>
+				<div class="accept_3">
+					<input type="checkbox" />
+					<label>개인정보취급방침 동의</label>
+				</div>
+			</div>
+		</section>
+		
+		<section class="terms">
+			<h1>이용약관</h1>
+			<div class="terms_box"> </div>
+		</section>
+		
+		<section class="terms">
+			<h1>개인정보취급방침</h1>
+			<div class="terms_box"> </div>
+		</section>
+		
+		<div class="btns_wrap">
+			<input type="submit" class="btns black large" value="회원가입" />
+		</div>
+		<!-- detail section : E -->
+		
+	</section>
+</section>

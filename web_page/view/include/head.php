@@ -27,7 +27,7 @@
 			case 'ct1.1.3'  : $subTitle = '결제하기 |'; break;
 			case 'ct1.1.3.1': $subTitle = '주문완료 |'; break;
 			case 'ct1.2'    : $subTitle = '주문서작성(비회원) |'; break;
-			case 'mb1'      : $subTitle = ''; break;
+			case 'mb1'      : $subTitle = '가입여부확인 |'; break;
 			case 'mb1.1'    : $subTitle = '회원정보입력 |'; break;
 			case 'mb1.1.1'  : $subTitle = '회원가입완료 |'; break;
 			case 'mb1.1.1.1': $subTitle = '회원정보설문1 |'; break;
@@ -39,6 +39,9 @@
 			case 'mb1.1.1.7': $subTitle = '회원정보설문7 |'; break;
 			case 'mb1.1.1.7.1'  : $subTitle = '설문결과 |'; break;
 			case 'mb1.1.1.7.1.1': $subTitle = '포인트발급 |'; break;
+			case 'mb1.2'    : $subTitle = '회원정보입력(연동회원)'; break;
+			case 'mb1.3'    : $subTitle = '회원정보입력(이전회원)'; break;
+			case 'mb1.4'    : $subTitle = '회원정보입력(기존회원)'; break;
 			case 'lg1'      : $subTitle = ''; break;
 			case 'lg1.1'    : $subTitle = '아이디찾기 |'; break;
 			case 'lg1.1.1'  : $subTitle = '아이디찾기 성공 |'; break;
