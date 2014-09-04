@@ -176,7 +176,8 @@
 .survey_complete .complete_message.coupon img{float:left; margin-right:40px;}
 .survey_complete .complete_message.coupon hgroup{text-align:left; width:393px; height:auto; float:left;}
 .survey_complete .complete_message.coupon hgroup h1{font-size:42px;}
-.survey_complete .complete_message.coupon hgroup p{font-size:28px; color:#231f20;}
+.survey_complete .complete_message.coupon hgroup p{font-size:28px; color:#231f20; line-height:1.2; margin:13px 0;}
+.survey_complete .complete_message.coupon hgroup p.comment{font-size:13px; line-height:1.4;}
 
 
 
