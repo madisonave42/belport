@@ -1,0 +1,129 @@
+<section id="contents" class="del_account">
+	<h1>MY BELPORT</h1><!-- depth 1 heading -->
+	<!--<nav></nav>-->
+	<section class="container clearfix">
+		
+		<article class="location">
+			<h1 class="hide">location</h1>
+			<em class="home"><a href="#">Home</a></em>
+			<em>></em>
+			<em><a href="#">MY BELPORT</a></em>
+			<em>></em>
+			<em><a href="#">나의정보</a></em>
+			<em>></em>
+			<em class="current">개인 정보 관리</em>
+		</article>
+		
+		<!-- detail section : S -->
+		<section class="account_summary">
+			<h1 class="hide">고객등급 및 포인트, 쿠폰 내역</h1>
+			<p class="user_name"><strong>홍길동님</strong> 안녕하세요!</p>
+			<p class="user_class"><strong>2014년도 고객님의 현재 등급은 <em>일반회원</em>입니다.</strong></p>
+			<div class="user_class_icon">일반회원</div>
+			<div class="point_coupon">
+				<p>벨포인트 <strong>18,000</strong><span>p</span></p>
+				<p>쿠폰 <strong>5</strong><span>장</span></p>
+			</div>
+		</section>
+		
+		<!-- [D] 활성화된 탭의 a태그에 on클래스 추가 -->
+		<ul class="tab clearfix">
+			<li class="tab_1"><a href="#"><strong>나의쇼핑</strong></a></li>
+			<li class="tab_2"><a href="#"><strong>나의혜택</strong></a></li>
+			<li class="tab_3"><a href="#"><strong>나의활동</strong></a></li>
+			<li class="tab_4"><a href="#" class="on"><strong>나의정보</strong></a></li>
+		</ul>
+		
+		<h1 class="hide">나의정보</h1><!-- depth 2 heading -->
+		
+		<section>
+			<h1 class="hide">개인 정보 관리</h1>
+						
+			<ul class="sub_tab">
+				<li><a href="#" class="on">개인 정보 관리</a></li>
+				<li><a href="#">나의 피부 타입</a></li>
+			</ul>
+			
+			<section class="caution_msg">
+				<h1>회원 탈퇴 전 아래의 사항들을 확인해 주세요.</h1>
+				<p>탈퇴 후 고객님의 정보는 전자상거래 소비자보호법에 의거한 ㈜ BELPORT 개인정보보호정책에 따라 관리됩니다. 고객님께서 보유하셨던 BELPORT 사이트의 회원 등급, 포인트, 쿠폰 정보는 모두 삭제되어 더 이상 사용하실 수 없습니다. 다음의 경우는 회원 탈퇴가 불가 합니다- 해당 사항이 있으신 경우는 내역을 종료하신 후 탈퇴 신청을 해주시기 바랍니다.</p>
+				<ul>
+					<li>- 현재 고객님의 반품 처리 요청 사항이나 고객 서비스가 완료되지 않은 경우, 모든 처리가 완료된 후 탈퇴 가능합니다.</li>
+					<li>- 배송 요청, 배송중, 반품 요청, 송금 예정 등의 거래가 진행될 경우, 진행 중인 거래를 모두 마무리 해주시기 바랍니다.</li>
+				</ul>
+				<p>회원 탈퇴 후 재가입은 30일 후부터 가능하고, 신규가입으로 처리됩니다. 탈퇴하신  ID는 다시 사용하실 수 없습니다.</p>
+			</section>
+			
+			<section class="point_info info_table">
+				<h1>회원 등급/포인트 현황</h1>
+				<table class="type_horizon" summary="회원 등급 및 보유한 벨 포인트 안내">
+					<caption style="display:none;">등급 및 포인트</caption>
+					<colgroup>
+						<col style="width:185px;" />
+						<col style="width:751px;" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">회원 등급</th>
+							<td>일반회원</td>
+						</tr>
+						<tr>
+							<th scope="row">벨포인트</th>
+							<td class="point">
+								200P
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			
+			<section class="del_account_form info_table">
+				<h1>BELPORT 멤버쉽 회원 탈퇴 신청</h1>
+				<p>BELPORT 사이트를 이용하며 불편한 사항이 있으셨나요? 사이트를 이용하시면서 불편한 점이 있으셨다면 아래에 사유를 남겨주세요.<br />고객님의 소중한 의견을 모아 더 나은 BELPORT가 될 수 있도록 최선을 다하겠습니다.</p> 
+				<table class="type_horizon" summary="탈퇴사유 입력 양식">
+					<caption style="display:none;">회원 탈퇴</caption>
+					<colgroup>
+						<col style="width:185px;" />
+						<col style="width:751px;" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><label for="chk_pw">비밀번호 확인</label></th>
+							<td>
+								<input type="text" id="chk_pw" />
+							</td>
+							<th scope="row">탈퇴사유</th>
+							<td>
+								<ul>
+									<li><input type="" id="reason_01" name="radio"/><label for="reason_01">배송 서비스 불만</label></li>
+									<li><input type="" id="reason_02" name="radio"/><label for="reason_02">제품 가격/품질 불만</label></li>
+									<li><input type="" id="reason_03" name="radio"/><label for="reason_03">제품 사용 후 트러블 유발</label></li>
+									<li><input type="" id="reason_04" name="radio"/><label for="reason_04">고객 응대 불친절 및 지연</label></li>
+									<li><input type="" id="reason_05" name="radio"/><label for="reason_05">제품 주문 과정의 어려움</label></li>
+									<li><input type="" id="reason_06" name="radio"/><label for="reason_06">사후 조치 불만</label></li>
+									<li><input type="" id="reason_07" name="radio"/><label for="reason_07">개인 정보 유출 우려</label></li>
+									<li><input type="" id="reason_08" name="radio"/><label for="reason_08">시스템 에러</label></li>
+									<li><input type="" id="reason_09" name="radio"/><label for="reason_09">BELPORT 사이트를 사용하지 않음</label></li>
+									<li><input type="" id="reason_10" name="radio"/><label for="reason_10">기타</label></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="del_msg">고객님의 소중한 의견을<br />남겨주세요</label></th>
+							<td>
+								<textarea cols="30" rows="10" id="del_msg"></textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</section>
+			
+		<div class="btns_wrap clearfix">
+			<input type="submit" class="btns black large" value="회원탈퇴" />
+			<a href="#" class="btns white large">취소</a>
+		</div>
+
+		<!-- detail section : E -->
+	</section>
+</section>

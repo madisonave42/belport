@@ -1,0 +1,171 @@
+<section id="contents" class="shipping">
+	<h1>MY BELPORT</h1><!-- depth 1 heading -->
+	<!--<nav></nav>-->
+	<section class="container clearfix">
+		
+		<article class="location">
+			<h1 class="hide">location</h1>
+			<em class="home"><a href="#">Home</a></em>
+			<em>></em>
+			<em><a href="#">MY BELPORT</a></em>
+			<em>></em>
+			<em class="home"><a href="#">나의쇼핑</a></em>
+			<em>></em>
+			<em class="current">주문배송조회</em>
+		</article>
+		
+		<!-- detail section : S -->
+		<section class="account_summary">
+			<h1 class="hide">고객등급 및 포인트, 쿠폰 내역</h1>
+			<p class="user_name"><strong>홍길동님</strong> 안녕하세요!</p>
+			<p class="user_class">2014년도 고객님의 현재 등급은 <em>일반회원</em>입니다.</p>
+			<div class="user_class_icon">일반회원</div>
+			<div class="point_coupon">
+				<p>벨포인트 <strong>18,000</strong><span>p</span></p>
+				<p>쿠폰 <strong>5</strong><span>장</span></p>
+			</div>
+		</section>
+		
+		<!-- [D] 활성화된 탭의 a태그에 on클래스 추가 -->
+		<ul class="tab clearfix">
+			<li class="tab_1"><a href="#" class="on"><strong>나의쇼핑</strong></a></li>
+			<li class="tab_2"><a href="#"><strong>나의혜택</strong></a></li>
+			<li class="tab_3"><a href="#"><strong>나의활동</strong></a></li>
+			<li class="tab_4"><a href="#"><strong>나의정보</strong></a></li>
+		</ul>
+		
+		<h1 class="hide">나의쇼핑</h1><!-- depth 2 heading -->
+		
+		<section>
+			<h1 class="hide">주문배송조회</h1>
+			
+			<!-- [D] 활성화된 탭의 a태그에 on클래스 추가 -->			
+			<ul class="sub_tab">
+				<li><a href="#" class="on">주문배송조회</a></li>
+				<li><a href="#">취소/교환/반품</a></li>
+				<li><a href="#">위시리스트</a></li>
+			</ul>
+						
+			<section class="find_purchase clearfix">
+				<h1>주문상품확인</h1>
+				<div class="find_area">
+					<div class="find_period clearfix">
+						<h2>기간별 조회</h2>
+						<button type="button" class="btn_period">1개월</button>
+						<button type="button" class="btn_period">3개월</button>
+						<button type="button" class="btn_period">6개월</button>
+					</div>
+					<div class="select_date clearfix">
+						<h2>직접입력</h2>
+						<div class="input_cal">
+							<input type="text" id="date_picker_1" title="시작날짜" />
+							<button type="button" class="btn_start_date"><img src="../images/mypage/btn_cal.gif" alt="시작날짜 선택" /></button>
+						</div>
+						<div class="dash_cal">-</div>
+						<div class="input_cal">
+							<input type="text" id="date_picker_2" title="종료날짜" />
+							<button type="button" class="btn_end_date"><img src="../images/mypage/btn_cal.gif" alt="종료날짜 선택" /></button>
+						</div>
+						<a href="#" class="btn_search">조회</a>
+					</div>
+				</div>
+			</section>
+						
+			<section class="order_result">
+				<h1 class="hide">검색 목록</h1>
+				<p>[주문번호] 또는 [상품정보]을 클릭하시면 주문 상세 내역을 확인하실 수 있습니다.</p>
+				<table summary="검색결과 목록 리스트" class="type_vertical">
+					<caption class="hide">검색결과 테이블</caption>
+					<colgroup>
+						<col style="width:80px;" />
+						<col style="width:160px;" />
+						<col style="width:100px;" />
+						<col style="width:auto;" />
+						<col style="width:160px;" />
+						<col style="width:110px;" />
+						<col style="width:110px;" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">주문일/주문번호</th>
+							<th scope="col" colspan="2">주문정보</th>
+							<th scope="col">판매가</th>
+							<th scope="col">결제금액</th>
+							<th scope="col">진행상태</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>20</td>
+							<td class="order_num">
+								<a href="#">2014.07.14<br />232323232323</a>
+								<div><a href="#" class="btn">주문취소</a></div>
+							</td>
+							<td class="product_image">
+								<img src="../images/temp/order_product_img_01.jpg" alt="제품이미지 대체텍스트" />
+							</td>
+							<td class="product_info">
+								<p class="name"><strong>시크릿 무코타 이지케어 컬러 트리트먼트</strong></p>
+								<p class="option">선택옵션:애플브라운 (외1건)</p>
+							</td>
+							<td class="discount">
+								<p class="original"><del>74,000원</del></p>
+								<p class="price"><strong>74,000원</strong></p>
+							</td>
+							<td class="purchase_price">
+								<strong>74,000원</strong>
+							</td>
+							<td class="state">
+								주문접수
+							</td>
+						</tr>
+						<tr>
+							<td>20</td>
+							<td class="order_num">
+								<a href="#">2014.07.14<br />232323232323</a>
+								<div><a href="#" class="btn">주문취소</a></div>
+							</td>
+							<td class="product_image">
+								<img src="../images/temp/order_product_img_01.jpg" alt="제품이미지 대체텍스트" />
+							</td>
+							<td class="product_info">
+								<p class="name"><strong>시크릿 무코타 이지케어 컬러 트리트먼트</strong></p>
+								<p class="option">선택옵션:애플브라운 (외1건)</p>
+							</td>
+							<td class="discount">
+								<p class="original"><del>74,000원</del></p>
+								<p class="price"><strong>74,000원</strong></p>
+							</td>
+							<td class="purchase_price">
+								<strong>74,000원</strong>
+							</td>
+							<td class="state">
+								주문접수
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</section>
+		
+		<div class="paging">
+			<a href="#" class="arrow first on">처음 페이지</a>
+			<a href="#" class="arrow prev on">이전 페이지</a>
+			<a href="#"><strong>1</strong></a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+			<a href="#">7</a>
+			<a href="#">8</a>
+			<a href="#">9</a>
+			<a href="#">10</a>
+			<a href="#" class="arrow next">다음 페이지</a>
+			<a href="#" class="arrow last">끝 페이지</a>
+		</div>
+		
+		<!-- detail section : E -->
+	</section>
+</section>

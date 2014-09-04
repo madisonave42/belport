@@ -658,7 +658,8 @@ footer .copyright {
 }
 #contents .container > section,
 #contents .container > div.double_col {
-	margin:50px auto 0;
+	margin-left:auto;
+	margin-right:auto;
 	width:936px;
 }
 #contents .container > div.double_col>section {
@@ -720,15 +721,11 @@ footer .copyright {
 
 /* paging */
 .paging {margin-top:20px; text-align:center;}
-.paging>* {display:inline-block; height:26px; line-height:26px; vertical-align:top;}
-.paging>div {margin-right:16px;}
-.paging>div p {float:left; margin-right:10px;}
-.paging>div select {border:1px solid #ddd; height:28px; min-width:70px;}
-.paging>a {width:27px; font-size:11px;}
-.paging>a strong {display:block; background:#231f20; color:#fff; font-weight:normal;}
-.paging>a:hover {background:#ddd;}
-.paging>a.arrow {width:25px; height:24px; text-indent:-9999em; border:1px solid #d3d2d2;}
-.paging>a.arrow:before {float:left; width:100%; text-align:center; text-indent:0; line-height:23px;}
+.paging>a {display:inline-block; margin:0 1px; width:30px; height:30px; line-height:30px; vertical-align:top; font-size:11px;}
+.paging>a strong {display:block; background:#231f20; color:#f3f3f4; font-weight:normal;}
+.paging>a:hover {background:#777; color:#f3f3f4;}
+.paging>a.arrow {width:28px; height:28px; text-indent:-9999em; border:1px solid #d3d2d2;}
+.paging>a.arrow:before {float:left; width:100%; text-align:center; text-indent:0; line-height:25px; font-size:20px;}
 .paging>a.first:before {content:'\00AB';}
 .paging>a.prev:before {content:'\2039';}
 .paging>a.next:before {content:'\203A';}

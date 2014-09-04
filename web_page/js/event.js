@@ -54,6 +54,24 @@ $(function(){
 		
 	})();
 	
+	/*============================================================
+	 * 달력 컨트롤
+	 =============================================================*/
+	(function(){
+		$('#date_picker_1, #date_picker_2').datepicker({
+			duration: 'fast',
+			dateFormat: 'yymmdd',
+			showMonthAfterYear: true,
+			monthNames: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+			dayNamesMin: ['일','월','화','수','목','금','토']
+		});
+		$('.btn_start_date').on('click',function() {
+			$('#date_picker_1').datepicker('show');
+		});
+		$('.btn_end_date').on('click',function() {
+			$('#date_picker_2').datepicker('show');
+		});
+	})();
 	
 	
 });
