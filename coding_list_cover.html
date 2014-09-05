@@ -17,6 +17,7 @@
 	.guide_wrap ul{padding-left:30px;}
 	.guide_wrap ul p{font-weight:bold;}
 	.guide_wrap li{padding-left:50px; margin:10px 0;}
+	.guide_wrap .title_table{float:left;}
 	
 	table{width:600px;}
 	table, th, td{border:1px solid #ccc; padding:10px;}
@@ -67,6 +68,49 @@
 		<p>개발에서 페이지별로 구분해 주어야 하는 페이지 타이틀</p><br />
 		<p>작업이 진행되면서 계속 추가될 예정</p><br />
 		
+		
+		<div class="title_table" style="margin-right:30px;">
+		<h2>전시파트</h2>
+		<table>
+			<tr>
+		    <td>SHOP</td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		  <tr>
+		    <td> </td>
+		    <td>sh1.1     </td>
+		    <td>Belport' Pick | SHOP | BELPORT</td>
+		  </tr>
+		  <tr>
+		    <td> </td>
+		    <td>sh1.2     </td>
+		    <td>New Items | SHOP | BELPORT</td>
+		  </tr>
+		  <tr>
+		    <td> </td>
+		    <td>sh1.3     </td>
+		    <td>On Sale | SHOP | BELPORT</td>
+		  </tr>
+		  <tr>
+		    <td> </td>
+		    <td>sh1.4     </td>
+		    <td>Theme Shop | SHOP | BELPORT</td>
+		  </tr>
+		  <tr>
+		    <td> </td>
+		    <td>sh1.5     </td>
+		    <td>Theme Box | SHOP | BELPORT</td>
+		  </tr>
+		  <tr>
+		    <td colspan="3">대카테고리, 중카테고리, 제품상세는 각각 제품명이 타이틀에 표현 되도록 요청</td>
+		  </tr>
+		</table>
+		
+		</div>
+		
+		<div class="title_table">
+		<h2>커머스 파트</h2>
 		<table>
 		  <tr>
 		    <td>고객센터</td>
@@ -349,14 +393,20 @@
 		    <td>피부타입설정 | 나의정보 | BELPORT</td>
 		  </tr>
 		</table>
+		</div>
 		
-		<h2>3. head 태그의 css 설명</h2>
+		
+		<h2 style="clear:both;">3. head 태그의 css 설명</h2>
 		
 		<p>각 페이지에 2개의 css가 포함되어야 함</p><br />
 		<p>&lt;link rel="stylesheet" href="../css/style.css" /&gt; : 모든 페이지 공통 추가되는 파일</p><br />
 		<p>페이지별로 구분해서 추가되는 파일</p><br />
 		
 		<table>
+			<tr>
+				<td>SHOP</td>
+				<td>&lt;link rel="stylesheet" href="../css/shop.css" /&gt;</td>
+			</tr>
 			<tr>
 				<td>고객센터</td>
 				<td>&lt;link rel="stylesheet" href="../css/customer.css" /&gt;</td>
