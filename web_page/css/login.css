@@ -7,6 +7,8 @@ hgroup{padding-top:128px; height:95px; text-align:center;}
 hgroup>h1{font-size:45px; margin-bottom:25px;}
 hgroup>p{color:#666; line-height:1.8;}
 
+#contents .container .first-section {margin-top:0;}
+
 .form_area {margin:30px auto 0; padding-top:60px; width:780px; height:130px; border-top:2px solid #000; border-bottom:1px solid #d3d0cf;}
 .form_area fieldset {display:block; margin:0 auto; width:574px; position:relative;}
 .form_area .input_area{margin-bottom:10px;}

@@ -18,7 +18,7 @@
 .sub_tab li a.on {height:40px; color:#231f20; background-color:#fff; border-color:#231f20;}
  
 /* 회원정보 공통 */
-.account_summary {padding-top:128px;}
+#contents .container .account_summary {margin-top:0; padding-top:128px;}
 .account_summary .user_name {padding-top:80px; border-top:3px solid #231f20; font-size:24px;}
 .account_summary .user_class {margin-top:10px; font-size:30px; font-weight:900; color:#231f20;}
 .account_summary .user_class em {font-style:normal; color:#ed6851;}
