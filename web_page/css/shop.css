@@ -293,5 +293,10 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 
 
 /* 개별테마샵 */
-#contents.theme_shop_detail .article {padding-top:30px; border-top:1px solid #231f20;}
+#contents.theme_shop_detail .article {padding-top:30px!important; border-top:1px solid #231f20;}
 .theme_shop_detail .list-products {border-top:1px solid #d3d0cf;}
+
+
+
+
+
