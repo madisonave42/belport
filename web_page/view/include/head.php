@@ -10,8 +10,8 @@
 			case 'ct' : $css = 'cart'; $title='장바구니 |'; break;
 			case 'mb' : $css = 'member'; $title='회원가입 |'; break;
 			case 'lg' : $css = 'login'; $title='로그인 |'; break;
-			case 'mp' : $css = 'mypage'; $title='마이벨포트 |'; break;
-			case 'sh' : $css = 'shop'; $title='샵 |'; break;
+			case 'mp' : $css = 'mypage'; $title='MY BELPORT |'; break;
+			case 'sh' : $css = 'shop'; $title='SHOP |'; break;
 		}
 		$currentTitle = $_GET['t'];
 		switch($currentTitle){
