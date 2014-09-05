@@ -12,6 +12,7 @@
 			case 'lg' : $css = 'login'; $title='로그인 |'; break;
 			case 'mp' : $css = 'mypage'; $title='MY BELPORT |'; break;
 			case 'sh' : $css = 'shop'; $title='SHOP |'; break;
+			case 'br' : $css = 'brand'; $title='BRAND |'; break;
 		}
 		$currentTitle = $_GET['t'];
 		switch($currentTitle){
@@ -67,6 +68,11 @@
 			case 'sh1.1'    : $subTitle = 'Belport\' Pick |'; break;
 			case 'sh1.2'    : $subTitle = 'New Items |'; break;
 			case 'sh1.3'    : $subTitle = 'On Sale |'; break;
+			case 'br1'      : $subTitle = ''; break;
+			case 'br1.1.1'  : $subTitle = 'Brand Product |'; break;
+			case 'br1.1.2'  : $subTitle = 'Brand Story |'; break;
+			case 'br1.2'    : $subTitle = 'Spotlight |'; break;
+			case 'br1.2.1'  : $subTitle = 'Spotlight |'; break;
 			
 			
 		}
