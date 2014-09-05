@@ -46,6 +46,11 @@ div.sorting .cnt > em { font-size: 12px; color: #231f20; font-weight: 700; font-
 div.sorting .cnt:after { content: '|'; position: absolute; top: -6px; left: 5px; display: block; font-size: 9px; color: #c0c0c0; }
 
 /*==================================================
+ * 브랜드 스토리
+ ===================================================*/
+.brand_story .detail {margin-top:50px;}
+ 
+/*==================================================
  * 개별 스팟라이트
  ===================================================*/
 .spotlight_detail .list-products {margin-top:50px; border-top:1px solid #231f20;}
