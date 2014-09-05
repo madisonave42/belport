@@ -72,75 +72,8 @@
 		</h1><!-- depth 2 heading -->
 		
 		<!-- detail section : S -->
-		<section class="shop-banner">
-			<div class="container-banner">
-				<ul class="list-banner">
-					<li><a href="#"><img src="../images/temp/banner01.jpg" alt="" /></a></li>
-					<li><a href="#"><img src="../images/temp/banner02.jpg" alt="" /></a></li>
-					<li><a href="#"><img src="../images/temp/banner03.jpg" alt="" /></a></li>
-				</ul>
-				
-				<div class="positions">
-					<a href="#0" class="current">1</a>
-					<a href="#1">2</a>
-					<a href="#2">3</a>
-				</div>
-				<p>
-					<a href="#" class="btn-prev">이전</a>
-					<a href="#" class="btn-next">다음</a>
-				</p>
-			</div>
-			<script>
-			$(window.document).ready(function(){
-				var $container = $('.list-banner');
-				var $clickItems = $('.positions > a');
-				var $btnPrev = $('.container-banner a.btn-prev');
-				var $btnNext = $('.container-banner a.btn-next');
-
-				var cnt = $clickItems.length;
-				var index = 0;
-				var oldIndex = 0;
-
-				$container.css("width", 694*cnt+"px");
-
-				function slideItem(itemNo) {
-					index = (itemNo) % cnt;
-
-					$container.animate({
-						left: (-index*694) + "px"
-					}, 500, function() {
-						$clickItems.eq(oldIndex).removeClass("current");
-						$clickItems.eq(index).addClass("current");
-						oldIndex = index;
-					});
-				}
-				
-				$clickItems.click( function(ev){
-					ev.preventDefault();
-					var no = parseInt($(this).attr('href').replace('#', ''));
-					slideItem(no);
-				});
-
-				$btnPrev.click( function(ev){
-					ev.preventDefault();
-					var no = parseInt(oldIndex, 10) - 1;
-					no = no < 0 ? cnt-1 : no;
-					slideItem(no);
-				});
-
-				$btnNext.click( function(ev){
-					ev.preventDefault();
-					var no = parseInt(oldIndex, 10) + 1;
-					slideItem(no);
-				});
-			});
-			</script>
-
-		</section>
-
-
-		<section class="belport-pick">
-			<h1 class="shop-sub-title">Belport's Pick</h1>
+		<section class="masonry_list">
+			<h1 class="hide">Theme Shop List</h1>
 			<ul class="list-products">
 				<li>
 					<figure class="product">
