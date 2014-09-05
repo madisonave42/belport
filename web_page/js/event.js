@@ -88,5 +88,56 @@ $(function(){
 		});
 	})();
 	
+ /*============================================================
+  * Theme Shop & Theme Box Masonry
+  =============================================================*/
+ 
+	(function(){
+		
+		var msnry = new Masonry( '#list_container', {
+			gutter:8
+		} );
+		
+	})();
+ 
+  /*============================================================
+  * list wish list action
+  =============================================================*/
+ (function(){
+ 	
+ 	var isWish = $('a').is('.btn-wish');
+ 	
+	if( isWish ){
+		$('.btn-wish').data('wish', 'false');
+	 	$('.btn-wish').on('click', function(e){
+	 		e.preventDefault();
+	 		if( $(this).data('wish') == 'false'  ){
+	 			$(this).addClass('on');
+	 			$(this).data('wish', 'true');
+	 		} else {
+	 			$(this).removeClass('on');
+	 			$(this).data('wish', 'false');
+	 		}
+	 		
+	 	});
+ 	}
+ 	
+ })();
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
 	
 });

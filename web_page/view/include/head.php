@@ -67,6 +67,8 @@
 			case 'sh1.1'    : $subTitle = 'Belport\' Pick |'; break;
 			case 'sh1.2'    : $subTitle = 'New Items |'; break;
 			case 'sh1.3'    : $subTitle = 'On Sale |'; break;
+			case 'sh1.4'    : $subTitle = 'Theme Shop |'; break;
+			case 'sh1.5'    : $subTitle = 'Theme Box |'; break;
 			
 			
 		}
