@@ -11,6 +11,7 @@
 			case 'mb' : $css = 'member'; $title='회원가입 |'; break;
 			case 'lg' : $css = 'login'; $title='로그인 |'; break;
 			case 'mp' : $css = 'mypage'; $title='마이벨포트 |'; break;
+			case 'sh' : $css = 'shop'; $title='샵 |'; break;
 		}
 		$currentTitle = $_GET['t'];
 		switch($currentTitle){
@@ -68,6 +69,9 @@
 			case 'mp1.4.1.1.1.1': $subTitle = '회원탈퇴 |'; break;
 			case 'mp1.4.1.1.1.1.1': $subTitle = '회원탈퇴 완료 |'; break;
 			case 'mp1.4.2'  : $subTitle = '피부타입설정 |'; break;
+			case 'sh1.1'    : $subTitle = 'Belport\' Pick |'; break;
+			case 'sh1.2'    : $subTitle = 'New Items |'; break;
+			case 'sh1.3'    : $subTitle = 'On Sale |'; break;
 			
 			
 		}
