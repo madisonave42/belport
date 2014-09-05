@@ -29,7 +29,28 @@
 .account_summary .point_coupon p strong {margin-left:10px; font-size:36px;}
 .account_summary .point_coupon p span {margin-left:5px; font-size:18px;}
 
-/* 기갑별 조회  */
+/* 상품 목록 */
+ul.list-products { overflow: hidden; margin: 0px -5px; }
+ul.list-products li {position:relative; float: left; padding: 0 5px 21px; width: 226px; }
+
+figure.product .frame { height: 191px; width: 226px; text-align: center; background-color: #f5f5f5; }
+figure.product figcaption { padding: 0 10px 0 6px; font-size: 13px; line-height: 18px; }
+
+figure.product p.icons { margin-top: 13px; margin-bottom: 5px; height: 20px; }
+figure.product p.icons span { position: relative; padding: 0 4px; display: inline-block; font-size: 10px; color: #fff; font-weight: 400; line-height: 12px; letter-spacing: -0.1em; background-color: #202020; }
+figure.product p.icons span:after { content: ''; position: absolute; bottom: -4px; left: 12px; display: block; height: 4px; width: 6px; background: url(../images/shop/bg_arrow04.png) left top no-repeat; }
+
+figure.product em.brand { color: #202020; font-weight: 700; font-style: normal; }
+figure.product p.title { height: 45px; color: #777; }
+
+figure.product p.price { padding-right: 7px; font-family: 'Alegreya', serif; font-style: italic; text-align: right; }
+figure.product p.price > a.btn-wish { float: left; margin-top: 2px; display: inline-block; height: 18px; width: 18px; text-align: left; text-indent: -9999px; background: url(../images/shop/btn_wish01.png) left top no-repeat; }
+figure.product p.price > a.btn-wish.on { background-position: -18px 0; }
+figure.product p.price > .dc-price { font-size: 20px; color: #2b282a; line-height: 18px; }
+figure.product p.price > .price { margin-left: 8px; font-size: 20px; color: #b9b9b9; line-height: 18px; }
+ul.list-products li .chk_item {position:absolute; top:10px; left:15px; z-index:10;}
+
+/* 기간별 조회  */
 .find_purchase .find_area{width:828px; height:24px; padding:30px 0 30px 110px; background:#f3f3f4;}
 .find_purchase .find_area>div{float:left;}
 .find_purchase .find_area>div>*{float:left; height:24px; line-height:24px;}
@@ -68,6 +89,12 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 .type_vertical th{border-top:2px solid #000; border-bottom:1px solid #000; height:52px; color:#231f20;}
 .type_vertical td{text-align:center; height:51px; line-height:1.4; border-bottom:1px solid #ccc;}
 /*=====================================================
+ * 마이벨포트 메인
+ ======================================================*/ 
+.main_wishlist {padding-bottom:29px; border-bottom:1px solid #d3d0cf;}
+.recent_purchases .list-products li .btn {display:block; margin-top:20px; height:22px; line-height:22px; font-size:12px; text-align:center; border:1px solid #231f20; color:#231f20;}
+
+ /*=====================================================
  * 나의쇼핑
  ======================================================*/ 
 .order_result>p{margin-bottom:10px; color:#666;}
@@ -83,6 +110,15 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 
 .shipping_info .tracking_num {display:inline-block; height:22px; line-height:22px; border-bottom:1px solid #777; vertical-align:middle;}
 
+/* 위시리스트 */
+.wishlist .list_section h1 {float:left}
+.wishlist .list_section > p {float:left; margin-top:2px; margin-left:10px; font-size:12px;}
+.wishlist .list_section .list-products {clear:both; border-bottom:1px solid #d3d0cf;}
+.wishlist .list_section .list-products li {margin-bottom:30px;}
+
+.btns_wishlist {margin-top:10px;}
+.btns_wishlist .btns {position:static; margin-left:0;}
+.btns_wishlist .add_cart{float:right;}
 /*=====================================================
  * 나의혜택
  ======================================================*/ 
