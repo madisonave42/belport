@@ -7,8 +7,10 @@
 
 
 /* 샵 타이틀 */
-.container > h1 { margin: 0 auto; padding: 75px 0 0 0; display: block; width: 936px; font-size: 30px; color: #231f20; font-weight: 700; line-height: 30px; }
-.container > h1 > p { font-size: 14px; color: #777; font-weight: 400; }
+.container > hgroup { margin: 0 auto; padding: 75px 0 0 0; display: block; width: 936px; line-height: 30px; }
+.container > hgroup > h1 { font-size: 30px; color: #231f20; font-weight: 700; }
+.container > hgroup > p { font-size: 14px; color: #777; font-weight: 400; }
+
 
 /* 샵 서브 타이틀 */
 h1.shop-sub-title { padding: 50px 0 6px 0; font-size: 14px; color: #242424; border-bottom: 1px solid #242424; }
