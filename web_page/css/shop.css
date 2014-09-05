@@ -3,6 +3,8 @@
  ===================================================*/
 
 #contents .container section { padding: 0 0 0 242px; width: 694px; }
+#contents .container section.first-section { margin-top: 0px; }
+
 
 /* 샵 타이틀 */
 .container > h1 { margin: 0 auto; padding: 75px 0 0 0; display: block; width: 936px; font-size: 30px; color: #231f20; font-weight: 700; line-height: 30px; }
@@ -70,7 +72,7 @@ section.shop-banner { }
 
 
 /* 상품 목록 컨테이너 */
-#contents .container section.all-products { position: relative; margin-top: 0; }
+#contents .container section.all-products { position: relative; }
 
 
 
