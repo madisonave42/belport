@@ -51,34 +51,6 @@
 				</li>
 			</ul>
 		</nav>
-
-		<aside class="options">
-			<h1>브랜드별</h1>
-
-			<ul>
-				<li><input type="checkbox" name="brand" id="brand01" /><label for="brand01">라콜린느</label></li>
-				<li><input type="checkbox" name="brand" id="brand02" /><label for="brand02">세파이</label></li>
-				<li><input type="checkbox" name="brand" id="brand03" /><label for="brand03">필러리나</label></li>
-				<li><input type="checkbox" name="brand" id="brand04" /><label for="brand04">엔젤리스</label></li>
-				<li><input type="checkbox" name="brand" id="brand05" /><label for="brand05">알고덤</label></li>
-				<li><input type="checkbox" name="brand" id="brand06" /><label for="brand06">레노</label></li>
-				<li><input type="checkbox" name="brand" id="brand07" /><label for="brand07">라프레쉬</label></li>
-			</ul>
-		</aside>
-
-		<aside class="options country">
-			<h1>국가별</h1>
-
-			<ul>
-				<li><input type="checkbox" name="country" id="country01" /><label for="country01">미국</label></li>
-				<li><input type="checkbox" name="country" id="country02" /><label for="country02">캐나다</label></li>
-				<li><input type="checkbox" name="country" id="country03" /><label for="country03">영국</label></li>
-				<li><input type="checkbox" name="country" id="country04" /><label for="country04">프랑스</label></li>
-				<li><input type="checkbox" name="country" id="country05" /><label for="country05">이탈리아</label></li>
-				<li><input type="checkbox" name="country" id="country06" /><label for="country06">독일</label></li>
-				<li><input type="checkbox" name="country" id="country07" /><label for="country07">일본</label></li>
-			</ul>
-		</aside>
 	</section>
 
 
@@ -87,20 +59,20 @@
 			
 		<article class="location">
 			<h1 class="hide">location</h1>
-			<em class="home">Home</em>
+			<em class="home"><a href="#">Home</a></em>
 			<em>></em>
-			<em>SHOP</em>
+			<em><a href="#">SHOP</a></em>
 			<em>></em>
 			<em class="current">Belport's Pick</em>
 		</article>
 
-		<h1>
-			Belport's Pick
+		<hgroup>
+			<h1>Belport's Pick</h1>
 			<p>금주 벨포트가 업선한 Hottest Item을 소개해 드립니다.</p>
-		</h1><!-- depth 2 heading -->
+		</hgroup><!-- depth 2 heading -->
 		
 		<!-- detail section : S -->
-		<section class="shop-banner">
+		<section class="shop-banner first-section">
 			<div class="container-banner">
 				<ul class="list-banner">
 					<li><a href="#"><img src="../images/temp/banner01.jpg" alt="" /></a></li>
@@ -234,15 +206,12 @@
 		<section class="all-products">
 			<h1 class="shop-sub-title">All Products</h1>
 
-			<fieldset class="sorting">
-				<legend class="hide">정렬</legend>
-
-				<input type="radio" name="sort" id="sort01" class="hide" checked="checked" /> <label for="sort01">낮은 가격순</label>
-				<input type="radio" name="sort" id="sort02" class="hide" /> <label for="sort02">높은 가격순</label>
-				<input type="radio" name="sort" id="sort03" class="hide" /> <label for="sort03">신상품순</label>
-				<span class="cnt">Total <em>123</em></span>	
-			</fieldset>
-
+			<div class="sorting">
+				<a href="#" class="on">낮은 가격순</a>
+				<a href="#">높은 가격순</a>
+				<a href="#">신상품순</a>
+				<span class="cnt">Total <em>123</em></span>
+			</div>
 
 			<ul class="list-products">
 				<li>
