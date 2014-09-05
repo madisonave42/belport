@@ -1,0 +1,115 @@
+/*==================================================
+ * 샵 공통 스타일
+ ===================================================*/
+
+#contents .container section { padding: 0 0 0 242px; width: 694px; }
+
+/* 샵 타이틀 */
+.container > h1 { margin: 0 auto; padding: 75px 0 0 0; display: block; width: 936px; font-size: 30px; color: #231f20; font-weight: 700; line-height: 30px; }
+.container > h1 > p { font-size: 14px; color: #777; font-weight: 400; }
+
+/* 샵 서브 타이틀 */
+h1.shop-sub-title { padding: 50px 0 6px 0; font-size: 14px; color: #242424; border-bottom: 1px solid #242424; }
+
+
+/* 샵 상단 메뉴 */
+#contents aside.shop-curation { z-index: 1; padding-top: 12px; height: 48px; background-color: #fff; }
+aside.shop-curation > div { margin: 0 auto; width: 936px; }
+aside.shop-curation a { float: left; position: relative; margin-right: -1px; padding: 18px 0 0 20px; display: block; height: 29px; width: 166px; font-size:14px; font-weight:300; color:#202020; border: 1px solid #e9e7e7; border-top: 0px none; background: url(../images/shop/bg_arrow01.png) 161px 22px no-repeat; }
+
+aside.shop-curation a:hover, aside.shop-curation a.on { color: #231f20; }
+aside.shop-curation a.on:after { content: ''; z-index: 1; position: absolute; bottom: -1px; left: -1px; display: block; height: 2px; width: 188px; background-color: #231f20; }
+aside.shop-curation a:hover:after { content: ''; z-index: 1; position: absolute; bottom: -1px; left: -1px; display: block; height: 2px; width: 188px; background-color: #231f20; }
+
+
+/* 샵 레프트 메뉴 */
+#contents section.sub-menus { z-index: 1; position: absolute; top: 367px; left: 50%; margin-left: -468px; width: 185px; background-color: #fff; }
+.menus { margin-bottom: 20px; padding: 13px 0 15px 0; border-top: 3px solid #231f20; border-bottom: 3px solid #231f20; }
+.menus ul.curation { }
+.menus ul.curation li { padding: 5px 0; }
+.menus ul.curation li > a { padding: 0 0 0 15px; display: block; height: 31px; font-size: 14px; color: #202020; line-height: 31px; }
+.menus ul.curation li > a:hover,
+.menus ul.curation li > a.on { font-weight: 700; background-color: #e2e2e2; }
+
+.menus ul.category { margin-top: 10px; padding: 21px 0 0 0; border-top: 1px solid #939192; }
+.menus ul.category > li { padding: 3px 0; }
+.menus ul.category > li > a { position: relative; padding: 0 0 0 17px; display: block; height: 30px; font-size: 14px; color: #777; line-height: 30px; }
+.menus ul.category > li > a:after { content: ''; position: absolute; top: 50%; right: 17px; margin-top: -5px; display: block; height: 9px; width: 8px; background: url(../images/shop/bg_category.png) left top no-repeat; }
+
+.menus ul.category > li > a:hover,
+.menus ul.category > li > a.on { color: #231f20; font-weight: 700; background: url(../images/shop/bg_arrow02.png) 5px 12px no-repeat; }
+.menus ul.category > li > a.on:after { background-position: -8px 0px; }
+
+.menus ul.category > li > a.on + ul.sub-category { display: block; }
+.menus ul.sub-category { position: relative; margin: 4px 6px 10px 5px; padding: 23px 0 22px 0; display: none; background-color: #e2e2e2; }
+.menus ul.sub-category:after { content: ''; position: absolute; top: -6px; left: 20px; display: block; height: 6px; width: 12px; background: url(../images/shop/bg_arrow03.png) left top no-repeat; }
+.menus ul.sub-category li { }
+.menus ul.sub-category li > a { padding: 0 0 0 34px; display: block; font-size: 12px; color: #858281; line-height: 28px; }
+.menus ul.sub-category li > a:hover,
+.menus ul.sub-category li > a.on { color: #231f20; background: url(../images/shop/bg_arrow02.png) 23px 11px no-repeat; }
+
+section.sub-menus aside.options { margin-top: 10px; padding: 20px 24px 20px 23px; border: 1px solid #eeedee; }
+section.sub-menus aside.options > h1 { margin-bottom: 15px; padding: 0 0 19px 0; font-size: 12px; color: #231f20; font-weight: 400; border-bottom: 1px solid #e3e2e2; }
+section.sub-menus aside.options label { margin-left: 5px; font-size: 12px; color: #838383; font-weight: 400; line-height: 25px; }
+
+
+
+
+/* belport'pick banner */
+section.shop-banner { }
+.container-banner { overflow: hidden; position: relative; margin-top: 32px; height: 342px; width: 694px; background-color: #000; }
+.container-banner ul.list-banner { position: absolute; top: 0; left: 0; }
+.container-banner ul.list-banner li { float: left; height: 342px; width: 694px; }
+
+.container-banner .positions { position: absolute; bottom: 16px; right: 20px; display: block; height: 3px; }
+.container-banner .positions > a { float: left; margin-left: 10px; display: block; height: 3px; width: 21px; text-indent: -9999px; background: url(../images/shop/bg_position01.png) -21px 0px no-repeat; }
+.container-banner .positions > a.current { background-position: 0px 0px; }
+
+.container-banner a.btn-prev { position: absolute; top: 50%; left: 0; display: block; height: 29px; width: 21px; text-indent: -9999px; background: url(../images/shop/btn_nav01.png) 0px 0px no-repeat; }
+.container-banner a.btn-next { position: absolute; top: 50%; right: 0; display: block; height: 29px; width: 21px; text-indent: -9999px; background: url(../images/shop/btn_nav01.png) -21px 0px no-repeat; }
+
+
+
+section.all-products { position: relative; }
+
+
+
+
+/* 상품 목록 */
+ul.list-products { overflow: hidden; margin: 0px -4px; }
+ul.list-products li { float: left; padding: 30px 4px 21px 4px; width: 226px; }
+
+	figure.product { }
+	figure.product .frame { height: 191px; width: 226px; text-align: center; background-color: #f5f5f5; }
+	figure.product figcaption { padding: 0 10px 0 6px; font-size: 13px; line-height: 18px; }
+
+	figure.product p.icons { margin-top: 13px; margin-bottom: 5px; height: 20px; }
+	figure.product p.icons span { position: relative; padding: 0 4px; display: inline-block; font-size: 10px; color: #fff; font-weight: 400; line-height: 12px; letter-spacing: -0.1em; background-color: #202020; }
+	figure.product p.icons span:after { content: ''; position: absolute; bottom: -4px; left: 12px; display: block; height: 4px; width: 6px; background: url(../images/shop/bg_arrow04.png) left top no-repeat; }
+
+	figure.product em.brand { color: #202020; font-weight: 700; font-style: normal; }
+	figure.product p.title { height: 45px; color: #777; }
+
+	figure.product p.price { padding-right: 7px; font-family: 'Alegreya', serif; font-style: italic; text-align: right; }
+	figure.product p.price > a.btn-wish { float: left; margin-top: 2px; display: inline-block; height: 18px; width: 18px; text-align: left; text-indent: -9999px; background: url(../images/shop/btn_wish01.png) left top no-repeat; }
+	figure.product p.price > a.btn-wish.on { background-position: -18px 0; }
+	figure.product p.price > .dc-price { font-size: 20px; color: #2b282a; line-height: 18px; }
+	figure.product p.price > .price { margin-left: 8px; font-size: 20px; color: #b9b9b9; line-height: 18px; }
+
+
+/* 상품 정렬 */
+h1.shop-sub-title + fieldset.sorting { position: absolute; top: 42px; right: 0px; padding: 0; border-bottom: 0px none; }
+
+fieldset.sorting { padding: 6px 12px 0 0; height: 28px; text-align: right; border-bottom: 1px solid #242424; background-color: #0f0; }
+fieldset.sorting .hide { position: absolute; top: -9999px; left: -9999px; }
+fieldset.sorting label { margin: 0 6px; display: inline-block; cursor: pointer; font-size: 11px; color: #777; font-weight: 400; line-height: 25px; }
+fieldset.sorting input[type="radio"]:checked + label { position: relative; color: #000; font-weight: 700; }
+fieldset.sorting input[type="radio"]:checked + label:after { content: ''; z-index: 10; position: absolute; right: -3px; bottom: -2px; left: -3px; display: block; height: 3px; background-color: #2b282a; }
+fieldset.sorting .cnt { position: relative; padding: 0 0 0 20px; font-size: 12px; color: #777; font-weight: 400; line-height: 26px; }
+fieldset.sorting .cnt > em { font-size: 12px; color: #231f20; font-weight: 700; font-style: normal; }
+fieldset.sorting .cnt:after { content: '|'; position: absolute; top: -6px; left: 5px; display: block; font-size: 9px; color: #c0c0c0; }
+
+
+
+
+
