@@ -10,8 +10,8 @@
 			case 'ct' : $css = 'cart'; $title='장바구니 |'; break;
 			case 'mb' : $css = 'member'; $title='회원가입 |'; break;
 			case 'lg' : $css = 'login'; $title='로그인 |'; break;
-			case 'mp' : $css = 'mypage'; $title='마이벨포트 |'; break;
-			case 'sh' : $css = 'shop'; $title='샵 |'; break;
+			case 'mp' : $css = 'mypage'; $title='MY BELPORT |'; break;
+			case 'sh' : $css = 'shop'; $title='SHOP |'; break;
 		}
 		$currentTitle = $_GET['t'];
 		switch($currentTitle){
@@ -49,21 +49,16 @@
 			case 'lg1.1.2'  : $subTitle = '아이디찾기 실패 |'; break;
 			case 'lg1.2'    : $subTitle = '비밀번호 찾기 |'; break;
 			case 'lg1.2.1'  : $subTitle = '인증번호 받기 |'; break;
-			case 'mp1'      : $subTitle = '마이페이지 |'; break;
-			case 'mp1.1'    : $subTitle = '나의쇼핑 |'; break;
+			case 'mp1'      : $subTitle = ''; break;
 			case 'mp1.1.1'  : $subTitle = '주문배송조회 |'; break;
 			case 'mp1.1.1.1': $subTitle = '주문배송내역 상세 |'; break;
-			case 'mp1.2'    : $subTitle = '나의혜택 |'; break;
+			case 'mp1.1.2'  : $subTitle = '취소/교환/반품 |'; break;
+			case 'mp1.1.3'  : $subTitle = '위시리스트 |'; break;
 			case 'mp1.2.1'  : $subTitle = '포인트 |'; break;
 			case 'mp1.2.2'  : $subTitle = '쿠폰 |'; break;
-			case 'mp1.3'    : $subTitle = '나의활동 |'; break;
 			case 'mp1.3.1'  : $subTitle = '1:1 상담 |'; break;
-			case 'mp1.3.1.1': $subTitle = '1:1 상담 보기 |'; break;
-			case 'mp1.3.1.2': $subTitle = '1:1 상담 보기 |'; break;
 			case 'mp1.3.2'  : $subTitle = '제품 Q&amp;A |'; break;
 			case 'mp1.3.3'  : $subTitle = '리뷰 |'; break;
-			case 'mp1.4'    : $subTitle = '나의정보 |'; break;
-			case 'mp1.4.1'  : $subTitle = '개인정보관리 |'; break;
 			case 'mp1.4.1.1': $subTitle = '비밀번호 확인 |'; break;
 			case 'mp1.4.1.1.1'  : $subTitle = '개인정보 수정 |'; break;
 			case 'mp1.4.1.1.1.1': $subTitle = '회원탈퇴 |'; break;
