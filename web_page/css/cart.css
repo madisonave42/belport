@@ -43,7 +43,7 @@
 .list_table td.amount .btn_change {margin:10px auto 0;}
 
 .list_table td .select-numb{display:inline-block; width:70px; height:22px; position:relative; border:1px solid #ccc; margin:0 auto;}
-.list_table td .select-numb input{width:30px; margin:0 0 0 21px; padding:0; border:0; font-size:12px; }
+.list_table td .select-numb input{width:30px; height:22px; margin:0 0 0 21px; padding:0; border:0; font-size:12px; }
 .list_table td .select-numb button{
 	position:absolute; top:0; border:0; padding:0; width:20px; height:22px; text-indent:-99999em;
 	background:url(../images/cart/btn_plus_minus.gif) no-repeat;
@@ -81,7 +81,7 @@
 .payment td.payment_price{font-size:40px; font-family:'Alegreya', serif; font-style:italic;}
 .payment td.payment_price strong {position:relative;top:-5px;color:#231f20;}
 .payment td.payment_price strong span {font-weight:500; font-size:19px;}
-.payment .msg_price{text-align:right; color:#888; margin-top:10px; font-size:12px;}
+.payment .msg_price{text-align:right; color:#888; margin-top:10px;}
 
 /*==================================================
  * 장바구니 스타일
@@ -90,31 +90,27 @@
 /* 삭제 버튼 & 메세지 */
 .btns_msg{margin-top:10px; height:24px;}
 .btns_msg .btns {position:static; margin-left:0;}
-.btns_msg .msg_shopping_bag{float:right; color:#666; font-size:12px;}
+.btns_msg .msg_shopping_bag{float:right; color:#666;}
 
 /*==================================================
  * 주문서 작성 테이블 공통 스타일
  ===================================================*/
-.info_table input[type=text]{
-	width:127px; border:1px solid #ccc; color:#666; margin:0;	*margin-top:-1px; 
-}
-.info_table select{height:24px; line-height:24px; border:1px solid #ccc; color:#666; font-size:12px;}
+.info_table input[type=text]{width:274px; border:1px solid #d3d0cf;}
+.info_table select{width:120px; height:34px; line-height:34px; border:1px solid #d3d0cf;}
 .info_table input[type=checkbox]{margin-right:2px;}
-.info_table .phone>div{float:left; height:24px; line-height:24px; margin-right:5px;}
-.info_table .phone input, .info_table .phone select{width:55px;}
-.info_table .email>div{float:left; height:24px; line-height:24px; margin-right:5px;}
-.info_table .email input,.customer_info .email select{width:135px;}
+.info_table .btn {display:inline-block; margin-left:8px; width:118px; height:34px; line-height:34px; background:#777; color:#f3f3f4; border:0; text-align:center; vertical-align:middle;}
+.info_table .phone>div{float:left; height:34px; line-height:34px; margin-right:5px;}
+.info_table .phone input {width:118px;}
+.info_table .email>div{float:left; height:34px; line-height:34px; margin-right:5px;}
+.info_table .email input,.customer_info .email select{width:118px;}
 
-.destination_info .address>div{height:24px; line-height:24px; position:relative;}
+.destination_info .address>div{height:34px; line-height:34px; position:relative;}
 .destination_info .address>div>div{float:left; margin-right:5px;}
 .destination_info .address>div>div input[type=checkbox]{position:relative; top:3px;}
 .destination_info .address>div>a{display:block; float:left; position:relative; top:4px;}
 .destination_info .address .zip_code{margin-bottom:10px;}
-.destination_info .address .zip_code>div{float:left; height:24px; line-height:24px; margin-right:5px;}
-.destination_info .address .zip_code>div .btn_find_addr {
-	display:inline-block; width:118px; height:24px; text-align:center; line-height:24px;
-	background:#777; color:#f3f3f4; vertical-align:middle;
-}
+.destination_info .address .zip_code>div{float:left; height:34px; line-height:34px; margin-right:5px;}
+.destination_info .address .zip_code > div input[type=text] {width:118px;}
 .destination_info .address .detail_address{margin-bottom:10px;}
 .destination_info .address .detail_address>input{margin-right:2px;width:270px;}
 .destination_info .msg_delivery input[type=text]{width:547px;}
@@ -123,10 +119,6 @@
 .pay_info .use_point .total_point {margin-left:10px; font-size:12px;}
 .pay_info .use_point .total_point span {color:#231f20;}
 .pay_info .use_point p {margin-top:10px; font-size:12px;}
-.pay_info .coupon_price .btn_use_coupon {
-	display:inline-block; margin-left:5px; width:118px; height:24px; text-align:center; line-height:24px;
-	background:#777; color:#f3f3f4; vertical-align:middle;
-}
 .pay_info .total_price strong span {color:#ed6851;}
 
 .payment_info td > div {float:left; width:150px;}
