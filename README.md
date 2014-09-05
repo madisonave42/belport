@@ -3,4 +3,4 @@ BELPORT Project Markup Source
 
 실제소스는 web_page 폴더 안에 있습니다.
 
-<p>hahahahah</p>
+<p style="color:red">css / html / images / js</p>
