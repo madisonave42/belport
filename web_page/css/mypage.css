@@ -111,8 +111,7 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 .shipping_info .tracking_num {display:inline-block; height:22px; line-height:22px; border-bottom:1px solid #777; vertical-align:middle;}
 
 /* 위시리스트 */
-.wishlist .list_section h1 {float:left}
-.wishlist .list_section > p {float:left; margin-top:2px; margin-left:10px; font-size:12px;}
+.wishlist .list_section h1 span {margin-left:10px; font-size:12px; color:#777; font-weight:400;}
 .wishlist .list_section .list-products {clear:both; border-bottom:1px solid #d3d0cf;}
 .wishlist .list_section .list-products li {margin-bottom:30px;}
 
@@ -126,7 +125,7 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 .point .information {padding:35px 0; border:1px solid #d3d0cf;}
 .point .information p {line-height:1.5; text-align:center;}
 .point .information em {font-style:normal; color:#231f20;}
-.my_point td {color:#ed6851;}
+.my_point td {color:#ed6851; font-weight:400;}
 .point_balance .title {text-align:left;}
 .point_balance .title span {color:#231f20;}
 .point_balance .point {color:#ed6851;}
