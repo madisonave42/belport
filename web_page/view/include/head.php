@@ -68,12 +68,13 @@
 			case 'sh1.1'    : $subTitle = 'Belport\' Pick |'; break;
 			case 'sh1.2'    : $subTitle = 'New Items |'; break;
 			case 'sh1.3'    : $subTitle = 'On Sale |'; break;
+			case 'sh1.4'    : $subTitle = 'Theme Shop |'; break;
+			case 'sh1.5'    : $subTitle = 'Theme Box |'; break;
 			case 'br1'      : $subTitle = ''; break;
 			case 'br1.1.1'  : $subTitle = 'Brand Product |'; break;
 			case 'br1.1.2'  : $subTitle = 'Brand Story |'; break;
 			case 'br1.2'    : $subTitle = 'Spotlight |'; break;
 			case 'br1.2.1'  : $subTitle = 'Spotlight |'; break;
-			
 			
 		}
 	?>

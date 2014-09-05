@@ -183,7 +183,6 @@ ul.list-selected-options li a.btn-delete { position: absolute; top: 50%; right: 
 .product-detail .product .btns.white > span { margin-right: 5px; display: inline-block; height: 18px; width: 18px; line-height: 18px; text-indent: -9999em; background: url(../images/shop/btn_wish01.png) 0px 0px no-repeat; }
 .product-detail .product .btns.white.on > span { background-position: -18px 0px; }
 
-
 /* 브랜드 정보 */
 aside.brand-info { position: relative; margin-top: 12px; padding: 29px 28px 29px 207px; height: 84px; background-color: #231f20; }
 aside.brand-info h1 > a { font-size: 14px; color: #fff; font-weight: 700; line-height: 19px; }
@@ -250,357 +249,54 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/************************************************************************************
+ * theme shop 
+ */
+.masonry_list{margin-top:32px!important;}
+#list_container{border-top:1px solid #231F20; padding-top:30px;}
+
+.theme_shop #list_container .item{border:1px solid #eee; padding:3px; width:218px; margin-bottom:15px;}
+.theme_shop #list_container .item hgroup{margin:10px 0;}
+.theme_shop #list_container .item hgroup h2{font-size:24px; color:#231f20; font-weight:700;}
+.theme_shop #list_container .item hgroup p{color:#231f20; font-weight:500; margin-top:5px; font-size:14px;}
+.theme_shop #list_container .item>p{line-height:1.4;}
+.theme_shop #list_container .item>a{display:block; width:33px; float:right; text-align:center; border-bottom:1px solid #aba8a7; padding-bottom:3px; font-size:11px; margin-bottom:7px;}
+.theme_shop .see_more{width:694px; margin:50px auto 0; padding:0 0 0 242px;}
+
+
+/************************************************************************************
+ * theme box
+ */
+
+.theme_box #list_container .item{border:1px solid #eee; padding:3px; width:218px; margin-bottom:15px;}
+.theme_box #list_container .item .top{background:#f3f3f4; position:relative;}
+.theme_box #list_container .item hgroup{margin:20px 5px; position:absolute; top:0;}
+.theme_box #list_container .item hgroup{font-size:24px; color:#231f20; font-weight:700;}
+.theme_box #list_container .item hgroup p{color:#231f20; font-weight:500; margin-top:5px; font-size:14px;}
+.theme_box #list_container .item .top p.description{position:absolute; bottom:0; left:0; line-height:1.4; padding:10px;}
+
+.theme_box #list_container p.price {position:absolute; top:100px; padding-left: 7px; font-family: 'Alegreya', serif; font-style: italic;}
+.theme_box #list_container p.price > .dc-price { font-size: 20px; color: #2b282a; line-height: 18px; }
+.theme_box #list_container p.price > .price {margin-left: 8px; font-size: 20px; color: #b9b9b9; line-height: 18px; }
+
+.theme_box #list_container .item .bottom{width:198px; height:18px; padding:13px 10px 7px; position:relative;}
+.theme_box #list_container .item .bottom > a.btn-wish {float: left; display:block; height: 18px; width: 18px; text-align: left; text-indent: -9999px; background: url(../images/shop/btn_wish01.png) left top no-repeat; }
+.theme_box #list_container .item .bottom > a.btn-wish.on { background-position: -18px 0; }
+.theme_box #list_container .item .bottom > a.more {float:right; display:block; height: 18px; width: 12px; text-align: left; text-indent: -9999px; background: url(../images/shop/bg_more.gif) center no-repeat;}
+.theme_box .paging{width:694px; margin:50px auto 0; padding:0 0 0 242px;}
+
+.theme_box #list_container .item.soldout .top:after{content:""; display:block; width:218px; height:421px; position:absolute; top:0; left:0; background:url(../images/shop/bg_soldout.png);}
+.theme_box #list_container .item.soldout .bottom:after{
+	content:"Sold Out"; display:block; width:218px; height:38px; position:absolute; top:0; left:0; font-family: 'Alegreya', serif; font-style: italic;
+	background:#231f20; color:#fff; text-align:center; font-size:18px; line-height:38px;}
 
 
 
 /* 개별테마샵 */
-#contents.theme_shop_detail .article {padding-top:30px; border-top:1px solid #231f20;}
+#contents.theme_shop_detail .article {padding-top:30px!important; border-top:1px solid #231f20;}
 .theme_shop_detail .list-products {border-top:1px solid #d3d0cf;}
+
+
+
+
+
