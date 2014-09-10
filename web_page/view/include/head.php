@@ -14,6 +14,7 @@
 			case 'sh' : $css = 'shop'; $title='SHOP |'; break;
 			case 'br' : $css = 'brand'; $title='BRAND |'; break;
 			case 'ib' : $css = 'inside'; $title='INSIDE B. |'; break;
+			case 'ev' : $css = 'event'; $title='EVENT |'; break;
 		}
 		$currentTitle = $_GET['t'];
 		switch($currentTitle){
@@ -78,6 +79,12 @@
 			case 'br1.2.1'  : $subTitle = 'Spotlight |'; break;
 			case 'ib1.1'  : $subTitle = '인사이드비 목록 |'; break;
 			case 'ib1.1.1'  : $subTitle = '인사이드비 상세 |'; break;
+			case 'ev1.1'  : $subTitle = '진행중 이벤트 목록 |'; break;
+			case 'ev1.1.1'  : $subTitle = '진행중 이벤트 상세 |'; break;
+			case 'ev1.2'  : $subTitle = '지난 이벤트 목록 |'; break;
+			case 'ev1.2.1'  : $subTitle = '지난 이벤트 상세 |'; break;
+			case 'ev1.3'  : $subTitle = 'Tester\'s Box |'; break;
+			case 'ev1.4'  : $subTitle = 'POP! Choice |'; break;
 			
 		}
 	?>

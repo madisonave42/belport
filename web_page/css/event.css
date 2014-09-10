@@ -1,0 +1,90 @@
+/*==================================================
+ * EVENT 공통 스타일
+ ===================================================*/
+
+#contents .container section.first-section { margin-top: 0px; }
+#contents .container section.comments, #contents .container section.result { margin-top: 10px; }
+
+/* EVENT 타이틀 */
+.container > hgroup { margin: 0 auto; padding: 75px 0 0 0; display: block; width: 936px; line-height: 30px; }
+.container > hgroup > h1 { font-size: 30px; color: #231f20; font-weight: 700; }
+.container > hgroup > p { font-size: 14px; color: #777; font-weight: 400; }
+
+/* EVENT 서브 타이틀 */
+h1.sub-title { padding: 50px 0 6px 0; font-size: 15px; color: #231f20; font-weight: 400; }
+h1.sub-title > em { margin-left: 8px; font-size: 13px; color: #000; font-style: normal; }
+
+
+
+/* 대표 이벤트 & Tester's Box & POP! Choice */
+ul.list-special-event { overflow: hidden; margin: 30px -5px 0 -5px; }
+ul.list-special-event li { float: left; margin: 0 5px 10px 5px; width: 303px; border: 1px solid #d3d0cf; }
+
+.list-special-event figure.item { }
+.list-special-event figure.item.soldout > a { position: relative; display: block; }
+.list-special-event figure.item.soldout > a:after { content: 'Sold Out'; position: absolute; top: 0; right: 0; left: 0; padding-top: 89px; display: block; height: 109px; font-family: 'Alegreya', serif; font-size: 25px; color: #fff; font-weight: bold; text-align: center; background: url(../images/event/bg_soldout.png) left top repeat; }
+
+.list-special-event figure.item > figcaption { padding: 30px 15px 20px 16px; border-top: 1px solid #d3d0cf; }
+.list-special-event figure.item hgroup span { position: relative; margin-bottom: 5px; padding: 0 3px; display: inline-block; font-size: 10px; color: #fff; font-weight: 400; line-height: 12px; letter-spacing: -0.1em; background-color: #231f20; }
+.list-special-event figure.item hgroup span:after { content: ''; position: absolute; bottom: -4px; left: 12px; display: block; height: 4px; width: 6px; background: url(../images/shop/bg_arrow04.png) left top no-repeat; }
+.list-special-event figure.item h1 { font-size: 12px; color: #231f20; font-weight: 400; line-height: 17px; }
+.list-special-event figure.item p.desc { }
+.list-special-event figure.item p.desc > a { font-size: 14px; color: #231f20; font-weight: 400; line-height: 20px; }
+.list-special-event figure.item p.price { margin-top: 6px; font-family: 'Alegreya', serif; font-style: italic; text-align: right; }
+.list-special-event figure.item p.price > .dc-price { font-size: 18px; color: #231f20; font-weight: 400; line-height: 18px; }
+.list-special-event figure.item p.price > .price { margin-left: 8px; font-size: 18px; color: #b9b9b9; font-weight: 400; line-height: 18px; }
+.list-special-event figure.item p.price > .soldout { font-size: 18px; color: #ed6851; font-weight: 400; }
+
+.list-special-event figure.item p.info { overflow: hidden; margin-top: 18px; }
+.list-special-event figure.item p.info > a.btn-wish { float: left; margin-top: 2px; display: inline-block; height: 18px; width: 18px; text-align: left; text-indent: -9999px; background: url(../images/shop/btn_wish01.png) left top no-repeat; }
+.list-special-event figure.item p.info > a.btn-wish.on { background-position: -18px 0; }
+.list-special-event figure.item p.info > span.remain { float: right; font-size: 14px; color: #231f20; font-weight: 400; line-height: 18px; }
+.list-special-event figure.item p.info > span.remain > em { font-weight: 700; font-style: normal; }
+
+.other figure.item > figcaption { padding: 15px 15px 15px 16px; }
+.other figure.item p.price { text-align: left; }
+
+
+/* 이벤트 목록 */
+.event .container .paging { margin-top: 60px; }
+
+.list-event { overflow: hidden; position: relative; margin: 0 -5px; width: 946px; }
+.list-event:after { content: ''; position: absolute; top: 0; right: 5px; left: 5px; display: block; height: 1px; background-color: #231f20; }
+.list-event li { float: left; margin: 0 5px; padding: 30px 0 0 0; display: block; width: 226px; border-bottom: 1px solid #d3d0cf; }
+
+.list-event figure.item { }
+.list-event figure.item > figcaption { padding: 20px 5px 18px 5px; }
+.list-event figure.item .duration { font-size: 12px; color: #231f20; font-weight: 400; }
+.list-event figure.item h1 { margin-top: 4px; font-size: 14px; color: #231f20; font-weight: 400; }
+
+
+/* 이벤트 상세 댓글 작성 */
+fieldset.form-comments { position: relative; padding: 20px 15px; border-top: 2px solid #231f20; border-bottom: 1px solid #d3d0cf; }
+fieldset.form-comments textarea { padding: 15px 15px 0 15px; height: 45px; width: 746px; font-size: 13px; color: #777; line-height: 18px; border: 1px solid #d3d0cf; }
+fieldset.form-comments input[type=submit] { position: absolute; top: 20px; right: 15px; display: block; height: 60px; width: 125px; font-size: 13px; color: #fff; font-weight: 400; text-align: center; background-color: #231f20; }
+
+
+
+/* 이벤트 상세 댓글 목록 */
+ul.list-comments { }
+ul.list-comments li { position: relative; padding: 14px 15px 11px 15px; display: block; border-bottom: 1px solid #d3d0cf; }
+ul.list-comments li a.btn-delete { position: absolute; top: 15px; right: 0; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat; }
+ul.list-comments li .uid { font-size: 13px; color: #231f20; font-weight: 400; margin-right: 8px; }
+ul.list-comments li .date { font-size: 13px; color: #231f20; font-weight: 400; }
+ul.list-comments li p { margin-top: 13px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
+
+/* 이벤트 상세 당첨자 발표 */
+.result-content { padding: 18px 15px 40px 15px; border-top: 1px solid #231f20; border-bottom: 1px solid #d3d0cf; }
+.result-content p.content { font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
+.result-content p.winner { margin-top: 16px; padding: 20px 0 20px 20px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; background-color: #f3f3f4; }
+.result-content p.winner > span { display: inline-block; width: 145px; }
+
+
+.event .container .btns_wrap { overflow: hidden; position: static; left: auto; float: none; margin-top: 10px; }
+.event .container .btns_wrap .btns { position: static; float: right; margin: 0; }
+
+
+
+
+
+
