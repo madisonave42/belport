@@ -89,7 +89,7 @@ $(function(){
 	})();
 	
  /*============================================================
-  * Theme Shop & Theme Box Masonry
+  * Theme Shop & Theme Box & Brand Spotlight Masonry
   =============================================================*/
  
 	(function(){
