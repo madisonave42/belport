@@ -659,7 +659,7 @@ footer .copyright {
 	width:980px;
 }
 #contents .container > section,
-#contents .container > div.double_col {
+#contents .container > div {
 	margin:50px auto 0;
 	width:936px;
 }
