@@ -83,3 +83,64 @@ var toggleListAction = (function(){
 		}
 	};
 })();
+
+/**
+ * 브랜드 슬라이드
+ * @namespace 
+ * 
+ */
+ 
+var slideAction = (function(){
+	
+	return{
+		/**
+		 * 상세보기 토글
+		 * 
+		 */
+		initSlide : function( bannerContainer ) {
+			var $container = bannerContainer.find('.list-banner');
+			var $clickItems = bannerContainer.find('.positions > a');
+			var $btnPrev = bannerContainer.find('a.btn-prev');
+			var $btnNext = bannerContainer.find('a.btn-next');
+			var $bannerWidth = $container.find('img').width();
+
+			var cnt = $clickItems.length;
+			var index = 0;
+			var oldIndex = 0;
+
+			$container.css("width", $bannerWidth*cnt+"px");
+
+			function slideItem(itemNo) {
+				index = (itemNo) % cnt;
+
+				$container.animate({
+					left: (-index*$bannerWidth) + "px"
+				}, 500, function() {
+					$clickItems.eq(oldIndex).removeClass("current");
+					$clickItems.eq(index).addClass("current");
+					oldIndex = index;
+				});
+			}
+			
+			$clickItems.click( function(ev){
+				ev.preventDefault();
+				var no = parseInt($(this).attr('href').replace('#', ''));
+				slideItem(no);
+			});
+
+			$btnPrev.click( function(ev){
+				ev.preventDefault();
+				var no = parseInt(oldIndex, 10) - 1;
+				no = no < 0 ? cnt-1 : no;
+				slideItem(no);
+			});
+
+			$btnNext.click( function(ev){
+				ev.preventDefault();
+				var no = parseInt(oldIndex, 10) + 1;
+				slideItem(no);
+			});
+		}
+			
+	};
+})();

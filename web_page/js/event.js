@@ -137,9 +137,16 @@ $(function(){
  })();
  
  
+ /*============================================================
+  * Brand Main Slide
+  =============================================================*/
  
- 
- 
+	(function(){
+		var bannerContainer = $('.container-banner');
+
+		slideAction.initSlide( bannerContainer );
+		
+	})();
  
  
  
