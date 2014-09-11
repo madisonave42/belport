@@ -15,6 +15,7 @@
 			case 'br' : $css = 'brand'; $title='BRAND |'; break;
 			case 'ib' : $css = 'inside'; $title='INSIDE B. |'; break;
 			case 'ev' : $css = 'event'; $title='EVENT |'; break;
+			case 'gr' : $css = 'index'; $title=''; break;
 		}
 		$currentTitle = $_GET['t'];
 		switch($currentTitle){
