@@ -183,6 +183,8 @@ ul.list-selected-options li a.btn-delete { position: absolute; top: 50%; right: 
 .product-detail .product .btns.white > span { margin-right: 5px; display: inline-block; height: 18px; width: 18px; line-height: 18px; text-indent: -9999em; background: url(../images/shop/btn_wish01.png) 0px 0px no-repeat; }
 .product-detail .product .btns.white.on > span { background-position: -18px 0px; }
 
+
+
 /* 브랜드 정보 */
 aside.brand-info { position: relative; margin-top: 12px; padding: 29px 28px 29px 207px; height: 84px; background-color: #231f20; }
 aside.brand-info h1 > a { font-size: 14px; color: #fff; font-weight: 700; line-height: 19px; }
@@ -195,6 +197,7 @@ ul.badge li span { display: block; height: 57px; width: 57px; text-indent: -9999
 ul.badge li span.badge01 { background: url(../images/shop/icon_badge01.png) left top no-repeat; }
 ul.badge li span.badge02 { background: url(../images/shop/icon_badge02.png) left top no-repeat; }
 ul.badge li span.badge03 { background: url(../images/shop/icon_badge03.png) left top no-repeat; }
+
 
 
 /* 상품 상세 탭 */
@@ -210,6 +213,31 @@ header.message > p { margin-top: 12px; font-size: 14px; color: #777; font-weight
 
 header.message .btns { position: static; float: right; margin: 35px 0 0 0; }
 
+
+
+
+/* 상품 상세 특징 */
+#contents .container section.spec { position: relative; padding: 0 0 0 295px; width: 641px; }
+	section.spec header { position: absolute; top: 0; left: 16px; padding: 0; min-width: inherit; width: 200px; background-color: transparent; }
+	section.spec header h1 { position: relative; margin: 0; padding: 26px 0 0 0; width: 100%; font-size: 12px; color: #231f20; font-weight: 700; text-align: left; background-color: transparent; }
+	section.spec header h1 > span { position: absolute; top: 0; left: 0; display: block; font-size: 12px; color: #ed6851; font-weight: 400; }
+	section.spec header h1 > span:after { content: ''; position: absolute; bottom: -7px; left: 0; display: block; height: 1px; width: 8px; background-color: #d3d0cf; }
+	section.spec header .rules { padding-top: 19px; }
+	section.spec header .rules > span { margin-right: 5px; display: block; height: 27px; width: 27px; text-indent: -9999em; }
+	section.spec header .rule01 { background: url(../images/shop/icon_rules01.png) left top no-repeat; }
+
+#contents .container section.spec-content { margin: 0; padding: 11px 0 60px 0px; width: 641px; border-top: 1px solid #d3d0cf; }
+	section.spec-content > h1 { margin-top: 12px; font-size: 18px; color: #231f20; font-weight: 700; line-height: 24px; }
+	section.spec-content > .desc { margin-top: 6px; font-size: 13px; color: #777; font-weight: 300; line-height: 19px; }
+	section.spec-content > .images { margin-top: 20px; }
+	section.spec-content > table.info { margin-top: 14px; border-top: 2px solid #231f20; }
+		table.info tbody th { padding: 20px 0 20px 15px; font-size: 12px; color: #231f20; font-weight: 700; text-align: left; border-bottom: 1px solid #d3d0cf; background-color: #f3f3f4; }
+		table.info tbody td { padding: 20px 10px 20px 15px; font-size: 12px; color: #777; font-weight: 400; line-height: 20px; border-bottom: 1px solid #d3d0cf; }
+
+/*
+	ul.tni { margin-top: 10px; }
+	ul.tni li { font-size: 13px; color: #777; font-weight: 300; line-height: 24px; }
+*/
 
 /* 나의활동 테이블 공통 */
 table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22px; line-height:22px; color:#231f20; text-align:center; border:1px solid #231f20; font-size:12px;}
