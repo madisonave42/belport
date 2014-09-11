@@ -28,7 +28,7 @@
 @font-face{
 	font-family:'ns';
 	font-weight:300;
-	src:url(fonts/NotoSansKR-DemiLight.eot) format("eot");
+	src:url(fonts/NotoSansKR-DemiLight.eot);
 	src:local('Noto Sans Korean Demilight'),
 			url(fonts/NotoSansKR-DemiLight.eot?#iefix) format("embedded-opentype"),
 			url(fonts/NotoSansKR-DemiLight.woff) format("woff"),
@@ -37,7 +37,7 @@
 @font-face{
 	font-family:'ns';
 	font-weight:400;
-	src:url(fonts/NotoSansKR-Regular.eot) format("eot");
+	src:url(fonts/NotoSansKR-Regular.eot);
 	src:local('Noto Sans Korean Regular'),
 			url(fonts/NotoSansKR-Regular.eot?#iefix) format("embedded-opentype"),
 			url(fonts/NotoSansKR-Regular.woff) format("woff"),
@@ -46,7 +46,7 @@
 @font-face{
 	font-family:'ns';
 	font-weight:500;
-	src:url(fonts/NotoSansKR-Medium.eot) format("eot");
+	src:url(fonts/NotoSansKR-Medium.eot);
 	src:local('Noto Sans Korean Medium'),
 			url(fonts/NotoSansKR-Medium.eot?#iefix) format("embedded-opentype"),
 			url(fonts/NotoSansKR-Medium.woff) format("woff"),
@@ -55,7 +55,7 @@
 @font-face{
 	font-family:'ns';
 	font-weight:700;
-	src:url(fonts/NotoSansKR-Bold.eot) format("eot");
+	src:url(fonts/NotoSansKR-Bold.eot);
 	src:local('Noto Sans Korean Bold'),
 			url(fonts/NotoSansKR-Bold.eot?#iefix) format("embedded-opentype"),
 			url(fonts/NotoSansKR-Bold.woff) format("woff"),
@@ -64,7 +64,7 @@
 @font-face{
 	font-family:'ns';
 	font-weight:900;
-	src:url(fonts/NotoSansKR-Black.eot) format("eot");
+	src:url(fonts/NotoSansKR-Black.eot);
 	src:local('Noto Sans Korean Black'),
 			url(fonts/NotoSansKR-Black.eot?#iefix) format("embedded-opentype"),
 			url(fonts/NotoSansKR-Black.woff) format("woff"), 
