@@ -53,7 +53,7 @@ ul.list-brands li {float:left; margin:0 5px; padding:30px 0 14px; width:226px; b
 ul.list-brands li.none { float: none; padding: 150px 0; width: auto; font-size: 12px; color: #777; font-weight: 400; text-align: center; }
 
 figure.brand .frame {height:93px; width:226px; text-align:center; background-color:#f5f5f5; }
-figure.brand figcaption {padding:17px 10px 0 6px; font-size:13px; line-height:18px; color:#231f20; font-weight:13px;}
+figure.brand figcaption {padding:17px 10px 0 6px; font-size:13px; line-height:18px; color:#231f20; }
 
 figure.brand p.name_en {font-size:14px;}
 
