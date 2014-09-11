@@ -15,6 +15,7 @@
 			case 'br' : $css = 'brand'; $title='BRAND |'; break;
 			case 'ib' : $css = 'inside'; $title='INSIDE B. |'; break;
 			case 'ev' : $css = 'event'; $title='EVENT |'; break;
+			case 'se' : $css = 'search'; $title='SEARCH |'; break;
 		}
 		$currentTitle = $_GET['t'];
 		switch($currentTitle){
@@ -85,6 +86,10 @@
 			case 'ev1.2.1'  : $subTitle = '지난 이벤트 상세 |'; break;
 			case 'ev1.3'  : $subTitle = 'Tester\'s Box |'; break;
 			case 'ev1.4'  : $subTitle = 'POP! Choice |'; break;
+			case 'se1.1'  : $subTitle = 'Shop 검색결과 |'; break;
+			case 'se1.2'  : $subTitle = 'Shop 검색결과 |'; break;
+			case 'se1.3'  : $subTitle = 'Brand 검색결과 |'; break;
+			case 'se1.4'  : $subTitle = 'Brand 검색결과 |'; break;
 			
 		}
 	?>

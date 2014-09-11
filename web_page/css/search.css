@@ -1,0 +1,84 @@
+/*==================================================
+ * SEARCH 공통 스타일
+ ===================================================*/
+
+#contents .container section.first-section { margin-top: 0px; }
+#contents .container section.comments, #contents .container section.result { margin-top: 10px; }
+
+/* EVENT 타이틀 */
+.container > hgroup { margin: 0 auto; padding: 75px 0 0 0; display: block; width: 936px; line-height: 30px; }
+.container > hgroup > h1 { font-size: 30px; color: #231f20; font-weight: 700; }
+.container > hgroup > p { font-size: 14px; color: #777; font-weight: 400; }
+
+/* EVENT 서브 타이틀 */
+h1.sub-title { padding: 50px 0 6px 0; font-size: 15px; color: #231f20; font-weight: 400; }
+h1.sub-title > em { margin-left: 8px; font-size: 13px; color: #000; font-style: normal; }
+
+
+fieldset.search-form { margin-top: 30px; margin-bottom: 57px; padding: 30px 0; text-align: center; background-color: #f3f3f4; }
+fieldset.search-form input[type=text] { height: 32px; width: 525px; line-height: 32px; border: 1px solid #d3d0cf; background-color: #fff; }
+fieldset.search-form input[type=submit] { margin-left: 7px; padding: 0 20px; height: 34px; font-size: 14px; color: #fff; font-weight: 500; text-align: center; line-height: 34px; background-color: #231f20; }
+fieldset.search-form .recommend-word { padding: 14px 0 0 0; }
+fieldset.search-form .recommend-word > a { position: relative; margin-right: 5px; padding: 0 0 0 10px; font-size: 12px; color: #777; font-weight: 400; }
+fieldset.search-form .recommend-word > a:after { content: '|'; position: absolute; top: 1px; left: 0; font-size: 10px; color: #777; font-weight: 400; }
+fieldset.search-form .recommend-word > a:first-child:after { content: ''; position: top: 0px; left: -10px; display: block; height: 11px; width: 11px; background: url(../images/search/icon_search.png) left top no-repeat; }
+
+
+
+/* 상품 정렬 */
+div.sorting {position: relative; padding:6px 12px 0 0; height:28px; text-align:right; border-bottom:1px solid #242424; }
+div.sorting > .category { position: absolute; bottom: 2px; padding-left: 4px; }
+div.sorting > .category > a { margin: 0 15px; font-size: 12px; }
+div.sorting > .category > a:hover, 
+div.sorting > .category > a.on { font-weight: 700; }
+
+div.sorting a {margin:0 6px; display:inline-block; height:25px; cursor:pointer; font-size:11px; color:#777; font-weight:400; line-height:25px; }
+div.sorting a:hover,
+div.sorting a.on {position:relative; color:#000; font-weight:700; }
+
+div.sorting a:hover:after,
+div.sorting a.on:after {content:''; z-index:10; position:absolute; right:-3px; bottom:-4px; left:-3px; display:block; height:3px; background-color:#2b282a; }
+
+div.sorting select { float: right; margin: -5px -12px 0 15px; width:180px; height:28px; border:1px solid #d3d0cf; color:#231f20; font-weight:400; }
+
+div.sorting select + .cnt:after { content: ''; }
+div.sorting .cnt {position:relative; padding:0 0 0 20px; font-size:12px; color:#777; font-weight:400; line-height:26px; }
+div.sorting .cnt > em {font-size:12px; color:#231f20; font-weight:700; font-style:normal; }
+div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; display:block; font-size:9px; color:#c0c0c0; }
+
+
+/* 브랜드 목록 */
+ul.list-brands {overflow:hidden; margin:0px -5px;}
+ul.list-brands li {float:left; margin:0 5px; padding:30px 0 14px; width:226px; border-bottom:1px solid #d3d0cf;}
+ul.list-brands li.none { float: none; padding: 150px 0; width: auto; font-size: 12px; color: #777; font-weight: 400; text-align: center; }
+
+figure.brand .frame {height:93px; width:226px; text-align:center; background-color:#f5f5f5; }
+figure.brand figcaption {padding:17px 10px 0 6px; font-size:13px; line-height:18px; color:#231f20; font-weight:13px;}
+
+figure.brand p.name_en {font-size:14px;}
+
+figure.brand p.toggle_like {margin-top:7px;}
+figure.brand p.toggle_like > a.btn-like {float:left; display:inline-block; height:18px; width:18px; text-align:left; text-indent:-9999px; background:url(../images/brand/btn_like_01.png) left top no-repeat; }
+figure.brand p.toggle_like > a.btn-like.on {background-position:-18px 0; }
+
+
+/* 상품 목록 */
+ul.list-products {overflow:hidden; margin:0px -5px; padding-bottom:30px;}
+ul.list-products li {float:left; padding:30px 5px 21px 5px; width:226px; }
+ul.list-products li.none { float: none; padding: 150px 0; width: auto; font-size: 12px; color: #777; font-weight: 400; text-align: center; }
+
+figure.product .frame {height:191px; width:226px; text-align:center; background-color:#f5f5f5; }
+figure.product figcaption {padding:0 10px 0 6px; font-size:13px; line-height:18px; }
+
+figure.product p.icons {margin-top:13px; margin-bottom:5px; height:20px; }
+figure.product p.icons span {position:relative; padding:0 4px; display:inline-block; font-size:10px; color:#fff; font-weight:400; line-height:12px; letter-spacing:-0.1em; background-color:#202020; }
+figure.product p.icons span:after {content:''; position:absolute; bottom:-4px; left:12px; display:block; height:4px; width:6px; background:url(../images/shop/bg_arrow04.png) left top no-repeat; }
+
+figure.product em.brand {color:#202020; font-weight:700; font-style:normal; }
+figure.product p.title {height:45px; color:#777; }
+
+figure.product p.price {padding-right:7px; font-family:'Alegreya', serif; font-style:italic; text-align:right; }
+figure.product p.price > a.btn-wish {float:left; margin-top:2px; display:inline-block; height:18px; width:18px; text-align:left; text-indent:-9999px; background:url(../images/shop/btn_wish01.png) left top no-repeat; }
+figure.product p.price > a.btn-wish.on {background-position:-18px 0; }
+figure.product p.price > .dc-price {font-size:20px; color:#2b282a; line-height:18px; }
+figure.product p.price > .price {margin-left:8px; font-size:20px; color:#b9b9b9; line-height:18px; }
