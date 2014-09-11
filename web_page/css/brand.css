@@ -19,7 +19,7 @@ ul.list-brands {overflow:hidden; margin:0px -5px;}
 ul.list-brands li {float:left; margin:0 5px; padding:30px 0 14px; width:226px; border-bottom:1px solid #d3d0cf;}
 
 figure.brand .frame {height:93px; width:226px; text-align:center; background-color:#f5f5f5; }
-figure.brand figcaption {padding:17px 10px 0 6px; font-size:13px; line-height:18px; color:#231f20; font-weight:13px;}
+figure.brand figcaption {padding:17px 10px 0 6px; font-size:13px; line-height:18px; color:#231f20;}
 
 figure.brand p.name_en {font-size:14px;}
 
