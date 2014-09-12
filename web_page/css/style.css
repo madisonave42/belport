@@ -775,3 +775,77 @@ input[type=submit].large{width:198px; height:57px; line-height:57px;}
 input[type=submit].medium{width:144px; height:42px; line-height:42px;}
 input[type=submit].small{width:118px; height:34px; line-height:34px;}
 
+
+
+
+/*==================================================
+ * 추가정보
+ ===================================================*/
+.survey hgroup { position: relative; padding: 40px 0 0 0; color: #231f20; text-align: center; }
+.survey hgroup > h1 { font-size:24px; font-weight:700; }
+.survey hgroup > p.desc { margin-top: 6px; font-size: 13px; color: #777; font-weight: 400; text-align: center; line-height: 19px; }
+.survey hgroup > p.current_step_container { position: absolute; top: 0px; right: 0px; left: 0px; font-size: 13px; font-weight: 400; }
+.survey hgroup .current_step { position: relative; margin-right: 8px; display: inline-block; height: 20px; width: 36px; font-size: 12px; color: #777; font-weight: 700; vertical-align: middle; }
+.survey hgroup .current_step > em { font-style: normal; }
+.survey hgroup .current_step > em.current { position: absolute; top: 0; left: 0; color: #231f20; }
+.survey hgroup .current_step > em.total { position: absolute; bottom: 0; right: 0; }
+.survey hgroup .current_step > .per { position: absolute; top: 50%; left: 50%; margin: -5px 0 0 -4px; display: block; height: 10px; width: 9px; text-indent: -9999em; background: url(../images/member/bg_per01.png) left top no-repeat; }
+
+.survey .select_section { margin: 44px -12px 0 -12px; text-align: center; }
+.survey .select_section li { margin: 0 11px 24px 10px; display: inline-block;  }
+.survey .select_section li input[type=checkbox],
+.survey .select_section li input[type=radio] { position: absolute; z-index: -1; }
+.survey .select_section li label { position: relative; padding: 177px 0 0 10px; display: block; height: 51px; width: 158px; font-size: 13px; color: #777; font-weight: 700; text-align: left; cursor: pointer; background-color: #f3f3f4; }
+
+.survey .select_section li input:checked + label { position: relative; color: #231f20; }
+.survey .select_section li input:checked + label:after { content: ''; position: absolute; top: 0; right: 0; left: 0; bottom: 0; display: block; border: 3px solid #231f20; }
+
+/* skin type */
+.survey .select_section li input[name=skin_type] + label { background: #f3f3f4 url(../images/member/bg_skin_type.jpg) left top no-repeat; }
+.survey .select_section li input[name=skin_tone] + label { background: #f3f3f4 url(../images/member/bg_skin_tone.jpg) left top no-repeat; }
+.survey .select_section li input[name=skin_trouble] + label { background: #f3f3f4 url(../images/member/bg_skin_trouble.jpg) left top no-repeat; }
+.survey .select_section li input[name=hair_trouble] + label { background: #f3f3f4 url(../images/member/bg_hair_trouble.jpg) left top no-repeat; }
+.survey .select_section li input[name=body_trouble] + label { background: #f3f3f4 url(../images/member/bg_body_trouble.jpg) left top no-repeat; }
+.survey .select_section li input[name=makeup_type] + label { background: #f3f3f4 url(../images/member/bg_makeup_type.jpg) left top no-repeat; }
+
+/* skin bg position */
+.survey .select_section li input + label[for=sel_1] { background-position: 0px 0px; }
+.survey .select_section li input + label[for=sel_2] { background-position: -168px 0px; }
+.survey .select_section li input + label[for=sel_3] { background-position: -336px 0px; }
+.survey .select_section li input + label[for=sel_4] { background-position: -504px 0px; }
+.survey .select_section li input + label[for=sel_5] { background-position: -672px 0px; }
+.survey .select_section li input + label[for=sel_6] { background-position: -840px 0px; }
+.survey .select_section li input + label[for=sel_7] { background-position: -1008px 0px; }
+.survey .select_section li input + label[for=sel_8] { background-position: -1176px 0px; }
+.survey .select_section li input + label[for=sel_9] { background-position: -1344px 0px; }
+
+
+.survey .select_section select{width:180px; height:34px; border:1px solid #d3d0cf;}
+
+/* 하단 설명 */
+.survey .select_section_desc { padding-top: 50px; padding-bottom: 6px; font-size: 13px; color: #777; font-weight: 400; text-align: center; line-height: 19px; border-bottom:1px solid #d3d0cf; }
+
+/*==================================================
+ * 설문완료
+ ===================================================*/
+.survey_complete .complete_message{padding-top:128px; margin-top:0!important;}
+.survey_complete .complete_message .border_area{height:347px; border:1px solid #d3d0cf; padding:40px 100px;}
+.survey_complete .complete_message hgroup{height:70px;}
+.survey_complete .complete_message .table_area{padding:30px 40px; background:#f3f3f4;}
+
+.survey_complete hgroup{text-align:center; margin-bottom:40px;}
+.survey_complete hgroup>h1{font-size:24px; margin-bottom:10px; font-weight:700;}
+.survey_complete hgroup>h1 span{font-weight:700;}
+.survey_complete hgroup>p{line-height:1.4;}
+
+.survey_complete .complete_message table th{padding:6px 0; text-align:left; color:#231f20;}
+.survey_complete .complete_message table td{padding:6px 0; text-align:left;}
+.survey_complete .complete_message span{color:#ed6851;}
+
+.survey_complete .complete_message.coupon .border_area{height:auto; padding:92px 54px;}
+.survey_complete .complete_message.coupon img{float:left; margin-right:40px;}
+.survey_complete .complete_message.coupon hgroup{text-align:left; width:393px; height:auto; float:left;}
+.survey_complete .complete_message.coupon hgroup h1{font-size:42px;}
+.survey_complete .complete_message.coupon hgroup p{font-size:28px; color:#231f20; line-height:1.2; margin:13px 0;}
+.survey_complete .complete_message.coupon hgroup p.comment{font-size:13px; line-height:1.4;}
+
