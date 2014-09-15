@@ -757,9 +757,9 @@ footer .copyright {
 
 /* buttons */
 /* btns_wrap */
-.btns_wrap{position:relative; left:50%; float:left; margin-top:30px;}
+.btns_wrap{margin-top:30px;text-align: center;}
 /* default */
-.btns{display:block; font-weight:400; text-align:center; font-weight:400; float:left; margin:0 5px; position:relative; right:50%;}
+.btns{display:inline-block; font-weight:400; text-align:center; font-weight:400; margin:0 5px;}
 /* black/gray/white */
 .black{color:#fff; background:#231f20; border:3px solid #231f20;}
 .gray{color:#fff; background:#767676; border:3px solid #767676;}
@@ -776,6 +776,19 @@ input[type=submit].medium{width:144px; height:42px; line-height:42px;}
 input[type=submit].small{width:118px; height:34px; line-height:34px;}
 
 
+
+/* 설문조사 단계 스타일 */
+.step.survey {margin:0 auto; margin-bottom:80px; padding:128px 37px 20px; width:862px; border-bottom:1px solid #d3d0cf;}
+.skin_type .step.survey { padding-top: 0; }
+.step.survey li {float:left; width:96px; margin-right:38px; background:url(../images/member/bg_step_arrow.gif) no-repeat 85px 25px;}
+.step.survey li strong {display:block; padding-left:0; height:65px; font-size:16px; color:#d5d5d4; background:none;}
+.step.survey li strong .num {display:block; margin-bottom:7px; padding-bottom:7px; background:url(../images/member/bg_step_num.gif) no-repeat 0 22px;}
+
+.step.survey li.on {background-position:85px -165px;}
+.step.survey li.on strong {color:#20221f;}
+.step.survey li.on strong .num {background-position:0 bottom;}
+
+.step.survey li.step_7 {width:58px; background:none; margin:0;}
 
 
 /*==================================================
@@ -825,10 +838,12 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 /* 하단 설명 */
 .survey .select_section_desc { padding-top: 50px; padding-bottom: 6px; font-size: 13px; color: #777; font-weight: 400; text-align: center; line-height: 19px; border-bottom:1px solid #d3d0cf; }
 
+
 /*==================================================
  * 설문완료
  ===================================================*/
 .survey_complete .complete_message{padding-top:128px; margin-top:0!important;}
+.skin_type .complete_message{padding-top:0px; margin-top:0!important;}
 .survey_complete .complete_message .border_area{height:347px; border:1px solid #d3d0cf; padding:40px 100px;}
 .survey_complete .complete_message hgroup{height:70px;}
 .survey_complete .complete_message .table_area{padding:30px 40px; background:#f3f3f4;}

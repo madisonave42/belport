@@ -68,7 +68,14 @@
 			case 'mp1.4.1.1.1'  : $subTitle = '개인정보 수정 |'; break;
 			case 'mp1.4.1.1.1.1': $subTitle = '회원탈퇴 |'; break;
 			case 'mp1.4.1.1.1.1.1': $subTitle = '회원탈퇴 완료 |'; break;
-			case 'mp1.4.2'  : $subTitle = '피부타입설정 |'; break;
+			case 'mp1.4.2'  : $subTitle = '추가 정보 관리 |'; break;
+			case 'mp1.4.2.1'  : $subTitle = '추가 정보 관리 |'; break;
+			case 'mp1.4.2.2'  : $subTitle = '추가 정보 관리 |'; break;
+			case 'mp1.4.2.3'  : $subTitle = '추가 정보 관리 |'; break;
+			case 'mp1.4.2.4'  : $subTitle = '추가 정보 관리 |'; break;
+			case 'mp1.4.2.5'  : $subTitle = '추가 정보 관리 |'; break;
+			case 'mp1.4.2.6'  : $subTitle = '추가 정보 관리 |'; break;
+			case 'mp1.4.2.7'  : $subTitle = '추가 정보 관리 |'; break;
 			case 'sh1.1'    : $subTitle = 'Belport\' Pick |'; break;
 			case 'sh1.2'    : $subTitle = 'New Items |'; break;
 			case 'sh1.3'    : $subTitle = 'On Sale |'; break;
