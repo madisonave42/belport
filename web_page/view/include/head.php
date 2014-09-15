@@ -111,6 +111,7 @@
 	
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link href='http://fonts.googleapis.com/css?family=Alegreya:400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=RixSGo+L:400|RixSGo+M:400|RixSGo+B:400" />
 	<link rel="stylesheet" href="../css/style.css" />
 	<link rel="stylesheet" href="../css/<?php echo $css ?>.css" />
 	

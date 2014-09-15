@@ -21,56 +21,6 @@
  *  License: none (public domain)
  *  Reset Css
  * =========================================================================================== */
-/* ==========================================================
- * Server Local Web Font
- * ========================================================== */
-
-@font-face{
-	font-family:'ns';
-	font-weight:300;
-	src:url(fonts/NotoSansKR-DemiLight.eot);
-	src:local('Noto Sans Korean Demilight'),
-			url(fonts/NotoSansKR-DemiLight.eot?#iefix) format("embedded-opentype"),
-			url(fonts/NotoSansKR-DemiLight.woff) format("woff"),
-			url(fonts/NotoSansKR-DemiLight.ttf) format("truetype");
-}
-@font-face{
-	font-family:'ns';
-	font-weight:400;
-	src:url(fonts/NotoSansKR-Regular.eot);
-	src:local('Noto Sans Korean Regular'),
-			url(fonts/NotoSansKR-Regular.eot?#iefix) format("embedded-opentype"),
-			url(fonts/NotoSansKR-Regular.woff) format("woff"),
-			url(fonts/NotoSansKR-Regular.ttf) format("truetype");
-}
-@font-face{
-	font-family:'ns';
-	font-weight:500;
-	src:url(fonts/NotoSansKR-Medium.eot);
-	src:local('Noto Sans Korean Medium'),
-			url(fonts/NotoSansKR-Medium.eot?#iefix) format("embedded-opentype"),
-			url(fonts/NotoSansKR-Medium.woff) format("woff"),
-			url(fonts/NotoSansKR-Medium.ttf) format("truetype");
-}
-@font-face{
-	font-family:'ns';
-	font-weight:700;
-	src:url(fonts/NotoSansKR-Bold.eot);
-	src:local('Noto Sans Korean Bold'),
-			url(fonts/NotoSansKR-Bold.eot?#iefix) format("embedded-opentype"),
-			url(fonts/NotoSansKR-Bold.woff) format("woff"),
-			url(fonts/NotoSansKR-Bold.ttf) format("truetype");
-}
-@font-face{
-	font-family:'ns';
-	font-weight:900;
-	src:url(fonts/NotoSansKR-Black.eot);
-	src:local('Noto Sans Korean Black'),
-			url(fonts/NotoSansKR-Black.eot?#iefix) format("embedded-opentype"),
-			url(fonts/NotoSansKR-Black.woff) format("woff"), 
-			url(fonts/NotoSansKR-Black.ttf) format("truetype");
-}
-
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -99,7 +49,7 @@ html {
 	overflow-y:scroll;
 }
 body {
-	font-family:'ns', sans-serif; font-size:13px; font-weight:300; color:#777;
+	font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;
 	line-height: 1;	line-height:1.4\0; letter-spacing:-0.25px;
 }
 ol, ul {
@@ -115,14 +65,14 @@ table {
 
 /* Custom Adding Css Code */
 a {
-	font-family:'ns', sans-serif; font-size:13px; font-weight:300; color:#777;
+	font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;
 	text-decoration: none;
 }
 a:active{background:transparent;}
 input {
 	margin:0;
 	padding:0;
-	font-family:'ns', sans-serif; font-size:13px; font-weight:300; color:#777;
+	font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;
 }
 input[type=text],
 input[type=password] {height:32px;line-height:32px; border:1px solid #d3d0cf;}
@@ -130,7 +80,7 @@ input[type=submit], input[type=image], button{
 	cursor: pointer;
 	border:0;
 }
-select{font-family:'ns', sans-serif; font-size:13px; font-weight:300; color:#777;}
+select{font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;}
 input,
 label,
 selectbox {vertical-align:middle;}
