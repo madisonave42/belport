@@ -93,10 +93,11 @@ $(function(){
   =============================================================*/
  
 	(function(){
-		
-		var msnry = new Masonry( '#list_container', {
-			gutter:8
-		} );
+		if( $('div').is('#list_container') ){
+			var msnry = new Masonry( '#list_container', {
+				gutter:8
+			} );
+		}
 		
 	})();
 
@@ -105,10 +106,11 @@ $(function(){
   =============================================================*/
  
 	(function(){
-		
-		var msnry = new Masonry( '#list_container_inside', {
-			gutter:11
-		} );
+		if( $('div').is('#list_container_inside') ){
+			var msnry = new Masonry( '#list_container_inside', {
+				gutter:11
+			} );
+		}
 		
 	})();
  
