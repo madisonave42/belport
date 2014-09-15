@@ -328,3 +328,34 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 
 
 
+/************************************************************************************
+ * Tester Box 리뷰 팝업
+ */
+.testerbox { }
+.testerbox .title { font-size: 13px; color: #231f20; }
+.testerbox .title > h1 { margin-right: 16px; display: inline; font-weight: 700; }
+.testerbox .title > p { display: inline; font-weight: 400; }
+
+/* Tester Box 제품 선택 리스트 */
+ul.list-products-review { overflow: hidden; margin-top: 40px; padding-bottom: 18px; }
+ul.list-products-review li { float: left; margin: 0 10px 10px 0; display: block; }
+ul.list-products-review li input[type=radio] { position: absolute; z-index: -1; visibility: hidden; }
+ul.list-products-review li label { position: relative; padding-bottom: 5px; display: block; width: 127px; font-size: 11px; color: #777; font-weight: 500; text-align: left; cursor: pointer; background-color: #fff; }
+
+ul.list-products-review li input:checked + label { position: relative; color: #231f20; }
+ul.list-products-review li input:checked + label:after { content: ''; position: absolute; top: 0; right: 0; left: 0; bottom: 0; display: block; border: 2px solid #231f20; }
+ul.list-products-review li input[disabled=disabled] + label:after { content: ''; position: absolute; top: 0; right: 0; left: 0; bottom: 0; display: block; background: url(../images/shop/bg_disabled.png) left top repeat;}
+
+ul.list-products-review li label > .thumb { height: 107px; width: 127px; background-color: #f3f4f5; }
+ul.list-products-review li label > p { padding: 4px 4px 0 4px; line-height: 14px; }
+ul.list-products-review li label > p > em {	display: block; font-weight: 700; font-style: normal; }
+
+/* 한줄평 & 하고싶은말 */
+fieldset.comments { margin-top: 32px; padding: 110px 0 110px 0; font-size: 13px; color: #777; font-weight: 400; text-align: center; background-color: #f3f4f5; }
+fieldset.comments input[type=text] { height: 30px; width: 610px; text-align: center; line-height: 30px; border: 2px solid #231f20; }
+fieldset.comments p { margin-top: 10px; }
+
+
+
+
+

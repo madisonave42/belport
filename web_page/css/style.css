@@ -796,6 +796,7 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
  ===================================================*/
 .survey hgroup { position: relative; padding: 40px 0 0 0; color: #231f20; text-align: center; }
 .survey hgroup > h1 { font-size:24px; font-weight:700; }
+.survey hgroup > h1 > strong { color: #ed6851; }
 .survey hgroup > p.desc { margin-top: 6px; font-size: 13px; color: #777; font-weight: 400; text-align: center; line-height: 19px; }
 .survey hgroup > p.current_step_container { position: absolute; top: 0px; right: 0px; left: 0px; font-size: 13px; font-weight: 400; }
 .survey hgroup .current_step { position: relative; margin-right: 8px; display: inline-block; height: 20px; width: 36px; font-size: 12px; color: #777; font-weight: 700; vertical-align: middle; }
@@ -803,6 +804,7 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .survey hgroup .current_step > em.current { position: absolute; top: 0; left: 0; color: #231f20; }
 .survey hgroup .current_step > em.total { position: absolute; bottom: 0; right: 0; }
 .survey hgroup .current_step > .per { position: absolute; top: 50%; left: 50%; margin: -5px 0 0 -4px; display: block; height: 10px; width: 9px; text-indent: -9999em; background: url(../images/member/bg_per01.png) left top no-repeat; }
+
 
 .survey .select_section { margin: 44px -12px 0 -12px; text-align: center; }
 .survey .select_section li { margin: 0 11px 24px 10px; display: inline-block;  }
@@ -813,13 +815,20 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .survey .select_section li input:checked + label { position: relative; color: #231f20; }
 .survey .select_section li input:checked + label:after { content: ''; position: absolute; top: 0; right: 0; left: 0; bottom: 0; display: block; border: 3px solid #231f20; }
 
+
+/* tester box - review */
+.popup.survey .select_section { margin: 30px -12px 0 -12px; padding: 65px 0 40px 0; text-align: center; background-color: #f3f3f4; }
+.popup.survey .select_section li label { padding-right: 10px; width: 148px; background-color: #fff; }
+.survey .select_section li input[name=purchase] + label { background: #fff url(../images/member/bg_skin_type.jpg) left top no-repeat; }
+
+
 /* skin type */
-.survey .select_section li input[name=skin_type] + label { background: #f3f3f4 url(../images/member/bg_skin_type.jpg) left top no-repeat; }
-.survey .select_section li input[name=skin_tone] + label { background: #f3f3f4 url(../images/member/bg_skin_tone.jpg) left top no-repeat; }
-.survey .select_section li input[name=skin_trouble] + label { background: #f3f3f4 url(../images/member/bg_skin_trouble.jpg) left top no-repeat; }
-.survey .select_section li input[name=hair_trouble] + label { background: #f3f3f4 url(../images/member/bg_hair_trouble.jpg) left top no-repeat; }
-.survey .select_section li input[name=body_trouble] + label { background: #f3f3f4 url(../images/member/bg_body_trouble.jpg) left top no-repeat; }
-.survey .select_section li input[name=makeup_type] + label { background: #f3f3f4 url(../images/member/bg_makeup_type.jpg) left top no-repeat; }
+.survey .select_section li input[name=skin_type] + label { background: url(../images/member/bg_skin_type.jpg) left top no-repeat; }
+.survey .select_section li input[name=skin_tone] + label { background: url(../images/member/bg_skin_tone.jpg) left top no-repeat; }
+.survey .select_section li input[name=skin_trouble] + label { background: url(../images/member/bg_skin_trouble.jpg) left top no-repeat; }
+.survey .select_section li input[name=hair_trouble] + label { background: url(../images/member/bg_hair_trouble.jpg) left top no-repeat; }
+.survey .select_section li input[name=body_trouble] + label { background: url(../images/member/bg_body_trouble.jpg) left top no-repeat; }
+.survey .select_section li input[name=makeup_type] + label { background: url(../images/member/bg_makeup_type.jpg) left top no-repeat; }
 
 /* skin bg position */
 .survey .select_section li input + label[for=sel_1] { background-position: 0px 0px; }
@@ -863,4 +872,11 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .survey_complete .complete_message.coupon hgroup h1{font-size:42px;}
 .survey_complete .complete_message.coupon hgroup p{font-size:28px; color:#231f20; line-height:1.2; margin:13px 0;}
 .survey_complete .complete_message.coupon hgroup p.comment{font-size:13px; line-height:1.4;}
+
+
+.popup.survey_complete hgroup{text-align:center; margin-top: 30px; margin-bottom:22px;}
+.popup.survey_complete .complete_message{padding-top:0px; margin-top:0!important;}
+.popup.survey_complete .complete_message table { margin: 0 auto; display: block; width: 375px; }
+.popup.survey_complete .complete_message table th{padding:7px 0; height: auto; font-size: 16px; text-align:left; color:#231f20; font-weight: 700; border: 0px none;}
+.popup.survey_complete .complete_message table td{padding:7px 0; height: auto; font-size: 16px; text-align:left; border: 0px none;}
 
