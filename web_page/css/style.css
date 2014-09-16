@@ -771,6 +771,11 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .popup.survey .select_section li label { padding-right: 10px; width: 148px; background-color: #fff; }
 .survey .select_section li input[name=purchase] + label { background: #fff url(../images/member/bg_skin_type.jpg) left top no-repeat; }
 
+/* ONLY 텍스트형 선택 */
+.survey .select_section.only_txt li label { position: relative; padding: 0px; display: inline-block; height: 39px; width: 313px; font-size: 14px; color: #777; font-weight: 500; text-align: center; line-height: 39px; cursor: pointer; border: 2px solid #aba8a7; background-color: #f3f3f4; }
+.survey .select_section.only_txt li input:checked + label { position: relative; color: #fff; border: 2px solid #231f20; background-color: #231f20; }
+.survey .select_section.only_txt li input:checked + label:after { content: none; }
+
 
 /* skin type */
 .survey .select_section li input[name=skin_type] + label { background: #f3f3f4 url(../images/member/bg_skin_type.jpg) left top no-repeat; }
@@ -791,8 +796,10 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .survey .select_section li input + label[for=sel_8] { background-position: -1176px 0px; }
 .survey .select_section li input + label[for=sel_9] { background-position: -1344px 0px; }
 
-
 .survey .select_section select{width:180px; height:34px; border:1px solid #d3d0cf;}
+
+
+
 
 /* 하단 설명 */
 .survey .select_section_desc { padding-top: 50px; padding-bottom: 6px; font-size: 13px; color: #777; font-weight: 400; text-align: center; line-height: 19px; border-bottom:1px solid #d3d0cf; }
