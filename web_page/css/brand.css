@@ -24,8 +24,8 @@ figure.brand figcaption {padding:17px 10px 0 6px; font-size:13px; line-height:18
 figure.brand p.name_en {font-size:14px;}
 
 figure.brand p.toggle_like {margin-top:7px;}
-figure.brand p.toggle_like > a.btn-like {float:left; display:inline-block; height:18px; width:18px; text-align:left; text-indent:-9999px; background:url(../images/brand/btn_like_01.png) left top no-repeat; }
-figure.brand p.toggle_like > a.btn-like.on {background-position:-18px 0; }
+figure.brand p.toggle_like > a.btn-wish {float:left; display:inline-block; height:18px; width:18px; text-align:left; text-indent:-9999px; background:url(../images/brand/btn_like_01.png) left top no-repeat; }
+figure.brand p.toggle_like > a.btn-wish.on {background-position:-18px 0; }
 
 /* 상품 목록 */
 ul.list-products {overflow:hidden; margin:0px -5px; padding-bottom:30px;}
