@@ -234,6 +234,9 @@ header.message .btns { position: static; float: right; margin: 35px 0 0 0; }
 		table.info tbody th { padding: 20px 0 20px 15px; font-size: 12px; color: #231f20; font-weight: 700; text-align: left; border-bottom: 1px solid #d3d0cf; background-color: #f3f3f4; }
 		table.info tbody td { padding: 20px 10px 20px 15px; font-size: 12px; color: #777; font-weight: 400; line-height: 20px; border-bottom: 1px solid #d3d0cf; }
 
+		ul.list-rules { overflow: hidden; margin-top: 20px; }
+		ul.list-rules > li { float: left; padding: 0 0 20px 0; }
+
 /*
 	ul.tni { margin-top: 10px; }
 	ul.tni li { font-size: 13px; color: #777; font-weight: 300; line-height: 24px; }
