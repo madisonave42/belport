@@ -98,6 +98,8 @@
 			case 'se1.2'  : $subTitle = 'Shop 검색결과 |'; break;
 			case 'se1.3'  : $subTitle = 'Brand 검색결과 |'; break;
 			case 'se1.4'  : $subTitle = 'Brand 검색결과 |'; break;
+			case 'gr0.1'  : $subTitle = '개인정보취급방침 |'; break;
+			case 'gr0.2'  : $subTitle = '이용약관 |'; break;
 			
 		}
 	?>
