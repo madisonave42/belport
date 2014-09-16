@@ -178,8 +178,8 @@ ul.list-selected-options li a.btn-delete { position: absolute; top: 50%; right: 
 
 
 /* 상품 기능 버튼 */
-.product-detail .product .btns_wrap { margin: 22px -2px 0 -2px; }
-.product-detail .product .btns { margin: 0 2px; }
+.product-detail .product .btns_wrap { margin: 22px -2px 0 -2px; overflow:hidden;}
+.product-detail .product .btns { margin: 0 2px; float:left;}
 .product-detail .product .btns.white > span { margin-right: 5px; display: inline-block; height: 18px; width: 18px; line-height: 18px; text-indent: -9999em; background: url(../images/shop/btn_wish01.png) 0px 0px no-repeat; }
 .product-detail .product .btns.white.on > span { background-position: -18px 0px; }
 
