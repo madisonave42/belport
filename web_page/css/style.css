@@ -765,7 +765,8 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 /* tester box - review */
 .popup.survey .select_section { margin: 30px -12px 0 -12px; padding: 65px 0 40px 0; text-align: center; background-color: #f3f3f4; }
 .popup.survey .select_section li label { padding-right: 10px; width: 148px; background-color: #fff; }
-.survey .select_section li input[name=purchase] + label { background: #fff url(../images/member/bg_skin_type.jpg) left top no-repeat; }
+.survey .select_section li input.purchase + label { background: #fff url(../images/shop/bg_purchase.jpg) left top no-repeat; }
+.survey .select_section li input.douknow + label { background: #fff url(../images/shop/bg_douknow.jpg) left top no-repeat; }
 
 /* ONLY 텍스트형 선택 */
 .survey .select_section.only_txt li label { position: relative; padding: 0px; display: inline-block; height: 39px; width: 313px; font-size: 14px; color: #777; font-weight: 500; text-align: center; line-height: 39px; cursor: pointer; border: 2px solid #aba8a7; background-color: #f3f3f4; }
@@ -774,12 +775,12 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 
 
 /* skin type */
-.survey .select_section li input[name=skin_type] + label { background: #f3f3f4 url(../images/member/bg_skin_type.jpg) left top no-repeat; }
-.survey .select_section li input[name=skin_tone] + label { background: #f3f3f4 url(../images/member/bg_skin_tone.jpg) left top no-repeat; }
-.survey .select_section li input[name=skin_trouble] + label { background: #f3f3f4 url(../images/member/bg_skin_trouble.jpg) left top no-repeat; }
-.survey .select_section li input[name=hair_trouble] + label { background: #f3f3f4 url(../images/member/bg_hair_trouble.jpg) left top no-repeat; }
-.survey .select_section li input[name=body_trouble] + label { background: #f3f3f4 url(../images/member/bg_body_trouble.jpg) left top no-repeat; }
-.survey .select_section li input[name=makeup_type] + label { background: #f3f3f4 url(../images/member/bg_makeup_type.jpg) left top no-repeat; }
+.survey .select_section li input.skin_type + label { background: #f3f3f4 url(../images/member/bg_skin_type.jpg) left top no-repeat; }
+.survey .select_section li input.skin_tone + label { background: #f3f3f4 url(../images/member/bg_skin_tone.jpg) left top no-repeat; }
+.survey .select_section li input.skin_trouble + label { background: #f3f3f4 url(../images/member/bg_skin_trouble.jpg) left top no-repeat; }
+.survey .select_section li input.hair_trouble + label { background: #f3f3f4 url(../images/member/bg_hair_trouble.jpg) left top no-repeat; }
+.survey .select_section li input.body_trouble + label { background: #f3f3f4 url(../images/member/bg_body_trouble.jpg) left top no-repeat; }
+.survey .select_section li input.makeup_type + label { background: #f3f3f4 url(../images/member/bg_makeup_type.jpg) left top no-repeat; }
 
 /* skin bg position */
 .survey .select_section li input + label[for=sel_1] { background-position: 0px 0px; }
