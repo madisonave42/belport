@@ -92,18 +92,20 @@ video{width:100%; min-width:1800px;}
 .video_area{overflow:hidden;}
 .video_area:after{content:""; display:block; width:100%; height:100%; background:#1e1400; opacity:0.6; position:absolute; top:0; left:0;}
 
-.text_crop{width:100%; height:100%; position:absolute; top:0; left:0; overflow:hidden;
+.logo_image{position:absolute; top:30px; left:50%;}
+
+.text_crop{width:100%; height:230px; position:absolute; top:30%; left:0; overflow:hidden;
 	display:table-cell; vertical-align:middle;
 }
-.text_area{width:100%; min-width:1050px; height:760px; position:relative; top:50%; margin-top:-380px;}
+.text_area{width:100%; height:230px; min-width:1050px; position:absolute; top:0; left:0;}
 .text_area img{display:inline-block;}
 .text_area>div{text-align:center;}
 
-.text_area  .logo_desc{font-size:15px; width:484px; height:44px; line-height:44px; background:url(../images/bg_logo_desc.png) no-repeat;
-	margin:27px auto 0;
+.text_area .message_1{font-size:36px; font-family: 'RixSGo L', sans-serif; margin-bottom:50px;
+	letter-spacing:24px;
 }
-.text_area .message_1{font-size:68px; font-family: 'RixSGo B', sans-serif; margin:90px 0 30px;}
-.text_area .date{font-size:52px; font-family: 'RixSGo B', sans-serif; margin-bottom:90px;}
+.text_area .message_1 span{font-family:'RixSGo B', sans-serif; font-weight:bold;}
+.text_area .message_1-1{font-size:15px; line-height:1.8;}
 
 	.brand{width:650px; margin:0 auto;}
 	.brand:after{content:""; display:block; clear:both;}
@@ -116,8 +118,10 @@ video{width:100%; min-width:1800px;}
 		margin:15px auto;}
 	.brand>div .desc{color:#777; line-height:1.4;}
 
-	.message_2{font-size:22px; margin-top:50px;}
+	.message_2{font-size:18px; margin-top:50px;}
 
-
+.date_slogan{position:absolute; bottom:30px; left:50%;}
+.date{font-family: 'RixSGo B', sans-serif; font-size:30px;}
+.slogan{font-family: 'RixSGo L', sans-serif; font-size:15px; color:#777;}
 
 
