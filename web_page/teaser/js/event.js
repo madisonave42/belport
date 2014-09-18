@@ -9,14 +9,32 @@ $(function(){
 	var nextIndex;
 	var isMoving;
 	var bannerHeight = 230;
+	var tID;
 
 	var ua = navigator.userAgent;
 	
 	
 	// function
 	function init(){
-		$bannerItem.css({top:230});
-		$bannerItem.eq(0).css({top:0});
+		$bannerItem.css({top:315, opacity:0});
+		$bannerItem.eq(0).css({top:85, opacity:1});
+	}
+	function setIndex(){
+		if( currentIndex > 0 ){move(0);}
+		else {move(currentIndex+1);}
+	}
+	function move(nextIndex){
+		
+		$currentBanner = $bannerItem.eq(currentIndex);
+		$nextBanner = $bannerItem.eq(nextIndex);
+		
+		
+		
+		$currentBanner.stop().animate({top:-145, opacity:0}, 500);
+		$nextBanner.css({top:315});
+		$nextBanner.stop().animate({top:85, opacity:1}, 500);
+		
+		currentIndex = nextIndex;
 	}
 
 
@@ -30,6 +48,12 @@ $(function(){
 
 	//rolling
 	init();
+	tID = setInterval(setIndex, 5000);
+	
+	$('.arrow').on('click', function(){
+		clearInterval(tID);
+		setIndex();
+	});
 	
 
 
