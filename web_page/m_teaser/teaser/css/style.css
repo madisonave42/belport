@@ -87,7 +87,8 @@ table{width:100%;}
 /*  custom  */
 
 html, body{width:100%; height:100%;}
-.wrap{width:100%; max-width:768px; background:#000 url(../images/bg_mobile.jpg) no-repeat left top; padding-top:500px;}
+/* .wrap{width:100%; max-width:768px; background:#000 url(../images/bg_mobile.jpg) no-repeat left top; padding-top:500px;} */
+.wrap > img {width:100%;}
 
 .text_crop{width:100%;}
 .text_area{width:100%;}
@@ -118,5 +119,5 @@ html, body{width:100%; height:100%;}
 	.message_2{font-size:22px; margin-top:150px; padding-bottom:150px; }
 	.message_2:before{content:""; display:block; width:70%; height:1px; background:#2d2d2d; margin: 0 auto 50px;;}
 
-
+.hide {position:absolute; top:-9999em;}
 
