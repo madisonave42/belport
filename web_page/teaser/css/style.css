@@ -105,7 +105,7 @@ video{width:100%; min-width:1800px;}
 .text_area img{display:inline-block;}
 .text_area>div{text-align:center;}
 
-.text_area .message_1{font-size:66px; font-family: 'RixSGo L', sans-serif; margin-bottom:35px;}
+.text_area .message_1{font-size:66px; font-family: 'RixSGo L', sans-serif; margin-bottom:35px; padding-top:10px;}
 .text_area .message_1 span{font-family:'RixSGo B', sans-serif; font-weight:bold;}
 .text_area .message_1-1{font-size:15px; line-height:1.8;}
 
