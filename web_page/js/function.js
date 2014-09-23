@@ -147,3 +147,30 @@ var slideAction = (function(){
 			
 	};
 })();
+
+
+/**
+ * 설문조사
+ * @namespace 
+ * 
+ */
+ 
+var surveyAction = (function(){
+	
+	return{
+		/**
+		 * 상세보기 토글
+		 * 
+		 */
+		checkState : function( inputs ) {
+			inputs.each(function(){
+				if( $( this ).is(':checked') ) {
+					$( this ).next( 'label' ).addClass( 'checked' );
+				} else {
+					$( this ).next( 'label' ).removeClass( 'checked' );
+				}
+			});
+		}
+			
+	};
+})();

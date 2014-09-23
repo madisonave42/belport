@@ -151,8 +151,17 @@ $(function(){
 	})();
  
  
- 
- 
+ /*============================================================
+  * Survey check
+  =============================================================*/
+ (function(){
+	var inputs = $( '.survey .select_section input' );
+	surveyAction.checkState( inputs );
+	
+	inputs.on( 'change', function(){
+		surveyAction.checkState( inputs );
+	});
+ })();
  
  
  

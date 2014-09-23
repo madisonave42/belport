@@ -55,9 +55,9 @@ ul.list-products li .chk_item {position:absolute; top:10px; left:15px; z-index:1
 .find_purchase .find_area>div{float:left;}
 .find_purchase .find_area>div>*{float:left; height:24px; line-height:24px;}
 .find_purchase .find_area>div>h2{margin-right:10px; color:#231f20;}
-.find_purchase .find_area>div>.btn_period{display:block; width:58px; height:24px; line-height:1; text-align:center; border:1px solid #d3d0cf; background:#fff; margin:0; margin-right:3px; padding:0; font-family:'ns', sans-serif; color:#777;}
+.find_purchase .find_area>div>.btn_period{display:block; width:58px; height:24px; line-height:1; text-align:center; border:1px solid #d3d0cf; background:#fff; margin:0; margin-right:3px; padding:0; font-family:'RixSGo L', sans-serif; color:#777;}
 .find_purchase .find_area>div>.btn_period.active{background:#231f20; color:#f3f3f4; border-color:#231f20;}
-.find_purchase .find_area>.select_date{margin-left:30px; width:445px;}
+.find_purchase .find_area>.select_date{margin-left:30px; width:460px;}
 .find_purchase .find_area .input_cal>*{float:left;}
 .find_purchase .find_area .input_cal>img{cursor:pointer;}
 .find_purchase .find_area .input_cal>input{margin:0; padding:0; width:128px; height:22px; border:1px solid #ccc; margin-right:3px;}
@@ -142,6 +142,7 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
  * 나의활동
  ======================================================*/
 /* 나의활동 테이블 공통 */
+.toggle_list {table-layout:fixed;}
 .toggle_list th,
 .toggle_list td {height:39px; border-bottom:1px solid #d3d0cf;}
 .toggle_list tr:first-child th,
