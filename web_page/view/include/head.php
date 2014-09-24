@@ -17,6 +17,7 @@
 			case 'ev' : $css = 'event'; $title='EVENT |'; break;
 			case 'se' : $css = 'search'; $title='SEARCH |'; break;
 			case 'gr' : $css = 'index'; $title=''; break;
+			case 'bp' : $css = 'about'; $title='About BELPORT |'; break;
 		}
 		$currentTitle = $_GET['t'];
 		switch($currentTitle){
@@ -100,6 +101,7 @@
 			case 'se1.4'  : $subTitle = 'Brand 검색결과 |'; break;
 			case 'gr0.1'  : $subTitle = '개인정보취급방침 |'; break;
 			case 'gr0.2'  : $subTitle = '이용약관 |'; break;
+			case 'bp1'    : $subTitle = ''; break;
 			
 		}
 	?>

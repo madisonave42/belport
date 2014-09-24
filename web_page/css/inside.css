@@ -58,7 +58,7 @@
 .inside-b .masonry_list .item{ margin-bottom:30px; padding: 3px; width: 296px; border: 1px solid #d3d0cf; }
 .inside-b .masonry_list .item hgroup {margin:26px 0 17px 0; padding:0 8px; }
 .inside-b .masonry_list .item hgroup span { position: relative; padding-left: 18px; font-size: 14px; color: #231f20; font-weight: 400; }
-.inside-b .masonry_list .item hgroup span:after { content: ''; position: absolute; top: 0; left: 0px; display: block; height: 12px; width: 12px; background: url(../images/inside/icon_sorting.png) left top no-repeat; }
+.inside-b .masonry_list .item hgroup span:after { content: ''; position: absolute; top:2px; left: 0px; display: block; height: 12px; width: 12px; background: url(../images/inside/icon_sorting.png) left top no-repeat; }
 .inside-b .masonry_list .item hgroup span.category01:after { background-position: 0px -12px; }
 .inside-b .masonry_list .item hgroup span.category02:after { background-position: -12px -12px; }
 .inside-b .masonry_list .item hgroup span.category03:after { background-position: -24px -12px; }
