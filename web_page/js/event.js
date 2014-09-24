@@ -31,6 +31,41 @@ $(function(){
 		});
 	})();
 	
+	/* gnb minimize */
+	(function(){
+		
+		var scrollStart = false;
+		
+		$(document).on('scroll', function(){
+			if( $(this).scrollTop() > 200 ){
+				if(!scrollStart){
+					$('header').addClass('scroll');
+					$('#contents').addClass('scroll');
+					$('header').css({top:-162}).stop().animate({top:0}, 500);
+					scrollStart = true;
+				}
+			} else {
+				$('header').removeClass('scroll');
+				$('#contents').removeClass('scroll');
+				scrollStart = false;
+			}
+		});
+		
+	})();
+	
+	/* show search */
+	(function(){
+		var open = false;
+		$('.header_util .btn_search').on('click', function(e){
+			e.preventDefault();
+			if(!open){
+				$('.header_search').stop().animate({height:50});
+			} else {
+				$('.header_search').stop().animate({height:0});
+			}
+		});
+	})();
+	
 	/*=====================================
 	 * 고객센터
 	 ======================================*/
