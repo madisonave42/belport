@@ -880,7 +880,7 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .survey_complete .complete_message .table_area{padding:30px 40px; background:#f3f3f4;}
 
 .survey_complete hgroup{text-align:center; margin-bottom:40px;}
-.survey_complete hgroup>h1{font-size:24px; margin-bottom:10px; font-weight:700;}
+.survey_complete hgroup>h1{font-size:24px; margin-bottom:10px; font-weight:700; letter-spacing:-1px\0;}
 .survey_complete hgroup>h1 span{font-weight:700;}
 .survey_complete hgroup>p{line-height:1.4;}
 
