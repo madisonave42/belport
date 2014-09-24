@@ -96,11 +96,11 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
  ===================================================*/ 
 .spotlight #list_container{border-top:1px solid #231F20; padding-top:30px;}
 .spotlight #list_container .item{border:1px solid #eee; padding:3px; width:218px; margin-bottom:15px;}
-.spotlight #list_container .item hgroup{margin:10px 0;}
+.spotlight #list_container .item hgroup{margin:10px 0; padding:0 8px;}
 .spotlight #list_container .item hgroup h2{font-size:24px; color:#231f20; font-weight:700;}
 .spotlight #list_container .item hgroup p{color:#231f20; font-weight:500; margin-top:5px; font-size:14px;}
-.spotlight #list_container .item>p{line-height:1.4;}
-.spotlight #list_container .item>a{display:block; width:33px; float:right; text-align:center; border-bottom:1px solid #aba8a7; padding-bottom:3px; font-size:11px; margin-bottom:7px;}
+.spotlight #list_container .item>p{padding:0 8px; line-height:1.4;}
+.spotlight #list_container .item>a{display:block; width:33px; float:right; margin-right:7px; text-align:center; border-bottom:1px solid #aba8a7; padding-bottom:3px; font-size:11px; margin-bottom:7px;}
 .spotlight .see_more{margin:50px auto 0; width:936px;} 
 
 

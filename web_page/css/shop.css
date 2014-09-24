@@ -287,11 +287,11 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 #list_container{border-top:1px solid #231F20; padding-top:30px;}
 
 .theme_shop #list_container .item{border:1px solid #eee; padding:3px; width:218px; margin-bottom:15px;}
-.theme_shop #list_container .item hgroup{margin:10px 0;}
+.theme_shop #list_container .item hgroup{margin:10px 0; padding:0 8px;}
 .theme_shop #list_container .item hgroup h2{font-size:24px; color:#231f20; font-weight:700;}
 .theme_shop #list_container .item hgroup p{color:#231f20; font-weight:500; margin-top:5px; font-size:14px;}
-.theme_shop #list_container .item>p{line-height:1.4;}
-.theme_shop #list_container .item>a{display:block; width:33px; float:right; text-align:center; border-bottom:1px solid #aba8a7; padding-bottom:3px; font-size:11px; margin-bottom:7px;}
+.theme_shop #list_container .item>p{padding:0 8px; line-height:1.4;}
+.theme_shop #list_container .item>a{display:block; width:33px; float:right; margin-right:7px; text-align:center; border-bottom:1px solid #aba8a7; padding-bottom:3px; font-size:11px; margin-bottom:7px;}
 #contents.theme_shop .see_more{width:694px; margin:50px auto 0; padding:0 0 0 242px;}
 
 
@@ -301,12 +301,12 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 
 .theme_box #list_container .item{border:1px solid #eee; padding:3px; width:218px; margin-bottom:15px;}
 .theme_box #list_container .item .top{background:#f3f3f4; position:relative;}
-.theme_box #list_container .item hgroup{margin:20px 5px; position:absolute; top:0;}
+.theme_box #list_container .item hgroup{margin:20px 8px; position:absolute; top:0;}
 .theme_box #list_container .item hgroup{font-size:24px; color:#231f20; font-weight:700;}
 .theme_box #list_container .item hgroup p{color:#231f20; font-weight:500; margin-top:5px; font-size:14px;}
-.theme_box #list_container .item .top p.description{position:absolute; bottom:0; left:0; line-height:1.4; padding:10px;}
+.theme_box #list_container .item .top p.description{position:absolute; bottom:0; left:0; line-height:1.4; padding:10px 8px;}
 
-.theme_box #list_container p.price {position:absolute; top:100px; padding-left: 7px; font-family: 'Alegreya', serif; font-style: italic;}
+.theme_box #list_container p.price {position:absolute; top:100px; padding-left:8px; font-family: 'Alegreya', serif; font-style: italic;}
 .theme_box #list_container p.price > .dc-price { font-size: 20px; color: #2b282a; line-height: 18px; }
 .theme_box #list_container p.price > .price {margin-left: 8px; font-size: 20px; color: #b9b9b9; line-height: 18px; }
 
