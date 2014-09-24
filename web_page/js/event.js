@@ -53,17 +53,29 @@ $(function(){
 		
 	})();
 	
-	/* show search */
+	/* show search & search or close */
 	(function(){
 		var open = false;
 		$('.header_util .btn_search').on('click', function(e){
 			e.preventDefault();
 			if(!open){
-				$('.header_search').stop().animate({height:50});
+				$('.header_search').stop().animate({height:50}, 300);
+				open = true;
 			} else {
-				$('.header_search').stop().animate({height:0});
+				$('.header_search').stop().animate({height:0}, 300);
+				open = false;
 			}
 		});
+		
+		$('.header_search .btn_search_big').on('click', function(e){
+			var inputValue = $('.keyword').val();
+			if( inputValue <= 0 ){
+				e.preventDefault();
+				$('.header_search').stop().animate({height:0}, 300);
+				open = false;
+			}
+		});
+		
 	})();
 	
 	/*=====================================

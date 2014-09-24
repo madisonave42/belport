@@ -398,7 +398,7 @@ header .header_util ul li a.btn_search{display:block; width:11px; height:11px; t
  
 header .header_search {
 	position:absolute;
-	top:11px;
+	top:7px;
 	left:50%;
 	margin-left:122px;
 	height:0;
