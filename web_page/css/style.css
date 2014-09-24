@@ -378,10 +378,10 @@ header .header_util ul li a {
 }
 header .header_util ul li.cart:after{content:""; display:block; clear:both;}
 header .header_util ul li.cart>a{float:left;}
-header .header_util ul li.cart>.count_bubble{position:relative; margin-left:8px; top:0\0;}
+header .header_util ul li.cart>.count_bubble{position:relative; margin-left:8px;}
 header .header_util ul li.cart>.count_bubble>.pr_count{
 	display:block; height:12px; line-height:12px; padding-left:8px; float:left;
-	background:url(../images/common/bg_cart_amount.gif) no-repeat; color:#fff; padding-top:3px\0; letter-spacing:0px;
+	background:url(../images/common/bg_cart_amount.gif) no-repeat; color:#fff; letter-spacing:0px;
 }
 header .header_util ul li.cart>.count_bubble>span{
 	display:block; width:8px; height:12px; float:left;
