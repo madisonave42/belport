@@ -128,7 +128,7 @@ header.scroll>h1{
 	margin:0 auto;
 }
 
-header.scroll .key_out{
+header.scroll>h1>a{
 	display:none;
 }
 
@@ -136,6 +136,11 @@ header.scroll .key_out{
 	height:46px;
 	background-color:#231f20;
 	border-bottom:3px solid #0f0f0f;
+	position:relative;
+}
+#gnb>h1.scroll{
+	width:37px; height:37px; background:url(../images/common/logo_small.png) no-repeat;
+	top:5px; left:50%; margin-left:-470px;
 }
 #gnb .main_menu {
 	position:relative;

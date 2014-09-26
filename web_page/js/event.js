@@ -39,14 +39,16 @@ $(function(){
 		$(document).on('scroll', function(){
 			if( $(this).scrollTop() > 200 ){
 				if(!scrollStart){
-					$('header').addClass('scroll');
-					$('#contents').addClass('scroll');
-					$('header').css({top:-162}).stop().animate({top:0}, 500);
+					$('body>header>#gnb>h1').addClass('scroll');
+					$('body>header').addClass('scroll');
+					$('body>#contents').addClass('scroll');
+					$('body>header').css({top:-162}).stop().animate({top:0}, 500);
 					scrollStart = true;
 				}
 			} else {
-				$('header').removeClass('scroll');
-				$('#contents').removeClass('scroll');
+				$('body>header>#gnb>h1').removeClass('scroll');
+				$('body>header').removeClass('scroll');
+				$('body>#contents').removeClass('scroll');
 				scrollStart = false;
 			}
 		});
