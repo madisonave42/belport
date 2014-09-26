@@ -174,3 +174,49 @@ var surveyAction = (function(){
 			
 	};
 })();
+
+
+/**
+ * 제품 상세 탭
+ * @namespace 
+ * 
+ */
+ 
+var productDetail = (function(){
+	
+	return{
+		/**
+		 * 상세보기 토글
+		 * 
+		 */
+		tabToggle : function( tabAreas, selectedTab ) {
+			if( selectedTab.attr('href') != undefined ) {
+				var tabClass = '';
+				
+				switch( selectedTab.attr('href') ) {
+					case '#tab01' : tabClass = '.feature';
+						break;
+					case '#tab02' : tabClass = '.review';
+						break;
+					case '#tab03' : tabClass = '.qna';
+						break;
+					case '#tab04' : tabClass = '.shipping';
+						break;
+				}
+				
+				if( tabClass != '.feature' ) {
+					tabAreas.hide();
+					$( '.single-column' + tabClass ).show();
+				}
+			
+				this.tabScroll( tabClass );
+			}
+		},
+		tabScroll : function( tabClass ) {
+			var ty = $( '.single-column' + tabClass ).offset().top -20;
+			$('html').animate({scrollTop : ty}, 700, 'easeOutCubic'); // for IE
+			$('body').animate({scrollTop : ty}, 700, 'easeOutCubic');
+		}
+			
+	};
+})();

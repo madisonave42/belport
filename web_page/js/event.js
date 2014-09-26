@@ -243,4 +243,18 @@ $(function(){
 		});
 	})();
 	
+	/*============================================================
+  * product detail
+  =============================================================*/
+	/* 탭 스크롤 */
+	(function() {
+		var tabs = $('.product-detail .single-column .tab a'),
+			tabAreas = $( '.single-column.review, .single-column.qna, .single-column.shipping' );
+		
+		tabs.on('click', function(e){
+			e.preventDefault();
+			productDetail.tabToggle( tabAreas, $(this) );
+		});
+	})();
+	
 });

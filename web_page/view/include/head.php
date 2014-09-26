@@ -85,6 +85,8 @@
 			case 'sh1.5.1'  : $subTitle = 'Laino |'; break;
 			case 'sh1.5.2'  : $subTitle = 'Dr. Bronner\'s |'; break;
 			case 'sh1.5.3'  : $subTitle = 'Linola |'; break;
+			case 'sh1.5.4'  : $subTitle = 'Hurraw |'; break;
+			case 'sh1.5.5'  : $subTitle = 'La fresh |'; break;
 			case 'br1'      : $subTitle = ''; break;
 			case 'br1.1.1'  : $subTitle = 'Brand Product |'; break;
 			case 'br1.1.2'  : $subTitle = 'Brand Story |'; break;
