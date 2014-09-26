@@ -222,7 +222,7 @@ $(function(){
 		topBtn.isClosing = false;
 		
 		$(window).on('scroll', function() {
-			if ( $(document).scrollTop() > $(window).height() * 1.5 ) {
+			if ( $(document).scrollTop() > 400 ) {
 				if( !topBtn.isOpening ) {
 					topBtn.isOpening = true;
 					topBtn.isClosing = false;
@@ -242,10 +242,19 @@ $(function(){
 			$('body').animate({scrollTop : 0}, 300);
 		});
 	})();
- 
- 
- 
- 
 	
+	/*============================================================
+  * product detail
+  =============================================================*/
+	/* 탭 스크롤 */
+	(function() {
+		var tabs = $('.product-detail .single-column .tab a'),
+			tabAreas = $( '.single-column.review, .single-column.qna, .single-column.shipping' );
+		
+		tabs.on('click', function(e){
+			e.preventDefault();
+			productDetail.tabToggle( tabAreas, $(this) );
+		});
+	})();
 	
 });

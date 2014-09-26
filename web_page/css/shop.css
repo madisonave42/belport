@@ -133,6 +133,8 @@ div.sorting .cnt:after { content: '|'; position: absolute; top: -6px; left: 5px;
 
 /* 상품 상세 */
 #contents.product-detail .container section.product { overflow: hidden; position: relative; padding: 0 0 48px 495px; min-height: 590px; width: 441px; border-bottom: 1px solid #d3d0cf; }
+#contents.product-detail .container section.single-column.qna,
+#contents.product-detail .container section.single-column.shipping {display:none;}
 
 /* share sns */
 div.share { overflow: hidden; margin: 5px 0 29px -495px; padding: 0 0 10px 0; width: 936px; border-bottom: 1px solid #231f20; }
