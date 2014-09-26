@@ -213,7 +213,35 @@ $(function(){
 	});
  })();
  
- 
+ /*============================================================
+  * 페이지 맨위로 이동
+  =============================================================*/
+	(function() {
+		var topBtn = $('.btn_top');
+		topBtn.isOpening = false;
+		topBtn.isClosing = false;
+		
+		$(window).on('scroll', function() {
+			if ( $(document).scrollTop() > $(window).height() * 1.5 ) {
+				if( !topBtn.isOpening ) {
+					topBtn.isOpening = true;
+					topBtn.isClosing = false;
+					topBtn.stop().animate({'top':0, 'opacity':1}, 300, function(){ topBtn.isOpening = false });
+				}
+			} else {
+				if( !topBtn.isClosing ) {
+					topBtn.isOpening = false;
+					topBtn.isClosing = true;
+					topBtn.stop().animate({'top':-45, 'opacity':1}, 300, function(){ topBtn.isClosing = false });
+				}
+			}
+		});
+		topBtn.on('click',function (e) {
+			e.preventDefault();
+			$('html').animate({scrollTop : 0}, 300); // for IE
+			$('body').animate({scrollTop : 0}, 300);
+		});
+	})();
  
  
  

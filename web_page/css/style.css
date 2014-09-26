@@ -716,6 +716,7 @@ footer .copyright {
 	width:450px;
 }
 
+.btn_top {position:fixed; top:-45px; left:50%; margin-left:500px; width:45px; height:45px;}
 
 
 /* ==========================================================
