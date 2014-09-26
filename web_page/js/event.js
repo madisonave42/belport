@@ -222,7 +222,7 @@ $(function(){
 		topBtn.isClosing = false;
 		
 		$(window).on('scroll', function() {
-			if ( $(document).scrollTop() > $(window).height() * 1.5 ) {
+			if ( $(document).scrollTop() > 400 ) {
 				if( !topBtn.isOpening ) {
 					topBtn.isOpening = true;
 					topBtn.isClosing = false;
@@ -242,10 +242,5 @@ $(function(){
 			$('body').animate({scrollTop : 0}, 300);
 		});
 	})();
- 
- 
- 
- 
-	
 	
 });
