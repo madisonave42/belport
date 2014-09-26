@@ -32,6 +32,7 @@ $(function(){
 	})();
 	
 	/* gnb minimize */
+	/*
 	(function(){
 		
 		var scrollStart = false;
@@ -54,7 +55,7 @@ $(function(){
 		});
 		
 	})();
-	
+	*/
 	/* show search & search or close */
 	(function(){
 		var open = false;
