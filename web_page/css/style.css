@@ -161,7 +161,6 @@ header.scroll>h1>a{
 	width:150px;
 	height:45px;
 	line-height:38px;
-	line-height:46px\0;
 	font-family:'RixSGo B', sans-serif;
 	font-size:16px;
 	color:#777;
@@ -239,7 +238,7 @@ header.scroll>h1>a{
 	color:#000;
 	background-color:#e2e2e2;
 	font-family:'RixSGo M', sans-serif;
-	font-weight:bold;
+	/*font-weight:bold;*/
 	letter-spacing:-1px\0;
 }
 #gnb .sub_menu .sub_default li a {
@@ -285,7 +284,7 @@ header.scroll>h1>a{
 #gnb .sub_menu .sub_emphasis li a:focus {
 	background-color:#e2e2e2;
 	font-family:'RixSGo M', sans-serif;
-	font-weight:bold;
+	/*font-weight:bold;*/
 	color:#00488c;
 }
 #gnb .sub_menu .sub_emphasis li.default a:hover,
@@ -491,7 +490,6 @@ header .about_belport {
 	width:221px;
 	height:51px;
 	line-height:51px;
-	line-height:57px\0;
 	font-size:14px;
 	color:#d3d0cf;
 	font-weight:400;
@@ -575,15 +573,18 @@ header .about_belport {
 	margin-right:20px;
 	padding-left:10px;
 	border-left:1px solid #534f4f;
+	width:635px;
 }
 #bottom_nav .bottom_location .location_info {
 	float:left;
 	padding-left:10px;
 	height:341px;
 	border-left:1px solid #534f4f;
+	width:215px;
 }
 #bottom_nav .bottom_location .location_info p {
-	font-size:15px;
+	font-size:16px;
+	font-family:'RixGo B', sans-serif;
 	color:#d3d0cf;
 }
 #bottom_nav .bottom_location .location_info dl {
@@ -592,6 +593,8 @@ header .about_belport {
 }
 #bottom_nav .bottom_location .location_info dl dt{
 	margin-top:15px;
+	font-size:14px;
+	font-family:'RixGo B', sans-serif;
 }
 #bottom_nav .bottom_location .location_info dl dd{
 	margin-top:7px;
@@ -640,7 +643,6 @@ footer .footer_links li:first-child {
 }
 footer .footer_links li a {
 	position:relative;
-	top:3px\0;
 }
 footer .footer_links li a strong {
 }
@@ -814,8 +816,11 @@ footer .copyright {
 .btns{display:inline-block; font-weight:400; text-align:center; font-weight:400; margin:0 5px;}
 /* black/gray/white */
 .black{color:#fff; background:#231f20; border:3px solid #231f20;}
+.black:active{color:#fff; background:#231f20; border:3px solid #231f20;}
 .gray{color:#fff; background:#767676; border:3px solid #767676;}
+.gray:active{color:#fff; background:#767676; border:3px solid #767676;}
 .white{color:#231f20; background:#fff; border:3px solid #231f20;}
+.white:active{color:#231f20; background:#fff; border:3px solid #231f20;}
 
 /* large/medium/small */
 .large{width:192px; height:51px; line-height:51px; font-size:16px;}

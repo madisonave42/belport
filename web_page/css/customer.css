@@ -5,8 +5,9 @@
 /* 탭 스타일 */
 .tab { width:936px; height:44px; margin:0 auto 50px; padding-top:128px; }
 .tab li { float:left; width:312px; }
-.tab li a { display:block; height:43px; line-height:39px; line-height:47px\0; text-align:center; font-size:15px; border-bottom:1px solid #231f20; }
-.tab li a.on { height:39px; border-bottom:5px solid #231f20; }
+.tab li a { display:block; height:43px; line-height:39px; text-align:center; font-size:15px; border-bottom:1px solid #231f20; }
+.tab li a.on,
+.tab li a:hover { height:39px; border-bottom:5px solid #231f20; }
 
 /* 테이블 기본 */
 .list_table{ border-top:2px solid #231f20; }
@@ -20,9 +21,9 @@
  ===================================================*/
 .main > section h1 { margin-bottom:13px; font-size:15px; }
 .main .cs_info .contact { width:936px; height:46px; margin:0 20px 60px 0; padding:10px 0; border:1px solid #d3d0cf; overflow:hidden; }
-.main .cs_info .contact .tel { float:left; width:467px; height:46px; line-height:46px; line-height:58px\0; font-size:28px; border-right:1px solid #d3d0cf; text-align:center; }
+.main .cs_info .contact .tel { float:left; width:467px; height:46px; line-height:46px; font-size:28px; border-right:1px solid #d3d0cf; text-align:center; }
 .main .cs_info .contact .tel{ }
-.main .cs_info .contact .work_time { float:left; width:468px; height:38px; padding-top:8px; padding-top:6px\0; text-align:center; }
+.main .cs_info .contact .work_time { float:left; width:468px; height:38px; padding-top:8px; text-align:center; }
 .main .cs_info .contact .work_time p { margin-top:5px; }
 .main .cs_info .contact .work_time p:first-child { margin-top:0; }
 .main .cs_main_board { position:relative; }

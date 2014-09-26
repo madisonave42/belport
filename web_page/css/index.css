@@ -3,8 +3,9 @@
 
 .container.index {padding-top:40px;}
 
+/*
 #contents .container > section,
-#contents .container > div {margin-top:80px;}
+#contents .container > div {margin-top:80px;}*/
 .container section > h1 {margin-bottom:40px; font-size:24px; font-weight:900; height:12px; border-bottom:1px solid #d3d0cf; }
 .container section > h1 span {padding-right:11px; background:#fff;}
 
@@ -17,12 +18,13 @@
 .container-banner ul.list-banner {position:absolute; top:0; left:0; }
 .container-banner ul.list-banner li {float:left; height:342px; width:694px; }
 
-.container-banner .positions {position:absolute; bottom:16px; right:20px; display:block; height:3px; }
-.container-banner .positions > a {float:left; margin-left:10px; display:block; height:3px; width:21px; text-indent:-9999px; background:url(../images/shop/bg_position01.png) -21px 0px no-repeat; overflow:hidden;}
+.container-banner .positions {position:absolute; bottom:16px; left:0; display:block; height:3px; width:100%; text-align:center;}
+.container-banner .positions > a {/*float:left;*/margin-left:10px; display:inline-block; height:3px; width:21px; text-indent:-9999px; background:url(../images/shop/bg_position01.png) -21px 0px no-repeat; overflow:hidden;}
+.container-banner .positions > a:first-child{margin-left:0;}
 .container-banner .positions > a.current {background-position:0px 0px; }
 
-.container-banner a.btn-prev {position:absolute; top:50%; left:0; display:block; height:29px; width:21px; text-indent:-9999px; background:url(../images/shop/btn_nav01.png) 0px 0px no-repeat; overflow:hidden;}
-.container-banner a.btn-next {position:absolute; top:50%; right:0; display:block; height:29px; width:21px; text-indent:-9999px; background:url(../images/shop/btn_nav01.png) -21px 0px no-repeat; overflow:hidden;}
+.container-banner a.btn-prev {position:absolute; top:50%; left:0; margin-top:-15px; display:block; height:29px; width:21px; text-indent:-9999px; background:url(../images/shop/btn_nav01.png) 0px 0px no-repeat; overflow:hidden;}
+.container-banner a.btn-next {position:absolute; top:50%; right:0; margin-top:-15px; display:block; height:29px; width:21px; text-indent:-9999px; background:url(../images/shop/btn_nav01.png) -21px 0px no-repeat; overflow:hidden;}
 
 /* belports_pick */
 ul.list-products {overflow:hidden; margin:0px -12px; }
