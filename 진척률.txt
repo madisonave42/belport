@@ -56,3 +56,21 @@ mailing/mailing.html
 popchoice/index.html
 
 
+개발 요청
+
+적용안된 것 요청
+
+<head></head> 영역에서
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 이 부분 바로 아래부분에
+
+<link rel="shortcut icon" href="../images/common/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../images/common/favicon.ico" type="image/x-icon">
+
+2라인 추가 요청 - favicon 적용되어야 합니다.
+
+
+
+
