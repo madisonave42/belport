@@ -3,15 +3,15 @@
  */
  
 /**
- * GNBµ¿ÀÛ
- * @namespace GNB ¼­ºê¸Ş´º ¿ÀÇÂ ÇÔ¼ö
+ * GNBë™ì‘
+ * @namespace GNB ì„œë¸Œë©”ë‰´ ì˜¤í”ˆ í•¨ìˆ˜
  * 
  */
 var gnbAction = (function(){
 	
 	return{
 		/**
-		 * °¢ µ¿ÀÛ¿¡ µû¸¥ gnb µ¿ÀÛµé
+		 * ê° ë™ì‘ì— ë”°ë¥¸ gnb ë™ì‘ë“¤
 		 * 
 		 */
 		checkSubMenu : function( mainMenus,  crtMenu ) {
@@ -34,15 +34,15 @@ var gnbAction = (function(){
 })();
 
 /**
- * bottom nav µ¿ÀÛ
- * @namespace ÇÏ´Ü¸Ş´º ¿ÀÇÂ ÇÔ¼ö
+ * bottom nav ë™ì‘
+ * @namespace í•˜ë‹¨ë©”ë‰´ ì˜¤í”ˆ í•¨ìˆ˜
  * 
  */
 var bottomNavAction = (function(){
 	
 	return{
 		/**
-		 * ¸Ş´º Åä±Û
+		 * ë©”ë‰´ í† ê¸€
 		 * 
 		 */
 		toggleMenu : function( bottomNavWrap, bottomNavMenus, crtMenu ) {
@@ -61,7 +61,7 @@ var bottomNavAction = (function(){
 })();
 
 /**
- * ¸¶ÀÌÆäÀÌÁö¿ë ÇÔ¼öµé
+ * ë§ˆì´í˜ì´ì§€ìš© í•¨ìˆ˜ë“¤
  * @namespace 
  * 
  */
@@ -69,7 +69,7 @@ var toggleListAction = (function(){
 	
 	return{
 		/**
-		 * »ó¼¼º¸±â Åä±Û
+		 * ìƒì„¸ë³´ê¸° í† ê¸€
 		 * 
 		 */
 		detailView : function( details, idx ) {
@@ -85,7 +85,7 @@ var toggleListAction = (function(){
 })();
 
 /**
- * ºê·£µå ½½¶óÀÌµå
+ * ë¸Œëœë“œ ìŠ¬ë¼ì´ë“œ
  * @namespace 
  * 
  */
@@ -94,7 +94,7 @@ var slideAction = (function(){
 	
 	return{
 		/**
-		 * »ó¼¼º¸±â Åä±Û
+		 * ìƒì„¸ë³´ê¸° í† ê¸€
 		 * 
 		 */
 		initSlide : function( bannerContainer ) {
@@ -150,7 +150,7 @@ var slideAction = (function(){
 
 
 /**
- * ¼³¹®Á¶»ç
+ * ì„¤ë¬¸ì¡°ì‚¬
  * @namespace 
  * 
  */
@@ -159,7 +159,7 @@ var surveyAction = (function(){
 	
 	return{
 		/**
-		 * »ó¼¼º¸±â Åä±Û
+		 * ìƒì„¸ë³´ê¸° í† ê¸€
 		 * 
 		 */
 		checkState : function( inputs ) {
@@ -177,7 +177,7 @@ var surveyAction = (function(){
 
 
 /**
- * Á¦Ç° »ó¼¼ ÅÇ
+ * ì œí’ˆ ìƒì„¸ íƒ­
  * @namespace 
  * 
  */
@@ -186,7 +186,7 @@ var productDetail = (function(){
 	
 	return{
 		/**
-		 * »ó¼¼º¸±â Åä±Û
+		 * ìƒì„¸ë³´ê¸° í† ê¸€
 		 * 
 		 */
 		tabToggle : function( tabAreas, selectedTab ) {

@@ -2,6 +2,7 @@
 - css, js 업데이트
 
 2. 개별 스팟라이트 추가
+br1.2.1_spotlight_detail.html
 - 24~117 변경및 추가
 
 9/26 수정사항
@@ -14,7 +15,7 @@ theme shop / limited edition 리스트 페이지 - 제목 폰트 크기 조정
 중카테고리 형태 - 좌측정렬
 브랜드 스토리 내용 페이지 레이아웃 형태 - 영문제목 미입력시 처리 개발 요청
 푸터 - 로케이션 지도 크기 조정
-공지사항 - 마우스 오버 효과
+공지사항, 마이페이지 탭 - 마우스 오버 효과
 로그인 - 버튼 효과 조정
 LNB / GNB - 마우스오버시 bold 제거
 브랜드 메인 - 리스트 상단 타이틀 bold 효과 추가
@@ -39,7 +40,7 @@ sh1.5.5_le_lafresh.html
 
 스팟라이트 수정
 
-br1.2.1_spotlight_detail
+br1.2.1_spotlight_detail.html
 line: 113 문구수정
 
 
@@ -47,5 +48,11 @@ line: 113 문구수정
 
 sh1.6.1.1_product_detail.html
 line: 242, 454, 584, 729 클래스추가
+
+메일링 페이지 추가
+mailing/mailing.html
+
+팝초이스 이동 페이지 추가
+popchoice/index.html
 
 
