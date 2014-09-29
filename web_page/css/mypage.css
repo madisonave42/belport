@@ -213,7 +213,7 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 .info_table input[type=text],
 .info_table input[type=password] {width:274px; color:#777; margin:0px;}
 .info_table input[type=checkbox]{margin-right:2px;}
-.info_table > table p {clear:both; padding-top:10px;}
+.info_table table p {clear:both; padding-top:10px;}
 .info_table .btn {margin-left:8px;width:118px; height:34px; line-height:34px; background:#777; color:#f3f3f4; border:0; font-size:13px;}
 .info_table .newsletter {margin-left:20px;}
 .info_table .phone>div{float:left; height:34px; line-height:34px; margin-right:5px;}
