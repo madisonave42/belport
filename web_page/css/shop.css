@@ -272,14 +272,14 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 .toggle_list .detail .btns_article {margin-top:20px; text-align:right;}
 .toggle_list .detail .btns_article .btn {padding:0; width:60px;}
 
-.toggle_list  .no_result {padding:30px 0; font-width:500; color:#231f20; text-align:center;}
+.toggle_list  .no_result {padding:30px 0; font-weight:500; color:#231f20; text-align:center;}
  
  /* 리뷰 */
-.toggle_list.review_list .detail .detail_view {padding-left:15px;}
+.toggle_list.review_list .detail .detail_view {padding-left:15px; line-height:1.7;}
 .toggle_list.review_list .detail .btns_article .btn {margin-left:2px;}
 
 /* 제품Q&A */
-.toggle_list.qna_list .detail .detail_view {padding-left:85px;}
+.toggle_list.qna_list .detail .detail_view {padding-left:85px; line-height:1.7;}
 .toggle_list.qna_list .detail .answer_view {padding-left:85px; background:#f3f3f4 url(../images/mypage/bg_answer_qna.png) no-repeat 20px 22px;}
 
 
