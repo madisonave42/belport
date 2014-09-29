@@ -143,11 +143,13 @@ $(function(){
   =============================================================*/
  
 	(function(){
-		if( $('div').is('#list_container') ){
-			var msnry = new Masonry( '#list_container', {
-				gutter:8
-			} );
-		}
+		$(window).on('load', function(){
+			if( $('div').is('#list_container') ){
+				var msnry = new Masonry( '#list_container', {
+					gutter:8
+				} );
+			}
+		});
 		
 	})();
 
