@@ -57,7 +57,7 @@ figure.product p.price > .price {margin-left:8px; font-size:20px; color:#b9b9b9;
 
 /* inside belport */
 .inside_b {float:left;}
-.inside_b > ul .item{float:left; margin-left:24px; border:1px solid #eee; padding:3px; padding-bottom:13px; width:208px;}
+.inside_b > ul .item{float:left; margin-left:24px; border:1px solid #eee; padding:3px; padding-bottom:13px; width:208px; height:315px;}
 .inside_b > ul .item:first-child {margin-left:0;}
 .inside_b > ul .item hgroup{margin:22px 0 17px; margin-left:7px;}
 .inside_b > ul .item hgroup h2{padding-left:17px; font-size:14px; color:#231f20; font-weight:400; background:url(../images/index/bg_theme_press.png) no-repeat 0 1px;}
@@ -76,7 +76,7 @@ figure.product p.price > .price {margin-left:8px; font-size:20px; color:#b9b9b9;
 .join_now .container-banner .positions > a.current {background:#231f20;}
 
 /* 하단영역 */
-#contents .container > div.supports {margin-top:100px;}
+/*#contents .container > div.supports {margin-top:100px;}*/
 .supports > section {float:left; margin-left:12px;}
 .container .supports section > h1 {margin-bottom:9px; font-size:15px; height:auto; border:0; }
 

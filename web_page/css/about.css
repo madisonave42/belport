@@ -1,5 +1,6 @@
 #contents.about .container .location {top:-9999em;}
 #contents .container > section {margin-top:0; width:100%; min-width:980px;}
+#contents .container{padding-bottom:0;}
 
 .intro {height:845px; background:#1a1a1a url(../images/about/bg_about_01.jpg) no-repeat center bottom; text-align:center;}
 .intro h1 {padding-top:355px; background:url(../images/about/about_logo.png) no-repeat center 154px; font-family:'RixSGo B', sans-serif; font-size:19px; font-weight:normal; color:#fff;}
@@ -13,7 +14,7 @@
 
 .mission h1 {margin-top:137px; font-family:'RixSGo B', sans-serif; font-size:30px; font-weight:normal; height:12px; border-bottom:1px solid #d3d0cf; text-align:center;}
 .mission h1 span {display:inline-block; padding:0 30px; background:#fff;}
-.mission ul {margin-top:48px; padding-top:35px; background:#f4f4f4;}
+.mission ul {margin-top:48px; padding-top:35px; background:#f4f4f4; padding-bottom:100px;}
 .mission ul li {margin:0 auto; width:980px; padding-top:48px; height:140px; border-bottom:1px solid #e9e9e9;}
 .mission ul li h2 {float:left; width:320px; font-size:48px; font-weight:normal; text-align:right; color:#231f20;}
 .mission ul li h2 span {display:block; margin-top:5px; font-family:'RixSGo B', sans-serif;}

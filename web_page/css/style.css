@@ -237,7 +237,7 @@ header.scroll>h1>a{
 #gnb .sub_menu ul li a:focus {
 	color:#000;
 	background-color:#e2e2e2;
-	font-family:'RixSGo M', sans-serif;
+	font-family:'RixSGo L', sans-serif;
 	/*font-weight:bold;*/
 	letter-spacing:-1px\0;
 }
@@ -465,13 +465,15 @@ header .about_belport {
 	background-color:#393536;
 }
 #bottom_nav .bottom_nav_wrap.on{
-	height:461px;
+	height:379px;
+	border-bottom:1px solid #484545;
 }
 /* 하단네비 공통 */
 #bottom_nav nav {
 	position:relative;
 	height:51px;
 	background-color:#231f20;
+	text-transform:uppercase;
 }
 #bottom_nav nav > ul {
 	position:relative;
@@ -482,7 +484,7 @@ header .about_belport {
 	float:left;
 }
 #bottom_nav nav > ul > li:first-child {
-	margin-left:22px;
+	/*margin-left:22px;*/
 }
 #bottom_nav nav > ul > li > a {
 	display:block;
@@ -521,7 +523,7 @@ header .about_belport {
 	top:51px;
 	left:0;
 	display:none;
-	padding:34px 22px;
+	padding:26px 0;
 }
 #bottom_nav nav .on .bottom_sub {
 	display:block;
@@ -530,81 +532,112 @@ header .about_belport {
 /* 하단 네비 메뉴별 */
 #bottom_nav .bottom_brand ul{
 	float:left;
-	padding-left:11px;
-	border-left:1px solid #534f4f;
 }
 #bottom_nav .bottom_brand ul li {
-	margin-bottom:27px;
+	margin-bottom:9px;
 }
 #bottom_nav .bottom_brand ul li a {
 	display:block;
-	width:210px;
+	width:187px;
 	font-size:11px;
-	color:#d3d0cf;
+	line-height:1.4;
+	color:#959595;
 }
-#bottom_nav .bottom_sitemap ul{
+#bottom_nav .bottom_brand ul li a.best_brand {
+	color:#fff;
+	font-family:'RixSGO M', sans-serif;
+}
+#bottom_nav .bottom_sitemap .col{
 	float:left;
-	padding-left:11px;
-	border-left:1px solid #534f4f;
-	min-height:341px;
+	margin-left:45px;
 }
-#bottom_nav .bottom_sitemap ul li {
-	margin-bottom:20px;
+#bottom_nav .bottom_sitemap .col:first-child{
+	margin-left:0;
 }
-#bottom_nav .bottom_sitemap ul li a {
+#bottom_nav .bottom_sitemap dl.wide{
+	width:420px;
+	padding:15px 0 6px 20px;
+	border-top:1px solid #454142;
+}
+#bottom_nav .bottom_sitemap dl.narrow{
+	width:148px;
+	padding:15px 0 16px 20px;
+	border-top:1px solid #454142;
+}
+#bottom_nav .bottom_sitemap dl.shop{
+	margin-bottom:22px;
+}
+#bottom_nav .bottom_sitemap dl:first-child{
+	border:0;
+	padding-top:37px;
+}
+#bottom_nav .bottom_sitemap dl:after{
+	content:"";
 	display:block;
-	width:210px;
-	font-size:11px;
-	color:#d3d0cf;
+	clear:both;
 }
-#bottom_nav .bottom_sitemap ul .cate_title,
-#bottom_nav .bottom_sitemap ul .util_title {
-	margin-top:50px;
+#bottom_nav .bottom_sitemap dl.wide dt{
+	float:left;
+	width:75px;	
 }
-#bottom_nav .bottom_sitemap ul .cate_title:first-child {
-	margin-top:0;
+#bottom_nav .bottom_sitemap dl.narrow dt{
+	float:left;
+	width:100px;	
 }
-#bottom_nav .bottom_sitemap ul .cate_title {
-	color:#f3f3f4;
+#bottom_nav .bottom_sitemap dl dt a{
+	font-family:'RixSGo M', sans-serif;
+	color:#fff;
+	display:block;
+}
+#bottom_nav .bottom_sitemap dl dd{float:left; width:325px;}
+#bottom_nav .bottom_sitemap dl dd ul li{
+	float:left; padding:0 15px 10px 0;
+}
+#bottom_nav .bottom_sitemap dl dd ul li a{font-size:12px; color:#959595;}
+
+#bottom_nav .bottom_location .col{
+	float:left;
+	width:468px;
+	height:136px;
+}
+#bottom_nav .bottom_location .map{
+
+}
+#bottom_nav .bottom_location .photo{
+	
+}
+#bottom_nav .bottom_location .store{
+	border-top:1px solid #646162;
+	padding-top:19px;
+	margin-top:30px;
+	font-size:18px;
+	font-family:'RixSGo M', sans-serif;
+	color:#fff;
+}
+#bottom_nav .bottom_location .location_info{
+	margin-top:30px;
 }
 
-#bottom_nav .bottom_location .map {
-	float:left;
-	margin-right:20px;
-	padding-left:10px;
-	border-left:1px solid #534f4f;
-	width:635px;
-}
-#bottom_nav .bottom_location .location_info {
-	float:left;
-	padding-left:10px;
-	height:341px;
-	border-left:1px solid #534f4f;
-	width:215px;
-}
-#bottom_nav .bottom_location .location_info p {
-	font-size:16px;
-	font-family:'RixGo B', sans-serif;
-	color:#d3d0cf;
-}
 #bottom_nav .bottom_location .location_info dl {
-	margin-top:50px;
-	color:#d3d0cf;
+	margin-left:30px;
+	font-size:12px;
 }
 #bottom_nav .bottom_location .location_info dl dt{
-	margin-top:15px;
-	font-size:14px;
-	font-family:'RixGo B', sans-serif;
+	font-family:'RixGo M', sans-serif;
+	float:left;
+	color:#fff;
+	width:100px;
 }
 #bottom_nav .bottom_location .location_info dl dd{
-	margin-top:7px;
+	margin-bottom:15px;
+	color:#959595;
 }
 
 #bottom_nav .sns_link {
 	position:absolute;
 	top:18px;
 	left:50%;
-	margin-left:391px;
+	margin-left:410px;
 }
 #bottom_nav .sns_link a {
 	float:left;
@@ -707,7 +740,7 @@ footer .copyright {
 }
 
 #contents .container.index {
-	width:1032px;
+	width:1016px;
 }
 #contents .container > section,
 #contents .container > div {
@@ -718,7 +751,7 @@ footer .copyright {
 	width:450px;
 }
 
-.btn_top {position:fixed; top:-45px; left:50%; margin-left:500px; width:45px; height:45px;}
+.btn_top {position:fixed; top:-45px; left:50%; margin-left:521px; width:45px; height:45px;}
 
 
 /* ==========================================================
