@@ -101,14 +101,18 @@
 	background:#777; color:#f3f3f4; vertical-align:middle;
 }
 
-.info_table .accept{float:right; margin-top:10px;}
-.info_table .accept>div{float:left; margin-left:30px;}
-.info_table .accept input[type=checkbox]{width:20px; height:20px; border:1px solid #d3d0cf; background:#fff;}
+.accept_all{margin-top:20px;}
+.accept_all>div{float:left; margin:0 30px 0 10px;}
+
+.accept{float:right; margin-top:10px;}
+.accept>div{float:left; margin-left:30px;}
+.accept input[type=checkbox]{width:20px; height:20px; border:1px solid #d3d0cf; background:#fff;}
 
 .terms>h1{font-size:15px; margin-bottom:10px;}
 .terms .terms_box{width:936px; height:100px; border:1px solid #d3d0cf; overflow-y:scroll;;}
 .terms .terms_box div{line-height:1.6;}
 .terms .terms_box pre{font-family:'RixGo L', sans-serif; line-height:1.6;}
+.terms .terms_box .accept_{}
 
 .join_message{
 	width:936px; border:1px solid #d3d0cf; margin-bottom:20px; text-align:center;
