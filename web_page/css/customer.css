@@ -84,12 +84,7 @@
 .faq .list_table .title { padding-left:30px; text-align:left; }
 .faq .list_table .answer { display:none; }
 .faq .list_table .answer.on { display:table-row; }
-<<<<<<< HEAD
-.faq .list_table .answer td { padding:30px 30px 30px 300px; text-align:left; background:#f3f3f4 url(../images/customer/bg_faq_answer.png) no-repeat 187px 24px; border-top:1px dashed #d3d0cf; line-height:1.6;}
-.faq .list_table .answer td p { line-height:1.6; }
-=======
 .faq .list_table .answer td { padding:30px 30px 30px 300px; text-align:left; background:#f3f3f4 url(../images/customer/bg_faq_answer.png) no-repeat 187px 24px; border-top:1px dashed #d3d0cf; line-height:1.7;}
->>>>>>> 461df4e76053cb827e076ad6312acc67a8a508a2
 
 /*==================================================
  * 1:1 상담
