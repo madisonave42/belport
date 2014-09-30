@@ -293,7 +293,7 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 
 .theme_shop #list_container .item{border:1px solid #eee; padding:3px; width:218px; margin-bottom:15px;}
 .theme_shop #list_container .item hgroup{margin:10px 0; padding:0 8px; line-height:1.3;}
-.theme_shop #list_container .item hgroup h2{font-size:20px; color:#231f20;}
+.theme_shop #list_container .item hgroup h2{font-size:20px; color:#231f20; font-weight:bold;}
 .theme_shop #list_container .item hgroup p{color:#231f20; font-weight:500; margin-top:5px; font-size:14px;}
 .theme_shop #list_container .item>p{padding:0 8px; line-height:1.4;}
 .theme_shop #list_container .item>a{display:block; width:33px; float:right; margin-right:7px; text-align:center; border-bottom:1px solid #aba8a7; padding-bottom:3px; font-size:11px; margin-bottom:7px;}
