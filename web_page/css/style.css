@@ -846,7 +846,7 @@ footer .copyright {
 /* btns_wrap */
 .btns_wrap{margin-top:30px;text-align: center;}
 /* default */
-.btns{display:inline-block; font-weight:400; text-align:center; font-weight:400; margin:0 5px;}
+.btns{display:inline-block; font-weight:400; text-align:center; font-weight:400; margin:0 5px; vertical-align:middle;}
 /* black/gray/white */
 .black{color:#fff; background:#231f20; border:3px solid #231f20;}
 .black:active{color:#fff; background:#231f20; border:3px solid #231f20;}
