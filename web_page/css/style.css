@@ -239,7 +239,6 @@ header.scroll>h1>a{
 	background-color:#e2e2e2;
 	font-family:'RixSGo L', sans-serif;
 	/*font-weight:bold;*/
-	letter-spacing:-1px\0;
 }
 #gnb .sub_menu .sub_default li a {
 	font-size:12px;
@@ -600,8 +599,9 @@ header .about_belport {
 	width:468px;
 	height:136px;
 }
-#bottom_nav .bottom_location .map{
-
+#bottom_nav .bottom_location .info_content.map{
+	width:486px;
+	height:136px;
 }
 #bottom_nav .bottom_location .photo{
 	
@@ -956,7 +956,7 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .survey_complete .complete_message .table_area{padding:30px 40px; background:#f3f3f4;}
 
 .survey_complete hgroup{text-align:center; margin-bottom:40px;}
-.survey_complete hgroup>h1{font-size:24px; margin-bottom:10px; font-weight:700; letter-spacing:-1px\0;}
+.survey_complete hgroup>h1{font-size:24px; margin-bottom:10px; font-weight:700;}
 .survey_complete hgroup>h1 span{font-weight:700;}
 .survey_complete hgroup>p{line-height:1.4;}
 
