@@ -3,7 +3,7 @@
 	
 	require('../html/include/gnb.html');
 	
-	require('../html/content/sh1.1_belport_pick.html');	
+	require('../html/content/sh1.5_limited_edition.html');	
 
 	require('../html/include/footer.html');
 ?>
