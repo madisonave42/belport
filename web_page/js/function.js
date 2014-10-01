@@ -124,6 +124,16 @@ var slideAction = (function(){
 					});
 				}
 				
+				(function(){
+					
+					var bannerNumber = $('.list-banner li').length;
+					if( bannerNumber <=1 ){
+						$('.positions').hide();
+						$('.btn-prev').parent('p').hide();
+					}
+					
+				})();
+				
 				$clickItems.click( function(ev){
 					ev.preventDefault();
 					var no = parseInt($(this).attr('href').replace('#', ''));

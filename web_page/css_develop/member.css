@@ -1,0 +1,157 @@
+
+/*==================================================
+ * 회원가입 공통스타일
+ ===================================================*/
+
+/* 회원가입 단계 스타일 */
+.step {margin:0 auto; margin-bottom:80px; padding:128px 50px 20px; width:836px; border-bottom:1px solid #d3d0cf;}
+.step li {float:left; width:256px; margin-right:94px; background:url(./images/member/bg_step_arrow.gif) no-repeat 245px 25px;}
+.step li strong {display:block; padding-left:76px; height:65px; background:url(./images/member/bg_step.gif) no-repeat; font-size:16px; color:#d5d5d4;}
+.step li strong .num {display:block; margin-bottom:7px; padding-bottom:7px; background:url(./images/member/bg_step_num.gif) no-repeat 0 22px;}
+
+.step li.on {background-position:245px -165px;}
+.step li.on strong {color:#20221f;}
+.step li.on strong .num {background-position:0 bottom;}
+
+.step li.step_1 strong {background-position:0 -2px;}
+.step li.step_1.on strong {background-position:0 -133px;}
+
+.step li.step_2 strong {background-position:-340px -2px;}
+.step li.step_2.on strong {background-position:-340px -133px;}
+
+.step li.step_3 strong {background-position:-693px -2px;}
+.step li.step_3.on strong {background-position:-693px -133px;}
+.step li.step_3 {width:136px; background:none; margin:0;}
+
+/* 설문조사 단계 스타일 */
+.step.survey {margin:0 auto; margin-bottom:80px; padding:128px 37px 20px; width:862px; border-bottom:1px solid #d3d0cf;}
+.step.survey li {float:left; width:96px; margin-right:38px; background:url(./images/member/bg_step_arrow.gif) no-repeat 85px 25px;}
+.step.survey li strong {display:block; padding-left:0; height:65px; font-size:16px; color:#d5d5d4; background:none;}
+.step.survey li strong .num {display:block; margin-bottom:7px; padding-bottom:7px; background:url(./images/member/bg_step_num.gif) no-repeat 0 22px;}
+
+.step.survey li.on {background-position:85px -165px;}
+.step.survey li.on strong {color:#20221f;}
+.step.survey li.on strong .num {background-position:0 bottom;}
+
+.step.survey li.step_7 {width:58px; background:none; margin:0;}
+
+/*==================================================
+ * 회원가입
+ ===================================================*/
+
+/* 단계 타이틀 */
+.join hgroup{text-align:center; margin-bottom:60px;}
+.join hgroup>h1{font-size:44px; margin-bottom:10px; font-weight:bold; font-weight:300;}
+.join hgroup>h1 span{font-weight:700;}
+.join hgroup>p{line-height:1.8;}
+
+.join .form_area{width:936px; margin-bottom:100px;}
+.join fieldset{width:620px; margin:47px auto 0; position:relative; display:block;}
+
+.join fieldset .input_area{font-weight:bold; margin-bottom:10px;}
+
+.join fieldset .input_area>div{float:left;}
+.join fieldset .input_area>div>label{display:block; width:80px; height:34px; line-height:39px;}
+.join fieldset .input_area>div>input{width:400px; height:32px; margin:0; border:1px solid #d3d0cf; padding:0;}
+
+.join fieldset .phone_number>div{float:left;}
+.join fieldset .phone_number>div>select{width:115px; height:34px; line-height:30px; border:1px solid #bbb; display:block;}
+.join fieldset .phone_number>div>input{width:111px; height:32px; line-height:28px; border:1px solid #bbb; padding:0; display:block; position:relative; *top:-1px;}
+.join fieldset .phone_number>div.dash{margin:0 12px; height:34px; line-height:34px;}
+
+.join fieldset .btn_login{position:absolute; top:0; right:0;}
+.join fieldset .btn_login a{display:block; width:131px; height:78px; background:#231f20; font-weight:400; color:#fff; text-align:center; line-height:78px;}
+
+.join .btn_area{width:936px; height:147px; margin:0 auto; border-top:1px solid #d3d0cf; border-bottom:1px solid #231f20; text-align:center;}
+.join .btn_area p{margin:40px 0 20px;}
+.join .btn_area a{display:block; width:196px; height:34px; background:#3a589b; text-align:center; line-height:34px; margin:0 auto; color:#fff; font-size:15px;}
+
+/*==================================================
+ * 회원정보입력
+ ===================================================*/
+
+.member_info hgroup{text-align:center; margin-bottom:60px;}
+.member_info hgroup>h1{font-size:44px; margin-bottom:10px; font-weight:bold; font-weight:300;}
+.member_info hgroup>h1 span{font-weight:700;}
+.member_info hgroup>p{line-height:1.8;}
+
+.info_table input[type=text]{
+	width:274px; border:1px solid #ccc; color:#666; margin:0;	*margin-top:-1px; 
+}
+.info_table select{height:34px; line-height:34px; border:1px solid #ccc; color:#666; font-size:12px;}
+.info_table input[type=checkbox]{margin-right:2px;}
+
+.info_table .email>div{float:left; line-height:32px; margin-right:5px;}
+.info_table .email input[type=text],
+.info_table .email select{width:125px;}
+.info_table .email input[type=checkbox]{margin-left:10px;}
+
+.info_table .gender input[type=radio]{margin-right:10px;}
+.info_table .gender>div{float:left; margin-right:20px;}
+
+.info_table .nick>div{float:left; margin-right:5px;}
+.info_table .nick>p{float:left; line-height:34px; margin-left:5px;}
+
+.info_table .phone>div{float:left; line-height:32px; margin-right:5px;}
+.info_table .phone input,
+.info_table .phone select{width:130px;}
+
+.info_table .duplication{
+	display:inline-block; width:118px; height:34px; text-align:center; line-height:34px;
+	background:#777; color:#f3f3f4; vertical-align:middle;
+}
+
+.accept_all{margin-top:20px;}
+.accept_all>div{float:left; margin:0 30px 0 10px;}
+
+.accept{float:right; margin-top:10px;}
+.accept>div{float:left; margin-left:30px;}
+.accept input[type=checkbox]{width:20px; height:20px; border:1px solid #d3d0cf; background:#fff;}
+
+.terms>h1{font-size:15px; margin-bottom:10px;}
+.terms .terms_box{width:936px; height:100px; border:1px solid #d3d0cf; overflow-y:scroll;;}
+.terms .terms_box div{line-height:1.6;}
+.terms .terms_box pre{font-family:'RixSGo L', sans-serif; line-height:1.6;}
+.terms .terms_box .accept_{}
+
+.join_message{
+	width:936px; border:1px solid #d3d0cf; margin-bottom:20px; text-align:center;
+	font-weight:700; padding:30px 0; margin:0 auto 20px;
+}
+.join_message.big_padding{padding:44px 0;}
+.join_message p{color:#232f20; line-height:2.2;}
+.join_message p span{color:#ed6851;}
+
+/*==================================================
+ * 가입완료
+ ===================================================*/
+
+.join_complete hgroup{text-align:center; margin-bottom:60px;}
+.join_complete hgroup>h1{font-size:44px; margin-bottom:10px; font-weight:300;}
+.join_complete hgroup>h1 span{font-weight:700;}
+.join_complete hgroup>p{line-height:1.8;}
+
+.join_complete_message{margin-bottom:30px;}
+.join_complete_message p{text-align:center; font-size:16px; line-height:1.4;}
+.join_complete_message p.point{color:#ed6851; margin-top:20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

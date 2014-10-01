@@ -1,0 +1,115 @@
+/*==================================================
+ * 고객센터 공통 스타일
+ ===================================================*/
+
+/* 탭 스타일 */
+.tab { width:936px; height:44px; margin:0 auto 50px; padding-top:128px; }
+.tab li { float:left; width:312px; }
+.tab li a { display:block; height:43px; line-height:39px; text-align:center; font-size:15px; border-bottom:1px solid #231f20; }
+.tab li a.on,
+.tab li a:hover { height:39px; border-bottom:5px solid #231f20; }
+
+/* 테이블 기본 */
+.list_table{ border-top:2px solid #231f20; }
+.list_table th { height:39px; border-bottom:1px solid #231f20; }
+.list_table td { padding:15px 0; vertical-align:middle; text-align:center; border-bottom:1px solid #d3d0cf; }
+.list_table td img { display:inline; vertical-align:middle; }
+.list_table td a { line-height:1.4; }
+
+/*==================================================
+ * 고객센터 메인
+ ===================================================*/
+.main > section h1 { margin-bottom:13px; font-size:15px; }
+.main .cs_info .contact { width:936px; height:46px; margin:0 20px 60px 0; padding:10px 0; border:1px solid #d3d0cf; overflow:hidden; }
+.main .cs_info .contact .tel { float:left; width:467px; height:46px; line-height:46px; font-size:28px; border-right:1px solid #d3d0cf; text-align:center; }
+.main .cs_info .contact .tel{ }
+.main .cs_info .contact .work_time { float:left; width:468px; height:38px; padding-top:8px; text-align:center; }
+.main .cs_info .contact .work_time p { margin-top:5px; }
+.main .cs_info .contact .work_time p:first-child { margin-top:0; }
+.main .cs_main_board { position:relative; }
+.main .cs_main_board ul { border-top:1px solid #231f20; }
+.main .cs_main_board ul li { padding:0 10px; padding-top:13px; height:26px; border-bottom:1px solid #d3d0cf; }
+.main .cs_main_board li a { }
+.main .cs_main_board .btn_more { position:absolute; top:-10px; right:0; width:26px; height:25px; text-indent:-9999em; background:url(./images/customer/bg_btn_more.gif) no-repeat; }
+.main .faq { float:left; width:470px; }
+.main .faq .cs_main_board .category { float:left; width:139px; color:#ed6851; }
+.main .notice { float:right; width:470px; }
+.main .notice .cs_main_board ul li a { float:left; padding-left:7px; }
+.main .notice .cs_main_board .date { float:right; }
+
+/*==================================================
+ * 공지사항 리스트
+ ===================================================*/
+.notice .search_box .search_box_wrap { float:right; }
+.notice .search_box select, .notice .search_box input { float:left; margin-right:3px; border:1px solid #d3d0cf; font-size:12px; }
+.notice .search_box select { height:24px; line-height:24px; }
+.notice .search_box input[type=text] { width:185px; height:22px; }
+.notice .search_box input[type=submit] { margin:0; width:47px; height:24px; line-height:22px; color:#fff; background-color:#231f20; border:0; text-align:center; }
+.notice .list_table { margin-top:10px; }
+.notice .list_table td img { margin-left:3px; }
+.notice .list_table .title { padding-left:20px; text-align:left; }
+.notice .list_table .date { padding-right:20px; text-align:right; }
+.notice .list_table .fixed .title { padding-left:20px; }
+.notice .list_table .fixed td a { color:#231f20; }
+.notice .list_table .no_result { padding:100px 0 200px; text-align:center; }
+
+/*==================================================
+ * 공지사항 상세보기
+ ===================================================*/
+.notice_view .detail_view { }
+.notice_view .detail_view .heading { padding-top:13px; height:26px; border-top:2px solid #231f20; border-bottom:1px solid #231f20; }
+.notice_view .detail_view .heading h2 { float:left; margin-left:20px; color:#231f20; }
+.notice_view .detail_view .heading h2 span { margin-right:20px; }
+.notice_view .detail_view .heading p { float:right; margin-right:20px; text-align:right; }
+.notice_view .detail_view .heading p span { margin-right:20px; color:#231f20; }
+.notice_view .detail_view .body { padding:40px; line-height:1.6; }
+.notice_view .detail_view .body p { margin-bottom:1.5em; line-height:1.5; }
+.notice_view .detail_view .neighbors { border-top:1px solid #d3d0cf; }
+.notice_view .detail_view .neighbors p { padding-top:13px; height:26px; border-bottom:1px solid #d3d0cf; }
+.notice_view .detail_view .neighbors p .head { float:left; margin-left:20px; margin-right:15px; color:#231f20; }
+.notice_view .detail_view .neighbors p a { float:left; width:760px; overflow:hidden; }
+.notice_view .detail_view .neighbors p .date { float:right; margin-right:20px; }
+
+/*==================================================
+ * FAQ
+ ===================================================*/
+.faq .sub_tab { margin-bottom:30px; }
+.faq .sub_tab ul { height:40px; border-bottom:1px solid #231f20; }
+.faq .sub_tab ul li { float:left; }
+.faq .sub_tab ul li a { display:block; width:154px; height:39px; line-height:39px; text-align:center; font-size:15px; background-color:#f3f3f4; border:1px solid #d3d0cf; border-bottom:0; font-weight:500; }
+.faq .sub_tab ul li a.on { height:40px; color:#231f20; background-color:#fff; border-color:#231f20; }
+.faq .mobile_sub_tab { display:none; }
+.faq .list_table { border-bottom:1px solid #d3d0cf; }
+.faq .list_table td { border-bottom:0; border-top:1px solid #d3d0cf; }
+.faq .list_table .title { padding-left:30px; text-align:left; }
+.faq .list_table .answer { display:none; }
+.faq .list_table .answer.on { display:table-row; }
+.faq .list_table .answer td { padding:30px 30px 30px 300px; text-align:left; background:#f3f3f4 url(./images/customer/bg_faq_answer.png) no-repeat 187px 24px; border-top:1px dashed #d3d0cf; line-height:1.7;}
+
+/*==================================================
+ * 1:1 상담
+ ===================================================*/
+.inquiry .inquiry_info { text-align:right; }
+.inquiry .inquiry_info span { color:#ed6851; }
+.inquiry .inquiry_table caption{ font-size:0; line-height:0; }
+.inquiry .inquiry_table { margin-top:10px;}
+.inquiry .inquiry_table th { padding-top:16px; vertical-align:top; color:#231f20; }
+.inquiry .inquiry_table th span { margin-left:3px; color:#ed6851; }
+.inquiry .inquiry_table td input { display:block; float:left; width:600px; border:1px solid #d3d0cf; }
+.inquiry .inquiry_table td input[type=text], .inquiry .inquiry_table td select, .inquiry .inquiry_table td textarea { margin:0; border:1px solid #d3d0cf; }
+.inquiry .inquiry_table td select { height:34px; line-height:34px; }
+.inquiry .inquiry_table td input[type=radio] { margin:0; *margin:-4px; }
+.inquiry .inquiry_table td label { vertical-align:middle; }
+.inquiry .inquiry_table td .inquiry_title { width:757px; }
+.inquiry .inquiry_table td .inquiry_text { padding:5px; width:755px; height:252px; }
+.inquiry .inquiry_table td.attach_file input { float:left; width:600px; height:34px;}
+.inquiry .inquiry_table td.attach_file .btn_file { float:left; margin-left:3px; width:67px; height:24px; line-height:24px; text-align:center; font-size:11px; background:url(./images/customer/bg_btn_attach.gif) no-repeat; }
+.inquiry .inquiry_table td.attach_file p { float:left; margin-left:10px; line-height:30px; }
+
+/*==================================================
+ * 1:1상담 완료
+ ===================================================*/
+.inquiry_complete .complete_body { padding:100px 0; border-top:2px solid #231f20; border-bottom:1px solid #d3d0cf; }
+.inquiry_complete .complete_body .title { padding-top:126px; background:url(./images/customer/icon_inquiry_complete.gif) no-repeat 50% 0; text-align:center; font-size:18px; }
+.inquiry_complete .complete_body .msg { margin-top:10px; text-align:center; }
+.inquiry_complete .btns_customer .btn_cancel { margin-right:3px; }
