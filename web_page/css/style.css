@@ -437,6 +437,21 @@ header .about_belport {
 	background:url(../images/common/logo_ring_small.png) no-repeat right top;
 	text-transform:uppercase;
 }
+
+header .floating_banner{
+	position:absolute;
+	width:330px;
+	bottom:-140px;
+	left:50%;
+	margin-left:160px;
+	z-index:150;
+}
+
+header .floating_banner .btn_close{
+	position:absolute;
+	top:17px;
+	right:36px;
+}
   
 /* Bottom Nav */
 #bottom_nav {

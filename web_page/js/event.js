@@ -18,6 +18,19 @@ $(function(){
 		});
 	})();
 	
+	/* floating banner close */
+	(function(){
+		
+		if( $('section').is('.about') ){
+			$('header .floating_banner').hide();
+		}
+		$('header .floating_banner .btn_close').on('click', function(e){
+			e.preventDefault();
+			$('header .floating_banner').hide();
+		});
+		
+	})();
+	
 	/* Bottom Nav */
 	(function(){
 		var bottomNav = $( '#bottom_nav' ),
