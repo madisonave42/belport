@@ -275,6 +275,10 @@ $(function(){
  			'background-position' : (menuWidth-21)
  		});
  		
+ 		$('aside.shop-curation a.on:after').css({
+ 			width: menuWidth
+ 		});
+ 		
  	}
  	
  })();
