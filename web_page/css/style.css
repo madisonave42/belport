@@ -813,7 +813,7 @@ footer .copyright {
  *  additional style
  * ================== */
 
-.hide{width:0; height:0; font-size:0; position:absolute; top:-99999em;}
+.hide{width:0; height:0; font-size:0; position:absolute; top:-99999px;}
 .clearfix {display:block; *overflow:hidden;}
 .clearfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}
 ul.list-products li.none { float: none; width: auto; font-size: 12px; color: #777; font-weight: 400; text-align: center; }

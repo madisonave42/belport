@@ -222,8 +222,8 @@ var productDetail = (function(){
 				}
 				
 				if( tabClass != '.feature' ) {
-					tabAreas.hide();
-					$( '.single-column' + tabClass ).show();
+					tabAreas.addClass('hide');
+					$( '.single-column' + tabClass ).removeClass('hide');
 				}
 			
 				this.tabScroll( tabClass );
