@@ -259,4 +259,30 @@ $(function(){
 		});
 	})();
 	
+	/*============================================================
+  * shop tab
+  =============================================================*/
+ 
+ (function(){
+ 	
+ 	if( $('aside').is('.shop-curation') ){
+ 		var menuWholeWidth = $('.shop-curation > div').width();
+ 		var menuNumber = $('.shop-curation a').length;
+ 		var menuWidth = menuWholeWidth / menuNumber;
+ 		
+ 		$('.shop-curation a').css({
+ 			width: (menuWidth - 21),
+ 			'background-position' : (menuWidth-21)
+ 		});
+ 		
+ 	}
+ 	
+ })();
+ 
+ 
+ 
+ 
+ 
+ 
+	
 });

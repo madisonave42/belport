@@ -77,6 +77,11 @@ section.shop-banner { }
 
 /* 상품 목록 컨테이너 */
 #contents .container section.all-products { position: relative; }
+/* 상품준비중 */
+#contents .container section.all-products.none{margin-top:0;}
+#contents .container section.all-products.none .sorting{padding:4px 12px 0 0;}
+#contents .container section.all-products.none ul{margin:0;}
+#contents .container section.all-products.none li{width:684px; padding:0; margin:0 auto; float:none;}
 
 
 
@@ -366,6 +371,10 @@ fieldset.comments { margin-top: 32px; padding: 110px 0 110px 0; font-size: 13px;
 fieldset.comments input[type=text] { height: 30px; width: 610px; text-align: center; line-height: 30px; border: 2px solid #231f20; }
 fieldset.comments p { margin-top: 10px; }
 
+
+/*******************************************************************************************
+ *  상품 준비중 
+ */
 
 
 
