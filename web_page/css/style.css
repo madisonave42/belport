@@ -444,7 +444,7 @@ header .floating_banner{
 	bottom:-140px;
 	left:50%;
 	margin-left:160px;
-	z-index:150;
+	z-index:80;
 }
 
 header .floating_banner .btn_close{
