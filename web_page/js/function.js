@@ -101,42 +101,49 @@ var slideAction = (function(){
 			bannerContainer.each(function(){
 				var $cont = $(this);
 				var $container = $cont.find('.list-banner');
+				var $containerList = $container.find('li');
 				var $clickItems = $cont.find('.positions > a');
 				var $btnPrev = $cont.find('a.btn-prev');
 				var $btnNext = $cont.find('a.btn-next');
 				var $bannerWidth = $container.find('img').width();
 
-				var cnt = $clickItems.length;
+				//var cnt = $clickItems.length;
+				var cnt = $containerList.length;
 				var index = 0;
 				var oldIndex = 0;
 
 				$container.css("width", $bannerWidth*cnt+"px");
-
+				
+				(function(){
+					var clickItem = '';	
+					
+					if( cnt <=1 ){
+						$cont.find('.positions').hide();
+						$cont.find('.btn-prev').parent('p').hide();
+					} else {
+						for(i=0;i<cnt;i++){
+							clickItem += '<a href="#' + i + '">' + i + '</a>';
+						}
+						$cont.find('.positions').html(clickItem);
+						$cont.find('.positions a').eq(0).addClass('current');
+					}
+				})();
+				
 				function slideItem(itemNo) {
 					index = (itemNo) % cnt;
-
+					
 					$container.animate({
 						left: (-index*$bannerWidth) + "px"
 					}, 500, function() {
-						$clickItems.eq(oldIndex).removeClass("current");
-						$clickItems.eq(index).addClass("current");
+						$cont.find('.positions>a').eq(oldIndex).removeClass("current");
+						$cont.find('.positions>a').eq(index).addClass("current");
 						oldIndex = index;
 					});
 				}
 				
-				(function(){
-					
-					var bannerNumber = $('.list-banner li').length;
-					if( bannerNumber <=1 ){
-						$('.positions').hide();
-						$('.btn-prev').parent('p').hide();
-					}
-					
-				})();
-				
-				$clickItems.click( function(ev){
+				$cont.find('.positions > a').on('click', function(ev){
 					ev.preventDefault();
-					var no = parseInt($(this).attr('href').replace('#', ''));
+					var no = parseInt( $(this).attr('href').replace('#', ''));
 					slideItem(no);
 				});
 
