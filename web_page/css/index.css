@@ -23,8 +23,8 @@
 .container-banner .positions > a:first-child{margin-left:0;}
 .container-banner .positions > a.current {background-position:0px 0px; }
 
-.container-banner a.btn-prev {position:absolute; top:50%; left:0; margin-top:-15px; display:block; height:29px; width:21px; text-indent:-9999px; background:url(../images/shop/btn_nav01.png) 0px 0px no-repeat; overflow:hidden;}
-.container-banner a.btn-next {position:absolute; top:50%; right:0; margin-top:-15px; display:block; height:29px; width:21px; text-indent:-9999px; background:url(../images/shop/btn_nav01.png) -21px 0px no-repeat; overflow:hidden;}
+.container-banner a.btn-prev {position:absolute; top:50%; left:0; margin-top:-24px; display:block; height:48px; width:48px; text-indent:-9999px; background:url(../images/shop/btn_nav01.png) left 0px no-repeat; overflow:hidden;}
+.container-banner a.btn-next {position:absolute; top:50%; right:0; margin-top:-24px; display:block; height:48px; width:48px; text-indent:-9999px; background:url(../images/shop/btn_nav01.png) right 0px no-repeat; overflow:hidden;}
 
 /* belports_pick */
 ul.list-products {overflow:hidden; margin:0px -12px; }

@@ -163,26 +163,22 @@ header.scroll>h1>a{
 	line-height:38px;
 	font-family:'RixSGo B', sans-serif;
 	font-size:16px;
-	color:#777;
+	color:#a4a4a4;
 	text-align:center;
 	letter-spacing:1px;
-	overflow:hidden;
+	/*overflow:hidden;*/
 }
 #gnb .main_menu > li.main_shop > a:after {
-	margin-left:-23px;
+	margin-left:-24px;
 	width:46px;
 }
 #gnb .main_menu > li.main_brand > a:after {
-	margin-left:-28px;
+	margin-left:-29px;
 	width:56px;
 }
 #gnb .main_menu > li.main_event > a:after {
-	margin-left:-27px;
+	margin-left:-28px;
 	width:54px;
-}
-#gnb .main_menu > li.main_inside > a:after {
-	margin-left:-38px;
-	width:76px;
 }
 #gnb .main_menu > li.on > a {
 	color:#f3f3f4;
@@ -191,11 +187,13 @@ header.scroll>h1>a{
 	content:attr(title);
 	position:absolute;
 	display:block;
-	bottom:0;
+	bottom:-1px;
 	left:50%;
-	height:2px;
-	background-color:#207aac;
+	height:11px;
+	/*background-color:#207aac;*/
+	background:url(../images/common/triangle.png) no-repeat center;
 	text-indent:-9999em;
+	z-index:100;
 }
 /* gnb 2뎁스 공통 */
 #gnb .sub_menu {
