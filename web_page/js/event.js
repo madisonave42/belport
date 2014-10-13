@@ -31,39 +31,49 @@ $(function(){
 		
 	})();
 	
-	/* rich banner toggle */
+	/* rich banner init & toggle & roll */
 	(function(){
+		
+		if( $('section').is('.index') ){
+			$('header .rich_banner_wrap').remove();
+		} else if( $('section').is( '.about' ) ){
+			$('header .rich_banner_wrap').remove();
+		}
 		
 		if( $('div').is('.rich_banner') ){
 			var large = true;
+			var bannerNum = $('.rich_banner').length;
+			
+			var dimension = [
+				{'height':164, "top":-24, 'marginLeft':-58},
+				{'height':149, "top":-16, 'marginLeft':-27}
+			];
 			
 			$('.rich_banner_wrap .btn_toggle').on('click', function(e){
 				e.preventDefault();
+				
 				if( large ){
-					$('.rich_banner_wrap').stop().animate({height:140});
-					$('.rich_banner_image').stop().animate({
-						height:162,
-						top:-22,
-						left:35
-					});
-					$('.rich_banner_large_text').fadeOut(500, function(){
-						$('.rich_banner_small_text').fadeIn();
-					});
-					$(this).addClass('rich_small');
-					large = false;
+					large = richBanner.toggleRichBanner( $(this), $('.rich_banner'), dimension, large );
 				} else {
-					$('.rich_banner_wrap').stop().animate({height:419});
-					$('.rich_banner_image').stop().animate({
-						height:419,
-						top:0, left:0
-					});
-					$('.rich_banner_small_text').fadeOut(500, function(){
-						$('.rich_banner_large_text').fadeIn();
-					});
+					$('.rich_banner_wrap').stop().animate({height:419}, 1000, 'easeOutExpo');
+					$('.rich_banner_image').stop().animate({height:419, top:0, 'margin-left': -960}, 1000, 'easeOutExpo');
+					$('h1.index').fadeOut(300);
+					$('.rich_banner_small_text').fadeOut(300, function(){$('.rich_banner_large_text').fadeIn();});
 					$(this).removeClass('rich_small');
 					large = true;
 				}
 			});
+			
+			$('.rich_banner_wrap .btn_prev').on('click', function(e){
+				e.preventDefault();
+				richBanner.changeBanner( 'true', bannerNum );
+			});
+			
+			$('.rich_banner_wrap .btn_next').on('click', function(e){
+				e.preventDefault();
+				richBanner.changeBanner( 'false', bannerNum );
+			});
+			
 		}
 		
 	})();

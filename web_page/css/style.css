@@ -436,6 +436,22 @@ header .about_belport {
 	text-transform:uppercase;
 }
 
+header .rich_banner_wrap{width:1016px; height:140px; position:absolute; left:50%; margin-left:-508px; top:162px; z-index:90;}
+header .rich_banner{position:absolute; top:0; left:0; width:100%; overflow:hidden;}
+header .rich_banner.first .rich_banner_image{height:164px; top:-24px; left:50%; margin-left:-58px; position:relative;}
+header .rich_banner.first .rich_banner_small_text{position:absolute; top:56px; left:50%; margin-left:-152px;}
+header .rich_banner.second{display:none;}
+header .rich_banner.second .rich_banner_image{height:149px; position:relative; top:-16px; left:50%; margin-left:-27px;}
+header .rich_banner.second .rich_banner_small_text{position:absolute; top:48px; left:50%; margin-left:-158px;}
+
+header .rich_banner_wrap .btn_arrow{position:absolute; bottom:13px; left:50%; margin-left:427px;}
+header .rich_banner_wrap .btn_arrow a{display:block; width:21px; height:21px; text-indent:-99999em;
+	background:url(../images/common/btn_arrow.png) no-repeat; float:left;
+}
+header .rich_banner_wrap .btn_arrow .btn_next{background-position:-21px 0;}
+header .rich_banner_wrap .btn_arrow .btn_prev:hover{background-position:0 -22px;}
+header .rich_banner_wrap .btn_arrow .btn_next:hover{background-position:-21px -22px;}
+
 header .floating_banner{
 	position:absolute;
 	width:330px;

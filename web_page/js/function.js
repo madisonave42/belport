@@ -34,6 +34,51 @@ var gnbAction = (function(){
 })();
 
 /**
+ * Rich Banner
+ * @namespace Rich Banner
+ * 
+ */
+var richBanner = (function(){
+	
+			var currentIndex=0;
+			var nextIndex=0;
+			
+	return{
+		
+		toggleRichBanner : function( $toggle, $richBanner, dimension, large ){
+			$('.rich_banner_wrap').stop().animate({height:140}, 800, 'easeOutExpo');
+			$richBanner.each(function(i){
+				$richBanner.eq(i).find('.rich_banner_image').stop().animate({
+					height: dimension[i].height,
+					top: dimension[i].top,
+					'margin-left': dimension[i].marginLeft
+				}, 800, 'easeOutExpo');
+			});
+			$('h1.index').fadeIn(300);
+			$('.rich_banner_large_text').fadeOut(300, function(){	$('.rich_banner_small_text').fadeIn(); });
+			$toggle.addClass('rich_small');
+			return false;
+		},
+		
+		changeBanner : function( prev, bannerNum ){
+			if( prev == 'true' ){
+				if(currentIndex <= 0){nextIndex = bannerNum - 1; }
+				else{nextIndex = currentIndex - 1;}
+			} else {
+				if(currentIndex >= (bannerNum-1) ){ nextIndex = 0; }
+				else{nextIndex = currentIndex + 1;}
+			}
+			
+			$('.rich_banner').eq(currentIndex).fadeOut();
+			$('.rich_banner').eq(nextIndex).fadeIn();
+			currentIndex = nextIndex;
+		}
+		
+	};
+	
+})();
+
+/**
  * bottom nav 동작
  * @namespace 하단메뉴 오픈 함수
  * 
