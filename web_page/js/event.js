@@ -203,11 +203,13 @@ $(function(){
   =============================================================*/
  
 	(function(){
+		
 		$(window).on('load', function(){
 			if( $('div').is('#list_container') ){
 				var msnry = new Masonry( '#list_container', {
 					gutter:8
 				} );
+				setTimeout(function(){ $('.theme_loader').fadeOut(500, function(){ $(this).remove(); }); }, 2000);
 			}
 		});
 		
@@ -218,11 +220,15 @@ $(function(){
   =============================================================*/
  
 	(function(){
-		if( $('div').is('#list_container_inside') ){
-			var msnry = new Masonry( '#list_container_inside', {
-				gutter:11
-			} );
-		}
+		
+		$(window).on('load', function(){
+			if( $('div').is('#list_container_inside') ){
+				var msnry = new Masonry( '#list_container_inside', {
+					gutter:11
+				} );
+				setTimeout(function(){ $('.loader').fadeOut(500, function(){ $(this).remove(); }); }, 2000);
+			}
+		});
 		
 	})();
  
@@ -288,13 +294,13 @@ $(function(){
 				if( !topBtn.isOpening ) {
 					topBtn.isOpening = true;
 					topBtn.isClosing = false;
-					topBtn.stop().animate({'top':0, 'opacity':1}, 300, function(){ topBtn.isOpening = false });
+					topBtn.stop().animate({'top':0, 'opacity':1}, 300, function(){ topBtn.isOpening = false; });
 				}
 			} else {
 				if( !topBtn.isClosing ) {
 					topBtn.isOpening = false;
 					topBtn.isClosing = true;
-					topBtn.stop().animate({'top':-45, 'opacity':1}, 300, function(){ topBtn.isClosing = false });
+					topBtn.stop().animate({'top':-45, 'opacity':1}, 300, function(){ topBtn.isClosing = false; });
 				}
 			}
 		});

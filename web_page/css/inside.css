@@ -8,6 +8,7 @@
 .container > hgroup > h1 { font-size: 30px; color: #231f20; font-weight: 700; }
 .container > hgroup > p { font-size: 14px; color: #777; font-weight: 400; }
 
+.first-section{position:relative;}
 
 .inside-b .container section > h1 { padding-left: 17px; font-size: 18px; color: #231f20; font-weight: 700; }
 
