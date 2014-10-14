@@ -718,6 +718,13 @@ footer .footer_info p {
 footer .footer_info p:first-child {
 	margin-top:0;
 }
+footer .footer_info p .link_pop {
+	display:inline-block;
+	font-size:11px;
+	padding:1px 4px;
+	background-color:#777;
+	color:#F3F3F4;
+}
 footer .copyright {
 	margin-left:278px;
 }
