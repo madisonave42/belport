@@ -51,16 +51,10 @@ $(function(){
 			
 			$('.rich_banner_wrap .btn_toggle').on('click', function(e){
 				e.preventDefault();
-				
 				if( large ){
 					large = richBanner.toggleRichBanner( $(this), $('.rich_banner'), dimension, large );
 				} else {
-					$('.rich_banner_wrap').stop().animate({height:419}, 1000, 'easeOutExpo');
-					$('.rich_banner_image').stop().animate({height:419, top:0, 'margin-left': -960}, 1000, 'easeOutExpo');
-					$('h1.index').fadeOut(300);
-					$('.rich_banner_small_text').fadeOut(300, function(){$('.rich_banner_large_text').fadeIn();});
-					$(this).removeClass('rich_small');
-					large = true;
+					large = richBanner.toggleRichBanner();
 				}
 			});
 			
@@ -349,10 +343,81 @@ $(function(){
  	
  })();
  
- 
- 
- 
- 
- 
+/*============================================================
+ * brand main list mouse over
+ =============================================================*/
+
+(function(){
 	
+	$('figure.brand').on({
+		
+		mouseenter : function(){
+			$(this).find('.over_cover').css({display:'block'});
+		},
+		mouseleave : function(){
+			$(this).find('.over_cover').css({display:'none'});
+		}
+		
+	});
+	
+})();
+
+
+	/*============================================================
+  * brand icon motion
+  =============================================================*/
+ 
+	(function(){
+	 	
+		var $icon = $('.choice_icon>div');
+		var $it;
+		
+		$icon.each(function(i){
+			$icon.eq(i).data('left', $(this).position().left);
+		});
+		
+		function move(index){
+			
+			$('.choice_icon>div').eq(index).stop().animate({left:0, width:400});
+			
+		}
+		
+		$('.choice_icon>div').on({
+			
+			mouseenter : function(){
+				
+				var index = $(this).index();
+				
+				$icon.each(function(i){
+					
+					if( i == index ){
+						$icon.eq(i).css({'z-index':90}).stop().animate({left:0, width:400, opacity:1});
+					} else {
+						$icon.eq(i).css({'z-index':1}).stop().animate({left:$icon.eq(i).data('left'), width:47, opacity:0});
+					}					
+					
+				});
+				
+			},
+			
+			mouseleave : function(){
+				
+				var index = $(this).index();
+				
+				$icon.each(function(i){
+					$icon.eq(i).css({'z-index':1}).stop().animate({left:$icon.eq(i).data('left'), width:47, opacity:1});
+				});
+				
+			}
+			
+		});
+	
+	})();
+
+
+
+
+
+
+
 });

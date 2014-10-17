@@ -19,8 +19,9 @@ aside.category-sub a.on:after {content:''; position:absolute; bottom:0; left:0px
 /* 브랜드 목록 */
 ul.list-brands {overflow:hidden; margin:0px -5px;}
 ul.list-brands li {float:left; margin:0 5px; padding:30px 0 14px; width:226px; border-bottom:1px solid #d3d0cf;}
-
+figure.brand{position:relative; cursor:pointer;}
 figure.brand .frame {height:93px; width:226px; text-align:center; background-color:#f5f5f5; }
+figure.brand .over_cover{position:absolute; top:0; left:0; display:none;}
 figure.brand figcaption {padding:17px 10px 0 6px; font-size:13px; line-height:18px; color:#231f20;}
 
 figure.brand p.name{font-family:'RixSGo M', sans-serif; font-size:14px;}
@@ -94,6 +95,31 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
  * 브랜드 스토리
  ===================================================*/
 .brand_story .detail {margin-top:50px;}
+#contents.brand_story .container .choice{width:936px; height:101px; background:url(../images/brand/bg_choice.gif) no-repeat; position:relative; margin-top:0px;}
+.brand_story .choice .choice_description,
+.brand_story .choice .choice_icon{height:59px; float:left;}
+.brand_story .choice .choice_description{width:376px; padding:21px 46px; font-size:12px;}
+.brand_story .choice .choice_description>dt{font-size:20px; margin-bottom:8px; color:#231f20}
+.brand_story .choice .choice_description>dt>span{font-size:12px; margin-left:12px;}
+.brand_story .choice .choice_description>dd{line-height:1.4;}
+.brand_story .choice .choice_icon{width:300px; height:46px; position:relative; top:31px; left:84px;}
+.brand_story .choice .choice_icon>div{width:47px; height:46px; position:absolute; float:left; line-height:46px; overflow:hidden; cursor:pointer; margin-right:15px;}
+.brand_story .choice .choice_icon>div:last-child{margin-right:0;}
+.brand_story .choice .choice_icon>div:after{content:""; display:block; width:47px; height:46px; background:url(../images/brand/choice_icon.png) no-repeat; position:absolute; top:0; left:0;}
+.brand_story .choice .choice_icon>div>p{position:absolute; width:auto; white-space:nowrap; left:74px;}
+
+.brand_story .choice .choice_icon .resource{left:0}
+.brand_story .choice .choice_icon .tradition{left:62px;}
+.brand_story .choice .choice_icon .natural{left:124px;}
+.brand_story .choice .choice_icon .award{left:186px;}
+.brand_story .choice .choice_icon .sale{left:248px;}
+
+.brand_story .choice .choice_icon .resource:after{background-position:0px 0;}
+.brand_story .choice .choice_icon .tradition:after{background-position:-62px 0;}
+.brand_story .choice .choice_icon .natural:after{background-position:-125px 0;}
+.brand_story .choice .choice_icon .award:after{background-position:-188px 0;}
+.brand_story .choice .choice_icon .sale:after{background-position:-250px 0;}
+
 
 /*==================================================
  * 스팟라이트
@@ -103,7 +129,7 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 .spotlight #list_container .item hgroup{margin:10px 0; padding:0 8px;}
 .spotlight #list_container .item hgroup h2{font-size:24px; color:#231f20; font-weight:700;}
 .spotlight #list_container .item hgroup p{color:#231f20; font-weight:500; margin-top:5px; font-size:14px;}
-.spotlight #list_container .item>p{padding:0 8px; line-height:1.4;}
+.spotlight #list_container .item>p{padding:0 8px; line-height:1.6;}
 .spotlight #list_container .item>a{display:block; width:33px; float:right; margin-right:7px; text-align:center; border-bottom:1px solid #aba8a7; padding-bottom:3px; font-size:11px; margin-bottom:7px;}
 .spotlight .see_more{margin:50px auto 0; width:936px;} 
 
