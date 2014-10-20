@@ -343,24 +343,24 @@ $(function(){
  	
  })();
  
-/*============================================================
- * brand main list mouse over
- =============================================================*/
+	/*============================================================
+	 * brand main list mouse over
+	 =============================================================*/
 
-(function(){
-	
-	$('figure.brand').on({
+	(function(){
 		
-		mouseenter : function(){
-			$(this).find('.over_cover').css({display:'block'});
-		},
-		mouseleave : function(){
-			$(this).find('.over_cover').css({display:'none'});
-		}
+		$('figure.brand').on({
+			
+			mouseenter : function(){
+				$(this).find('.over_cover').css({display:'block'});
+			},
+			mouseleave : function(){
+				$(this).find('.over_cover').css({display:'none'});
+			}
+			
+		});
 		
-	});
-	
-})();
+	})();
 
 
 	/*============================================================
@@ -414,8 +414,18 @@ $(function(){
 	
 	})();
 
-
-
+	/*============================================================
+  * brand story tab
+  =============================================================*/
+	(function () {
+		var tabs = $('.brand_story .tab a');
+		var sections = $('.brand_story #section_product, .brand_story #section_story');
+		
+		if (tabs.length > 0 && sections.length > 0) {
+		console.log('?')
+			brand.initTab(sections, tabs);
+		}
+	})();
 
 
 

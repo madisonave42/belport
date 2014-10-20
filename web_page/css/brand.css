@@ -120,6 +120,15 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 .brand_story .choice .choice_icon .award:after{background-position:-188px 0;}
 .brand_story .choice .choice_icon .sale:after{background-position:-250px 0;}
 
+.brand_story .tab a {float:left; display:block; width:50%; height:46px; text-indent:-9999px; background:url(../images/brand/tab.gif) no-repeat; overflow:hidden;}
+.brand_story .tab a.tab_product {background-position:0 0}
+.brand_story .tab a.tab_product.on {background-position:0 -57px}
+.brand_story .tab a.tab_story {background-position:-468px -57px}
+.brand_story .tab a.tab_story.on {background-position:-468px 0}
+
+.brand_story #section_product, .brand_story #section_story {display:none;}
+.brand_story #section_product.on, .brand_story #section_story.on {display:block;}
+
 
 /*==================================================
  * 스팟라이트
@@ -153,14 +162,5 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 	position: absolute; top: 50%; right: 0; left: 0; height: 30%; margin-top: -15%;
 }
 
-
 .detail.over h1 { color: #fff; }
 .detail.over h1:after { background-color: #fff; }
-.detail.over .desc {  }
-.detail.over .photo {
-}
-
-
-
-
-

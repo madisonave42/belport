@@ -90,6 +90,7 @@
 			case 'br1'      : $subTitle = ''; break;
 			case 'br1.1.1'  : $subTitle = 'Brand Product |'; break;
 			case 'br1.1.2'  : $subTitle = 'Brand Story |'; break;
+			case 'br1.1.3'  : $subTitle = 'Brand 소개|'; break;
 			case 'br1.2'    : $subTitle = 'Spotlight |'; break;
 			case 'br1.2.1'  : $subTitle = 'Spotlight |'; break;
 			case 'ib1.1'  : $subTitle = '인사이드비 목록 |'; break;

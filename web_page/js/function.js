@@ -291,3 +291,32 @@ var productDetail = (function(){
 			
 	};
 })();
+
+/**
+ * 브랜드 페이지 탭
+ *
+ */
+
+var brand = (function() {
+	
+	return {
+		/**
+		 * 스토리+프로덕트 탭
+		 *
+		 */
+		initTab : function (sections, tabs) {
+			tabs.on('click', function(e) {
+				if ($(this).attr('href') != undefined) {
+					var target = $(this).attr('href');
+					
+					sections.removeClass('on');
+					tabs.removeClass('on');
+					
+					$(target).addClass('on');
+					$(this).addClass('on');
+				}
+				e.preventDefault();
+			});
+		}
+	}
+})();
