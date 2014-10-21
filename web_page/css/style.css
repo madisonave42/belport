@@ -797,6 +797,10 @@ footer .copyright {
 .theme_loader{position:absolute; top:0; left:0; width:694px; padding-left:242px; height:100%; background:#fff; text-align:center;}
 .theme_loader img{display:inline-block; margin-top:120px;}
 
+ul.list-products li figure.product .frame{width:226px; height:191px;}
+ul.list-products li figure.product .frame a{display:block; border:1px solid #e2e2e2;}
+ul.list-products li figure.product .frame a:hover{border:1px solid #979797;}
+ul.list-products li figure.product .frame a img{width:224px; height:189px;}
 
 /* ==========================================================
  * popup layout

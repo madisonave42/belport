@@ -155,11 +155,12 @@ var slideAction = (function(){
 			bannerContainer.each(function(){
 				var $cont = $(this);
 				var $container = $cont.find('.list-banner');
-				var $containerList = $container.find('li');
+				var $containerList = $container.find('> li');
 				var $clickItems = $cont.find('.positions > a');
 				var $btnPrev = $cont.find('a.btn-prev');
 				var $btnNext = $cont.find('a.btn-next');
-				var $bannerWidth = $container.find('img').width();
+				//var $bannerWidth = $container.find('img').width();
+				var $bannerWidth = $containerList.width();
 
 				//var cnt = $clickItems.length;
 				var cnt = $containerList.length;

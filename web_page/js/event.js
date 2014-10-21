@@ -257,7 +257,7 @@ $(function(){
  
 	(function(){
 		var bannerContainer = $('.container-banner');
-
+		
 		slideAction.initSlide( bannerContainer );
 		
 	})();

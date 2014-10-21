@@ -191,7 +191,15 @@ ul.list-selected-options li a.btn-delete { position: absolute; top: 50%; right: 
 .product-detail .product .btns.white > span { margin-right: 5px; display: inline-block; height: 18px; width: 18px; line-height: 18px; text-indent: -9999em; background: url(../images/shop/btn_wish01.png) 0px 0px no-repeat; }
 .product-detail .product .btns.white.on > span { background-position: -18px 0px; }
 
-
+/* 상품 목록 슬라이드 */
+.product-detail {position:relative;}
+.product-detail .container-banner {margin-top:0; width:936px; height:399px; background:transparent;}
+.product-detail .container-banner ul.list-banner > li {width:936px; height:399px;}
+.product-detail .container-banner ul.list-banner .list-products li {padding-top:50px; padding-bottom:36px; width:226px; height:auto;}
+.product-detail .container-banner .btn-prev,
+.product-detail .container-banner .btn-next {position:absolute; top:14px; margin-top:0; left:auto; width:22px; height:22px; background:url(../images/common/btn_list_slide.png) no-repeat; text-indent:-9999px;}
+.product-detail .container-banner .btn-prev {right:26px;}
+.product-detail .container-banner .btn-next {right:0; background-position:-26px 0;}
 
 /* 브랜드 정보 */
 #contents.product-detail .container .choice{width:936px; height:135px; background:#f7f6f6; position:relative; margin-top:0px; border-top:3px solid #231f20;}
@@ -331,6 +339,7 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 #list_container{border-top:1px solid #231F20; padding-top:30px;}
 
 .theme_shop #list_container .item{border:1px solid #eee; padding:3px; width:218px; margin-bottom:15px;}
+.theme_shop #list_container .item:hover{border:1px solid #979797;}
 .theme_shop #list_container .item hgroup{margin:10px 0; padding:0 8px; line-height:1.3;}
 .theme_shop #list_container .item hgroup h2{font-size:20px; color:#231f20; font-weight:bold;}
 .theme_shop #list_container .item hgroup p{color:#231f20; font-weight:500; margin-top:5px; font-size:14px;}
@@ -344,6 +353,7 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
  */
 
 .theme_box #list_container .item{border:1px solid #eee; padding:3px; width:218px; margin-bottom:15px;}
+.theme_box #list_container .item:hover{border:1px solid #979797;}
 .theme_box #list_container .item .top{background:#f3f3f4;}
 .theme_box #list_container .item hgroup{padding:20px 8px 13px;}
 .theme_box #list_container .item hgroup{font-size:20px; color:#231f20; font-weight:700; line-height:1.3;}
