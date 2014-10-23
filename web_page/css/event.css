@@ -83,8 +83,38 @@ ul.list-comments li p { margin-top: 13px; font-size: 13px; color: #777; font-wei
 .event .container .btns_wrap { overflow: hidden; position: static; left: auto; float: none; margin-top: 10px; }
 .event .container .btns_wrap .btns { position: static; float: right; margin: 0; }
 
+/* brand week */
+#contents.about .container .location {top:-9999em;}
+#contents.about .container > section {margin-top:0; width:100%; min-width:980px;}
+#contents.about .container{padding-bottom:0;}
 
+.intro{text-align:center; background:url(../images/event/bg_event_green.jpg) repeat-x;}
+.intro img{display:inline-block;}
 
+.join {text-align:center;}
+.join img{display:inline-block;}
+
+.product {text-align:center; background:url(../images/event/bg_brandweek4-3.png) no-repeat; background-size:contain; position:relative;}
+.product .bw4-3{display:inline-block; position:relative; z-index:1;}
+.product:after{content:""; display:block; width:100%; height:275px; background:#ececec; position:absolute; bottom:0; left:0;}
+.product .product_img{width:1055px; margin:0 auto; position:relative;}
+.product .product_img .tip{position:absolute; top:360px; z-index:2; cursor:pointer; display:none;}
+.product .product_img .tip-1{top:280px; left:39px; height:350px;}
+.product .product_img .tip-1 img{position:relative; top:80px;}
+.product .product_img .tip-2{left:204px; height:260px;}
+.product .product_img .tip-3{left:394px; height:285px;}
+.product .product_img .tip-4{left:559px; height:285px;}
+.product .product_img .tip-5{left:744px; height:285px;}
+@media all and (max-width:1600px){
+	.product {background-size:initial;}
+}
+
+.guide {text-align:center; background:#231f20;}
+.guide img{display:inline-block;}
+
+.layer-pop{position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/bg_layer_popup.png); z-index:5; display:none;}
+.layer-pop .pop{position:absolute; top:1400px; left:50%; margin-left:-448px; display:none;}
+.layer-pop .close{position:absolute; display:block; top:10px; right:10px;}
 
 
 

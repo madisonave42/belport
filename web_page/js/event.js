@@ -422,12 +422,50 @@ $(function(){
 		var sections = $('.brand_story #section_product, .brand_story #section_story');
 		
 		if (tabs.length > 0 && sections.length > 0) {
-		console.log('?')
 			brand.initTab(sections, tabs);
 		}
 	})();
 
-
+	/*============================================================
+  * event - brand week
+  =============================================================*/
+ (function(){
+ 	
+ 	$('.event-pd').on('mouseenter', function(e){
+ 		var index = $(this).index();
+ 		
+ 		$('.tip').hide();
+ 		$('.tip').eq(index).show();
+ 	});
+ 	
+	$('.tip').on('mouseleave', function(e){
+ 		$(this).hide();
+ 	});
+ 	
+	$('.tip').on('click', function(e){
+		e.preventDefault();
+		
+ 		var index = $(this).index();
+ 		$('.layer-pop').css({height: $('body').height() }).show();
+ 		$('.layer-pop .pop').eq(index).show();
+ 		
+ 	});
+ 	
+ 	$('.layer-pop .close').on('click', function(e){
+ 		e.preventDefault();
+ 		
+ 		$('.layer-pop').hide();
+ 		$('.layer-pop .pop').hide();
+ 	});
+ 	
+ })();
+ 
+ (function(){
+ 	
+ 	
+ 	
+ })();
+ 
 
 
 });
