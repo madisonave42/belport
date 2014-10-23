@@ -96,6 +96,8 @@
 .info_table .phone input,
 .info_table .phone select{width:130px;}
 
+.info_table .auth_num>div{float:left; line-height:32px; margin-right:5px;}
+
 .info_table .duplication{
 	display:inline-block; width:118px; height:34px; text-align:center; line-height:34px;
 	background:#777; color:#f3f3f4; vertical-align:middle;

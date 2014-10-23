@@ -23,7 +23,7 @@ hgroup>p{color:#666; line-height:1.8;}
 
 /* 로그인 페이지 */
 .login hgroup>h1 {font-size:60px;}
-.login .form_area .check_area{margin-left:75px; font-size:12px;}
+.login .form_area .check_area{margin-left:68px; font-size:12px;}
 .login .form_area .check_area input[type=checkbox]{margin:-4px\9; margin-right:3px;}
 .login .form_area .btn_login{position:absolute; top:0; right:0;}
 .login .form_area .btn_login>*{display:block; float:left;}
@@ -33,7 +33,7 @@ hgroup>p{color:#666; line-height:1.8;}
 	color:#f3f3f4; text-align:center; line-height:71px; margin-left:5px;
 }
 .login .form_area .btn_login .login {background:#231f20;}
-.login .form_area .btn_login .fb_login {padding-left:54px; width:77px; background:#3b589c url(../images/login/btn_login_facebook.gif) no-repeat 31px 24px; text-align:left;}
+.login .form_area .btn_login .fb_login {padding-left:54px; width:77px; background:#3b589c url(./images/login/btn_login_facebook.gif) no-repeat 31px 24px; text-align:left;}
 .login .form_area .input_area>input {width:220px;}
 .login .btn_area .find_idpw{width:390px; height:66px; float:left;}
 .login .btn_area .btns_wrap {margin-top:19px;}

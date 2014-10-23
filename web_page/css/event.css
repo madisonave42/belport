@@ -59,19 +59,22 @@ ul.list-special-event li { float: left; margin: 0 5px 10px 5px; width: 303px; bo
 
 
 /* 이벤트 상세 댓글 작성 */
-fieldset.form-comments { position: relative; padding: 20px 15px; border-top: 2px solid #231f20; border-bottom: 1px solid #d3d0cf; }
-fieldset.form-comments textarea { padding: 15px 15px 0 15px; height: 45px; width: 746px; font-size: 13px; color: #777; line-height: 18px; border: 1px solid #d3d0cf; }
+fieldset.form-comments { position: relative; padding:20px 15px; border-top: 2px solid #231f20; border-bottom: 1px solid #d3d0cf; }
+fieldset.form-comments img {float:left; width:60px;}
+fieldset.form-comments textarea {margin:0;margin-left:10px;padding:5px; height: 48px; width: 696px; font-size: 13px; color: #777; line-height: 18px; border: 1px solid #d3d0cf; }
 fieldset.form-comments input[type=submit] { position: absolute; top: 20px; right: 15px; display: block; height: 60px; width: 125px; font-size: 13px; color: #fff; font-weight: 400; text-align: center; background-color: #231f20; }
-
-
 
 /* 이벤트 상세 댓글 목록 */
 ul.list-comments { }
-ul.list-comments li { position: relative; padding: 14px 15px 11px 15px; display: block; border-bottom: 1px solid #d3d0cf; }
+ul.list-comments li { position: relative; padding:20px 55px 20px 15px; display: block; border-bottom: 1px solid #d3d0cf;}
 ul.list-comments li a.btn-delete { position: absolute; top: 15px; right: 0; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat; }
-ul.list-comments li .uid { font-size: 13px; color: #231f20; font-weight: 400; margin-right: 8px; }
-ul.list-comments li .date { font-size: 13px; color: #231f20; font-weight: 400; }
-ul.list-comments li p { margin-top: 13px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
+ul.list-comments li > img {float:left;width:60px;}
+ul.list-comments li > div,
+ul.list-comments li > p {margin-left:70px;}
+ul.list-comments li .uid {font-size: 13px; color: #231f20; font-weight:600; margin-right:45px; }
+ul.list-comments li .date { font-size: 13px; color: #231f20; font-weight:600; }
+ul.list-comments li p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
+ul.list-comments li p a {color:#6896ea;}
 
 /* 이벤트 상세 당첨자 발표 */
 .result-content { padding: 18px 15px 40px 15px; border-top: 1px solid #231f20; border-bottom: 1px solid #d3d0cf; }
