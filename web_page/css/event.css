@@ -90,6 +90,9 @@ ul.list-comments li p a {color:#6896ea;}
 #contents.about .container .location {top:-9999em;}
 #contents.about .container > section {margin-top:0; width:100%; min-width:980px;}
 #contents.about .container{padding-bottom:0;}
+#contents.about .container > section.comments {margin-top:50px; padding-bottom:30px; width:980px;}
+#contents.about .container > section.comments h1{font-weight:600;}
+#contents.about .container > section.comments .form-comments textarea {width:740px;}
 
 .intro{text-align:center; background:url(../images/event/bg_event_green.jpg) repeat-x;}
 .intro img{display:inline-block;}
