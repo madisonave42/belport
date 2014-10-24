@@ -27,6 +27,7 @@ html {
 body {
 	font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;
 	line-height: 1; letter-spacing:-0.25px;
+	background:#000;
 }
 ol, ul {
 	list-style: none;
