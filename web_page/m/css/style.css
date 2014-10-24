@@ -132,7 +132,10 @@ img {display:block; width:100%;}
 
 
 
-.product{width:100%; height:242px;}
+.product{width:100%; position:relative; left:0;}
+.product .prd{position:relative; top:0; left:0; z-index:10;}
+.product .share{display:block; position:absolute; top:0; right:0;}
+.product .share img{height:100%;}
 
 
 
