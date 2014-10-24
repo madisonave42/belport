@@ -460,12 +460,15 @@ $(function(){
  	
  })();
  
- (function(){
- 	
- 	
- 	
- })();
- 
-
+	/* 이벤트 참여하기 스크롤 */
+	(function() {
+		var btn = $('.btn_select_event');
+		btn.on('click', function(e){
+			var ty = $( $(this).attr('href') ).offset().top;
+			$('html').animate({scrollTop : ty}, 600, 'easeOutCubic'); // for IE
+			$('body').animate({scrollTop : ty}, 600, 'easeOutCubic');
+			e.preventDefault();
+		});
+	})();
 
 });
