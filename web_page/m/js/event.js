@@ -6,6 +6,7 @@ $(function(){
 	
 	$('.prd').on('swipeleft', function(e){
 		e.preventDefault();
+		$(this).parent().siblings().find('.prd').stop().animate({left:0}, 300);
 		$(this).stop().animate({left:-$(this).width()/4}, 300);
 	});
 

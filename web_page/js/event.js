@@ -427,7 +427,7 @@ $(function(){
 	})();
 
 	/*============================================================
-  * event - brand week
+  * event - brand week & tester box
   =============================================================*/
  (function(){
  	
@@ -442,6 +442,7 @@ $(function(){
  		$(this).hide();
  	});
  	
+ 	// brand week
 	$('.tip').on('click', function(e){
 		e.preventDefault();
 		
@@ -451,6 +452,18 @@ $(function(){
  		
  	});
  	
+ 	// tester box
+ 	$('.btn>div').on('click', function(e){
+		e.preventDefault();
+		
+ 		var index = $(this).index();
+ 		$('.layer-pop').css({height: $('body').height() }).show();
+ 		$('.layer-pop .tb_pop').eq(index).show();
+ 		
+ 	});
+ 	 
+ 	
+ 	// close
  	$('.layer-pop .close').on('click', function(e){
  		e.preventDefault();
  		
@@ -470,5 +483,15 @@ $(function(){
 			e.preventDefault();
 		});
 	})();
+	
+	/* textarea */
+	(function(){
+		$('textarea').on('focus', function(){
+			$(this).val('');
+		});
+	})();
+
+
+
 
 });
