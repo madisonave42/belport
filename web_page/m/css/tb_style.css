@@ -33,6 +33,16 @@ ol, ul {
 }
 img {display:block; width:100%;}
 
+a { -webkit-tap-highlight-color:transparent;}
+
 .hide {position:absolute; top:-9999px;}
 
 .info a {float:left; width:50%;}
+
+.layer-pop {display:none; position:absolute; top:0; left:0; padding-top:24%; width:100%;}
+.layer-pop .btn-close-pop {position:absolute; top:15px; right:15px; padding-top:24%; width:23px; height:23px; background:url(../images/testers_box/btn_close.png) no-repeat center bottom; text-indent:-9999em;}
+
+#msg .input-msg {position:absolute; top:0; left:0; padding-top:92%; width:100%; height:41%;}
+#msg .input-msg textarea {display:block; margin:0 auto; width:75%; height:50%; border:0;}
+#msg .input-msg input {position:absolute; bottom:5%; left:33%; width:35%;}
+
