@@ -86,7 +86,6 @@ ul.list-comments li p a {color:#6896ea;}
 .event .container .btns_wrap { overflow: hidden; position: static; left: auto; float: none; margin-top: 10px; }
 .event .container .btns_wrap .btns { position: static; float: right; margin: 0; }
 
-
 /* brand week */
 #contents.about .container .location {top:-9999em;}
 #contents.about .container > section {margin-top:0; width:100%; min-width:980px;}
@@ -99,7 +98,7 @@ ul.list-comments li p a {color:#6896ea;}
 .intro img{display:inline-block;}
 .btn_select_event:focus{outline:none;} /* tester box 공통 */
 
-.join {text-align:center;}
+.join {text-align:center; background:url(../images/event/bg_brandweek4-2.gif) repeat-x;}
 .join img{display:inline-block;}
 
 .product {text-align:center; background:url(../images/event/bg_brandweek4-3.png) no-repeat center top; background-size:contain; position:relative;}
