@@ -59,13 +59,26 @@ ul.list-special-event li { float: left; margin: 0 5px 10px 5px; width: 303px; bo
 
 
 /* 이벤트 상세 댓글 작성 */
-fieldset.form-comments { position: relative; padding:20px 15px; border-top: 2px solid #231f20; border-bottom: 1px solid #d3d0cf; }
+fieldset.form-comments { position: relative; padding:20px 15px; border-top: 2px solid #231f20; border-bottom: 1px solid #d3d0cf;}
 fieldset.form-comments img {float:left; width:60px;}
 fieldset.form-comments textarea {margin:0;margin-left:10px;padding:5px; height: 48px; width: 696px; font-size: 13px; color: #777; line-height: 18px; border: 1px solid #d3d0cf; }
 fieldset.form-comments input[type=submit] { position: absolute; top: 20px; right: 15px; display: block; height: 60px; width: 125px; font-size: 13px; color: #fff; font-weight: 400; text-align: center; background-color: #231f20; }
 
+
+/* 자신이 작성한 댓글 표시 */
+.my_comment{position: relative; padding:20px 55px 20px 15px; display: block; border-bottom: 1px solid #d3d0cf;  border-top:1px solid #d3d0cf; margin:30px 0; background:#fafafc;}
+.my_comment .my_comment_title{margin-left:0px; font-size:15px; font-family:RixSGo B, sans-serif; color:#231f20; padding-bottom:20px; }
+.my_comment a.btn-delete { position: absolute; top: 15px; right: 15px; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat; }
+.my_comment > img {float:left;width:60px;}
+.my_comment > div,
+.my_comment > p {margin-left:70px;}
+.my_comment .uid {font-size: 13px; color: #231f20; font-weight:600; margin-right:45px; }
+.my_comment .date { font-size: 13px; color: #231f20; font-weight:600; }
+.my_comment p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
+.my_comment p a {color:#6896ea;}
+
 /* 이벤트 상세 댓글 목록 */
-ul.list-comments { }
+ul.list-comments {border-top:1px solid #d3d0cf;}
 ul.list-comments li { position: relative; padding:20px 55px 20px 15px; display: block; border-bottom: 1px solid #d3d0cf;}
 ul.list-comments li a.btn-delete { position: absolute; top: 15px; right: 0; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat; }
 ul.list-comments li > img {float:left;width:60px;}
@@ -122,13 +135,7 @@ ul.list-comments li p a {color:#6896ea;}
 .layer-pop{position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/bg_layer_popup.png); z-index:5; display:none;}
 .layer-pop .pop{position:absolute; top:1400px; left:50%; margin-left:-448px; display:none;}
 
-.layer-pop .tb_pop{position:absolute; top:1200px; left:50%; margin-left:-448px; display:none;}
-.layer-pop .tb_pop.pop-3 .textarea{position:absolute; top:281px; left:44px;}
-.layer-pop .tb_pop.pop-3 textarea{width:744px; height:115px; font-family:RixSGo L, sans-serif; padding:30px; font-size:18px;}
-
-
 .layer-pop .close{position:absolute; display:block; top:20px; right:20px;}
-
 
 /* tester box */
 .tester_intro{text-align:center; background:url(../images/event/bg_event.jpg) repeat-x;}
@@ -149,6 +156,10 @@ ul.list-comments li p a {color:#6896ea;}
 .tester_guide{text-align:center; background:#231f20;}
 .tester_guide img{display:inline-block;}
 
+.layer-pop .tb_pop{position:absolute; top:1200px; left:50%; margin-left:-448px; display:none;}
+.layer-pop .tb_pop.pop-3 .textarea{width:806px; position:absolute; top:281px; left:44px; text-align:center;}
+.layer-pop .tb_pop.pop-3 textarea{width:744px; height:115px; font-family:RixSGo L, sans-serif; padding:30px; font-size:18px;}
+.layer-pop .tb_pop input[type=image]{margin-top:20px;}
 
 
 

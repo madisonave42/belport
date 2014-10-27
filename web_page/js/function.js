@@ -319,5 +319,39 @@ var brand = (function() {
 				e.preventDefault();
 			});
 		}
-	}
+	};
 })();
+
+/**
+ * 얼럿 창 생성 함수
+ *
+ */
+
+var alertPop = (function(){
+	
+	return{
+		
+		success : function(){
+			var alert = '<div class="alert-pop">';
+			alert    += '  <div class="pop pop-1">';
+			alert 	 += '    <img src="../images/event/pop1.png" alt="" usemap="#link_pop01" />';
+			alert 	 += '    <map name="link_pop01">';
+			alert 	 += '      <area shape="rect" coords="55,389,355,440" href="#" alt="" />';
+			alert 	 += '    </map>';
+			alert 	 += '    <a href="#" class="close"><img src="../images/event/btn_close.png" alt="close" /></a>';
+			alert 	 += '  </div>';
+			alert    += '</div>';
+			
+			$('body').append(alert);
+			
+		}
+		
+	};
+	
+})();
+
+
+
+
+
+

@@ -469,6 +469,7 @@ $(function(){
  		
  		$('.layer-pop').hide();
  		$('.layer-pop .pop').hide();
+ 		$('.layer-pop .tb_pop').hide();
  	});
  	
  })();
