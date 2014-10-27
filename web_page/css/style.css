@@ -86,7 +86,7 @@ label,
 selectbox {font-family: 'RixSGo L', sans-serif; vertical-align:middle;}
 img{display:block;}
 address{font-style:normal;}
-strong, h1{color:#231f20; font-weight:bold;}
+strong, h1{color:#231f20; font-family:'RixSGo M', sans-serif; font-weight:normal;}
 table{width:100%;}
 
 /* ==========================================================
@@ -301,6 +301,7 @@ header.scroll>h1>a{
 	width:185px;
 	height:206px;
 }
+/*
 #gnb .sub_menu li a.link_all_brand {
 	padding-right:18px;
 	color:#ed6851;
@@ -308,6 +309,7 @@ header.scroll>h1>a{
 	text-transform:uppercase;
 	font-weight:bold;
 }
+*/
 #gnb .sub_menu .sub_event li {
 	float:left;
 	min-height:231px;
@@ -401,13 +403,13 @@ header .header_search {
 	position:absolute;
 	top:7px;
 	left:50%;
-	margin-left:122px;
+	margin-left:100px;
 	height:0;
 	overflow:hidden;
 }
 header .header_search input[type=text] {
 	padding:0 3px;
-	width:290px;
+	width:315px;
 	height:50px;
 	line-height:18px;
 	background-color:#dedede;
@@ -436,10 +438,10 @@ header .about_belport {
 	text-transform:uppercase;
 }
 
-header .rich_banner_wrap{width:1016px; height:140px; position:absolute; left:50%; margin-left:-508px; top:162px; z-index:90;}
+header .rich_banner_wrap{width:1016px; height:140px; position:absolute; left:50%; margin-left:-508px; top:162px; z-index:80;}
 header .rich_banner{position:absolute; top:0; left:0; width:100%; overflow:hidden;}
 header .rich_banner.first .rich_banner_image{height:164px; top:-24px; left:50%; margin-left:-58px; position:relative;}
-header .rich_banner.first .rich_banner_small_text{position:absolute; top:56px; left:50%; margin-left:-152px;}
+header .rich_banner.first .rich_banner_small_text{position:absolute; top:35px; left:50%; margin-left:-152px;}
 header .rich_banner.second{display:none;}
 header .rich_banner.second .rich_banner_image{height:149px; position:relative; top:-16px; left:50%; margin-left:-27px;}
 header .rich_banner.second .rich_banner_small_text{position:absolute; top:48px; left:50%; margin-left:-158px;}
@@ -823,14 +825,14 @@ ul.list-products li figure.product .frame a img{width:224px; height:189px;}
 .popup.find_addr .result_info {margin-top:35px; font-weight:400; color:#231f20;}
 
 .popup.find_addr .result_heading {margin-top:13px;}
-.popup.find_addr .result_heading li {float:left; border-top:2px solid #231f20; border-bottom:1px solid #231f20; width:25%; height:32px; line-height:32px; font-size:13px; color:#231f20; font-weight:700; text-align:center;}
+.popup.find_addr .result_heading li {float:left; border-top:2px solid #231f20; border-bottom:1px solid #231f20; width:25%; height:32px; line-height:32px; font-size:13px; color:#231f20; text-align:center;}
 .popup.find_addr .result_heading li:first-child {width:75%;}
 
 .popup.find_addr .result_wrap {height:270px; overflow-y:scroll; border-bottom:1px solid #d3d0cf;}
 .popup.find_addr .addr_result thead {display:none;}
 .popup.find_addr .addr_result td {padding:10px 0; border-bottom:0; border-top:1px solid #d3d0cf; }
 .popup.find_addr .addr_result tr:first-child td {border-top:0;}
-.popup.find_addr .addr_result .select_addr a {display:block; width:50px; height:22px; line-height:22px; font-size:12px; font-weight:700; text-align:center; border:1px solid #d3d0cf; color:#231f20;}
+.popup.find_addr .addr_result .select_addr a {display:block; width:50px; height:22px; line-height:22px; font-size:12px; text-align:center; border:1px solid #d3d0cf; color:#231f20;}
 .popup.find_addr .addr_result .select_addr a:first-child {border-bottom:0;}
 .popup.find_addr .addr_result .addr_type a {display:block; line-height:22px;}
 .popup.find_addr .addr_result .zip_code {text-align:center;}
@@ -840,7 +842,8 @@ ul.list-products li figure.product .frame a img{width:224px; height:189px;}
 
 /* 리뷰, QNA 작성 */
 .popup.write-review { }
-.popup.write-review th { padding-top: 15px; font-size: 13px; color: #231f20; font-weight: 700; text-align: left; vertical-align: top; border: 0px none; }
+.popup.write-review th { padding-top: 15px; font-size: 13px; color: #231f20; font-family:'RixSGo M', sans-serif; font-weight:normal; text-align: left; vertical-align: top; border: 0px none; }
+.popup.write-review th label {font-family:'RixSGo M', sans-serif;}
 .popup.write-review td { padding: 4px 0 5px 0; border: 0px none; }
 .popup.write-review input[type=text] { width: 100%; border:1px solid #ccc; color:#666; margin:0; }
 .popup.write-review input[type=file] { margin:0; height: 34px; border:1px solid #ccc; color:#666; }
@@ -888,7 +891,8 @@ ul.list-products li.none img{display:inline-block;}
 
 /* 가로형 테이블 공통 스타일 */
 .type_horizon{border-top:2px solid #000;}
-.type_horizon th{height:24px; background:#f3f3f3; border-bottom:1px solid #d3d0cf; text-align:left; padding-left:15px; color:#231f20;}
+.type_horizon th{height:24px; background:#f3f3f3; border-bottom:1px solid #d3d0cf; text-align:left; padding-left:15px; color:#231f20; font-family:'RixSGo M', sans-serif; font-weight:normal;}
+.type_horizon th label{font-family:'RixSGo M', sans-serif;}
 .type_horizon td{height:34px; background:#fff; border-bottom:1px solid #d3d0cf; text-align:left; padding:10px 0 10px 15px;}
 .type_horizon strong{color:#231f20;}
 
@@ -935,11 +939,11 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
  * 추가정보
  ===================================================*/
 .survey hgroup { position: relative; padding: 40px 0 0 0; color: #231f20; text-align: center; }
-.survey hgroup > h1 { font-size:24px; font-weight:700; }
+.survey hgroup > h1 { font-size:24px;}
 .survey hgroup > h1 > strong { color: #ed6851; }
 .survey hgroup > p.desc { margin-top: 6px; font-size: 13px; color: #777; font-weight: 400; text-align: center; line-height: 19px; }
 .survey hgroup > p.current_step_container { position: absolute; top: 0px; right: 0px; left: 0px; font-size: 13px; font-weight: 400; }
-.survey hgroup .current_step { position: relative; margin-right: 8px; display: inline-block; height: 20px; width: 36px; font-size: 12px; color: #777; font-weight: 700; vertical-align: middle; }
+.survey hgroup .current_step { position: relative; margin-right: 8px; display: inline-block; height: 20px; width: 36px; font-size: 12px; color: #777; font-family:'RixSGo M', sans-serif; vertical-align: middle; }
 .survey hgroup .current_step > em { font-style: normal; }
 .survey hgroup .current_step > em.current { position: absolute; top: 0; left: 0; color: #231f20; }
 .survey hgroup .current_step > em.total { position: absolute; bottom: 0; right: 0; }
@@ -950,7 +954,7 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .survey .select_section li { margin: 0 11px 24px 10px; display: inline-block;  }
 .survey .select_section li input[type=checkbox],
 .survey .select_section li input[type=radio] { position: absolute; z-index: -1; }
-.survey .select_section li label { position: relative; padding: 177px 0 0 10px; display: block; height: 51px; width: 158px; font-size: 13px; color: #777; font-weight: 700; text-align: left; cursor: pointer; background-color: #f3f3f4; }
+.survey .select_section li label { position: relative; padding: 177px 0 0 10px; display: block; height: 51px; width: 158px; font-size: 13px; color: #777; font-family:'RixSGo M', sans-serif; font-weight:normal; text-align: left; cursor: pointer; background-color: #f3f3f4; }
 
 .survey .select_section li input + label.checked { position: relative; color: #231f20; }
 .survey .select_section li input + label.checked:after { content: ''; position: absolute; top: 0; right: 0; left: 0; bottom: 0; display: block; border: 3px solid #231f20; }
@@ -1006,11 +1010,10 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .survey_complete .complete_message .table_area{padding:30px 40px; background:#f3f3f4;}
 
 .survey_complete hgroup{text-align:center; margin-bottom:40px;}
-.survey_complete hgroup>h1{font-size:24px; margin-bottom:10px; font-weight:700;}
-.survey_complete hgroup>h1 span{font-weight:700;}
+.survey_complete hgroup>h1{margin-bottom:10px; font-size:24px;}
 .survey_complete hgroup>p{line-height:1.4;}
 
-.survey_complete .complete_message table th{padding:6px 0; text-align:left; color:#231f20;}
+.survey_complete .complete_message table th{padding:6px 0; text-align:left; color:#231f20; font-family:'RixSGo M', sans-serif; font-weight:normal;}
 .survey_complete .complete_message table td{padding:6px 0; text-align:left;}
 .survey_complete .complete_message span{color:#ed6851;}
 
@@ -1025,7 +1028,7 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .popup.survey_complete hgroup{text-align:center; margin-top: 30px; margin-bottom:22px;}
 .popup.survey_complete .complete_message{padding-top:0px; margin-top:0!important;}
 .popup.survey_complete .complete_message table { margin: 0 auto; display: block; width: 375px; }
-.popup.survey_complete .complete_message table th{padding:7px 0; height: auto; font-size: 16px; text-align:left; color:#231f20; font-weight: 700; border: 0px none;}
+.popup.survey_complete .complete_message table th{padding:7px 0; height: auto; font-size: 16px; text-align:left; color:#231f20; border: 0px none;}
 .popup.survey_complete .complete_message table td{padding:7px 0; height: auto; font-size: 16px; text-align:left; border: 0px none;}
 
 
@@ -1035,12 +1038,12 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
  ===================================================*/
  /* 2Depth 타이틀 */
 .policy .container > hgroup { margin: 0 auto; padding: 75px 0 0 0; display: block; width: 936px; line-height: 30px; }
-.policy .container > hgroup > h1 { font-size: 30px; color: #231f20; font-weight: 700; }
+.policy .container > hgroup > h1 { font-size: 30px; color: #231f20;}
 .policy .container > hgroup > p { font-size: 14px; color: #777; font-weight: 400; }
 #contents.policy .container section.first-section { margin-top: 55px; }
 
 dl.list-policy { border-top: 1px solid #231f20; }
-dl.list-policy dt { margin-top: 16px; font-family: "RixSGo B", sans-serif; font-size: 12px; color: #231f20; font-weight: bold; line-height: 25px; }
+dl.list-policy dt { margin-top: 16px; font-family: "RixSGo B", sans-serif; font-size: 12px; color: #231f20; font-weight:normal; line-height: 25px; }
 dl.list-policy dd { padding-top: 16px; font-size: 12px; color: #777; line-height: 25px; }
 
 ol.list-sub { }

@@ -7,7 +7,7 @@
 
 /* EVENT 타이틀 */
 .container > hgroup { margin: 0 auto; padding: 75px 0 0 0; display: block; width: 936px; line-height: 30px; }
-.container > hgroup > h1 { font-size: 30px; color: #231f20; font-weight: 700; }
+.container > hgroup > h1 { font-size: 30px; color: #231f20;}
 .container > hgroup > p { font-size: 14px; color: #777; font-weight: 400; }
 
 /* EVENT 서브 타이틀 */
@@ -43,7 +43,7 @@ div.sorting select { float: right; margin: -5px -12px 0 15px; width:180px; heigh
 
 div.sorting select + .cnt:after { content: ''; }
 div.sorting .cnt {position:relative; padding:0 0 0 20px; font-size:12px; color:#777; font-weight:400; line-height:26px; }
-div.sorting .cnt > em {font-size:12px; color:#231f20; font-weight:700; font-style:normal; }
+div.sorting .cnt > em {font-size:12px; color:#231f20; font-family:'RixSGo M', sans-serif; font-weight:normal; font-style:normal; }
 div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; display:block; font-size:9px; color:#c0c0c0; }
 
 
@@ -75,7 +75,7 @@ figure.product p.icons {margin-top:13px; margin-bottom:5px; height:20px; }
 figure.product p.icons span {position:relative; padding:0 4px; display:inline-block; font-size:10px; color:#fff; font-weight:400; line-height:12px; letter-spacing:-0.1em; background-color:#202020; }
 figure.product p.icons span:after {content:''; position:absolute; bottom:-4px; left:12px; display:block; height:4px; width:6px; background:url(../images/shop/bg_arrow04.png) left top no-repeat; }
 
-figure.product em.brand {color:#202020; font-weight:700; font-style:normal; }
+figure.product em.brand {color:#202020; font-family:'RixSGo M', sans-serif; font-weight:normal; font-style:normal; }
 figure.product p.title {height:45px; color:#777; }
 
 figure.product p.price {padding-right:7px; font-family:'Alegreya', serif; font-style:italic; text-align:right; }

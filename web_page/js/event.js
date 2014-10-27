@@ -471,6 +471,16 @@ $(function(){
  		$('.layer-pop .pop').hide();
  		$('.layer-pop .tb_pop').hide();
  	});
+	
+	// 임시 완료팝업보이기
+	$('.brandweek-complete').height($(document).height()).show();
+	
+	// 참여완료 팝업
+	$('.brandweek-complete .close').on('click', function(e){
+		e.preventDefault();
+		
+		$('.brandweek-complete').hide();
+	});
  	
  })();
  

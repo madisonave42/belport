@@ -5,14 +5,14 @@
 
 /* 타이틀 */
 .container > hgroup {margin:0 auto; padding:47px 0 0 0; display:block; width:936px; height:81px; line-height:30px; }
-.container > hgroup > h1 {font-size:30px; color:#231f20; font-weight:700; }
+.container > hgroup > h1 {font-size:30px; color:#231f20;}
 .container > hgroup > p {font-size:14px; color:#777; font-weight:400; }
 
 /* 카테고리 종류 */
 aside.category-sub {margin-top:32px; margin-bottom:36px; padding-top:5px; padding-left:9px; background-color:#f3f3f4; }
 aside.category-sub a {position:relative; margin:0 11px; padding:0 10px;	display:inline-block; height:33px; font-size:12px; color:#767676; font-weight:400; line-height:33px; }
 aside.category-sub a:hover,
-aside.category-sub a.on {position:relative; color:#000; /*font-weight:700;*/ }
+aside.category-sub a.on {position:relative; color:#000;}
 aside.category-sub a:hover:after,
 aside.category-sub a.on:after {content:''; position:absolute; bottom:0; left:0px; right:0px; display:block; height:3px; background-color:#2b282a; }
 
@@ -42,25 +42,25 @@ figure.product p.icons {margin-top:13px; margin-bottom:5px; height:20px; }
 figure.product p.icons span {position:relative; padding:0 4px; display:inline-block; font-size:10px; color:#fff; font-weight:400; line-height:12px; letter-spacing:-0.1em; background-color:#202020; }
 figure.product p.icons span:after {content:''; position:absolute; bottom:-4px; left:12px; display:block; height:4px; width:6px; background:url(../images/shop/bg_arrow04.png) left top no-repeat; }
 
-figure.product em.brand {color:#202020; font-weight:700; font-style:normal; }
+figure.product em.brand {color:#202020;font-family:'RixSGo M', sans-serif; font-weight:normal; font-style:normal; }
 figure.product p.title {height:45px; color:#777; }
 
 figure.product p.price {padding-right:7px; font-family:'Alegreya', serif; font-style:italic; text-align:right; }
 figure.product p.price > a.btn-wish {float:left; margin-top:2px; display:inline-block; height:18px; width:18px; text-align:left; text-indent:-9999px; background:url(../images/shop/btn_wish01.png) left top no-repeat; }
 figure.product p.price > a.btn-wish.on {background-position:-18px 0; }
-figure.product p.price > .dc-price {font-size:20px; color:#2b282a; line-height:18px; }
+figure.product p.price > .dc-price {font-family:'Alegreya', serif; font-style:italic;  font-weight:bold;font-size:20px; color:#2b282a; line-height:18px; }
 figure.product p.price > .price {margin-left:8px; font-size:20px; color:#b9b9b9; line-height:18px; }
 
 /* 상품 정렬 */
 div.sorting {padding:6px 12px 0 0; height:28px; text-align:right; border-bottom:1px solid #242424; }
 div.sorting a {margin:0 6px; display:inline-block; height:25px; cursor:pointer; font-size:11px; color:#777; font-weight:400; line-height:25px; }
 div.sorting a:hover,
-div.sorting a.on {position:relative; color:#000; /*font-weight:700;*/ }
+div.sorting a.on {position:relative; color:#000;}
 
 div.sorting a:hover:after,
 div.sorting a.on:after {content:''; z-index:10; position:absolute; right:-3px; bottom:-4px; left:-3px; display:block; height:3px; background-color:#2b282a; }
 div.sorting .cnt {position:relative; padding:0 0 0 20px; font-size:12px; color:#777; font-weight:400; line-height:26px; }
-div.sorting .cnt > em {font-size:12px; color:#231f20; font-weight:700; font-style:normal; }
+div.sorting .cnt > em {font-size:12px; color:#231f20;font-family:'RixSGo M', sans-serif;  font-weight:normal; font-style:normal; }
 div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; display:block; font-size:9px; color:#c0c0c0; }
 
 /*==================================================
@@ -89,7 +89,7 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 .sorting_brand {padding-right:12px; height:35px; border-bottom:1px solid #242424; }
 .sorting_brand select {width:180px; height:28px; border:1px solid #d3d0cf; color:#231f20; font-weight:400;}
 .sorting_brand .cnt {float:right; margin-top:15px; font-size:12px; color:#777; font-weight:400;}
-.sorting_brand .cnt > em {font-size:12px; color:#231f20; font-weight:700; font-style:normal; }
+.sorting_brand .cnt > em {font-size:12px; color:#231f20; font-family:'RixSGo M', sans-serif;  font-weight:normal; font-style:normal; }
 
 /*==================================================
  * 브랜드 스토리
@@ -136,7 +136,7 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 .spotlight #list_container{border-top:1px solid #231F20; padding-top:30px;}
 .spotlight #list_container .item{border:1px solid #eee; padding:3px; width:218px; margin-bottom:15px;}
 .spotlight #list_container .item hgroup{margin:10px 0; padding:0 8px;}
-.spotlight #list_container .item hgroup h2{font-size:24px; color:#231f20; font-weight:700;}
+.spotlight #list_container .item hgroup h2{font-size:24px; color:#231f20; font-family:'RixSGo M', sans-serif;  font-weight:normal;}
 .spotlight #list_container .item hgroup p{color:#231f20; font-weight:500; margin-top:5px; font-size:14px;}
 .spotlight #list_container .item>p{padding:0 8px; line-height:1.6;}
 .spotlight #list_container .item>a{display:block; width:33px; float:right; margin-right:7px; text-align:center; border-bottom:1px solid #aba8a7; padding-bottom:3px; font-size:11px; margin-bottom:7px;}
@@ -150,7 +150,7 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 
 .brand_story .detail { position: relative; margin-top: 87px; color: #231f20; }
 .detail h1 { position: relative; margin-bottom: 35px; padding: 0 0 36px 0; width: 100%; font-size: 32px; text-align: center; font-weight: 400; line-height: 40px; }
-.detail h1 > .en { font-size: 44px; font-weight: 700; letter-spacing: -0.1em; }
+.detail h1 > .en { font-size: 44px; letter-spacing: -0.1em; }
 .detail h1:after { content: ''; position: absolute; bottom: 0; left: 50%; margin-left: -17px; display: block; height: 3px; width: 35px; background-color: #000; }
 .detail .desc { display: block; font-size: 16px; font-weight: 400; text-align: center; line-height: 25px; }
 .detail .photo { margin-top: 50px; }
