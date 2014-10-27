@@ -5,12 +5,12 @@
 
 /* Inside B. 타이틀 */
 .container > hgroup { margin: 0 auto; padding: 75px 0 0 0; display: block; width: 936px; line-height: 30px; }
-.container > hgroup > h1 { font-size: 30px; color: #231f20; font-weight: 700; }
+.container > hgroup > h1 { font-size: 30px; color: #231f20;}
 .container > hgroup > p { font-size: 14px; color: #777; font-weight: 400; }
 
 .first-section{position:relative;}
 
-.inside-b .container section > h1 { padding-left: 17px; font-size: 18px; color: #231f20; font-weight: 700; }
+.inside-b .container section > h1 { padding-left: 17px; font-size: 18px; color: #231f20;}
 
 
 .sorting { position: relative; padding: 23px 0 0 0; text-align: center; }
@@ -66,7 +66,7 @@
 .inside-b .masonry_list .item hgroup span.category04:after { background-position: -36px -12px; }
 .inside-b .masonry_list .item hgroup span.category05:after { background-position: -48px -12px; }
 
-.inside-b .masonry_list .item hgroup h2 { margin-top: 6px; font-size: 24px; color: #231f20; font-weight: 700; }
+.inside-b .masonry_list .item hgroup h2 { margin-top: 6px; font-size: 24px; color: #231f20; font-family:'RixSGo M', sans-serif;  font-weight:normal;}
 
 .inside-b .masonry_list .item > p { padding: 0 8px 13px; line-height: 18px; }
 .inside-b .masonry_list .item > span.date { margin-left:8px; font-size: 11px; color: #777; font-weight: 500; }

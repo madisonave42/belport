@@ -7,7 +7,7 @@
 
 /* EVENT 타이틀 */
 .container > hgroup { margin: 0 auto; padding: 75px 0 0 0; display: block; width: 936px; line-height: 30px; }
-.container > hgroup > h1 { font-size: 30px; color: #231f20; font-weight: 700; }
+.container > hgroup > h1 { font-size: 30px; color: #231f20;}
 .container > hgroup > p { font-size: 14px; color: #777; font-weight: 400; }
 
 /* EVENT 서브 타이틀 */
@@ -39,7 +39,7 @@ ul.list-special-event li { float: left; margin: 0 5px 10px 5px; width: 303px; bo
 .list-special-event figure.item p.info > a.btn-wish { float: left; margin-top: 2px; display: inline-block; height: 18px; width: 18px; text-align: left; text-indent: -9999px; background: url(../images/shop/btn_wish01.png) left top no-repeat; }
 .list-special-event figure.item p.info > a.btn-wish.on { background-position: -18px 0; }
 .list-special-event figure.item p.info > span.remain { float: right; font-size: 14px; color: #231f20; font-weight: 400; line-height: 18px; }
-.list-special-event figure.item p.info > span.remain > em { font-weight: 700; font-style: normal; }
+.list-special-event figure.item p.info > span.remain > em {font-family:'RixSGo M', sans-serif;  font-weight:normal; font-style: normal; }
 
 .other figure.item > figcaption { padding: 15px 15px 15px 16px; }
 .other figure.item p.price { text-align: left; }
@@ -72,7 +72,7 @@ ul.list-comments li > img {float:left;width:60px;}
 ul.list-comments li > div,
 ul.list-comments li > p {margin-left:70px;}
 ul.list-comments li .uid {font-size: 13px; color: #231f20; font-weight:600; margin-right:45px; }
-ul.list-comments li .date { font-size: 13px; color: #231f20; font-weight:600; }
+ul.list-comments li .date {font-family:'RixSGo M', sans-serif; font-weight:normal; font-size: 13px; color: #231f20; font-weight:600; }
 ul.list-comments li p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
 ul.list-comments li p a {color:#6896ea;}
 
@@ -128,6 +128,10 @@ ul.list-comments li p a {color:#6896ea;}
 
 
 .layer-pop .close{position:absolute; display:block; top:20px; right:20px;}
+
+.brandweek-complete {position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/bg_layer_popup.png); z-index:5; display:none;}
+.brandweek-complete .complete-msg{position:fixed; top:10%; left:50%; margin-left:-448px;}
+.brandweek-complete .close{position:absolute; display:block; top:20px; right:20px;}
 
 
 /* tester box */
