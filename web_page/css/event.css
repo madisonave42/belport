@@ -73,7 +73,7 @@ fieldset.form-comments input[type=submit] { position: absolute; top: 20px; right
 .my_comment > div,
 .my_comment > p {margin-left:70px;}
 .my_comment .uid {font-size: 13px; color: #231f20; font-weight:600; margin-right:45px; }
-.my_comment .date { font-size: 13px; color: #231f20; font-weight:600; }
+.my_comment .date { font-size: 13px; color: #231f20; }
 .my_comment p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
 .my_comment p a {color:#6896ea;}
 
@@ -84,8 +84,8 @@ ul.list-comments li a.btn-delete { position: absolute; top: 15px; right: 0; disp
 ul.list-comments li > img {float:left;width:60px;}
 ul.list-comments li > div,
 ul.list-comments li > p {margin-left:70px;}
-ul.list-comments li .uid {font-size: 13px; color: #231f20; font-weight:600; margin-right:45px; }
-ul.list-comments li .date {font-family:'RixSGo M', sans-serif; font-weight:normal; font-size: 13px; color: #231f20; font-weight:600; }
+ul.list-comments li .uid {font-size: 13px; margin-right:45px;}
+ul.list-comments li .date {font-family:'RixSGo M', sans-serif; font-weight:normal; font-size: 13px; color: #231f20;}
 ul.list-comments li p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
 ul.list-comments li p a {color:#6896ea;}
 
@@ -137,7 +137,7 @@ ul.list-comments li p a {color:#6896ea;}
 
 .layer-pop .close{position:absolute; display:block; top:20px; right:20px;}
 
-.brandweek-complete {position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/bg_layer_popup.png); z-index:5; display:none;}
+.brandweek-complete {position:fixed; top:0; left:0; width:100%; height:100%; background:url(../images/event/bg_layer_popup.png); z-index:5;}
 .brandweek-complete .complete-msg{position:fixed; top:10%; left:50%; margin-left:-448px;}
 .brandweek-complete .close{position:absolute; display:block; top:20px; right:20px;}
 
