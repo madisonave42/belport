@@ -31,7 +31,7 @@ ul.list-special-event li { float: left; margin: 0 5px 10px 5px; width: 303px; bo
 .list-special-event figure.item p.desc { }
 .list-special-event figure.item p.desc > a { font-size: 14px; color: #231f20; font-weight: 400; line-height: 20px; }
 .list-special-event figure.item p.price { margin-top: 6px; font-family: 'Alegreya', serif; font-style: italic; text-align: right; }
-.list-special-event figure.item p.price > .dc-price { font-size: 18px; color: #231f20; font-weight: 400; line-height: 18px; }
+.list-special-event figure.item p.price > .dc-price {font-family:'Alegreya', serif; font-style:italic; font-weight:bold; font-size: 18px; color: #231f20; font-weight: 400; line-height: 18px; }
 .list-special-event figure.item p.price > .price { margin-left: 8px; font-size: 18px; color: #b9b9b9; font-weight: 400; line-height: 18px; }
 .list-special-event figure.item p.price > .soldout { font-size: 18px; color: #ed6851; font-weight: 400; }
 
@@ -39,7 +39,7 @@ ul.list-special-event li { float: left; margin: 0 5px 10px 5px; width: 303px; bo
 .list-special-event figure.item p.info > a.btn-wish { float: left; margin-top: 2px; display: inline-block; height: 18px; width: 18px; text-align: left; text-indent: -9999px; background: url(../images/shop/btn_wish01.png) left top no-repeat; }
 .list-special-event figure.item p.info > a.btn-wish.on { background-position: -18px 0; }
 .list-special-event figure.item p.info > span.remain { float: right; font-size: 14px; color: #231f20; font-weight: 400; line-height: 18px; }
-.list-special-event figure.item p.info > span.remain > em {font-family:'RixSGo M', sans-serif;  font-weight:normal; font-style: normal; }
+.list-special-event figure.item p.info > span.remain > em {font-family:'RixSGo B', sans-serif;  font-weight:normal; font-style: normal; }
 
 .other figure.item > figcaption { padding: 15px 15px 15px 16px; }
 .other figure.item p.price { text-align: left; }
@@ -72,8 +72,8 @@ fieldset.form-comments input[type=submit] { position: absolute; top: 20px; right
 .my_comment > img {float:left;width:60px;}
 .my_comment > div,
 .my_comment > p {margin-left:70px;}
-.my_comment .uid {font-size: 13px; color: #231f20; font-weight:600; margin-right:45px; }
-.my_comment .date { font-size: 13px; color: #231f20; font-weight:600; }
+.my_comment .uid {font-size: 13px; color: #231f20; font-family:'RixSGo B', sans-serif; margin-right:45px; }
+.my_comment .date { font-size: 13px; color: #231f20; font-family:'RixSGo B', sans-serif;}
 .my_comment p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
 .my_comment p a {color:#6896ea;}
 
@@ -84,8 +84,8 @@ ul.list-comments li a.btn-delete { position: absolute; top: 15px; right: 0; disp
 ul.list-comments li > img {float:left;width:60px;}
 ul.list-comments li > div,
 ul.list-comments li > p {margin-left:70px;}
-ul.list-comments li .uid {font-size: 13px; color: #231f20; font-weight:600; margin-right:45px; }
-ul.list-comments li .date {font-family:'RixSGo M', sans-serif; font-weight:normal; font-size: 13px; color: #231f20; font-weight:600; }
+ul.list-comments li .uid {font-size: 13px; color: #231f20; font-family:'RixSGo B', sans-serif; margin-right:45px; }
+ul.list-comments li .date {font-family:'RixSGo B', sans-serif; font-size: 13px; color: #231f20; }
 ul.list-comments li p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
 ul.list-comments li p a {color:#6896ea;}
 
@@ -104,7 +104,7 @@ ul.list-comments li p a {color:#6896ea;}
 #contents.about .container > section {margin-top:0; width:100%; min-width:980px;}
 #contents.about .container{padding-bottom:0;}
 #contents.about .container > section.comments {margin-top:50px; padding-bottom:30px; width:980px;}
-#contents.about .container > section.comments h1{font-weight:600;}
+#contents.about .container > section.comments h1{ font-family:'RixSGo B', sans-serif; font-weight:normal;}
 #contents.about .container > section.comments .form-comments textarea {width:740px;}
 
 .intro{text-align:center; background:url(../images/event/bg_event_green.jpg) repeat-x;}

@@ -86,7 +86,7 @@ label,
 selectbox {font-family: 'RixSGo L', sans-serif; vertical-align:middle;}
 img{display:block;}
 address{font-style:normal;}
-strong, h1{color:#231f20; font-family:'RixSGo M', sans-serif; font-weight:normal;}
+strong, h1{color:#231f20; font-family:'RixSGo B', sans-serif; font-weight:normal;}
 table{width:100%;}
 
 /* ==========================================================
@@ -432,7 +432,8 @@ header .about_belport {
 	height:18px;
 	line-height:19px;
 	font-size:11px;
-	font-weight:900;
+	font-family:'RixSGo B', sans-serif;
+	font-weight:normal;
 	color:#231f20;
 	background:url(../images/common/logo_ring_small.png) no-repeat right top;
 	text-transform:uppercase;
@@ -842,8 +843,8 @@ ul.list-products li figure.product .frame a img{width:224px; height:189px;}
 
 /* 리뷰, QNA 작성 */
 .popup.write-review { }
-.popup.write-review th { padding-top: 15px; font-size: 13px; color: #231f20; font-family:'RixSGo M', sans-serif; font-weight:normal; text-align: left; vertical-align: top; border: 0px none; }
-.popup.write-review th label {font-family:'RixSGo M', sans-serif;}
+.popup.write-review th { padding-top: 15px; font-size: 13px; color: #231f20; font-family:'RixSGo B', sans-serif; font-weight:normal; text-align: left; vertical-align: top; border: 0px none; }
+.popup.write-review th label {font-family:'RixSGo B', sans-serif;}
 .popup.write-review td { padding: 4px 0 5px 0; border: 0px none; }
 .popup.write-review input[type=text] { width: 100%; border:1px solid #ccc; color:#666; margin:0; }
 .popup.write-review input[type=file] { margin:0; height: 34px; border:1px solid #ccc; color:#666; }
@@ -891,8 +892,8 @@ ul.list-products li.none img{display:inline-block;}
 
 /* 가로형 테이블 공통 스타일 */
 .type_horizon{border-top:2px solid #000;}
-.type_horizon th{height:24px; background:#f3f3f3; border-bottom:1px solid #d3d0cf; text-align:left; padding-left:15px; color:#231f20; font-family:'RixSGo M', sans-serif; font-weight:normal;}
-.type_horizon th label{font-family:'RixSGo M', sans-serif;}
+.type_horizon th{height:24px; background:#f3f3f3; border-bottom:1px solid #d3d0cf; text-align:left; padding-left:15px; color:#231f20; font-family:'RixSGo B', sans-serif; font-weight:normal;}
+.type_horizon th label{font-family:'RixSGo B', sans-serif;}
 .type_horizon td{height:34px; background:#fff; border-bottom:1px solid #d3d0cf; text-align:left; padding:10px 0 10px 15px;}
 .type_horizon strong{color:#231f20;}
 
@@ -943,7 +944,7 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .survey hgroup > h1 > strong { color: #ed6851; }
 .survey hgroup > p.desc { margin-top: 6px; font-size: 13px; color: #777; font-weight: 400; text-align: center; line-height: 19px; }
 .survey hgroup > p.current_step_container { position: absolute; top: 0px; right: 0px; left: 0px; font-size: 13px; font-weight: 400; }
-.survey hgroup .current_step { position: relative; margin-right: 8px; display: inline-block; height: 20px; width: 36px; font-size: 12px; color: #777; font-family:'RixSGo M', sans-serif; vertical-align: middle; }
+.survey hgroup .current_step { position: relative; margin-right: 8px; display: inline-block; height: 20px; width: 36px; font-size: 12px; color: #777; font-family:'RixSGo B', sans-serif; vertical-align: middle; }
 .survey hgroup .current_step > em { font-style: normal; }
 .survey hgroup .current_step > em.current { position: absolute; top: 0; left: 0; color: #231f20; }
 .survey hgroup .current_step > em.total { position: absolute; bottom: 0; right: 0; }
@@ -954,7 +955,7 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .survey .select_section li { margin: 0 11px 24px 10px; display: inline-block;  }
 .survey .select_section li input[type=checkbox],
 .survey .select_section li input[type=radio] { position: absolute; z-index: -1; }
-.survey .select_section li label { position: relative; padding: 177px 0 0 10px; display: block; height: 51px; width: 158px; font-size: 13px; color: #777; font-family:'RixSGo M', sans-serif; font-weight:normal; text-align: left; cursor: pointer; background-color: #f3f3f4; }
+.survey .select_section li label { position: relative; padding: 177px 0 0 10px; display: block; height: 51px; width: 158px; font-size: 13px; color: #777; font-family:'RixSGo B', sans-serif; font-weight:normal; text-align: left; cursor: pointer; background-color: #f3f3f4; }
 
 .survey .select_section li input + label.checked { position: relative; color: #231f20; }
 .survey .select_section li input + label.checked:after { content: ''; position: absolute; top: 0; right: 0; left: 0; bottom: 0; display: block; border: 3px solid #231f20; }
@@ -1013,7 +1014,7 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .survey_complete hgroup>h1{margin-bottom:10px; font-size:24px;}
 .survey_complete hgroup>p{line-height:1.4;}
 
-.survey_complete .complete_message table th{padding:6px 0; text-align:left; color:#231f20; font-family:'RixSGo M', sans-serif; font-weight:normal;}
+.survey_complete .complete_message table th{padding:6px 0; text-align:left; color:#231f20; font-family:'RixSGo B', sans-serif; font-weight:normal;}
 .survey_complete .complete_message table td{padding:6px 0; text-align:left;}
 .survey_complete .complete_message span{color:#ed6851;}
 
