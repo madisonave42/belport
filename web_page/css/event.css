@@ -66,7 +66,7 @@ fieldset.form-comments input[type=submit] { position: absolute; top: 20px; right
 
 
 /* 자신이 작성한 댓글 표시 */
-.my_comment{position: relative; padding:20px 55px 20px 15px; display: block; border-bottom: 1px solid #d3d0cf;  border-top:1px solid #d3d0cf; margin:30px 0; background:#fafafc;}
+.my_comment{position: relative; padding:20px 55px 20px 15px; display: block; border-bottom: 1px solid #d3d0cf;  border-top:1px solid #d3d0cf; margin:30px 0; background:#fafafc; min-height:95px;}
 .my_comment .my_comment_title{margin-left:0px; font-size:15px; font-family:RixSGo B, sans-serif; color:#231f20; padding-bottom:20px; }
 .my_comment a.btn-delete { position: absolute; top: 15px; right: 15px; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat; }
 .my_comment > img {float:left;width:60px;}
@@ -79,8 +79,8 @@ fieldset.form-comments input[type=submit] { position: absolute; top: 20px; right
 
 /* 이벤트 상세 댓글 목록 */
 ul.list-comments {border-top:1px solid #d3d0cf;}
-ul.list-comments li { position: relative; padding:20px 55px 20px 15px; display: block; border-bottom: 1px solid #d3d0cf;}
-ul.list-comments li a.btn-delete { position: absolute; top: 15px; right: 0; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat; }
+ul.list-comments li { position: relative; padding:20px 55px 20px 15px; display: block; border-bottom: 1px solid #d3d0cf; min-height:60px;}
+ul.list-comments li a.btn-delete { position: absolute; top: 15px; right: 0; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat;}
 ul.list-comments li > img {float:left;width:60px;}
 ul.list-comments li > div,
 ul.list-comments li > p {margin-left:70px;}
