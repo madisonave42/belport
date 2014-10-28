@@ -42,7 +42,7 @@
 /* 단계 타이틀 */
 .join hgroup{text-align:center; margin-bottom:60px;}
 .join hgroup>h1{font-size:44px; margin-bottom:10px; font-weight:300;}
-.join hgroup>h1 span{font-family: 'RixSGo M', sans-serif;}
+.join hgroup>h1 span{font-family: 'RixSGo B', sans-serif;}
 .join hgroup>p{line-height:1.8;}
 
 .join .form_area{width:936px; margin-bottom:100px;}
@@ -112,7 +112,7 @@
 
 .terms>h1{font-size:15px; margin-bottom:10px;}
 .terms .terms_box{width:936px; height:100px; border:1px solid #d3d0cf; overflow-y:scroll;;}
-.terms .terms_box b {font-family:'RixSGo M', sans-serif; font-weight:normal;}
+.terms .terms_box b {font-family:'RixSGo B', sans-serif; font-weight:normal;}
 .terms .terms_box div{line-height:1.6;}
 .terms .terms_box pre{font-family:'RixSGo L', sans-serif; line-height:1.6;}
 .terms .terms_box .accept_{}
