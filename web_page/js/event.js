@@ -476,10 +476,10 @@ $(function(){
 	$('.brandweek-complete').height($(document).height()).show();
 	
 	// 참여완료 팝업
-	$('.brandweek-complete .close').on('click', function(e){
+	//$('.brandweek-complete .close').on('click', function(e){
+	$('body').on('click', '.brandweek-complete .close', function(e){
 		e.preventDefault();
-		
-		$('.brandweek-complete').hide();
+		$('.brandweek-complete').remove();
 	});
  	
  })();
@@ -503,6 +503,6 @@ $(function(){
 	})();
 
 
-
+	//alertPop.success();
 
 });

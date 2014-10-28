@@ -332,14 +332,17 @@ var alertPop = (function(){
 	return{
 		
 		success : function(){
-			var alert = '<div class="alert-pop">';
-			alert    += '  <div class="pop pop-1">';
-			alert 	 += '    <img src="../images/event/pop1.png" alt="" usemap="#link_pop01" />';
-			alert 	 += '    <map name="link_pop01">';
-			alert 	 += '      <area shape="rect" coords="55,389,355,440" href="#" alt="" />';
-			alert 	 += '    </map>';
-			alert 	 += '    <a href="#" class="close"><img src="../images/event/btn_close.png" alt="close" /></a>';
-			alert 	 += '  </div>';
+			
+			var alert = '<div class="brandweek-complete">';
+			alert    += '<div class="complete-msg">';
+			alert    += '<p class="hide">성공적으로 응모가 되었습니다. 당첨 시 정확한 배송을 위해 개인정보를 변경하여 주시기 바랍니다.</p>';
+			alert    += '<img src="../images/event/pop_complete.png" alt="" usemap="#link_complete" />';
+			alert    += '<map name="link_complete">';
+			alert    += '<area shape="rect" coords="363,386,528,437" href="http://belport.co.kr/shop/member/myinfo.php?&" alt="개인정보 수정" />';
+			alert    += '<area shape="rect" coords="434,457,469,477" href="#" alt="확인" class="close" />';
+			alert    += '</map>';
+			alert    += '<a href="#" class="close"><img src="../images/event/btn_close.png" alt="close" /></a>';
+			alert    += '</div>';
 			alert    += '</div>';
 			
 			$('body').append(alert);

@@ -34,7 +34,7 @@ $(function(){
 			oldLeft = e.originalEvent.touches[0].clientX;
 			oldTop = e.originalEvent.touches[0].clientY;
 			slope[i] = distanceY[i] / distanceX[i];
-			if( Math.abs(slope[i]) < 0.25 ) {
+			if( Math.abs(slope[0]) < 0.25 ) {
 				e.preventDefault();
 				if( distanceX < 0 ){swipeLeft = true;}
 				else if(distanceX > 0) {swipeLeft = false;}
