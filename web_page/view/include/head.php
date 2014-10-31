@@ -129,6 +129,7 @@
 	<script src="../js/lib/jquery-1.11.0.min.js"></script>
 	<script src="../js/lib/jquery-ui-1.10.4.custom.min.js"></script>
 	<script src="../js/lib/jquery.masonry.min.js" type="text/javascript"></script>
+	<script src="../js/lib/jquery.slides.min.js" type="text/javascript"></script>
 	<script src="../js/function.js"></script>
 	<script src="../js/event.js"></script>
 </head>
