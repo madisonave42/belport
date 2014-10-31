@@ -1,0 +1,7 @@
+/* renewal contents */
+section#main a, section#main img{display:block;}
+section#main .event a,
+section#main .shop a{float:left; width:50%;}
+section#main .event:after,
+section#main .shop:after{content:""; display:block; clear:both;}
+
