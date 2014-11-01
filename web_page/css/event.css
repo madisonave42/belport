@@ -170,7 +170,21 @@ ul.list-comments li p a {color:#6896ea;}
 .layer-pop .tb_pop.pop-3 textarea{width:744px; height:115px; font-family:RixSGo L, sans-serif; padding:30px; font-size:18px;}
 .layer-pop .tb_pop input[type=image]{margin-top:20px;}
 
-.layer-pop .tb_alert{width:543px; height:276px; position:absolute; top:170px; left:175px;} 
+.layer-pop .tb_alert{width:543px; height:276px; position:absolute; top:170px; left:175px;}
+
+/* movie event */
+
+.movie_intro{text-align:center; background:url(../images/event/bg_me-1.jpg) repeat-x;}
+.movie_intro img{width:979px; margin:0 auto; padding-left:135px;}
+
+.movie{text-align:center; background:#231f20; position:relative;}
+.gift{text-align:center; background:url(../images/event/bg_me-2.png);}
+.movie img, .gift img{display:inline-block;}
+.movie_layer{position:absolute; top:70px; left:50%; margin-left:-435px; width:850px; height:500px; background:#000; padding:10px; display:none;}
+.movie_layer .m1,
+.movie_layer .m2{display:none}
+.movie_layer .m_close{display:block; position:absolute; top:10px; right:10px;}
+
 
 
 
