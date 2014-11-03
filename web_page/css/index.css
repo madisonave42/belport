@@ -12,8 +12,13 @@
 .rich_banner{position:absolute; top:0; left:0; width:100%; overflow:hidden;}
 
 .rich_banner.first .rich_banner_image{height:100%; position:relative; left:50%; margin-left:-960px;}
-.rich_banner.first .rich_banner_large_text{display:block; position:absolute; top:160px; left:50%; margin-left:221px;}
-.rich_banner.first .rich_banner_small_text{display:none; position:absolute; top:35px; left:50%; margin-left:-152px;}
+/*.rich_banner.first .rich_banner_large_text{display:block; position:absolute; top:160px; left:50%; margin-left:221px;}*/
+/*.rich_banner.first .rich_banner_small_text{display:none; position:absolute; top:35px; left:50%; margin-left:-152px;}*/
+
+.rich_banner.first .frame{width:510px; height:300px; background:url(../images/common/bg_frame.png) no-repeat; position:absolute; left:50%; margin-left:-508px; top:60px; z-index:80;}
+.rich_banner.first .frame iframe{position:absolute; padding:7px 6px;}
+.rich_banner.first .rich_banner_large_text{display:block; position:absolute; top:310px; left:50%; margin-left:7px;}
+.rich_banner.first .rich_banner_small_text{display:none; position:absolute; top:26px; left:50%; margin-left:-70px;}
 
 .rich_banner.second{display:none;}
 .rich_banner.second .rich_banner_image{height:100%; position:relative; left:50%; margin-left:-960px;}
