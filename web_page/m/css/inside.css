@@ -1,4 +1,20 @@
-section.inside_b {background:#f0f0f0;}
-section.inside_b > h1 {position:absolute; top:-9999px;}
-section.inside_b ul li {margin-bottom:18px; padding:5px;  border:1px solid #dfdfdf;}
-section.inside_b ul li hgroup {margin-top:25px;}
+section.inside_b {background:#f0f0f0; }
+section.inside_b p {margin: 0px; padding: 0px; }
+section.inside_b > h1 {position:absolute; top:-9999px; }
+section.inside_b ul {padding: 10px; }
+section.inside_b ul li {margin-bottom: 18px; padding: 5px 5px 15px; border: 1px solid #DFDFDF; background: #fff; }
+section.inside_b ul li:after {content: ""; display: block; clear: both; }
+section.inside_b ul li img {width: 100%; }
+section.inside_b ul li hgroup {margin-top: 20px; padding: 0px 7px; }
+section.inside_b ul li hgroup span {position: relative; padding-left: 18px; font-size: 13px; }
+section.inside_b ul li hgroup span:after {content: ""; position: absolute; top: 3px; left: 0px; display: block; height: 12px; width: 12px; background: url('../images/inside/icon_sorting.png') no-repeat; }
+section.inside_b ul li hgroup span.category01:after {background-position: 0px -12px; }
+section.inside_b ul li hgroup span.category02:after {background-position: -12px -12px; }
+section.inside_b ul li hgroup span.category03:after {background-position: -24px -12px; }
+section.inside_b ul li hgroup span.category04:after {background-position: -36px -12px; }
+section.inside_b ul li hgroup span.category05:after {background-position: -48px -12px; }
+section.inside_b ul li hgroup h2 {margin-top: 5px; font-size: 23px; }
+section.inside_b ul li p {margin-top: 15px; padding: 0px 7px; color: #777; }
+section.inside_b ul li .date {float: left; margin: 15px 0px 0px 7px; }
+section.inside_b ul li .more {float: right; margin: 15px 7px 0px 0px; text-decoration: underline; }
+ 
