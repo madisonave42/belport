@@ -109,7 +109,7 @@ ul.list-products.fullsize li { padding-right: 5px; padding-left: 5px; }
 	figure.product p.icons span { position: relative; padding: 2px 4px; display: inline-block; font-size: 10px; color: #fff; font-weight: 400; line-height: 12px; letter-spacing: -0.1em; background-color: #231f20; }
 	figure.product p.icons span:after { content: ''; position: absolute; bottom: -4px; left: 12px; display: block; height: 4px; width: 6px; background: url(../images/shop/bg_arrow04.png) left top no-repeat; }
 
-	figure.product em.brand { color: #231f20; font-family:'RixSGo B', sans-serif; font-weight:normal; font-style: normal; }
+	figure.product em.brand {display:block; height:36px; color: #231f20; font-family:'RixSGo B', sans-serif; font-weight:normal; font-style: normal; }
 	figure.product p.title { height: 45px; color: #777; }
 
 	figure.product p.price { padding-right: 7px; font-family: 'Alegreya', serif; font-style: italic; text-align: right; }

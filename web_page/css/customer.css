@@ -70,6 +70,11 @@
 .notice_view .detail_view .neighbors p a { float:left; width:760px; overflow:hidden; }
 .notice_view .detail_view .neighbors p .date { float:right; margin-right:20px; }
 
+/* 공지사항 테이블 */
+.event_table {margin-top:30px; width:100%;}
+.event_table th {padding:7px 0; background:#ddd; color:#333;}
+.event_table td {text-align:center; padding:5px; border-top:1px solid #ccc; color:#333;}
+
 /*==================================================
  * FAQ
  ===================================================*/

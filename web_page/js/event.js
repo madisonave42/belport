@@ -45,7 +45,8 @@ $(function(){
 			var bannerNum = $('.rich_banner').length;
 			
 			var dimension = [
-				{'height':164, "top":-24, 'marginLeft':-58},
+				//{'height':164, "top":-24, 'marginLeft':-58},
+				{'height':164, "top":0, 'marginLeft':-220},
 				{'height':149, "top":-16, 'marginLeft':-27}
 			];
 			
@@ -57,6 +58,10 @@ $(function(){
 				} else {
 					$('.rich_banner_wrap').stop().animate({height:419}, 1000, 'easeOutExpo');
 					$('.rich_banner_image').stop().animate({height:419, top:0, 'margin-left': -960}, 1000, 'easeOutExpo');
+					
+					$('.rich_banner_wrap .frame iframe').attr('src', '//www.youtube.com/embed/TGUGLNaJFig?autoplay=1');
+					$('.rich_banner_wrap .frame').delay(300).fadeIn(300);
+					
 					$('h1.index').fadeOut(300);
 					$('.rich_banner_small_text').fadeOut(300, function(){$('.rich_banner_large_text').fadeIn();});
 					$(this).removeClass('rich_small');
@@ -89,6 +94,33 @@ $(function(){
 			e.preventDefault();
 			bottomNavAction.toggleMenu( bottomNavWrap, bottomNavMenus, $( this ) );
 		});
+	})();
+	
+	/* 약도 슬라이드 */
+	(function() {
+		var maps = $('.bottom_location .bottom_maps');
+		var pageNum = $('.bottom_location .currentPage span');
+		
+		if (maps != 0) {
+			maps.slidesjs({
+        width: 936,
+        height: 302,
+				navigation: {
+					effect: "fade"
+				},
+				pagination: {
+					active: false
+				},
+				callback: {
+					loaded: function() {
+						maps.css({'display': ''});
+					},
+					 complete: function(number) {
+						pageNum.text(number);
+					}
+				}
+      });
+		}
 	})();
 	
 	/* gnb minimize */
