@@ -307,7 +307,7 @@ $(function(){
 	// 상단 메인 슬라이드
 	(function() {
 		var topBanner = $('.top-banner .slides');
-		if (topBanner.length != 0) {
+		if (topBanner.length != 0 && topBanner.children().length > 1) {
 			topBanner.slidesjs({
         width: 1014,
         height: 420,
@@ -323,7 +323,7 @@ $(function(){
 	// 가운데 제품 슬라이드
 	(function() {
 		var products = $('.products .slides');
-		if (products.length != 0) {
+		if (products.length != 0 && products.children().length > 1) {
 			products.slidesjs({
         width: 338,
         height: 338,

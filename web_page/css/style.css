@@ -96,11 +96,11 @@ table{width:100%;}
 .slidesjs-previous:hover, 
 .slidesjs-next:hover {background-color:#eee;}
 .slidesjs-previous,
-.slidesjs-previous:active {background:url(./images/index/bg_arrow_black.png) no-repeat 6px 5px;}
+.slidesjs-previous:active {background:url(../images/index/bg_arrow_black.png) no-repeat 6px 5px;}
 .slidesjs-next,
-.slidesjs-next:active {background:url(./images/index/bg_arrow_black.png) no-repeat -14px 5px;}
+.slidesjs-next:active {background:url(../images/index/bg_arrow_black.png) no-repeat -14px 5px;}
 
-.slidesjs-pagination-item a {display:block; padding:2px; width:7px; height:7px; text-indent:-9999px; background:url(./images/index/bg_page_black.png) no-repeat 2px 2px;}
+.slidesjs-pagination-item a {display:block; padding:2px; width:7px; height:7px; text-indent:-9999px; background:url(../images/index/bg_page_black.png) no-repeat 2px 2px;}
 .slidesjs-pagination-item a.active {background-position:-9px 2px;}
 
 /* ==========================================================
