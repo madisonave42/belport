@@ -5,3 +5,12 @@ section#main .shop a{float:left; width:50%;}
 section#main .event:after,
 section#main .shop:after{content:""; display:block; clear:both;}
 
+.fix_layer{position:fixed; width:100%; height:100%; top:0; left:0; background:url(../images/main/bg_fix_event.png); z-index:5000;}
+
+.fix_layer .fix_close{display:block; position:absolute; top:15px; right:5px;}
+.fix_layer .fix_close img{width:50%;}
+
+.fix_layer .fix_logo{text-align:center; position:absolute; top:70px;}
+.fix_layer .fix_logo img{display:inline-block; width:50%}
+
+.fix_layer .fix_photo{position:absolute; bottom:0;}

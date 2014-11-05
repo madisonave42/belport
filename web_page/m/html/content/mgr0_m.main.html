@@ -28,33 +28,44 @@
 <!-- 201411 renewal modify : Start -->
 <style>
 #slides, #slides2{position:relative;}
-.slidesjs-pagination{position:absolute; bottom:20px; left:20px; z-index:100; }
-.slidesjs-pagination li{float:left;}
-.slidesjs-pagination li a{background:#ebebeb; display:block; width:10px; height:10px; border-radius:5px; margin:0 2px; text-indent:999px;}
-.slidesjs-pagination li a.active{background:#231f20;}
+#slides .slidesjs-pagination{position:absolute; bottom:20px; left:20px; z-index:100; }
+#slides .slidesjs-pagination li{float:left;}
+#slides .slidesjs-pagination li a{background:#ebebeb; display:block; width:10px; height:10px; border-radius:5px; margin:0 2px; text-indent:999px;}
+#slides .slidesjs-pagination li a.active{background:#231f20;}
+
+#slides2 .slidesjs-pagination{position:absolute; bottom:20px; left:20px; z-index:100; }
+#slides2 .slidesjs-pagination li{float:left;}
+#slides2 .slidesjs-pagination li a{background:#ebebeb; display:block; width:10px; height:10px; border-radius:5px; margin:0 2px; text-indent:999px;}
+#slides2 .slidesjs-pagination li a.active{background:#daa4a6;}
 </style>
 <script>
 	$(function() {
+		
 		if($('#slides')){
-		  $('#slides').slidesjs({
-			navigation: false,
-			height:610,
-			effect: {
-				slide: {
-					speed: 2000
+			
+		  if( $('#slides').children().length > 1){
+		  
+			  $('#slides').slidesjs({
+				navigation: false,
+				height:610,
+				effect: {
+					slide: {
+						speed: 2000
+					}
+				},
+				play: {
+					height:420,
+				  active: false,
+				  effect: "slide",
+				  interval: 5000,
+				  auto: true,
+				  swap: false,
+				  pauseOnHover: false,
+				  restartDelay: 2500
 				}
-			},
-			play: {
-				height:420,
-			  active: false,
-			  effect: "slide",
-			  interval: 5000,
-			  auto: true,
-			  swap: false,
-			  pauseOnHover: false,
-			  restartDelay: 2500
-			}
-		  });
+			  });
+		  }
+		  
 		}
 		if($('#slides2')){
 		  $('#slides2').slidesjs({
@@ -102,7 +113,7 @@ function showSearchArea() {
 }
 
 function showCateArea() {
-
+	
 	var now_cate = $("[name=now_cate]").val();
 
 	if($("#cate-area").is(':hidden') == true) {
@@ -182,6 +193,11 @@ function showCategoryMsg(message) {
 	setTimeout( function() {
 		$("[id=goodsres-hide]").fadeOut(300);
 	}, sec);
+}
+
+// 201411 추가
+function closeFix(){
+	$('.fix_layer').hide();
 }
 
 $(document).ready(function(){
@@ -362,7 +378,6 @@ $(document).ready(function(){
 </section>
 <!-- End : 출석체크 템플릿 -->
 <style type="text/css">
-#slides{display:none;}
 
 #background {
 	position : fixed;
@@ -406,9 +421,6 @@ function closeTodayPop(popupNo) {
 <section id="main" class="content" >
 	<div id="slides">
 			<a href="#" target=""><img src="../../images/main/mm_01.jpg" align="absmiddle"></a>
-			<a href="#" target=""><img src="../../images/main/mm_01.jpg" align="absmiddle"></a>
-			<a href="#" target=""><img src="../../images/main/mm_01.jpg" align="absmiddle"></a>
-			<a href="#" target=""><img src="../../images/main/mm_01.jpg" align="absmiddle"></a>
 	</div>
 
 	<a href="#" target=""><img src="../../images/main/mm_02.jpg" align="absmiddle"></a>
@@ -418,7 +430,6 @@ function closeTodayPop(popupNo) {
 		<a href="#" target=""><img src="../../images/main/mm_05.jpg" align="absmiddle"></a>
 	</div>
 	<div id="slides2">
-			<a href="#" target=""><img src="../../images/main/mm_06.jpg" align="absmiddle"></a>
 			<a href="#" target=""><img src="../../images/main/mm_06.jpg" align="absmiddle"></a>
 			<a href="#" target=""><img src="../../images/main/mm_06.jpg" align="absmiddle"></a>
 			<a href="#" target=""><img src="../../images/main/mm_06.jpg" align="absmiddle"></a>
@@ -432,7 +443,64 @@ function closeTodayPop(popupNo) {
 </section>
 <!-- 201411 renewal modify : End -->
 
+<section id='footer'>
+	<div class='company'>
+		<div class="bottom_menu">
+			<div class="bottom_menu_contents">
+				<table>
+					<tr>
+						<td class="faq"><a href="/m2/proc/faq.php">FAQ</a></td>
+						<td><a href="/shop/?pc" title="PC버전으로 보기" class="btn_pcmode">PC버전</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class='lineinfo'>
+				<table>
+					<tr>
+						<td class='title_r'>상호</td>
+						<td>(주) 벨포트</td>
+					</tr>
+					<tr>
+						<td class='title_r'>대표이사</td>
+						<td>민영훈</td>
+					</tr>
+					<tr>
+						<td class='title_r'>주소</td>
+						<td>서울특별시 강남구  삼성로 570 (대한해운 사옥) 9층</td>
+					</tr>
+					<tr>
+						<td class='title_r'>고객센터</td>
+						<td class="num"><a href="/m2/service/customer.php">080-508-6631</a></td>
+					</tr>
+					<tr>
+						<td class='title_r'>사업자번호</td>
+						<td class="num">220-88-60804</td>
+					</tr>
+					<tr>
+						<td class='title_r'>통신판매업신고</td>
+						<td>제2013-서울강남-02382호</td>
+					</tr>
+				</table>
+		</div>
+	</div>
+	
+	<div class="copyright">
+		<div class='lineinfo'>COPYRIGHT (C) 벨포트 ALL RIGHTS RESERVED.</div>
+		<div class="service_menu">
+			<a href="/m2/service/agrmt.php">이용약관</a>
+			<a href="/m2/service/private.php">개인정보취급방침</a>
+		</div>
+	</div>
+</section>
+
 </div>
+<div class="fix_layer">
+	<a href="#" class="fix_close" onclick="javascript:closeFix();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
+	<div class="fix_logo"><img src="../../images/main/fix_event_logo.png" alt="" /></div>
+	<div class="fix_photo"><img src="../../images/main/nj.png" alt="" /></div>
+</div>
+
 <iframe class="" id="ifrmHidden" name="ifrmHidden" src='/shop/blank.php'></iframe>
 </body>
 </html>
