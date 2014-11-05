@@ -16,11 +16,11 @@
 <script src="../../js/lib/jquery-1.11.0.min.js"></script>
 <!-- 201411 renewal add : End -->
 
-<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/common.js"></script>
-<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/goods_list_action.js"></script>
-<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery-1.9.1.min.js"></script>
-<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery.mobile-1.1.1.js"></script>
-<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery.cookie.js"></script>
+<script src="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/js/common.js"></script>
+<script src="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/js/goods_list_action.js"></script>
+<script src="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/js/jquery-1.9.1.min.js"></script>
+<script src="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/js/jquery.mobile-1.1.1.js"></script>
+<script src="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/js/jquery.cookie.js"></script>
 
 
 <script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery.slides.min.js"></script>
@@ -200,6 +200,11 @@ function closeFix(){
 	$('.fix_layer').hide();
 }
 
+function openMenu(){
+	$('.sidemenu').stop().animate({left:0}, 200);
+	$('.dimm').show();
+}
+
 function closeMenu(){
 	$('.sidemenu').stop().animate({left:-260}, 200);
 	$('.dimm').hide();
@@ -266,7 +271,7 @@ $(document).ready(function(){
 
 <header>
 <div class="gnb">
-	<div class="btn_sidemenu"><img src="../../images/main/btn_m_menu.png" /></div>
+	<div class="btn_sidemenu" onclick="javascript:openMenu();"><img src="../../images/main/btn_m_menu.png" /></div>
 	<div id="logo">
 		<a href="javascript:goHome();"><img src="../../images/main/m_logo.png" alt="벨포트" title="벨포트" height="35px"/></a>
 	</div>

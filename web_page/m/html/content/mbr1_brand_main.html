@@ -30,6 +30,9 @@
 <script src="http://www.belport.co.kr/m2/lib/js/mobileCommon2.js"></script>
 <script src="http://www.belport.co.kr/m2/lib/js/attendance.js"></script>
 
+<!-- [D] 스타일 추가 -->
+<link rel="stylesheet" type="text/css" href="../../css/brand.css" />
+<!-- [D] 스크립트 추가 -->
 <script type="text/javascript">
 function showSearchArea() {
 	if($(".search-area").is(':hidden') == true) {
@@ -125,11 +128,6 @@ function showCategoryMsg(message) {
 	}, sec);
 }
 
-// 201411 추가
-function closeFix(){
-	$('.fix_layer').hide();
-}
-
 $(document).ready(function(){
 	$.ajax({
 		"url" : "/m2/proc/mAjaxAction.php",
@@ -191,22 +189,25 @@ $(document).ready(function(){
 
 <header>
 <div class="gnb">
+	<div class="btn_sidemenu"><img src="../../images/main/btn_m_menu.png" /></div>
 	<div id="logo">
-		<a href="javascript:goHome();"><img src="../../images/main/mobileShopLogo.jpg" alt="벨포트" title="벨포트" height="35px"/></a>
-		
+		<a href="javascript:goHome();"><img src="../../images/main/m_logo.png" alt="벨포트" title="벨포트" height="35px"/></a>
 	</div>
 	<div id="logo-right">
-		<div id="search-btn" onClick="javascript:showSearchArea();"><img src="../../images/main/seach.png" /></div>
-		<div class="top_global" ><span onClick="javascript:goMenu('my');" >마이페이지</span><span onClick="javascript:goMenu('login');" >로그인</span></div>
-		
+		<!--<div id="search-btn" onClick="javascript:showSearchArea();"><img src="../../images/main/seach.png" /></div>-->
+		<div class="top_global" >
+			<!--<span onClick="javascript:goMenu('my');" >마이페이지</span>-->
+			<span onClick="javascript:goMenu('login');" >로그인</span></div>
 	</div>
 </div>
+<!--
 <div class="search-area">
 	<div id="search-box">
 		<input type="text" name="search_key" placeholder="검색어를 입력해 주세요"/>
 	</div>
 	<div id="search-box-btn" onclick="javascript:searchKw();" >검색</div>
 </div>
+-->
 <div class="new-menu-area">
 	<div id="category-btn" onClick="javascript:showCateArea();">SHOP<div class="bar_area"></div></div>
 	<div id="viewgoods-btn" onClick="javascript:location.href='/m2/event/event.php'">EVENT</div>
@@ -220,6 +221,34 @@ $(document).ready(function(){
 			<li class="item community">게시판</li>
 		</ul>
 	</div>
+</div>
+
+<div class="sidemenu">
+	
+	<ul class="top">
+		<li><a href="#">로그아웃</a></li>
+		<li><a href="#">마이벨포트</a></li>
+		<li><a href="#">장바구니</a></li>
+		<li><a href="#" onclick="javascript:closeMenu();"><img src="../../images/main/menu_close.png" /></a></li>
+	</ul>
+	
+	<ul class="middle">
+		<li><a href="#">SHOP</a></li>
+		<li><a href="#">BRAND</a></li>
+		<li><a href="#">EVENT</a></li>
+		<li><a href="#">INSIDE.B</a></li>
+	</ul>
+	
+	<ul class="bottom">
+		<li><a href="#">ABOUT BELPORT</a></li>
+		<li><a href="#">공지사항</a></li>
+		<li><a href="#">고객센터</a></li>
+		<li><a href="#">매장안내</a></li>
+	</ul>
+	
+	<div class="tel"><a href="tel:080-508-6631">080-508-6631</a></div>
+	
+	
 </div>
 
 </header>
@@ -333,6 +362,7 @@ $(document).ready(function(){
 	</ul>
 </section>
 <!-- [D] // 브랜드 페이지 -->
+<<<<<<< HEAD
 
 <section id='footer'>
 	<div class='company'>
@@ -384,6 +414,8 @@ $(document).ready(function(){
 		</div>
 	</div>
 </section>
+=======
+>>>>>>> 378e788b661f7dc48432a7b98980e2ac6cbf0cf0
 
 </div>
 
