@@ -43,6 +43,10 @@
 .container section > h1 {margin-bottom:40px; font-size:24px; height:12px; border-bottom:1px solid #d3d0cf; }
 .container section > h1 span {padding-right:11px; background:#fff;}
 
+.container section a {display:block; position:relative;}
+.container section a .hover {display:none; position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/index/bg_view_detail.png);}
+.container section a .hover span {display:block; position:absolute; top:50%; left:50%; width:123px; height:123px; margin-left:-61px; margin-top:-61px; text-indent:-9999em; background:url(../images/index/btn_view_detail.png) no-repeat;}
+
 /* top-banner */
 .top-banner {position:relative;}
 .top-banner .slides {width:1014px; height:420px;}
@@ -61,7 +65,7 @@
 .sub-event ul li {float:left;}
 
 /* sub-event */
-.limited-edition {clear:left;}
+.new-brand {clear:left;}
 
 /* products */
 .products {position:relative;}
@@ -78,6 +82,11 @@
 .products .slides .slidesjs-pagination {position:absolute; bottom:39px; left:48px; z-index:10;}
 .products .slides .slidesjs-pagination li {float:left;}
 .products .slides .slidesjs-pagination .slidesjs-pagination-item a {background-image:url(../images/index/bg_page_white.png);}
+
+#contents .container.index .main-wrap .side-banner {position:absolute; top:0; right:-179px; padding:8px; width:149px; height:404px; background:#fff; z-index:10;}
+#contents .container.index .main-wrap .side-banner .slidesjs-previous {position:absolute; left:8px; bottom:8px; z-index:10;}
+#contents .container.index .main-wrap .side-banner .slidesjs-next {position:absolute; right:8px; bottom:8px; z-index:10;}
+#contents .container.index .main-wrap .side-banner .current-page {position:absolute; bottom:11px; left:0; width:100%; text-align:center; font-size:12px;}
 
 /* inside belport */
 .inside_b {float:left;}

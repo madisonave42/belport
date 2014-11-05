@@ -304,6 +304,18 @@ $(function(){
 		
 	})();
 	
+	// 자세히 보기 롤오버
+	(function() {
+		$('.index section a').on({
+			'mouseenter': function() {
+				$(this).find('.hover').stop().fadeIn(300);
+			},
+			'mouseleave': function() {
+				$(this).find('.hover').stop().fadeOut(300);
+			}
+		});
+	})();
+	
 	// 상단 메인 슬라이드
 	(function() {
 		var topBanner = $('.top-banner .slides');
@@ -334,6 +346,47 @@ $(function(){
 				}
       });
 		}
+	})();
+	
+	// 사이드 배너 슬라이드
+	(function() {
+		var sideBanner = $('.side-banner');
+		var banners = sideBanner.find('.banner-container');
+		var pageNum = sideBanner.find('.current-page span');
+		var richBanner = $('.rich_banner_wrap');
+		var maxHeight;
+		
+		if (banners.length != 0 && banners.children().length > 1) {
+			banners.slidesjs({
+        width: 149,
+        height: 380,
+				effect: {
+					slide: {
+						speed: 1000
+					}
+				},
+				pagination: {
+					active: false
+				},
+				callback: {
+					 complete: function(number) {
+						pageNum.text(number);
+					}
+				}
+      });
+		}
+		
+		$(window).on('load', function(){
+			maxHeight = $('.container.index').innerHeight() - 420
+		});
+		
+		$(window).on('scroll', function() {
+			var scrollHeight = richBanner.height() > 140 ? 530 : 245 ;
+			var tTop = $(document).scrollTop() - scrollHeight;
+			tTop = tTop < 0 ? 0 : tTop;
+			tTop = tTop > maxHeight ? maxHeight : tTop;
+			sideBanner.css({top: tTop});
+		});
 	})();
  
  

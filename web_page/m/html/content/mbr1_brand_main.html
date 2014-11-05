@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+<meta name="description" content="벨포트" />
+<meta name="keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<title>벨포트</title>
+
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery-1.9.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=RixSGo+L:400|RixSGo+M:400|RixSGo+B:400">
+<link rel="stylesheet" type="text/css" href="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/css/style.css" />
+
+<!-- [D] 스타일 추가 -->
+<link rel="stylesheet" type="text/css" href="../css/brand.css" />
+<!-- [D] 스크립트 추가 -->
+<script type="text/javascript">
+
+$(function(){
+	/*============================================================
+	* list wish list action
+	=============================================================*/
+	(function(){
+
+		var isWish = $('a').is('.btn-wish');
+
+		if( isWish ){
+			$('.btn-wish').data('wish', 'false');
+			$('.btn-wish').on('click', function(e){
+				e.preventDefault();
+				if( $(this).data('wish') == 'false'  ){
+					$(this).addClass('on');
+					$(this).data('wish', 'true');
+				} else {
+					$(this).removeClass('on');
+					$(this).data('wish', 'false');
+				}
+				
+			});
+		}
+
+	})();	
+});
+
+</script>
+
+</head>
+
+<body>
+
+<!-- [D] 브랜드 페이지 -->
+<section class="brand">
+	<h1><img src="../images/temp/brand_title.jpg" alt="에이뷰티 - 벨포트가 집중 조명하는 이달의 브랜드" /></h1>
+	<ul>
+		<li>
+			<a href="#"><img src="../images/temp/brand_01.jpg" alt="시크릿 무코타 이지케어" /></a>
+			<p class="title">시크릿 무코타 이지케어</p>
+			<p class="subtitle">SECRET MUCOTA EASY CARE</p>
+			<a href="#" class="btn-wish">위시리스트 추가</a>
+		</li>
+		<li>
+			<a href="#"><img src="../images/temp/brand_02.jpg" alt="시크릿 무코타 이지케어" /></a>
+			<p class="title">시크릿 무코타 이지케어</p>
+			<p class="subtitle">SECRET MUCOTA EASY CARE</p>
+			<a href="#" class="btn-wish">위시리스트 추가</a>
+		</li>
+		<li>
+			<a href="#"><img src="../images/temp/brand_03.jpg" alt="시크릿 무코타 이지케어" /></a>
+			<p class="title">시크릿 무코타 이지케어</p>
+			<p class="subtitle">SECRET MUCOTA EASY CARE</p>
+			<a href="#" class="btn-wish">위시리스트 추가</a>
+		</li>
+	</ul>
+</section>
+<!-- [D] // 브랜드 페이지 -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+section.inside_b {background:#f0f0f0;}
+section.inside_b > h1 {position:absolute; top:-9999px;}
+section.inside_b ul li {margin-bottom:18px; padding:5px;  border:1px solid #dfdfdf;}
+section.inside_b ul li hgroup {margin-top:25px;}

@@ -1,0 +1,9 @@
+section.brand img {width:100%;}
+section.brand p {margin:0; padding:0;}
+section.brand ul {padding:15px 10px;}
+section.brand ul li{margin-bottom:15px; padding-bottom:20px; border-bottom:1px solid #d3d0cf;}
+section.brand ul li .title{margin-top:25px; font-size:15px;}
+section.brand ul li .subtitle{font-size:18px;}
+section.brand ul li .btn-wish{display:block; margin-top:5px; height:23px; width:23px; text-indent:-9999px; background: url('../images/common/btn_wish01.png') no-repeat scroll left top transparent;}
+section.brand ul li .btn-wish.on {background-position:-23px 0; }
+
