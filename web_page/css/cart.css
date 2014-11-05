@@ -85,7 +85,7 @@
 .payment td.payment_price strong span {font-weight:500; font-size:19px;}
 .payment .msg_price{text-align:right; color:#888; margin-top:10px;}
 /*20141023*/
-.payment .shipping_fee{background:#f5f4f5; border-top:1px solid #000; margin-bottom:30px; padding:25px 40px 0; font-size:12px;}
+.payment .shipping_fee{background:#f9f9f9; border-top:1px solid #000; margin-bottom:30px; padding:25px 40px 0; font-size:12px;}
 .payment .shipping_fee dt{font-size:15px; color:#231f20; font-family:RixSGo B, sans-serif; margin-bottom:12px;}
 .payment .shipping_fee dd .message{float:left;}
 .payment .shipping_fee dd p{line-height:1.8;}

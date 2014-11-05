@@ -1,0 +1,172 @@
+<section id="contents" class="about">
+	<h1 class="hide">Movie Event</h1><!-- depth 1 heading -->
+	<!--<nav></nav>-->
+	<section class="container">
+			
+		<article class="location">
+			<h1 class="hide">location</h1>
+			<em class="home"><a href="#">Home</a></em>
+			<em>></em>
+			<em class="current">About Belport</em>
+		</article>
+
+		<h1 class="hide">Movie Event</h1><!-- depth 2 heading -->
+		
+		<!-- detail section : S -->
+		<section class="movie_intro">
+			<img src="../images/event/movie_event-1.png" alt="movie event" />
+		</section>
+		
+		<section class="movie">
+			<img src="../images/event/movie_event-2.png" usemap="#movie" alt="movie event" />
+			<map name="movie">
+				<area shape="rect" coords="86,242,270,430" href="#" class="btn_m1" />
+				<area shape="rect" coords="313,242,500,430" href="#" class="btn_m2" />
+			</map>
+			
+			<div class="movie_layer">
+				
+				<div class="m1" data-src="//www.youtube.com/embed/UL8tdbE9lF4">
+					<iframe id="m1" width="850" height="500" src="//www.youtube.com/embed/UL8tdbE9lF4" frameborder="0" allowfullscreen></iframe>
+				</div>
+				
+				<div class="m2" data-src="//www.youtube.com/embed/kwWdWMDLyvc">
+					<iframe id="m2" width="850" height="500" src="//www.youtube.com/embed/kwWdWMDLyvc" frameborder="0" allowfullscreen></iframe>
+				</div>
+				
+				<a href="#" class="m_close"><img src="../images/event/m_close.png" /></a>
+				
+				
+				<script>
+					// 동영상 이벤트
+					(function(){
+						
+						$('.btn_m1').on('click', function(e){
+							e.preventDefault();
+							var src = $('.m1').attr('data-src');
+							$('#m1').attr('src', src);
+							$('.movie_layer').show();
+							$('.movie_layer .m1').show();
+						});
+						
+						$('.btn_m2').on('click', function(e){
+							e.preventDefault();
+							var src = $('.m2').attr('data-src');
+							$('#m2').attr('src', src);
+							$('.movie_layer').show();
+							$('.movie_layer .m2').show();
+						});
+						
+						$('.m_close').on('click', function(e){
+							e.preventDefault();
+							$('#m1, #m2').attr('src', '');
+							
+							$('.movie_layer').hide();
+							$('.movie_layer .m1, .movie_layer .m2').hide();
+						});
+					})();
+				</script>
+			</div>
+			
+		</section>
+		
+		<section class="gift">
+			<img src="../images/event/movie_event-3.png" alt="movie event" />
+		</section>
+		
+		<section class="comments">
+			<h1 class="sub-title">댓글달기 <em>총 15개</em></h1>
+
+			<fieldset class="form-comments">
+				<legend class="hide">댓글 작성 입력 폼</legend>
+				
+				<img src="../images/temp/event_product01.jpg" alt="" />
+				<textarea rows="3" cols="200" maxlength="250"></textarea>
+				<input type="submit" value="등록하기" class="" />
+			</fieldset>
+			
+			<div class="my_comment">
+				<div class="my_comment_title"><span>댓글의 아이디</span> 님이 작성한 글</div>
+				<img src="../images/temp/event_product01.jpg" alt="" />
+				<div>
+					<span class="date">2014.0422 21:06</span>
+				</div>
+				<p>
+					이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요.	좋은 하루 되세요!! <a href="#">https://www.facebook.com/asdfjklwbe</a>
+				</p>
+				<a href="#" class="btn-delete">댓글 삭제</a>
+			</div>
+
+			<ul class="list-comments">
+				<li>
+					<img src="../images/temp/event_product01.jpg" alt="" />
+					<div>
+						<strong class="uid">댓글의 아이디</strong>
+						<span class="date">2014.0422 21:06</span>
+					</div>
+					<p>
+						이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요.	좋은 하루 되세요!! <a href="#">https://www.facebook.com/asdfjklwbe</a>
+					</p>
+					<a href="#" class="btn-delete">댓글 삭제</a>
+				</li>
+				<li>
+					<img src="../images/temp/event_product01.jpg" alt="" />
+					<div>
+						<strong class="uid">댓글의 아이디</strong>
+						<span class="date">2014.0422 21:06</span>
+					</div>
+					<p>
+						 좋은 하루 되세요!! 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 좋은 하루 되세요!! <a href="#">https://www.facebook.com/asdfjklwb</a>
+					</p>
+					<a href="#" class="btn-delete">댓글 삭제</a>
+				</li>
+				<li>
+					<img src="../images/temp/event_product01.jpg" alt="" />
+					<div>
+						<strong class="uid">댓글의 아이디</strong>
+						<span class="date">2014.0422 21:06</span>
+					</div>
+					<p>
+						이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요.	좋은 하루 되세요!! <a href="#">https://www.facebook.com/asdfjklwbe</a>
+					</p>
+					<a href="#" class="btn-delete">댓글 삭제</a>
+				</li>
+				<li>
+					<img src="../images/temp/event_product01.jpg" alt="" />
+					<div>
+						<strong class="uid">댓글의 아이디</strong>
+						<span class="date">2014.0422 21:06</span>
+					</div>
+					<p>
+						이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요.	좋은 하루 되세요!! <a href="#">https://www.facebook.com/asdfjklwbe</a>
+					</p>
+					<a href="#" class="btn-delete">댓글 삭제</a>
+				</li>
+				<li>
+					<img src="../images/temp/event_product01.jpg" alt="" />
+					<div>
+						<strong class="uid">댓글의 아이디</strong>
+						<span class="date">2014.0422 21:06</span>
+					</div>
+					<p>
+						이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요. 이벤트 참여 합니다. 꼭 당첨시켜 주세요.	좋은 하루 되세요!! <a href="#">https://www.facebook.com/asdfjklwbe</a>
+					</p>
+					<a href="#" class="btn-delete">댓글 삭제</a>
+				</li>
+			</ul>
+
+			<div class="paging">
+				<a href="#" class="arrow first on">처음 페이지</a>
+				<a href="#" class="arrow prev on">이전 페이지</a>
+				<a href="#"><strong>1</strong></a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#" class="arrow next">다음 페이지</a>
+				<a href="#" class="arrow last">끝   페이지</a>
+			</div>
+		</section>
+		<!-- detail section : E -->
+	</section>
+</section>

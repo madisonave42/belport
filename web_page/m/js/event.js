@@ -2,12 +2,10 @@ $(function(){
 	
 	(function(){
 
-		var oldHeight;
 		var oldWidth;
 		
 		$(window).on('load', function(){
 			oldWidth = $(window).width();
-			oldHeight = $(window).height();
 		});
 
 		$(window).on('resize', function(){
@@ -24,27 +22,16 @@ $(function(){
 			}
 		});	
 	})();
-	
-	
-	
 	(function(){
 		
 		var $prd = $('.prd');
 		$prd.data('open', 'false');
-		
-		var originalLeft;
-		var originalTop;
-		
-		var oldPosition;
-		
+
 		var distanceX = [];
 		var distanceY = [];
 		var oldLeft = [];
 		var oldTop = [];
-		var slope = [];
-		
 		var rad = [];
-		
 		var i;
 		
 		var isSlideOpen = false;
@@ -55,7 +42,6 @@ $(function(){
 			distanceY = [];
 			oldLeft = [];
 			oldTop = [];
-			slope = [];
 			
 			rad = [];
 			
@@ -67,8 +53,8 @@ $(function(){
 				});
 				$prd.data('open', 'false');
 			} else {
-				oldLeft[0] = originalLeft = e.originalEvent.touches[0].clientX;
-				oldTop[0] = originalTop = e.originalEvent.touches[0].clientY;				
+				oldLeft[0] = e.originalEvent.touches[0].clientX;
+				oldTop[0] = e.originalEvent.touches[0].clientY;				
 			}
 			
 		});
