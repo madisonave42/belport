@@ -43,19 +43,6 @@
 .container section > h1 {margin-bottom:40px; font-size:24px; height:12px; border-bottom:1px solid #d3d0cf; }
 .container section > h1 span {padding-right:11px; background:#fff;}
 
-/* 슬라이드 컨트롤 */
-.slidesjs-previous, 
-.slidesjs-next {display:block; width:17px; height:17px; text-indent:-9999px;}
-.slidesjs-previous:hover, 
-.slidesjs-next:hover {background-color:#eee;}
-.slidesjs-previous,
-.slidesjs-previous:active {background:url(../images/index/bg_arrow_black.png) no-repeat 6px 5px;}
-.slidesjs-next,
-.slidesjs-next:active {background:url(../images/index/bg_arrow_black.png) no-repeat -14px 5px;}
-
-.slidesjs-pagination-item a {display:block; padding:2px; width:7px; height:7px; text-indent:-9999px; background:url(../images/index/bg_page_black.png) no-repeat 2px 2px;}
-.slidesjs-pagination-item a.active {background-position:-9px 2px;}
-
 /* top-banner */
 .top-banner {position:relative;}
 .top-banner .slides {width:1014px; height:420px;}

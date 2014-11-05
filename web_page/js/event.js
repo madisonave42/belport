@@ -96,6 +96,33 @@ $(function(){
 		});
 	})();
 	
+	/* 약도 슬라이드 */
+	(function() {
+		var maps = $('.bottom_location .bottom_maps');
+		var pageNum = $('.bottom_location .currentPage span');
+		
+		if (maps != 0) {
+			maps.slidesjs({
+        width: 936,
+        height: 302,
+				navigation: {
+					effect: "fade"
+				},
+				pagination: {
+					active: false
+				},
+				callback: {
+					loaded: function() {
+						maps.css({'display': ''});
+					},
+					 complete: function(number) {
+						pageNum.text(number);
+					}
+				}
+      });
+		}
+	})();
+	
 	/* gnb minimize */
 	/*
 	(function(){
@@ -280,7 +307,7 @@ $(function(){
 	// 상단 메인 슬라이드
 	(function() {
 		var topBanner = $('.top-banner .slides');
-		if (topBanner.length != 0) {
+		if (topBanner.length != 0 && topBanner.children().length > 1) {
 			topBanner.slidesjs({
         width: 1014,
         height: 420,
@@ -296,7 +323,7 @@ $(function(){
 	// 가운데 제품 슬라이드
 	(function() {
 		var products = $('.products .slides');
-		if (products.length != 0) {
+		if (products.length != 0 && products.children().length > 1) {
 			products.slidesjs({
         width: 338,
         height: 338,
