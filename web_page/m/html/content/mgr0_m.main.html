@@ -10,11 +10,11 @@
 
 <title>벨포트</title>
 
-<!-- 201411 renewal add : Start -->
+<!-- 20141105 renewal add : Start -->
 <link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=RixSGo+L:400|RixSGo+M:400|RixSGo+B:400">
 <link rel="stylesheet" href="../../css/main.css" />
 <script src="../../js/lib/jquery-1.11.0.min.js"></script>
-<!-- 201411 renewal add : End -->
+<!-- 20141105 renewal add : End -->
 
 <script src="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/js/common.js"></script>
 <script src="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/js/goods_list_action.js"></script>
@@ -25,7 +25,7 @@
 
 <script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery.slides.min.js"></script>
 
-<!-- 201411 renewal modify : Start -->
+<!-- 20141105 renewal modify : Start -->
 <style>
 #slides, #slides2{position:relative;}
 #slides .slidesjs-pagination{position:absolute; bottom:20px; left:20px; z-index:100; }
@@ -90,7 +90,7 @@
 		}
 	});
 </script>
-<!-- 201411 renewal modify : End -->
+<!-- 20141105 renewal modify : End -->
 
 <script src="http://www.belport.co.kr//m2/lib/js/mobileAction.js"></script>
 <script src="http://www.belport.co.kr//m2/lib/js/mobileCommon.js"></script>
@@ -195,7 +195,7 @@ function showCategoryMsg(message) {
 	}, sec);
 }
 
-// 201411 추가
+// 20141105 추가
 function closeFix(){
 	$('.fix_layer').hide();
 }
@@ -209,7 +209,7 @@ function closeMenu(){
 	$('.sidemenu').stop().animate({left:-260}, 200);
 	$('.dimm').hide();
 }
-
+// 20141105 추가
 $(document).ready(function(){
 	$.ajax({
 		"url" : "/m2/proc/mAjaxAction.php",
@@ -270,6 +270,7 @@ $(document).ready(function(){
 <div id="wrap">
 
 <header>
+<!-- 20141105 -->
 <div class="gnb">
 	<div class="btn_sidemenu" onclick="javascript:openMenu();"><img src="../../images/main/btn_m_menu.png" /></div>
 	<div id="logo">
@@ -334,6 +335,7 @@ $(document).ready(function(){
 </div>
 
 </header>
+<!-- 20141105 -->
 <section id="cate-area">
 	<div class="top_title"><div class="title">카테고리</div></div>
 	<div class="top_path"><div class='now_path'><div class='pathitem activeitem allpath' onClick='javascript:cateSelect("");'>전체카테고리</div></div></div>
@@ -457,7 +459,7 @@ function closeTodayPop(popupNo) {
 </script>
 
 
-<!-- 201411 renewal modify : Start -->
+<!-- 20141105 renewal modify : Start -->
 
 <section id="main" class="content" >
 	<div id="slides">
@@ -482,7 +484,7 @@ function closeTodayPop(popupNo) {
 	</div>
 	
 </section>
-<!-- 201411 renewal modify : End -->
+<!-- 20141105 renewal modify : End -->
 
 <section id='footer'>
 	<div class='company'>
