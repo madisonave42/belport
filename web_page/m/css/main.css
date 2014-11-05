@@ -7,10 +7,37 @@ section#main .shop:after{content:""; display:block; clear:both;}
 
 .fix_layer{position:fixed; width:100%; height:100%; top:0; left:0; background:url(../images/main/bg_fix_event.png); z-index:5000;}
 
-.fix_layer .fix_close{display:block; position:absolute; top:15px; right:5px;}
-.fix_layer .fix_close img{width:50%;}
+.fix_layer .fix_close{display:block; position:absolute; top:15px; right:15px;}
+.fix_layer .fix_close img{width:20px;}
 
-.fix_layer .fix_logo{text-align:center; position:absolute; top:70px;}
-.fix_layer .fix_logo img{display:inline-block; width:50%}
+.fix_layer .fix_logo{text-align:center; position:absolute; top:70px; width:100%;}
+.fix_layer .fix_logo img{display:inline-block; width:160px}
 
-.fix_layer .fix_photo{position:absolute; bottom:0;}
+.fix_layer .fix_photo{position:absolute; bottom:0; text-align:center; width:100%;}
+.fix_layer .fix_photo img{display:inline-block; width:320px;}
+
+/* side menu */
+.sidemenu{position:absolute; top:0; left:-260px; width:260px; height:600px; background:#231f20; z-index: 4700;}
+.sidemenu .top{padding:15px; background:#2e2a2b;}
+.sidemenu .top:after{content:""; display:block; clear:both;}
+.sidemenu .top li{float:left; margin-left:24px;}
+.sidemenu .top li:first-child{margin:0;}
+.sidemenu .top li a{color:#fff; font-size:12px; font-family:RixSGo M, sans-serif;}
+
+.sidemenu .middle{padding:0 15px;}
+.sidemenu .middle li{border-top:1px solid #353233;}
+.sidemenu .middle li:first-child{border:0;}
+.sidemenu .middle li:last-child{border-bottom:1px solid #f3f3f4; padding-bottom:15px;}
+.sidemenu .middle li a{display:block; color:#898989; height:37px; line-height:37px; padding-top:3px;}
+
+.sidemenu .bottom{padding:0 15px;}
+.sidemenu .bottom li{border-top:1px solid #353233;}
+.sidemenu .bottom li:first-child{border:0; margin-top:15px;}
+.sidemenu .bottom li:last-child{border-bottom:1px solid #353233;}
+.sidemenu .bottom li a{display:block; color:#898989; height:37px; line-height:37px; padding-top:3px;}
+
+.sidemenu .tel{padding:15px 15px 15px; color:#898989; background:url(../images/main/bg_tel.png) no-repeat 220px 10px;}
+.sidemenu .tel a{display:block; width:100%; color:#898989; font-size:12px; font-family:RixSGo M, sans-serif;}
+
+.dimm{position:absolute; width:100%; height:100%; top:0; left:0; background:#000; opacity:0.8; z-index: 4600; display:none;}
+
