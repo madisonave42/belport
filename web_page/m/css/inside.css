@@ -7,7 +7,7 @@ section.inside_b ul li:after {content: ""; display: block; clear: both; }
 section.inside_b ul li img {width: 100%; }
 section.inside_b ul li hgroup {margin-top: 20px; padding: 0px 7px; }
 section.inside_b ul li hgroup span {position: relative; padding-left: 18px; font-size: 13px; }
-section.inside_b ul li hgroup span:after {content: ""; position: absolute; top: 3px; left: 0px; display: block; height: 12px; width: 12px; background: url('../images/inside/icon_sorting.png') no-repeat; }
+section.inside_b ul li hgroup span:after {content: ""; position: absolute; top: 6px; left: 0px; display: block; height: 12px; width: 12px; background: url('../images/inside/icon_sorting.png') no-repeat; }
 section.inside_b ul li hgroup span.category01:after {background-position: 0px -12px; }
 section.inside_b ul li hgroup span.category02:after {background-position: -12px -12px; }
 section.inside_b ul li hgroup span.category03:after {background-position: -24px -12px; }

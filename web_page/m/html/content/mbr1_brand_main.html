@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <head>
 <meta name="description" content="벨포트" />
@@ -16,6 +15,36 @@
 <script src="../../js/lib/jquery-1.11.0.min.js"></script>
 <!-- 201411 renewal add : End -->
 
+<!-- [D] 스크립트 추가 -->
+<script type="text/javascript">
+$(function() {
+
+	/*============================================================
+	 * list wish list action
+   =============================================================*/
+	(function(){
+		var isWish = $('a').is('.btn-wish');
+		
+		if( isWish ){
+			$('.btn-wish').data('wish', 'false');
+			$('.btn-wish').on('click', function(e){
+				e.preventDefault();
+				if( $(this).data('wish') == 'false'  ){
+					$(this).addClass('on');
+					$(this).data('wish', 'true');
+				} else {
+					$(this).removeClass('on');
+					$(this).data('wish', 'false');
+				}
+				
+			});
+		}
+ 	
+	})();
+ 
+});
+</script>
+
 <script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/common.js"></script>
 <script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/goods_list_action.js"></script>
 <script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery-1.9.1.min.js"></script>
@@ -32,7 +61,7 @@
 
 <!-- [D] 스타일 추가 -->
 <link rel="stylesheet" type="text/css" href="../../css/brand.css" />
-<!-- [D] 스크립트 추가 -->
+
 <script type="text/javascript">
 function showSearchArea() {
 	if($(".search-area").is(':hidden') == true) {
@@ -162,6 +191,7 @@ $(document).ready(function(){
 });
 
 </script>
+
 <link rel="stylesheet" type="text/css" href="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/css/reset.css" />
 <link rel="stylesheet" type="text/css" href="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/css/style.css" />
 <link rel="stylesheet" type="text/css" href="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/css/attendance.css" />
@@ -362,7 +392,6 @@ $(document).ready(function(){
 	</ul>
 </section>
 <!-- [D] // 브랜드 페이지 -->
-<<<<<<< HEAD
 
 <section id='footer'>
 	<div class='company'>
@@ -414,8 +443,6 @@ $(document).ready(function(){
 		</div>
 	</div>
 </section>
-=======
->>>>>>> 378e788b661f7dc48432a7b98980e2ac6cbf0cf0
 
 </div>
 
