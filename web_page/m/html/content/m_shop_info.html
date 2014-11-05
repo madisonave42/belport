@@ -124,6 +124,21 @@ function showCategoryMsg(message) {
 	}, sec);
 }
 
+// 201411 추가
+function closeFix(){
+	$('.fix_layer').hide();
+}
+
+function openMenu(){
+	$('.sidemenu').stop().animate({left:0}, 200);
+	$('.dimm').show();
+}
+
+function closeMenu(){
+	$('.sidemenu').stop().animate({left:-260}, 200);
+	$('.dimm').hide();
+}
+
 $(document).ready(function(){
 	$.ajax({
 		"url" : "/m2/proc/mAjaxAction.php",
@@ -185,7 +200,7 @@ $(document).ready(function(){
 
 <header>
 <div class="gnb">
-	<div class="btn_sidemenu"><img src="../../images/main/btn_m_menu.png" /></div>
+	<div class="btn_sidemenu" onclick="javascript:openMenu();"><img src="../../images/main/btn_m_menu.png" /></div>
 	<div id="logo">
 		<a href="javascript:goHome();"><img src="../../images/main/m_logo.png" alt="벨포트" title="벨포트" height="35px"/></a>
 	</div>
@@ -206,9 +221,9 @@ $(document).ready(function(){
 -->
 <div class="new-menu-area">
 	<div id="category-btn" onClick="javascript:showCateArea();">SHOP<div class="bar_area"></div></div>
+	<div id="cart-btn" onClick="javascript:goMenu('cart');">BRAND</div>
 	<div id="viewgoods-btn" onClick="javascript:location.href='/m2/event/event.php'">EVENT</div>
-   	<div id="cart-btn" onClick="javascript:goMenu('cart');">장바구니</div>
-	<div id="more-view-btn"><div class="bar_area"></div>더보기</div>
+	<div id="more-view-btn"><div class="bar_area"></div>INSIDE.B</div>
 	<div id="more-view-menu" style="display: none;">
 		<ul>
 			<li class="item wishlist">Wish List</li>
@@ -389,7 +404,7 @@ $(document).ready(function(){
 		</div>
 	</div>
 </section>
-
+<div class="dimm"> </div>
 </div>
 
 <iframe class="" id="ifrmHidden" name="ifrmHidden" src='/shop/blank.php'></iframe>
