@@ -327,6 +327,11 @@ $(function(){
 					slide: {
 						speed: 1000
 					}
+				},
+				play: {
+					interval: 4000,
+					auto: true,
+					pauseOnHover: true
 				}
       });
 		}
@@ -343,6 +348,11 @@ $(function(){
 					slide: {
 						speed: 1000
 					}
+				},
+				play: {
+					interval: 4000,
+					auto: true,
+					pauseOnHover: true
 				}
       });
 		}
