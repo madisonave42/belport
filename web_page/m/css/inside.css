@@ -17,4 +17,7 @@ section.inside_b ul li hgroup h2 {margin-top: 5px; font-size: 23px; }
 section.inside_b ul li p {margin-top: 15px; padding: 0px 7px; color: #777; }
 section.inside_b ul li .date {float: left; margin: 15px 0px 0px 7px; }
 section.inside_b ul li .more {float: right; margin: 15px 7px 0px 0px; text-decoration: underline; }
- 
+section.inside_b .detail_view {padding:10px;} 
+section.inside_b .detail_view h2 {margin-bottom:5px; font-size:16px;} 
+section.inside_b .detail_view .date {text-align:right;} 
+section.inside_b .detail_view .view_contents {margin:10px 0; padding:5px 5px 10px; border-bottom:2px solid #dfdfdf;}
