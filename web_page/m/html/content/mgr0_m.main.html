@@ -200,6 +200,23 @@ function closeFix(){
 	$('.fix_layer').hide();
 }
 
+function closeVideo(){
+	$('.fix_video iframe').attr('src', '');
+	$('.fix_video').hide();
+	
+}
+
+function openVideo(){
+	$('.fix_layer').hide();
+	$('.fix_video').show();
+}
+
+function noMore(){
+	document.cookie = 'nomore=true; expires=Sun, 31 Jan 2100 12:00:00 UTC; path=/';
+	$('.fix_video').remove();
+	$('.fix_layer').remove();
+}
+
 function openMenu(){
 	$('.sidemenu').stop().animate({left:0}, 200);
 	$('.dimm').show();
@@ -209,7 +226,10 @@ function closeMenu(){
 	$('.sidemenu').stop().animate({left:-260}, 200);
 	$('.dimm').hide();
 }
+
+
 // 20141105 추가
+
 $(document).ready(function(){
 	$.ajax({
 		"url" : "/m2/proc/mAjaxAction.php",
@@ -239,7 +259,15 @@ $(document).ready(function(){
 	}
 	catch(e) {}
 
-	
+	// 20141105 추가
+	(function() {
+		var ck = document.cookie;
+		if (ck.indexOf('nomore') > -1) {
+			$('.fix_video').remove();
+			$('.fix_layer').remove();
+		}
+		
+	})();
 
 });
 
@@ -546,13 +574,18 @@ function closeTodayPop(popupNo) {
 <div class="dimm"> </div>
 <!-- 20141105 -->
 </div>
-<!--
+
 <div class="fix_layer">
 	<a href="#" class="fix_close" onclick="javascript:closeFix();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
 	<div class="fix_logo"><img src="../../images/main/fix_event_logo.png" alt="" /></div>
-	<div class="fix_photo"><img src="../../images/main/nj.png" alt="" /></div>
+	<div class="fix_photo" onclick="javascript:closeFix();openVideo();"><img src="../../images/main/nj.png" alt="" /></div>
+	<a href="#" class="btn_no_more" onclick="noMore();return false;"><img src="../../images/main/btn_no_more.jpg" alt="다시 보지 않기"/></a>
 </div>
--->
+<div class="fix_video">
+	<a href="#" class="fix_close" onclick="javascript:closeVideo();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
+	<iframe width="90%" height="275" src="http://www.youtube.com/embed/TGUGLNaJFig?autoplay=1&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
 <iframe class="" id="ifrmHidden" name="ifrmHidden" src='/shop/blank.php'></iframe>
 </body>
 </html>
