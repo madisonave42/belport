@@ -101,6 +101,7 @@ ul.list-comments li p a {color:#6896ea;}
 .event .container .btns_wrap .btns { position: static; float: right; margin: 0; }
 
 /* brand week */
+/*
 #contents.about .container .location {top:-9999em;}
 #contents.about .container > section {margin-top:0; width:100%; min-width:980px;}
 #contents.about .container{padding-bottom:0;}
@@ -111,6 +112,7 @@ ul.list-comments li p a {color:#6896ea;}
 .intro{text-align:center; background:url(../images/event/bg_event_green.jpg) repeat-x;}
 .intro img{display:inline-block;}
 .btn_select_event:focus{outline:none;} /* tester box 공통 */
+/*
 
 .join {text-align:center; background:url(../images/event/bg_brandweek4-2.gif) repeat-x;}
 .join img{display:inline-block;}
@@ -128,6 +130,27 @@ ul.list-comments li p a {color:#6896ea;}
 .product .product_img .tip-5{left:744px; height:285px;}
 @media all and (max-width:1600px){
 	.product {background-size:initial;}
+}
+*/
+.omo-slides {
+	position:relative;
+	margin-bottom:32px;
+}
+.omo-slides .slidesjs-previous,
+.omo-slides .slidesjs-next {
+	position:absolute;
+	top:275px;
+	width:39px;
+	height:39px;
+	background:url(../images/event/omo_arrow.png) no-repeat;
+	z-index:10;
+}
+.omo-slides .slidesjs-previous{
+	left:0;
+}
+.omo-slides .slidesjs-next {
+	right:0;
+	background-position:-39px 0;
 }
 
 .guide {text-align:center; background:#231f20;}
