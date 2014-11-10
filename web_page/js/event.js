@@ -641,5 +641,20 @@ $(function(){
 
 
 	//alertPop.success();
+	
+	// 오모로비짜
+	(function() {
+		var omoSlides = $('.omo-slides');
+		
+		if (omoSlides.length != 0) {
+			omoSlides.slidesjs({
+        width: 936,
+        height: 600,
+				pagination: {
+					active: false
+				}
+      });
+		}
+	})();
 
 });
