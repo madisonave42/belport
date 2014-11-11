@@ -136,26 +136,13 @@ ul.list-comments li p a {color:#6896ea;}
 	.product {background-size:initial;}
 }
 */
-.omo-slides {
-	position:relative;
-	margin-bottom:32px;
-}
+.omo-slides {position:relative;margin-bottom:32px;}
 .omo-slides .slidesjs-previous,
-.omo-slides .slidesjs-next {
-	position:absolute;
-	top:275px;
-	width:39px;
-	height:39px;
-	background:url(../images/event/omo_arrow.png) no-repeat;
-	z-index:10;
-}
-.omo-slides .slidesjs-previous{
-	left:0;
-}
-.omo-slides .slidesjs-next {
-	right:0;
-	background-position:-39px 0;
-}
+.omo-slides .slidesjs-next {position:absolute; top:275px; width:39px; height:39px; background:url(./images/event/omo_arrow.png) no-repeat; z-index:10;}
+.omo-slides .slidesjs-previous{left:0;}
+.omo-slides .slidesjs-next {right:0;	background-position:-39px 0;}
+
+.omo_info + .go_event {display:block; margin:0 auto; width:198px;}
 
 .guide {text-align:center; background:#231f20;}
 .guide img{display:inline-block;}
