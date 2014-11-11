@@ -21,6 +21,7 @@ ul.list-special-event { overflow: hidden; margin: 30px -5px 0 -5px; }
 ul.list-special-event li { float: left; margin: 0 5px 10px 5px; width: 303px; border: 1px solid #d3d0cf; }
 
 .list-special-event figure.item { }
+.list-special-event figure.item > a {display:block; margin-top:15px;}
 .list-special-event figure.item.soldout > a { position: relative; display: block; }
 .list-special-event figure.item.soldout > a:after { content: 'Sold Out'; position: absolute; top: 0; right: 0; left: 0; padding-top: 89px; display: block; height: 109px; font-family: 'Alegreya', serif; font-size: 25px; color: #fff; font-weight: bold; text-align: center; background: url(../images/event/bg_soldout.png) left top repeat; }
 
