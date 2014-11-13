@@ -200,6 +200,15 @@ function closeFix(){
 	$('.fix_layer').hide();
 }
 
+function closeVideo(){
+	$('.fix_video').hide();
+}
+
+function openVideo(){
+	$('.fix_layer').hide();
+	$('.fix_video').show();
+}
+
 function openMenu(){
 	$('.sidemenu').stop().animate({left:0}, 200);
 	$('.dimm').show();
@@ -209,6 +218,7 @@ function closeMenu(){
 	$('.sidemenu').stop().animate({left:-260}, 200);
 	$('.dimm').hide();
 }
+
 // 20141105 추가
 $(document).ready(function(){
 	$.ajax({
@@ -329,7 +339,7 @@ $(document).ready(function(){
 		<li>
 			<a href="tel:080-508-6631" class="tel">
 				<div>고객센터</div>
-				<div >080-508-6631</div>
+				<div>080-508-6631</div>
 			</a>
 		</li>
 	</ul>
@@ -478,7 +488,6 @@ function closeTodayPop(popupNo) {
 			<a href="#" target=""><img src="../../images/main/mm_06_01.jpg" align="absmiddle"></a>
 			<a href="#" target=""><img src="../../images/main/mm_06_02.jpg" align="absmiddle"></a>
 			<a href="#" target=""><img src="../../images/main/mm_06_03.jpg" align="absmiddle"></a>
-			<a href="#" target=""><img src="../../images/main/mm_06_04.jpg" align="absmiddle"></a>
 	</div>
 	<a href="#" target=""><img src="../../images/main/mm_07.jpg" align="absmiddle"></a>
 	<div class="shop">
@@ -546,13 +555,15 @@ function closeTodayPop(popupNo) {
 <div class="dimm"> </div>
 <!-- 20141105 -->
 </div>
-<!--
 <div class="fix_layer">
 	<a href="#" class="fix_close" onclick="javascript:closeFix();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
 	<div class="fix_logo"><img src="../../images/main/fix_event_logo.png" alt="" /></div>
-	<div class="fix_photo"><img src="../../images/main/nj.png" alt="" /></div>
+	<div class="fix_photo" onclick="javascript:closeFix();openVideo();"><img src="../../images/main/nj.png" alt="" /></div>
 </div>
--->
+<div class="fix_video">
+	<a href="#" class="fix_close" onclick="javascript:closeVideo();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
+	<iframe width="90%" height="275" src="//www.youtube.com/embed/TGUGLNaJFig?autoplay=1&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
 <iframe class="" id="ifrmHidden" name="ifrmHidden" src='/shop/blank.php'></iframe>
 </body>
 </html>
