@@ -74,14 +74,14 @@
 
 /* 결제 금액 테이블 스타일 */
 #contents .container .payment{position:relative; margin-top:50px;}
-.payment table{border-top:2px solid #000; border-bottom:1px solid #000; background:url(../images/cart/bg_cart_payment.gif) no-repeat 0 98px;}
-.payment th{border-bottom:1px solid #000; height:52px; color:#231f20;}
-.payment td{font-size:15px; text-align:center; height:98px;}
+.payment table{border:3px solid #333; background:url(../images/cart/bg_cart_payment.gif) no-repeat 0 86px;}
+.payment th{padding-top:30px; color:#231f20;}
+.payment td{padding-bottom:15px; font-size:20px; text-align:center; height:70px;}
 .payment td strong {color:#777; font-weight:500;}
 .payment td.point_sum strong {color:#ed6851;}
 .payment td.fee strong {color:#ed6851;}
 .payment td.payment_price{font-size:40px; font-family:'Alegreya', serif; font-style:italic;}
-.payment td.payment_price strong {position:relative;top:-5px;color:#231f20;}
+.payment td.payment_price strong {position:relative; color:#231f20;}
 .payment td.payment_price strong span {font-weight:500; font-size:19px;}
 .payment .msg_price{text-align:right; color:#888; margin-top:10px;}
 /*20141023*/
@@ -153,12 +153,12 @@
  /*==================================================
  * 주문서작성 스타일
  ===================================================*/
-.order_sheet .payment table{background:url(../images/cart/bg_pay_payment.gif) no-repeat 0 98px;}
+.order_sheet .payment table{background:url(../images/cart/bg_pay_payment.gif) no-repeat 0 72px;}
 
 /*==================================================
  * 결제하기 스타일
  ===================================================*/
-.payment_sheet .payment table{background:url(../images/cart/bg_pay_payment.gif) no-repeat 0 98px;}
+.payment_sheet .payment table{background:url(../images/cart/bg_pay_payment.gif) no-repeat 0 72px;}
 
  /*==================================================
  * 주문완료 스타일

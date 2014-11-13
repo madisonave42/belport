@@ -21,6 +21,7 @@ ul.list-special-event { overflow: hidden; margin: 30px -5px 0 -5px; }
 ul.list-special-event li { float: left; margin: 0 5px 10px 5px; width: 303px; border: 1px solid #d3d0cf; }
 
 .list-special-event figure.item { }
+.list-special-event figure.item > a {display:block; margin-top:15px;}
 .list-special-event figure.item.soldout > a { position: relative; display: block; }
 .list-special-event figure.item.soldout > a:after { content: 'Sold Out'; position: absolute; top: 0; right: 0; left: 0; padding-top: 89px; display: block; height: 109px; font-family: 'Alegreya', serif; font-size: 25px; color: #fff; font-weight: bold; text-align: center; background: url(../images/event/bg_soldout.png) left top repeat; }
 
@@ -90,6 +91,10 @@ ul.list-comments li .date {font-family:'RixSGo B', sans-serif; font-size: 13px; 
 ul.list-comments li p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
 ul.list-comments li p a {color:#6896ea;}
 
+/* 오모로비짜 브랜드 위크 */
+.no-pic-cmt ul.list-comments li {min-height:0;}
+.sorting.omo-brand-week {margin-top:60px;}
+
 /* 이벤트 상세 당첨자 발표 */
 .result-content { padding: 18px 15px 40px 15px; border-top: 1px solid #231f20; border-bottom: 1px solid #d3d0cf; }
 .result-content p.content { font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
@@ -101,6 +106,7 @@ ul.list-comments li p a {color:#6896ea;}
 .event .container .btns_wrap .btns { position: static; float: right; margin: 0; }
 
 /* brand week */
+/*
 #contents.about .container .location {top:-9999em;}
 #contents.about .container > section {margin-top:0; width:100%; min-width:980px;}
 #contents.about .container{padding-bottom:0;}
@@ -111,6 +117,7 @@ ul.list-comments li p a {color:#6896ea;}
 .intro{text-align:center; background:url(../images/event/bg_event_green.jpg) repeat-x;}
 .intro img{display:inline-block;}
 .btn_select_event:focus{outline:none;} /* tester box 공통 */
+/*
 
 .join {text-align:center; background:url(../images/event/bg_brandweek4-2.gif) repeat-x;}
 .join img{display:inline-block;}
@@ -129,6 +136,14 @@ ul.list-comments li p a {color:#6896ea;}
 @media all and (max-width:1600px){
 	.product {background-size:initial;}
 }
+*/
+.omo-slides {position:relative;margin-bottom:32px;}
+.omo-slides .slidesjs-previous,
+.omo-slides .slidesjs-next {position:absolute; top:275px; width:39px; height:39px; background:url(./images/event/omo_arrow.png) no-repeat; z-index:10;}
+.omo-slides .slidesjs-previous{left:0;}
+.omo-slides .slidesjs-next {right:0;	background-position:-39px 0;}
+
+.omo_info + .go_event {display:block; margin:0 auto; width:198px;}
 
 .guide {text-align:center; background:#231f20;}
 .guide img{display:inline-block;}
@@ -186,6 +201,42 @@ ul.list-comments li p a {color:#6896ea;}
 .movie_layer .m_close{display:block; position:absolute; top:10px; right:10px;}
 
 
+/* 상품 목록 */
+ul.list-products { overflow: hidden; margin: 0px -4px; }
+ul.list-producs.fullsize { margin: 0px -5px; }
+ul.list-products li { float: left; padding: 30px 4px 21px 4px; width: 226px; }
+ul.list-products.fullsize li { padding-right: 5px; padding-left: 5px; }
 
+	figure.product { }
+	figure.product .frame { height: 191px; width: 226px; text-align: center; background-color: #f3f3f4; }
+	figure.product figcaption { padding: 0 10px 0 6px; font-size: 13px; line-height: 18px; }
+
+	figure.product p.icons { margin-top: 13px; margin-bottom: 5px; height: 20px; }
+	figure.product p.icons span { position: relative; padding: 2px 4px; display: inline-block; font-size: 10px; color: #fff; font-weight: 400; line-height: 12px; letter-spacing: -0.1em; background-color: #231f20; }
+	figure.product p.icons span:after { content: ''; position: absolute; bottom: -4px; left: 12px; display: block; height: 4px; width: 6px; background: url(../images/shop/bg_arrow04.png) left top no-repeat; }
+
+	figure.product em.brand {display:block; height:36px; color: #231f20; font-family:'RixSGo B', sans-serif; font-weight:normal; font-style: normal; }
+	figure.product p.title { height: 45px; color: #777; }
+
+	figure.product p.price { padding-right: 7px; font-family: 'Alegreya', serif; font-style: italic; text-align: right; }
+	figure.product p.price > a.btn-wish { float: left; margin-top: 2px; display: inline-block; height: 18px; width: 18px; text-align: left; text-indent: -9999px; background: url(../images/shop/btn_wish01.png) left top no-repeat; }
+	figure.product p.price > a.btn-wish.on { background-position: -18px 0; }
+	figure.product p.price > .dc-price {font-family:'Alegreya', serif; font-style:italic; font-weight:bold; font-size: 20px; color: #231f20; line-height: 18px; }
+	figure.product p.price > .price { margin-left: 8px; font-size: 20px; color: #b9b9b9; line-height: 18px; }
+
+
+
+/* 상품 정렬 */
+h1.shop-sub-title + div.sorting { margin-top: -35px; padding: 6px 12px 0 0; height: 28px; text-align: right; border-bottom: 0px none; }
+div.sorting { padding: 6px 12px 0 0; height: 28px; text-align: right; border-bottom: 1px solid #231f20; }
+div.sorting a { margin: 0 6px; display: inline-block; height: 25px; cursor: pointer; font-size: 11px; color: #777; font-weight: 400; line-height: 25px; }
+div.sorting a:hover,
+div.sorting a.on { position: relative; color: #000; /*font-weight: 700; */}
+
+div.sorting a:hover:after,
+div.sorting a.on:after { content: ''; z-index: 10; position: absolute; right: -3px; bottom: -4px; left: -3px; display: block; height: 3px; background-color: #231f20; }
+div.sorting .cnt { position: relative; padding: 0 0 0 20px; font-size: 12px; color: #777; font-weight: 400; line-height: 26px; }
+div.sorting .cnt > em { font-size: 12px; color: #231f20; font-family:'RixSGo B', sans-serif; font-weight:normal; font-style: normal; }
+div.sorting .cnt:after { content: '|'; position: absolute; top: -6px; left: 5px; display: block; font-size: 9px; color: #777; }
 
 

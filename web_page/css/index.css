@@ -43,9 +43,9 @@
 .container section > h1 {margin-bottom:40px; font-size:24px; height:12px; border-bottom:1px solid #d3d0cf; }
 .container section > h1 span {padding-right:11px; background:#fff;}
 
-.container section a {display:block; position:relative;}
-.container section a .hover {display:none; position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/index/bg_view_detail.png);}
-.container section a .hover span {display:block; position:absolute; top:50%; left:50%; width:123px; height:123px; margin-left:-61px; margin-top:-61px; text-indent:-9999em; background:url(../images/index/btn_view_detail.png) no-repeat;}
+.container .main-wrap section a {display:block; position:relative;}
+.container .main-wrap section a .hover {display:none; position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/index/bg_view_detail.png);}
+.container .main-wrap section a .hover span {display:block; position:absolute; top:50%; left:50%; width:123px; height:123px; margin-left:-61px; margin-top:-61px; text-indent:-9999em; background:url(../images/index/btn_view_detail.png) no-repeat;}
 
 /* top-banner */
 .top-banner {position:relative;}

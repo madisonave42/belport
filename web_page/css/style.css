@@ -237,6 +237,10 @@ header.scroll>h1>a{
 	padding-left:2px;
 	min-height:231px;
 }
+#gnb .sub_menu .sub_menu_container > ul.first-list {
+	padding-left:30px;
+	border-left:1px solid #d3d0cf;
+}
 #gnb .sub_menu ul li a {
 	display:block;
 	padding-left:10px;
@@ -265,9 +269,7 @@ header.scroll>h1>a{
 	margin-top:0;
 }
 #gnb .sub_menu .sub_emphasis {
-	margin-right:30px;
 	padding-right:10px;
-	border-right:1px solid #d3d0cf;
 }
 #gnb .sub_menu .sub_emphasis li {
 	margin-top:10px;

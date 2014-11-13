@@ -201,7 +201,13 @@ function closeFix(){
 }
 
 function closeVideo(){
+<<<<<<< HEAD
 	$('.fix_video').hide();
+=======
+	$('.fix_video iframe').attr('src', '');
+	$('.fix_video').hide();
+	
+>>>>>>> 98759450f4037524c4e16c2f12a9b0dc2806750b
 }
 
 function openVideo(){
@@ -209,6 +215,15 @@ function openVideo(){
 	$('.fix_video').show();
 }
 
+<<<<<<< HEAD
+=======
+function noMore(){
+	document.cookie = 'nomore=true; expires=Sun, 31 Jan 2100 12:00:00 UTC; path=/';
+	$('.fix_video').remove();
+	$('.fix_layer').remove();
+}
+
+>>>>>>> 98759450f4037524c4e16c2f12a9b0dc2806750b
 function openMenu(){
 	$('.sidemenu').stop().animate({left:0}, 200);
 	$('.dimm').show();
@@ -219,7 +234,12 @@ function closeMenu(){
 	$('.dimm').hide();
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 98759450f4037524c4e16c2f12a9b0dc2806750b
 // 20141105 추가
+
 $(document).ready(function(){
 	$.ajax({
 		"url" : "/m2/proc/mAjaxAction.php",
@@ -249,7 +269,15 @@ $(document).ready(function(){
 	}
 	catch(e) {}
 
-	
+	// 20141105 추가
+	(function() {
+		var ck = document.cookie;
+		if (ck.indexOf('nomore') > -1) {
+			$('.fix_video').remove();
+			$('.fix_layer').remove();
+		}
+		
+	})();
 
 });
 
@@ -555,15 +583,29 @@ function closeTodayPop(popupNo) {
 <div class="dimm"> </div>
 <!-- 20141105 -->
 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 98759450f4037524c4e16c2f12a9b0dc2806750b
 <div class="fix_layer">
 	<a href="#" class="fix_close" onclick="javascript:closeFix();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
 	<div class="fix_logo"><img src="../../images/main/fix_event_logo.png" alt="" /></div>
 	<div class="fix_photo" onclick="javascript:closeFix();openVideo();"><img src="../../images/main/nj.png" alt="" /></div>
+<<<<<<< HEAD
 </div>
 <div class="fix_video">
 	<a href="#" class="fix_close" onclick="javascript:closeVideo();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
 	<iframe width="90%" height="275" src="//www.youtube.com/embed/TGUGLNaJFig?autoplay=1&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
 </div>
+=======
+	<a href="#" class="btn_no_more" onclick="noMore();return false;"><img src="../../images/main/btn_no_more.jpg" alt="다시 보지 않기"/></a>
+</div>
+<div class="fix_video">
+	<a href="#" class="fix_close" onclick="javascript:closeVideo();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
+	<iframe width="90%" height="275" src="http://www.youtube.com/embed/TGUGLNaJFig?autoplay=1&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+>>>>>>> 98759450f4037524c4e16c2f12a9b0dc2806750b
 <iframe class="" id="ifrmHidden" name="ifrmHidden" src='/shop/blank.php'></iframe>
 </body>
 </html>

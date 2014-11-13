@@ -13,13 +13,45 @@
 <link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=RixSGo+L:400|RixSGo+M:400|RixSGo+B:400">
 <link rel="stylesheet" type="text/css" href="../../css/brand.css" />
 <script src="../../js/lib/jquery-1.11.0.min.js"></script>
-<!-- 201411 renewal add : End -->
+
 
 <script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/common.js"></script>
 <script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/goods_list_action.js"></script>
 <script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery-1.9.1.min.js"></script>
 <script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery.mobile-1.1.1.js"></script>
 <script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery.cookie.js"></script>
+
+<script src="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/js/jquery.slides.min.js"></script>
+<style type="text/css">
+/* 오모로비짜 */
+.omo-slides {position:relative;}
+.omo-slides .slidesjs-previous,
+.omo-slides .slidesjs-next {position:absolute; top:50%; margin-top:-27px; width:54px; height:54px; background:url(../../images/week_05/omo_arrow.png) no-repeat; z-index:10; text-indent:-9999px;}
+.omo-slides .slidesjs-previous{left:0;}
+.omo-slides .slidesjs-next {right:0;background-position:-54px 0;}
+</style>
+<script type="text/javascript">
+	// 오모로비짜
+	$(function() {
+		var omoSlides = $('.omo-slides');
+		console.log(omoSlides.slidesjs);
+		if (omoSlides.length != 0) {
+			omoSlides.slidesjs({
+        width: 640,
+        height: 1715,
+				pagination: {
+					active: false
+				},
+				callback: {
+					complete: function(number) {
+						console.log(number)
+						$('.slidesjs-container').height($('.slidesjs-slide[slidesjs-index=' + (number - 1) + ']').find('img').height());
+					}
+				}
+      });
+		}
+	});
+</script>
 
 <script src="http://www.belport.co.kr/m2/lib/js/mobileAction.js"></script>
 <script src="http://www.belport.co.kr/m2/lib/js/mobileCommon.js"></script>
@@ -167,8 +199,6 @@ $(document).ready(function(){
 		}
 	}
 	catch(e) {}
-
-	
 
 });
 
@@ -348,16 +378,18 @@ $(document).ready(function(){
 </section>
 <!-- End : 출석체크 템플릿 -->
 
-<!-- 20141105 매장안내 : Start -->
-<link rel="stylesheet" type="text/css" href="../../css/shop_info.css">
-<section class="shop_info">
-	<img src="../../images/shop_info/shop_info_01.jpg" alt="" />
-	<iframe src="http://dna.daum.net/include/tools/routemap/map_view.php?width=300&height=200&latitude=37.5188564008988&longitude=127.02339281729112&contents=&zoom=4" width="300" height="200" scrolling="no" frameborder="0"></iframe>
-	<img src="../../images/shop_info/shop_info_02.jpg" alt="" />
-	<iframe src="http://dna.daum.net/include/tools/routemap/map_view.php?width=300&height=200&latitude=35.09931993454184&longitude=129.0308945746201&contents=&zoom=4" width="300" height="200" scrolling="no" frameborder="0"></iframe>
-	<img src="../../images/shop_info/shop_info_03.jpg" alt="" />
+<!-- 브랜드위크 오모로비짜 : Start -->
+<section class="omo_info">
+	<h1 style="position:absolute;top:-9999px;">브랜드 위크 오모로비짜 이벤트</h1>
+		<div class="omo-slides">
+			<div><img src="../../images/week_05/omo_01.jpg" alt=""/></div>
+			<div><img src="../../images/week_05/omo_02.jpg" alt=""/></div>
+			<div><img src="../../images/week_05/omo_03.jpg" alt=""/></div>
+			<div><img src="../../images/week_05/omo_04.jpg" alt=""/></div>
+			<div><img src="../../images/week_05/omo_05.jpg" alt=""/></div>
+		</div>
 </section>
-<!-- 20141105 매장안내 : End -->
+<!-- 브랜드위크 오모로비짜 : End -->
 
 <section id='footer'>
 	<div class='company'>
