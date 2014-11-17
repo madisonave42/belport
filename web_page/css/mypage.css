@@ -104,11 +104,12 @@ table td .btn {display:inline-block; margin-left:10px; padding:0 8px; height:22p
 .order_result table td.order_num > a {color:#ed6851; line-height:1.2;}
 .order_result table td.order_num > div {margin-top:8px;}
 .order_result table td.order_num > div .btn {margin-left:0;}
-.order_result table td.product_image img{margin:0 auto; width:60px; height:60px;}
+.order_result table td.product_image img{margin:0 auto; width:64px; height:auto;}
 .order_result table td.product_info{text-align:left;}
 .order_result table td.product_info .name{margin-bottom:5px;}
 .order_result table td.product_info .option{font-size:11px; margin-bottom:5px; line-height:1.6;}
 .order_result table td.state {color:#231f20; font-weight:400;}
+.order_result table td.review .btn {margin-left:0;}
 
 .shipping_info .tracking_num {display:inline-block; height:22px; line-height:22px; border-bottom:1px solid #777; vertical-align:middle;}
 
