@@ -525,7 +525,8 @@ header .floating_banner .btn_close{
 #bottom_nav nav > ul {
 	position:relative;
 	margin:0 auto;
-	width:936px;
+	padding-left:16px;
+	width:920px;
 }
 #bottom_nav nav > ul > li {
 	float:left;
@@ -568,7 +569,7 @@ header .floating_banner .btn_close{
 #bottom_nav nav .bottom_sub {
 	position:absolute;
 	top:51px;
-	left:0;
+	left:28px;
 	display:none;
 	padding:26px 0;
 }
@@ -585,7 +586,7 @@ header .floating_banner .btn_close{
 }
 #bottom_nav .bottom_brand ul li a {
 	display:block;
-	width:187px;
+	width:180px;
 	font-size:11px;
 	line-height:1.4;
 	color:#959595;
@@ -643,7 +644,7 @@ header .floating_banner .btn_close{
 #bottom_nav .bottom_sitemap dl dd ul li a{font-size:12px; color:#959595;}
 
 #bottom_nav .bottom_location .bottom_maps {
-	width:936px;
+	width:880px;
 	height:302px;
 }
 #bottom_nav .bottom_location .slidesjs-previous,
@@ -656,22 +657,22 @@ header .floating_banner .btn_close{
 #bottom_nav .bottom_location .slidesjs-previous {
 	position:absolute;
 	top:212px;
-	left:381px;
+	left:352px;
 }
 #bottom_nav .bottom_location .slidesjs-next {
 	position:absolute;
 	top:212px;
-	left:450px;
+	left:421px;
 }
 #bottom_nav .bottom_location .currentPage {
 	position:absolute;
 	top:214px;
-	left:412px;
+	left:383px;
 	color:#9c9a9b;
 }
 #bottom_nav .bottom_location .col{
 	float:left;
-	width:468px;
+	width:440px;
 	height:136px;
 }
 #bottom_nav .bottom_location .info_content.map{
