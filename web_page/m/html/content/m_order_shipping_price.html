@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<head>
+<meta name="description" content="벨포트" />
+<meta name="keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<title>벨포트</title>
+
+<link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=RixSGo+L:400|RixSGo+M:400|RixSGo+B:400">
+
+<!-- 20141105 renewal add : Start -->
+<link rel="stylesheet" href="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/new/css/main.css" />
+<script src="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/new/js/lib/jquery-1.11.0.min.js"></script>
+<script src="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/common/js/jquery.slides.min.js"></script>
+<!-- 20141105 renewal add : End -->
+
+<script type="text/javascript">
+	// 오모로비짜
+	$(function() {
+		var omoSlides = $('.omo-slides');
+		console.log(omoSlides.slidesjs);
+		if (omoSlides.length != 0) {
+			omoSlides.slidesjs({
+        width: 640,
+        height: 1715,
+				pagination: {
+					active: false
+				},
+				callback: {
+					complete: function(number) {
+						$('.slidesjs-container').height($('.slidesjs-slide[slidesjs-index=' + (number - 1) + ']').find('img').height());
+					}
+				}
+      });
+		}
+	});
+</script>
+
+<script src="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/common/js/common.js"></script>
+<script src="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/common/js/goods_list_action.js"></script>
+<!--<script src="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/common/js/jquery-1.9.1.min.js"></script>-->
+<script src="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/common/js/jquery.mobile-1.1.1.js"></script>
+<script src="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/common/js/jquery.cookie.js"></script>
+
+
+
+<script src="http://popchoice1.godo.co.kr/m2/lib/js/mobileAction.js"></script>
+<script src="http://popchoice1.godo.co.kr/m2/lib/js/mobileCommon.js"></script>
+<script src="http://popchoice1.godo.co.kr/m2/lib/js/mobileDisplay.js"></script>
+<script src="http://popchoice1.godo.co.kr/m2/lib/js/swipe/swipe.js"></script>
+<script src="http://popchoice1.godo.co.kr/m2/lib/js/iscroll/iscroll.js"></script>
+<script src="http://popchoice1.godo.co.kr/m2/lib/js/mobileCommon2.js"></script>
+<script src="http://popchoice1.godo.co.kr/m2/lib/js/attendance.js"></script>
+
+<script type="text/javascript">
+function showSearchArea() {
+	if($(".search-area").is(':hidden') == true) {
+
+		$(".search-area").slideDown(30);
+	}
+	else {
+
+		$(".search-area").slideUp(0);
+	}
+}
+
+function showCateArea() {
+
+	var now_cate = $("[name=now_cate]").val();
+
+	if($("#cate-area").is(':hidden') == true) {
+		$("#page_title").hide();
+		$(".content").hide();
+		$(".content_goods").hide();
+		//$("body").addClass('back_bg');
+		$("#cate-area").slideDown(30);
+		getCategoryData(now_cate);
+	}
+	else {
+		$("#cate-area").hide();
+		//$("body").removeClass('back_bg');
+		$("#page_title").show();
+		$(".content").show();
+
+	}
+}
+
+function goHome() {
+	document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/index.php";
+}
+
+function goMenu(page_nm) {
+	switch(page_nm) {
+		case "my" :
+			document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/myp/menu_list.php";
+			break;
+		case "cart" :
+			document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/goods/cart.php";
+			break;
+		case "wish" :
+			document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/myp/wishlist.php";
+			break;
+		case "login" :
+			document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/mem/login.php";
+			break;
+		case "logout" :
+				document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/mem/logout.php";
+			break;
+		case "viewgoods" :
+				document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/myp/viewgoods.php";
+			break;
+		case "event" :
+				document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/event/event.php";
+			break;
+		case "notice" :
+				document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/board/list.php?id=notice";
+			break;
+		case "customer" :
+				document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/goods/goods_qna_list.php?isAll=Y";
+			break;
+		case "insideb" :
+				document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/intro/inside.php";
+			break;
+		case "brand" :
+				document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/intro/brand.php";
+			break;
+		case "about" :
+				document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/intro/about.php";
+			break;
+		case "place" :
+				document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/intro/place.php";
+			break;
+	}
+}
+
+
+function searchKw() {
+	if($("[name=search_key]").val()) {
+		document.location.href="http://popchoice1.godo.co.kr/" + getMobileHomepath() + "/goods/list.php?kw=" + $("[name=search_key]").val();
+	}
+	else {
+		alert("검색 키워드를 입력해 주시기 바랍니다");
+		return;
+	}
+}
+
+function getMobileHomepath() {
+	//각 URL 최상위 홈PATH를 구한다. 모바일의 홈이 여러 종류일수 있으므로  2012-09-20 khs
+	var path1 = document.location.pathname;
+
+	if (path1.charAt(0) == '/')	{
+		path1 = path1.substring(1);
+	}
+	var x = path1.split("/");
+
+	return x[0];
+}
+
+function showCategoryMsg(message) {
+
+	var sec = 1000;
+
+	$("[id=goodsres-hide] .text_msg").text(message);
+	$("[id=goodsres-hide]").fadeIn(300);
+
+	setTimeout( function() {
+		$("[id=goodsres-hide]").fadeOut(300);
+	}, sec);
+}
+
+// 20141105 추가
+function closeFix(){
+	$('.fix_layer').hide();
+}
+
+function closeVideo(){
+	$('.fix_video iframe').attr('src', '');
+	$('.fix_video').hide();
+	
+}
+
+function openVideo(){
+	$('.fix_layer').hide();
+	$('.fix_video').show();
+}
+
+function noMore(){
+	document.cookie = 'nomore=true; expires=Sun, 31 Jan 2100 12:00:00 UTC; path=/';
+	$('.fix_video').remove();
+	$('.fix_layer').remove();
+}
+
+function openMenu(){
+	$('.sidemenu').stop().animate({left:0}, 200);
+	$('.dimm').show();
+}
+
+function closeMenu(){
+	$('.sidemenu').stop().animate({left:-260}, 200);
+	$('.dimm').hide();
+}
+
+// 20141105 추가
+
+$(document).ready(function(){
+	$.ajax({
+		"url" : "/m2/proc/mAjaxAction.php",
+		"type" : "post",
+		"data" : {
+			"mode" : "get_cart_item"
+		},
+		"cash" : false,
+		"dataType" : "json",
+		"success" : function(cartItem)
+		{
+			if (cartItem.quantity) {
+				$("#cart-btn .cart-item-quantity").text(" ("+cartItem.quantity.toString()+")");
+			}
+		}
+	});
+
+	try {
+		var todayGoodsMobileIdx = $.cookie('todayGoodsMobileIdx');
+		
+		if(todayGoodsMobileIdx != "undefined" && todayGoodsMobileIdx != "") {
+			
+			var goods_idx = todayGoodsMobileIdx.split(',');
+			var view_cnt = goods_idx.length - 1;
+			$("#viewgoods-btn .viewgoods-quantity").text(" ("+view_cnt.toString()+")");
+		}
+	}
+	catch(e) {}
+
+});
+
+</script>
+<link rel="stylesheet" type="text/css" href="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/common/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/common/css/style.css" />
+<link rel="stylesheet" type="text/css" href="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/common/css/attendance.css" />
+<style type="text/css">
+.cart-item-quantity{font-weight:normal;}
+.viewgoods-quantity{font-weight:normal;}
+
+#goodsres-hide2 {display:none;} 
+.goodsres_wrap {position : fixed;left : 10%;width : 80%;background : #ffffff;display : block;border-radius:1em;box-shadow:2px 2px 4px #7f7f7f;z-index: 1000; bottom:20%;}
+.goodsres_wrap .goodsres_title {background:#313030;width:100%;border-top-left-radius:1em;border-top-right-radius:1em;height:45px;border-bottom:solid 1px #b2b2b2;margin-bottom:6px;}
+.goodsres_wrap .goodsres_title .title{padding-left:14px;line-height:45px;font-size:16px;font-weight:bold;color:#FFFFFF;font-family:dotum;}
+.goodsres_wrap .goodsres_msg { padding:15px; }
+.goodsres_wrap .goodsres_msg .text_msg{ font-size:12px; color:#353535;}
+
+</style>
+<!--<link rel="stylesheet" href="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/style_screen.css" type="text/css" media="screen and (min-width: 321px)"  />-->
+
+
+
+</head>
+
+<body>
+
+<div id="dynamic"></div>
+
+<div id="wrap">
+
+<header>
+<!-- 20141105 -->
+<div class="gnb">
+	<div class="btn_sidemenu" onclick="javascript:openMenu();"><img src="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/new/images/main/btn_m_menu.png" /></div>
+	<div id="logo">
+		<a href="javascript:goHome();"><img src="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/new/images/main/m_logo.png" alt="벨포트" title="벨포트" height="35px"/></a>
+	</div>
+	<div id="logo-right">
+		<!--<div id="search-btn" onClick="javascript:showSearchArea();"><img src="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/images/main/seach.png" /></div>-->
+		<div class="top_global" >
+			<span onClick="javascript:goMenu('logout');" >로그아웃</span></div>
+</div>
+</div>
+<!--
+<div class="search-area">
+	<div id="search-box">
+		<input type="text" name="search_key" placeholder="검색어를 입력해 주세요"/>
+	</div>
+	<div id="search-box-btn" onclick="javascript:searchKw();" >검색</div>
+</div>
+-->
+<div class="new-menu-area">
+	<div id="category-btn" onClick="javascript:showCateArea();">SHOP<div class="bar_area"></div></div>
+	<div id="cart-btn" onClick="javascript:goMenu('brand');">BRAND</div>
+	<div id="viewgoods-btn" onClick="javascript:goMenu('event');">EVENT</div>
+	<div id="more-view-btn" onClick="javascript:goMenu('insideb');">INSIDE B.</div>
+	<div id="more-view-menu" style="display: none;">
+		<ul>
+			<li class="item wishlist">Wish List</li>
+			<li class="item goods-review">상품후기</li>
+			<li class="item goods-qna">상품문의</li>
+			<li class="item community">게시판</li>
+		</ul>
+	</div>
+</div>
+
+<div class="sidemenu">
+	
+	<ul class="top">
+
+		<li><a href="#" onClick="javascript:goMenu('logout');">로그아웃</a></li>
+		<li><a href="#" onClick="javascript:goMenu('my');">마이페이지</a></li>
+		<li><a href="#" onClick="javascript:goMenu('cart');">장바구니</a></li>
+		<li><a href="#" onclick="javascript:closeMenu();"><img src="http://popchoice1.godo.co.kr/shop/data/skin_mobileV2/belport/new/images/main/menu_close.png" /></a></li>
+	</ul>
+	
+	<ul class="middle">
+		<li><a href="#" onClick="javascript:showCateArea();closeMenu();">SHOP</a></li>
+		<li><a href="#" onClick="javascript:goMenu('brand');">BRAND</a></li>
+		<li><a href="#" onClick="javascript:goMenu('event');">EVENT</a></li>
+		<li><a href="#" onClick="javascript:goMenu('insideb');">INSIDE.B</a></li>
+	</ul>
+	
+	<ul class="bottom">
+		<li><a href="#" onClick="javascript:goMenu('about');">ABOUT BELPORT</a></li>
+		<li><a href="#" onClick="javascript:goMenu('notice');">공지사항</a></li>
+		<li><a href="#" onClick="javascript:goMenu('place');">매장안내</a></li>
+		<li>
+			<a href="tel:080-508-6631" class="tel">
+				<div>고객센터</div>
+				<div>080-508-6631</div>
+			</a>
+		</li>
+	</ul>
+	
+	
+</div>
+
+</header>
+<!-- 20141105 -->
+<section id="cate-area">
+	<div class="top_title"><div class="title">카테고리</div></div>
+	<div class="top_path"><div class='now_path'><div class='pathitem activeitem allpath' onClick='javascript:cateSelect("");'>전체카테고리</div></div></div>
+	<div class="now_cate">
+
+		<input type="hidden" name="now_cate" value="" />
+	</div>
+	<div class="cate_path">
+	</div>
+	<div class="cate_list">
+	</div>
+
+</section>
+<div class="clearb"></div>
+
+<section id="goodsres-hide" class="content_goods">
+	<div class="pop_back">
+		<div class="pop_effect">
+			<div class="text_msg"></div>
+		</div>
+	</div>
+</section>
+
+<section id="goodsres-hide2" class="content_goods">
+	<div class="goodsres_wrap">
+		<div class="goodsres_title"><div class="title">알림</div></div>
+		<div class="goodsres_msg"><div class="text_msg"></div></div>
+	</div>
+</section>
+
+<!-- Start : 출석체크 템플릿 -->
+<section id="attendance-popup" style="display: none;" data-root-dir="/m2">
+	<h1 id="attendance-title"></h1>
+	<div id="attendance-close">닫기</div>
+	<div id="attendance-info-straight" class="condition-type">
+		<div class="attendance-period">
+			<span class="attendance-start-date"></span> ~ <span class="attendance-end-date"></span> 까지
+		</div>
+		<div class="attendance-description">
+			연속 <span class="attendance-condition-period"></span>일 이상 출석하면 적립금이 차곡차곡!
+		</div>
+	</div>
+	<div id="attendance-info-sum" class="condition-type">
+		<div class="attendance-period">
+			기간 : <span class="attendance-start-date"></span> ~ <span class="attendance-end-date"></span> 안에
+		</div>
+		<div class="attendance-description">
+			<span class="attendance-condition-period"></span>일 이상 출석하면 적립금이 차곡차곡!
+		</div>
+	</div>
+	<h2 id="attendance-calendar-title">
+		<button id="attendance-calendar-previous-month">이전 달</button>
+		<span id="attendance-calendar-month">
+			<span id="attendance-calendar-month-1">January</span>
+			<span id="attendance-calendar-month-2">February</span>
+			<span id="attendance-calendar-month-3">March</span>
+			<span id="attendance-calendar-month-4">April</span>
+			<span id="attendance-calendar-month-5">May</span>
+			<span id="attendance-calendar-month-6">June</span>
+			<span id="attendance-calendar-month-7">July</span>
+			<span id="attendance-calendar-month-8">August</span>
+			<span id="attendance-calendar-month-9">September</span>
+			<span id="attendance-calendar-month-10">October</span>
+			<span id="attendance-calendar-month-11">November</span>
+			<span id="attendance-calendar-month-12">December</span>
+		</span>
+		<span id="attendance-calendar-year"></span>
+		<button id="attendance-calendar-next-month">다음 달</button>
+	</h2>
+	<table id="attendance-date-list">
+		<tbody>
+			<tr class="attendance-calendar-date-floor">
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+<!-- End : 출석체크 템플릿 -->
+
+<section id="page_title">
+	<div class="top_title">주문하기</div>
+</section>
+
+<style type="text/css">
+section#m_order{background:#FFFFFF;}
+
+section#nm_order {background:#FFFFFF; padding:12px;font-family:dotum;font-size:12px;}
+section#nm_order .sub_title{height:22px; line-height:22px; color:#436693; font-weight:bold; font-size:12px;}
+section#nm_order .sub_title .point {width:4px; height:22px; background:url('/shop/data/skin_mobileV2/belport/common/img/bottom/icon_guide.png') no-repeat center left; float:left; margin-right:7px;}
+section#nm_order table{border:none; border-top:solid 1px #dbdbdb;width:100%; margin-bottom:20px;}
+section#nm_order table td{padding:8px 0px 8px 10px; vertical-align:middle; border-bottom:solid 1px #dbdbdb;}
+section#nm_order table th{text-align:center; background:#f5f5f5; width:70px; vertical-align:middle; border-bottom:solid 1px #dbdbdb; color:#353535; font-size:12px;}
+section#nm_order table .img{padding:5px; width:60px;}
+section#nm_order table .img img{border:solid 1px #d9d9d9;}
+section#nm_order table td input[type=text], input[type=password], input[type=email], input[type=number], select{height:21px;}
+
+section#nm_order table td.phone input[type=number]{width:45px;height:21px;}
+section#nm_order table td.zipcode input[type=text]{width:60px;height:21px;}
+section#nm_order table td.zipcode input[type=number]{width:45px;height:21px;}
+section#nm_order table td.coupon input[type=number]{width:100px;height:21px;}
+section#nm_order table td.emoney input[type=number]{width:100px;height:21px;}
+section#nm_order table td textarea{width:95%;height:116px;}
+section#nm_order .btn_center {margin:auto; width:198px; height:34px; margin-top:20px; margin-bottom:20px;}
+section#nm_order .btn_center .btn_payment{border:none; background:#f35151; color:#FFFFFF; font-size:14px; width:94px; height:34px; float:left; font-family:dotum; line-height:34px; border-radius:3px;}
+section#nm_order .btn_center .btn_prev{border:none; background:#808591;  color:#FFFFFF; font-size:14px; width:94px; height:34px; float:right; font-family:dotum; line-height:34px; border-radius:3px;}
+section#nm_order .goods-nm{color:#353535; font-weight:bold; fonst-size:14px; margin-bottom:5px; overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
+section#nm_order .goods-price{color:#f03c3c; font-size:12px;}
+#zipcode_list ul {list-style:none;}
+#zipcode_list li {padding:5px; 0px;}
+.btn_zipcode {background:#808591; width:73px; height:25px; border:none; color:#FFFFFF; text-align:center; margin-left:10px;line-height:25px; border-radius:3px;vertical-align:middle;}
+.coupon-btn-area {margin-bottom:10px;}
+.btn_coupon {background:#808591; width:73px; height:25px; border:none; color:#FFFFFF; text-align:center; margin-right:10px;line-height:25px; border-radius:3px;}
+.max_width{width:95%;}
+</style>
+
+
+
+
+<form id="form" name="frmOrder" action="settle.php" method="post" onsubmit="return chkForm2(this)">
+<input type="hidden" name="ordno" value="1416364908442">
+<div id="apply_coupon"></div>
+<section id="m_order" class="content">
+<input type="hidden" name=item_apply_coupon[]>
+<input type="hidden" name=item_apply_coupon[]>
+<input type="hidden" name=item_apply_coupon[]>
+<input type="hidden" name=item_apply_coupon[]>
+<input type="hidden" name=item_apply_coupon[]>
+<input type="hidden" name=item_apply_coupon[]>
+ <style type="text/css">
+
+.order_item_list .goods-list-item {background:#FFFFFF;min-height:110px;padding:10px; border-bottom:solid 1px #e5e5e5;}
+.order_item_list .goods-list-item-gray {background:#FFFFFF;}
+.order_item_list .goods-list-item .goods-list-chk{width:20px; height:80px; float:left; margin-top:15px; line-height:80px;}
+.order_item_list .goods-list-item .goods-list-chk input[type=checkbox]{width:10px;}
+.order_item_list .goods-list-item .goods-list-img{width:80px; height:80px; border:solid 1px #dbdbdb; float:left; margin-top:15px;}
+.order_item_list .goods-list-item .goods-list-img img{width:100%; height:100%;}
+.order_item_list .goods-list-item .goods-list-info{float:left; margin-left:10px;width:53%;}
+.order_item_list .goods-list-item .goods-list-info .goods-nm{color:#222222; font-weight:bold; fonst-size:13px; margin-bottom:5px; overflow:hidden;text-overflow:ellipsis;white-space:nowrap; height:18px;}
+.order_item_list .goods-list-item .goods-list-info .goods-option{color:#666666; font-size:12px; margin-bottom:2px;}
+.order_item_list .goods-list-item .goods-list-info .goods-price{color:#666666; font-size:12px; margin-bottom:2px;}
+.order_item_list .goods-list-item .goods-list-info .goods-price .red{color:#f03c3c; font-size:12px; font-weight:bold;}
+.order_item_list .goods-list-item .goods-list-info .goods-dc{color:#666666; font-size:12px; margin-bottom:2px;}
+.order_item_list .goods-list-item .goods-list-info .goods-dc .blue{color:#436693; font-size:12px; font-weight:bold;}
+.order_item_list .goods-list-item .goods-list-info .goods-reserve{color:#666666; font-size:12px; margin-bottom:2px;}
+.order_item_list .goods-list-item .goods-list-info .goods-delivery{color:#666666; font-size:12px; margin-bottom:2px;}
+.order_item_list .goods-list-item .goods-list-info .goods-ea{color:#666666; font-size:12px; margin-bottom:2px;}
+.order_item_list .goods-list-item .goods-list-info .goods-nvmileage{color:#666666; font-size:12px; margin-bottom:2px;}
+.order_item_list .goods-list-item .goods-list-arrow{width:15px; height:21px; background:url("/shop/data/skin_mobileV2/belport/common/img/nlist/arrow01.png") no-repeat; float:right; margin-top:40px;}
+
+.order_item_list .goods-list-item .option-modify-btn{width:31px; height:21px; background:url("/shop/data/skin_mobileV2/belport/common/img/new/btn_modify.png") no-repeat; background-size:31px 21px; float:right; border:none; color:#ffffff;}
+.order_item_list .goods-list-item:after {visibility:hidden;display:block;content:" ";clear:both;height:0;}
+
+.shipping_area {padding:10px;}
+.shipping_fee {padding:10px 10px 0 10px; border-top:1px solid #333; background:#f5f4f5;}
+.shipping_fee p {margin:0;}
+.shipping_fee dt {margin-bottom:10px; font-weight:bold;}
+.shipping_fee dd {margin-bottom:10px; overflow:hidden;}
+.shipping_fee dd .message {float:left;}
+.shipping_fee dd .message .brand {font-weight:bold;}
+.shipping_fee dd .message .price {color:#ed6851;}
+.shipping_fee dd .message .price:before {content:''; display:block;}
+.shipping_fee dd .fee {float:right; color:#ed6851; line-height:2.4;}
+.shipping_fee .total {margin:0; padding:10px 0; border-top:1px solid #c4c3c4; overflow:hidden;}
+.shipping_fee .total .heading {float:left;}
+.shipping_fee .total .total-fee {float:right;color:#ed6851;}
+</style>
+<div class="order_item_list">
+
+<div class="goods-list-item ">
+	<div class="goods-list-chk"></div>
+	<div class="goods-list-img"><a href="../goods/view.php?goodsno=1841"><img src='http://popchoice1.godo.co.kr/shop/data/goods/b1841m.jpg' width=100 onerror="this.src='http://popchoice1.godo.co.kr/shop/data/skin/belport/img/common/noimg_100.gif'"></a></div>
+	<div class="goods-list-info">
+		<div class="goods-nm"><a href="../goods/view.php?goodsno=1841">[코레스] 포머그래니트 토닉 로션 오일리 투  컴비네이션 스킨</a></div>
+		<div class="goods-option">
+		</div>
+		<div class="goods-price">상품가격 : <span class="red">0원</span></div>
+		<div class="goods-ea">수량 : 1개</div>
+		<div class="goods-price">합계 : <span class="red">0원</span></div>
+	</div>
+
+</div>
+
+<div class="goods-list-item goods-list-item-gray">
+	<div class="goods-list-chk"></div>
+	<div class="goods-list-img"><a href="../goods/view.php?goodsno=1528"><img src='http://popchoice1.godo.co.kr/shop/data/goods/b1528m.jpg' width=100 onerror="this.src='http://popchoice1.godo.co.kr/shop/data/skin/belport/img/common/noimg_100.gif'"></a></div>
+	<div class="goods-list-info">
+		<div class="goods-nm"><a href="../goods/view.php?goodsno=1528">[꼬달리] 꼬달리 뷰티엘릭시르 </a></div>
+		<div class="goods-option">
+		</div>
+		<div class="goods-price">상품가격 : <span class="red">0원</span></div>
+		<div class="goods-ea">수량 : 1개</div>
+		<div class="goods-price">합계 : <span class="red">0원</span></div>
+	</div>
+
+</div>
+
+<div class="goods-list-item ">
+	<div class="goods-list-chk"></div>
+	<div class="goods-list-img"><a href="../goods/view.php?goodsno=1379"><img src='http://popchoice1.godo.co.kr/shop/data/goods/b1379m.jpg' width=100 onerror="this.src='http://popchoice1.godo.co.kr/shop/data/skin/belport/img/common/noimg_100.gif'"></a></div>
+	<div class="goods-list-info">
+		<div class="goods-nm"><a href="../goods/view.php?goodsno=1379">[보타니] 수딩 페이셜 미스트</a></div>
+		<div class="goods-option">
+		</div>
+		<div class="goods-price">상품가격 : <span class="red">27,000원</span></div>
+		<div class="goods-reserve">적립금 :270원</div>
+		<div class="goods-ea">수량 : 1개</div>
+		<div class="goods-price">합계 : <span class="red">27,000원</span></div>
+	</div>
+
+</div>
+
+<div class="goods-list-item goods-list-item-gray">
+	<div class="goods-list-chk"></div>
+	<div class="goods-list-img"><a href="../goods/view.php?goodsno=1869"><img src='http://popchoice1.godo.co.kr/shop/data/goods/b1869m.jpg' width=100 onerror="this.src='http://popchoice1.godo.co.kr/shop/data/skin/belport/img/common/noimg_100.gif'"></a></div>
+	<div class="goods-list-info">
+		<div class="goods-nm"><a href="../goods/view.php?goodsno=1869">[코레스] 머&올리고엘리먼트 네일컬러 44 코랄 히비스커스</a></div>
+		<div class="goods-option">
+		</div>
+		<div class="goods-price">상품가격 : <span class="red">0원</span></div>
+		<div class="goods-ea">수량 : 1개</div>
+		<div class="goods-price">합계 : <span class="red">0원</span></div>
+	</div>
+
+</div>
+
+<div class="goods-list-item ">
+	<div class="goods-list-chk"></div>
+	<div class="goods-list-img"><a href="../goods/view.php?goodsno=1805"><img src='http://popchoice1.godo.co.kr/shop/data/goods/b1805m.jpg' width=100 onerror="this.src='http://popchoice1.godo.co.kr/shop/data/skin/belport/img/common/noimg_100.gif'"></a></div>
+	<div class="goods-list-info">
+		<div class="goods-nm"><a href="../goods/view.php?goodsno=1805">[더 밤] 스테이니악</a></div>
+		<div class="goods-option">
+		</div>
+		<div class="goods-price">상품가격 : <span class="red">0원</span></div>
+		<div class="goods-ea">수량 : 1개</div>
+		<div class="goods-price">합계 : <span class="red">0원</span></div>
+	</div>
+
+</div>
+
+<div class="goods-list-item goods-list-item-gray">
+	<div class="goods-list-chk"></div>
+	<div class="goods-list-img"><a href="../goods/view.php?goodsno=1847"><img src='http://popchoice1.godo.co.kr/shop/data/goods/b1847m.jpg' width=100 onerror="this.src='http://popchoice1.godo.co.kr/shop/data/skin/belport/img/common/noimg_100.gif'"></a></div>
+	<div class="goods-list-info">
+		<div class="goods-nm"><a href="../goods/view.php?goodsno=1847">[코레스] 워터크레스 엑스트라 모이스쳐라이징 크림 베리 드라이 & 디하이드레이티드 스킨</a></div>
+		<div class="goods-option">
+		</div>
+		<div class="goods-price">상품가격 : <span class="red">0원</span></div>
+		<div class="goods-ea">수량 : 1개</div>
+		<div class="goods-price">합계 : <span class="red">0원</span></div>
+	</div>
+
+</div>
+</div>
+
+
+
+
+<div class="sum_area">
+	<div class="board_area">
+		<div class="title">
+			<div>상품 합계금액 : </div>
+			<div>받으실 적립금 : </div>
+		</div>
+		<div class="price">
+			<div id="el-orderitem-total-price">27,000원</div>
+			<div id="el-orderitem-total-reserve">270원</div>
+		</div>
+	</div>
+	<div class="clearb"></div>
+</div>
+
+
+	<div class="shipping_area">
+		<dl class="shipping_fee">
+			<dt>배송비 안내</dt>
+							<dd>
+					<p class="message"><span class="brand">Korres [코레스]</span> 제품으로만 <span class="price">20,000원</span> 이상 구매시 무료배송 됩니다. </p>
+					<p class="fee">
+
+										</p>
+				</dd>
+										<dd>
+					<p class="message"><span class="brand">Caudalie [꼬달리]</span> 제품으로만 <span class="price">30,000원</span> 이상 구매시 무료배송 됩니다. </p>
+					<p class="fee">
+	
+										</p>
+				</dd>
+													<dd>
+					<p class="message"><span class="brand">The Balm [더 밤]</span> 제품으로만 <span class="price">30,000원</span> 이상 구매시 무료배송 됩니다. </p>
+					<p class="fee">
+	
+										</p>
+				</dd>
+				
+							<dd>
+					<p class="message"><span class="brand">Botani[보타니] </span> 제품은 <span class="price">50,000원</span> 이상 구매시 무료배송 됩니다. </p>
+				</dd>
+						<dt class="total">
+				<p class="heading">총배송비</p>
+				<p class="total-fee">10,000원</p-->
+			</dt>
+		</dl>
+	</div>
+	
+</section>
+<section id="nm_order" class="content">
+
+
+<!-- 01 주문자정보 -->
+<div class="sub_title"><div class="point"></div>주문자정보</div>
+<table>
+	<tr>
+		<th>주문자명</th>
+		<td>
+			<input type="text" name="nameOrder" value="오준식" readonly required msgR="주문하시는분의 이름을 적어주세요" class="max_width"/>
+		</td>
+	</tr>
+	<tr>
+		<th>전화번호</th>
+		<td class="phone">
+			<input type="number" name="phoneOrder[]" value="" size="3" maxlength="3" required /> -
+			<input type="number" name="phoneOrder[]" value="" size="4" maxlength="4" required /> -
+			<input type="number" name="phoneOrder[]" value="" size="4" maxlength="4" required />
+		</td>
+	</tr>
+	<tr>
+		<th>휴대폰</th>
+		<td class="phone">
+			<input type="number" name="mobileOrder[]" value="010" size="3" maxlength="3" required /> -
+			<input type="number" name="mobileOrder[]" value="8610" size="4" maxlength="4" required /> -
+			<input type="number" name="mobileOrder[]" value="6094" size="4" maxlength="4" required />
+		</td>
+	</tr>
+	<tr>
+		<th>이메일</th>
+		<td class="email">
+			<input type="text" name="email" value="eee@eee.com" required option=regEmail class="max_width" />
+		</td>
+	</tr>
+</table>
+<div class="sub_title"><div class="point"></div>배송정보</div>
+<table>
+	<tr>
+		<th>배송지</th>
+		<td>
+			<label><input type="checkbox" onclick="ctrl_field(this.checked)" checked /> 주문고객 정보와 동일합니다</label>
+		</td>
+	</tr>
+	<tr>
+		<th>받으실분</th>
+		<td>
+			<input type="text" name="nameReceiver" value="오준식" required class="max_width" fld_esssential label="받으실분" />
+		</td>
+	</tr>
+	<tr>
+		<th>우편번호</th>
+		<td class="zipcode">
+			<div>
+			<input type="number" name="zipcode[]" id="zipcode0" size=3 readonly value="" required /> -
+			<input type="number" name="zipcode[]" id="zipcode1" size=3 readonly value="" required />
+			<button id="zipcode-btn" class="btn_zipcode" type="button" onClick="window.open('/shop/proc/popup_address.php?isMobile=true','','scrollbars=1');">우편번호</button>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+
+		</td>
+	</tr>
+	<tr>
+		<th>주소</th>
+		<td>
+			<div><input type="text" name="address" id="address" value=""  required class="max_width" onFocus="search_zipcode();this.blur();" fld_esssential label="주소" /></div>
+		</td>
+	</tr>
+	<tr>
+		<th>세부주소</th>
+		<td>
+			<input type="text" name="address_sub" id="address_sub" value=""  label="세부주소" class="max_width" label="세부주소" onkeyup="SameAddressSub(this)" oninput="SameAddressSub(this)"/>
+			<input type="hidden" name="road_address" id="road_address" style="width:100%" value="" class="line">
+			<div style="padding:5px 5px 0 1px;font:12px dotum;color:#999;" id="div_road_address"></div>
+			<div style="padding:5px 0 0 1px;font:12px dotum;color:#999;" id="div_road_address_sub"></div>
+		</td>
+	</tr>
+	<tr>
+		<th>전화번호</th>
+		<td class="phone">
+			<input type="number" name="phoneReceiver[]" value="" size="3" maxlength="3" /> -
+			<input type="number" name="phoneReceiver[]" value="" size="4" maxlength="4" /> -
+			<input type="number" name="phoneReceiver[]" value="" size="4" maxlength="4" />
+		</td>
+	</tr>
+	<tr>
+		<th>휴대폰</th>
+		<td class="phone">
+			<input type="number" name="mobileReceiver[]" value="010" size="3" maxlength="3" required fld_esssential label="받으실분 휴대폰번호" /> -
+			<input type="number" name="mobileReceiver[]" value="8610" size="4" maxlength="4" required fld_esssential label="받으실분 휴대폰번호" /> -
+			<input type="number" name="mobileReceiver[]" value="6094" size="4" maxlength="4" required fld_esssential label="받으실분 휴대폰번호" />
+		</td>
+	</tr>
+	<tr>
+		<th>메시지</th>
+		<td>
+			<textarea name="memo"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<th>회원정보<br/>반영</th>
+		<td>
+			<input type="checkbox" name="updateMemberInfo" value="y" /> 위 내용을 회원정보에 반영합니다.<br/>(주소/전화번호/핸드폰번호)
+		</td>
+	</tr>
+</table>
+
+<div class="sub_title"><div class="point"></div>배송선택</div>
+<table>
+	<tr>
+		<th>배송선택</th>
+		<td>
+			<div><input type="radio" name="deliPoli" value="0" checked onclick="getDelivery()" onblur="chk_emoney(document.frmOrder.emoney)" /> 기본배송</div>
+		</td>
+	</tr>
+</table>
+
+<div class="sub_title"><div class="point"></div>결제금액</div>
+<table>
+	<tr>
+		<th>합계금액</th>
+		<td>
+			<span id="paper_goodsprice">27,000</span> 원
+		</td>
+	</tr>
+	<tr>
+		<th>배송비</th>
+		<td>
+			<div id="paper_delivery_msg1"><span id="paper_delivery"></span> 원</div>
+			<div id="paper_delivery_msg2"></div>
+		</td>
+	</tr>
+	<tr>
+		<th>회원할인</th>
+		<td>
+			<span id='memberdc'>0</span> 원
+		</td>
+	</tr>
+	<tr>
+		<th>쿠폰적용</th>
+		<td class="coupon">
+			<div class="coupon-btn-area">
+				<button class="btn_coupon" type="button" onClick="removeCoupon();">쿠폰취소</button>
+				<button class="btn_coupon" type="button" onClick="getCoupon();">쿠폰조회</button>
+			</div>
+			<div id="coupon_list"></div>
+			<div style="height:32px;">할인:<input type="text" id="coupon" name="coupon" size="5" style="text-align:right" value="0" readonly> 원</div>
+			<div style="height:32px;">적립:<input type="text" id="coupon_emoney" name="coupon_emoney" size="5" style="text-align:right" value="0" readonly> 원</div>
+		</td>
+	</tr>
+	<tr>
+		<th>적립금</th>
+		<td class="emoney">
+			<input type="text" name="emoney"  size="5" style="text-align:right" value="0" onblur="chk_emoney(this);" onkeyup="calcu_settle();" onkeydown="if (event.keyCode == 13) {return false;}" > 원 (보유적립금 : 0원)
+
+
+			<div style="font-size:12px;color:#436693;margin-top:7px;">
+			보유적립금이 3,000원이상 일 경우 사용하실 수 있습니다.
+			</div>
+
+
+			<input type="hidden" name="emoney_max" value="20000">
+		</td>
+	</tr>
+
+	<tr>
+		<th>결제금액</th>
+				<td>
+			<span id=paper_settlement style="width:146px;text-align:right; color:FF6C68;">37,000</span> 원
+		</td>
+		<input type="hidden" name="total_all_price" value="37000">
+	</tr>
+</table>
+
+
+<div class="sub_title"><div class="point"></div>결제수단</div>
+<table>
+	<tr>
+		<th>결제수단</th>
+		<td>
+			<input type="hidden" name="escrow" value="N" />
+			<div><label><input type=radio name=settlekind value="a" onclick="input_escrow(this,'N')" style="height:30px"/>무통장입금</label></div>
+			<div><label><input type=radio name=settlekind value="c" onclick="input_escrow(this,'N')" style="height:30px"/>신용카드</label></div>
+			<div><label><input type=radio name=settlekind value="v" onclick="input_escrow(this,'N')" style="height:30px"/>가상계좌</label></div>
+			<div><label><input type=radio name=settlekind value="h" onclick="input_escrow(this,'N')" style="height:30px"/>핸드폰</label></div>
+		</td>
+	</tr>
+</table>
+
+<div class="m_ord">
+<div class="btn_center">
+	<div class="btn_pay"><button type="submit" id="payment-btn" class="btn_payment">결제하기</button></div>
+	<div class="btn_pre"><button type="button" id="prev-btn" class="btn_prev"  onclick="history.back();">취소</button></div>
+</div>
+</div>
+
+</section>
+
+</form>
+
+<div id=dynamic></div>
+
+<script>
+var emoney_max = 20000;
+
+document.getElementById('paper_delivery').innerHTML = '10,000';
+calcu_settle();
+
+function chkForm2(fm)
+{
+	var guestPrivateAgreement = document.getElementById("guest-private-agreement");
+	var privateAgreement = jQuery(fm).find("[name=private]:checked").val();
+	if (guestPrivateAgreement != null) {
+		if (privateAgreement !== "y") {
+			alert("비회원 개인정보 수집에 동의를 하셔야만 주문이 가능합니다.");
+			return false;
+		}
+	}
+
+	if (typeof(fm.settlekind)=="undefined"){
+		alert("결제수단이 활성화가 안 되었습니다. 관리자에게 문의하세요.");
+		return false;
+	}
+
+	var obj = document.getElementsByName('settlekind');
+	if (obj[0].getAttribute('required') == undefined){
+		obj[0].setAttribute('required', '');
+		obj[0].setAttribute('label', '결제수단');
+	}
+	// 여기에서 쿠폰 제거처리
+	var checked_count =0;
+	var chks = document.getElementsByName('coupon_[]');
+	for (var i=0,m=chks.length;i<m ;i++) {
+		if (chks[i].checked == true) {
+			checked_count ++;
+		}
+	}
+	// 선택된 쿠폰이 하나도 없다면 , 쿠폰정보를 전부 삭제해야 한다.
+	if (checked_count == 0) {
+		removeCoupon();
+	}
+
+	var mobilians_paymentLimitPrice = parseInt("300000"), settleprice = parseInt(uncomma(_ID('paper_settlement').innerHTML)), checkedSettlekind;
+	for (var i = 0; i < fm.settlekind.length; i++) {
+		if (fm.settlekind[i].checked && fm.settlekind[i].value == "h") {
+			mobilians_paymentLimitPrice = (isNaN(mobilians_paymentLimitPrice) ? 0 : mobilians_paymentLimitPrice);
+			settleprice = (isNaN(settleprice) ? 0 : settleprice);
+			if (mobilians_paymentLimitPrice > 0 && mobilians_paymentLimitPrice < settleprice) {
+				alert('휴대폰 결제 가능 금액은 300,000원 이하 입니다.\r\n(한도금액은 본인 설정 또는 통신사별로 금액 차이가 있습니다.)');
+				return false;
+			}
+		}
+	}
+	return chkForm(fm);
+}
+
+function input_escrow(obj,val)
+{
+	obj.form.escrow.value = val;
+	if (typeof(cash_required) == 'function') cash_required();
+}
+
+function ctrl_field(val)
+{
+	if (val) copy_field();
+	else clear_field();
+}
+function copy_field()
+{
+	var form = document.frmOrder;
+	form.nameReceiver.value = form.nameOrder.value;
+	form['zipcode[]'][0].value = "";
+	form['zipcode[]'][1].value = "";
+	form.address.value = "";
+	form.address_sub.value = "";
+	form.road_address.value = "";
+	document.getElementById("div_road_address").innerHTML =  "";
+	document.getElementById("div_road_address_sub").innerHTML =  form.road_address.value ? "" : "";
+	form['phoneReceiver[]'][0].value = form['phoneOrder[]'][0].value;
+	form['phoneReceiver[]'][1].value = form['phoneOrder[]'][1].value;
+	form['phoneReceiver[]'][2].value = form['phoneOrder[]'][2].value;
+	form['mobileReceiver[]'][0].value = form['mobileOrder[]'][0].value;
+	form['mobileReceiver[]'][1].value = form['mobileOrder[]'][1].value;
+	form['mobileReceiver[]'][2].value = form['mobileOrder[]'][2].value;
+
+	getDelivery();
+}
+function clear_field()
+{
+	var form = document.frmOrder;
+	form.nameReceiver.value = "";
+	form['zipcode[]'][0].value = "";
+	form['zipcode[]'][1].value = "";
+	form.address.value = "";
+	form.address_sub.value = "";
+	form.road_address.value = "";
+	document.getElementById("div_road_address").innerHTML =  "";
+	document.getElementById("div_road_address_sub").innerHTML =  "";
+	form['phoneReceiver[]'][0].value = "";
+	form['phoneReceiver[]'][1].value = "";
+	form['phoneReceiver[]'][2].value = "";
+	form['mobileReceiver[]'][0].value = "";
+	form['mobileReceiver[]'][1].value = "";
+	form['mobileReceiver[]'][2].value = "";
+}
+function cutting(emoney)
+{
+	var chk_emoney = new String(emoney);
+	reg = /(0)$/g;
+	if (emoney && !chk_emoney.match(reg)){
+		emoney = Math.floor(emoney/10) * 10;
+	}
+	return emoney;
+}
+function chk_emoney(obj)
+{
+	var form = document.frmOrder;
+	var my_emoney = 0;
+	var max = '20000';
+	var min = '0';
+	var hold = '3000';
+
+	var delivery	= uncomma(document.getElementById('paper_delivery').innerHTML);
+	var goodsprice = uncomma(document.getElementById('paper_goodsprice').innerText);
+	var erangeprice = goodsprice;
+	var max_base = erangeprice - uncomma(_ID('memberdc').innerHTML) - uncomma(document.getElementsByName('coupon')[0].value);
+	if( form.coupon ){
+		 var coupon = uncomma(form.coupon.value);
+	}
+	max = getDcprice(max_base,max,10);
+	min = parseInt(min);
+
+	if (max > max_base)  max = max_base;
+	if( _ID('print_emoney_max') && _ID('print_emoney_max').innerHTML != comma(max)  )_ID('print_emoney_max').innerHTML = comma(max);
+
+	var emoney = uncomma(obj.value);
+	if (emoney>my_emoney) emoney = my_emoney;
+
+	// 쿠폰/이머니 중복 사용 체크
+	var dup = false;
+	if (my_emoney > 0 && emoney > 0 && (parseInt(coupon) > 0 || parseInt(coupon_emoney)) > 0 && !dup) {
+		alert('적립금과 쿠폰 사용이 중복적용되지 않습니다.');
+		emoney = 0;
+	}
+
+	if(my_emoney > 0 && emoney > 0 && my_emoney < hold){
+		alert("보유적립금이 "+ comma(hold) + "원 이상 일 경우에만 사용하실 수 있습니다.");
+		emoney = 0;
+	}
+	if (min && emoney > 0 && emoney < min){
+		alert("적립금은 " + comma(min) + "원 부터  사용이 가능합니다");
+		emoney = 0;
+	} else if (max && emoney > max && emoney > 0){
+		if(emoney_max < min){
+			alert("주문 상품 금액이 최소 사용 적립금 " + comma(min) + "원 보다  작습니다.");
+			emoney = 0;
+		}else{
+			alert("적립금은 " + comma(min) + "원 부터 " + comma(max) + "원 까지만 사용이 가능합니다");
+			emoney = max;
+		}
+	}
+
+	obj.value = comma(cutting(emoney));
+	calcu_settle();
+}
+
+function calcu_settle()
+{
+	var dc=0;
+	var special_discount_amount = 0;
+	var coupon = settleprice = 0;
+	var goodsprice	= uncomma(document.getElementById('paper_goodsprice').innerHTML);
+	var delivery	= uncomma(document.getElementById('paper_delivery').innerHTML);
+	if(_ID('memberdc')) dc = uncomma(_ID('memberdc').innerHTML);
+	if(_ID('special_discount_amount')) special_discount_amount = uncomma(_ID('special_discount_amount').innerHTML);
+	var emoney = (document.frmOrder.emoney) ? uncomma(document.frmOrder.emoney.value) : 0;
+	if (document.frmOrder.coupon){
+		coupon = uncomma(document.frmOrder.coupon.value);
+		if (goodsprice + delivery - dc - coupon - emoney < 0){
+			emoney = goodsprice - dc - coupon - special_discount_amount;
+			document.frmOrder.emoney.value = comma(cutting(emoney));
+		}
+		dc += coupon + emoney;
+	}
+	var settlement = (goodsprice + delivery - dc - special_discount_amount);
+	
+	document.getElementById('paper_settlement').innerHTML = comma(settlement);
+}
+
+function getDelivery(){
+	var form = document.frmOrder;
+	var obj = form.deliPoli;
+	var coupon = 0;
+	var emoney = 0;
+
+	var deliPoli = 0;
+	for(var i=0;i<obj.length;i++){
+		if(obj[i].checked){
+			deliPoli = i;
+		}
+	}
+	if( form.coupon ) coupon = form.coupon.value;
+	if( form.emoney ) emoney = form.emoney.value;
+	var zipcode = form['zipcode[]'][0].value + '-' + form['zipcode[]'][1].value;
+	var mode = 'order';
+
+	$.ajax({
+		url : '/shop/proc/getdelivery2.php',
+		type : 'get',
+		async : false,
+		data : "zipcode="+zipcode+"&deliPoli="+deliPoli+"&coupon="+coupon+"&emoney="+emoney+"&mode="+mode,
+		success : function(res) {
+			eval(res);
+		}
+	});
+}
+
+
+function getCoupon(){
+
+	$('#coupon_list').show();
+	$.ajax({
+		url : '../proc/coupon_list.php',
+		dataType : 'html',
+		success : function(result){
+
+			$('#coupon_list').html(result);
+		},
+		error: function(){
+			alert('error');
+
+		}
+	});
+}
+
+function removeCoupon(){
+
+	$('#coupon_list').html('');
+	var apply_coupon = document.getElementById('apply_coupon');
+	apply_coupon.innerHTML = '';
+	document.frmOrder.coupon.value = '0';
+	document.frmOrder.coupon_emoney.value = '0';
+	chk_emoney(document.frmOrder.emoney);
+	getDelivery();
+	calcu_settle();
+}
+
+/*** 결제수단 첫번째 객체 자동 선택 ***/
+window.onload = function (){
+	var obj = document.getElementsByName('settlekind');
+	for (var i = 0; i < obj.length; i++){
+		if (obj[i].checked != true) continue;
+		obj[i].onclick();
+		var idx = i;
+		break;
+	}
+	if (obj[0] && idx == null){ obj[0].checked = true; obj[0].onclick(); }
+
+	getDelivery();
+	$(".m_rightlongtext").css("width", (document.body.clientWidth-70-20-14)+"px");
+}
+
+
+</script>
+
+<section id='footer'>
+	<div class='company'>
+		<div class="bottom_menu">
+			<div class="bottom_menu_contents">
+				<table>
+					<tr>
+						<td><a href="http://popchoice1.godo.co.kr/m2/proc/faq.php">FAQ</a></td>
+						<td><a href="http://popchoice1.godo.co.kr/shop/?pc" title="PC버전으로 보기" class="btn_pcmode">PC버전</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class='lineinfo'>
+				<table>
+					<tr>
+						<td class='title_r'>상호</td>
+						<td>(주) 벨포트</td>
+					</tr>
+					<tr>
+						<td class='title_r'>대표이사</td>
+						<td>민영훈</td>
+					</tr>
+					<tr>
+						<td class='title_r'>주소</td>
+						<td>서울특별시 강남구  삼성로 570 (대한해운 사옥) 9층</td>
+					</tr>
+					<tr>
+						<td class='title_r'>고객센터</td>
+						<td class="num"><a href="http://popchoice1.godo.co.kr/m2/service/customer.php">080-508-6631</td>
+					</tr>
+					<tr>
+						<td class='title_r'>사업자번호</td>
+						<td class="num">220-88-60804</td>
+					</tr>
+					<tr>
+						<td class='title_r'>통신판매업신고</td>
+						<td>제2013-서울강남-02382호</td>
+					</tr>
+				</table>
+		</div>
+	</div>
+
+	<div class="copyright">
+		<div class='lineinfo'>COPYRIGHT (C) 벨포트 ALL RIGHTS RESERVED.</div>
+		<div class="service_menu">
+			<a href="http://popchoice1.godo.co.kr/m2/service/agrmt.php">이용약관</a>
+			<a href="http://popchoice1.godo.co.kr/m2/service/private.php">개인정보취급방침</a>
+		</div>
+	</div>
+</section>
+<div class="dimm"> </div>
+</div>
+
+<iframe class="" id="ifrmHidden" name="ifrmHidden" src='http://popchoice1.godo.co.kr/shop/blank.php'></iframe>
+</body>
+</html>
