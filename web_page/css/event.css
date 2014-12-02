@@ -21,7 +21,6 @@ ul.list-special-event { overflow: hidden; margin: 30px -5px 0 -5px; }
 ul.list-special-event li { float: left; margin: 0 5px 10px 5px; width: 303px; border: 1px solid #d3d0cf; }
 
 .list-special-event figure.item { }
-.list-special-event figure.item > a {display:block; margin-top:15px;}
 .list-special-event figure.item.soldout > a { position: relative; display: block; }
 .list-special-event figure.item.soldout > a:after { content: 'Sold Out'; position: absolute; top: 0; right: 0; left: 0; padding-top: 89px; display: block; height: 109px; font-family: 'Alegreya', serif; font-size: 25px; color: #fff; font-weight: bold; text-align: center; background: url(../images/event/bg_soldout.png) left top repeat; }
 
@@ -32,7 +31,7 @@ ul.list-special-event li { float: left; margin: 0 5px 10px 5px; width: 303px; bo
 .list-special-event figure.item p.desc { }
 .list-special-event figure.item p.desc > a { font-size: 14px; color: #231f20; font-weight: 400; line-height: 20px; }
 .list-special-event figure.item p.price { margin-top: 6px; font-family: 'Alegreya', serif; font-style: italic; text-align: right; }
-.list-special-event figure.item p.price > .dc-price {font-family:'Alegreya', serif; font-style:italic; font-weight:bold; font-size: 18px; color: #231f20; font-weight: 400; line-height: 18px; }
+.list-special-event figure.item p.price > .dc-price { font-size: 18px; color: #231f20; font-weight: 400; line-height: 18px; }
 .list-special-event figure.item p.price > .price { margin-left: 8px; font-size: 18px; color: #b9b9b9; font-weight: 400; line-height: 18px; }
 .list-special-event figure.item p.price > .soldout { font-size: 18px; color: #ed6851; font-weight: 400; }
 
@@ -40,7 +39,7 @@ ul.list-special-event li { float: left; margin: 0 5px 10px 5px; width: 303px; bo
 .list-special-event figure.item p.info > a.btn-wish { float: left; margin-top: 2px; display: inline-block; height: 18px; width: 18px; text-align: left; text-indent: -9999px; background: url(../images/shop/btn_wish01.png) left top no-repeat; }
 .list-special-event figure.item p.info > a.btn-wish.on { background-position: -18px 0; }
 .list-special-event figure.item p.info > span.remain { float: right; font-size: 14px; color: #231f20; font-weight: 400; line-height: 18px; }
-.list-special-event figure.item p.info > span.remain > em {font-family:'RixSGo B', sans-serif;  font-weight:normal; font-style: normal; }
+.list-special-event figure.item p.info > span.remain > em {font-family:'RixSGo M', sans-serif;  font-weight:normal; font-style: normal; }
 
 .other figure.item > figcaption { padding: 15px 15px 15px 16px; }
 .other figure.item p.price { text-align: left; }
@@ -64,7 +63,7 @@ fieldset.form-comments { position: relative; padding:20px 15px; border-top: 2px 
 fieldset.form-comments img {float:left; width:60px;}
 fieldset.form-comments textarea {margin:0;margin-left:10px;padding:5px; height: 48px; width: 696px; font-size: 13px; color: #777; line-height: 18px; border: 1px solid #d3d0cf; }
 fieldset.form-comments input[type=submit] { position: absolute; top: 20px; right: 15px; display: block; height: 60px; width: 125px; font-size: 13px; color: #fff; font-weight: 400; text-align: center; background-color: #231f20; }
-fieldset.form-comments input[type=button] { position: absolute; top: 20px; right: 15px; display: block; height: 60px; width: 125px; font-size: 13px; color: #fff; font-weight: 400; text-align: center; background-color: #231f20; }
+fieldset.form-comments input[type=button] { position: absolute; top: 20px; right: 15px; display: block; height: 60px; width: 125px; font-size: 13px; color: #fff; font-weight: 400; text-align: center; background-color: #231f20; border:0;}
 
 
 /* 자신이 작성한 댓글 표시 */
@@ -74,26 +73,44 @@ fieldset.form-comments input[type=button] { position: absolute; top: 20px; right
 .my_comment > img {float:left;width:60px;}
 .my_comment > div,
 .my_comment > p {margin-left:70px;}
-.my_comment .uid {font-size: 13px; color: #231f20; font-family:'RixSGo B', sans-serif; margin-right:45px; }
-.my_comment .date { font-size: 13px; color: #231f20; font-family:'RixSGo B', sans-serif;}
+.my_comment .uid {font-size: 13px; color: #231f20; font-weight:600; margin-right:45px; }
+.my_comment .date { font-size: 13px; color: #231f20; }
 .my_comment p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
 .my_comment p a {color:#6896ea;}
 
 /* 이벤트 상세 댓글 목록 */
 ul.list-comments {border-top:1px solid #d3d0cf;}
 ul.list-comments li { position: relative; padding:20px 55px 20px 15px; display: block; border-bottom: 1px solid #d3d0cf; min-height:60px;}
-ul.list-comments li a.btn-delete { position: absolute; top: 15px; right: 0; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat;}
+ul.list-comments li a.btn-delete { position: absolute; top: 15px; right: 0; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat; }
 ul.list-comments li > img {float:left;width:60px;}
 ul.list-comments li > div,
 ul.list-comments li > p {margin-left:70px;}
-ul.list-comments li .uid {font-size: 13px; color: #231f20; font-family:'RixSGo B', sans-serif; margin-right:45px; }
-ul.list-comments li .date {font-family:'RixSGo B', sans-serif; font-size: 13px; color: #231f20; }
+ul.list-comments li .uid {font-size: 13px; margin-right:45px;}
+ul.list-comments li .date {font-family:'RixSGo M', sans-serif; font-weight:normal; font-size: 13px; color: #231f20;}
 ul.list-comments li p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
 ul.list-comments li p a {color:#6896ea;}
 
 /* 오모로비짜 브랜드 위크 */
-.no-pic-cmt ul.list-comments li {min-height:0;}
+.no-pic-cmt {width:100%;}
+.no-pic-cmt .my_comment{margin:15px 0;}
+.no-pic-cmt ul.list-comments li {padding:10px 55px 10px 20px;min-height:0;}
+.no-pic-cmt fieldset.form-comments textarea {width:755px;}
+.no-pic-cmt .my_comment > div,
+.no-pic-cmt .my_comment > p,
+.no-pic-cmt ul.list-comments li > div,
+.no-pic-cmt ul.list-comments li > p {margin-left:0px;}
+.no-pic-cmt ul.list-comments li p {margin-top:7px;}
 .sorting.omo-brand-week {margin-top:60px;}
+@media all and (max-width:640px){
+	h1.sub-title {width:85%; line-height:1.2;}
+	fieldset.form-comments {padding:10px;}
+	fieldset.form-comments textarea {margin:0; padding:2%; width:96%; height:100px;}
+	fieldset.form-comments input[type=button] {position:static; display:block; margin-top:15px; width:100%; height:44px; -webkit-appearance: none;}
+	.no-pic-cmt ul.list-comments li {padding:10px;}
+	ul.list-comments li .date {float:right;}
+	.paging>a.arrow.first,
+	.paging>a.arrow.last {display:none;}
+}
 
 /* 이벤트 상세 당첨자 발표 */
 .result-content { padding: 18px 15px 40px 15px; border-top: 1px solid #231f20; border-bottom: 1px solid #d3d0cf; }
@@ -106,18 +123,19 @@ ul.list-comments li p a {color:#6896ea;}
 .event .container .btns_wrap .btns { position: static; float: right; margin: 0; }
 
 /* brand week */
-/*
+#contents.event .container .location {display:none;}
+
 #contents.about .container .location {top:-9999em;}
 #contents.about .container > section {margin-top:0; width:100%; min-width:980px;}
 #contents.about .container{padding-bottom:0;}
 #contents.about .container > section.comments {margin-top:50px; padding-bottom:30px; width:980px;}
-#contents.about .container > section.comments h1{ font-family:'RixSGo B', sans-serif; font-weight:normal;}
+#contents.about .container > section.comments h1{font-weight:600;}
 #contents.about .container > section.comments .form-comments textarea {width:740px;}
 
 .intro{text-align:center; background:url(../images/event/bg_event_green.jpg) repeat-x;}
 .intro img{display:inline-block;}
 .btn_select_event:focus{outline:none;} /* tester box 공통 */
-/*
+
 
 .join {text-align:center; background:url(../images/event/bg_brandweek4-2.gif) repeat-x;}
 .join img{display:inline-block;}
@@ -136,14 +154,6 @@ ul.list-comments li p a {color:#6896ea;}
 @media all and (max-width:1600px){
 	.product {background-size:initial;}
 }
-*/
-.omo-slides {position:relative;margin-bottom:32px;}
-.omo-slides .slidesjs-previous,
-.omo-slides .slidesjs-next {position:absolute; top:275px; width:39px; height:39px; background:url(./images/event/omo_arrow.png) no-repeat; z-index:10;}
-.omo-slides .slidesjs-previous{left:0;}
-.omo-slides .slidesjs-next {right:0;	background-position:-39px 0;}
-
-.omo_info + .go_event {display:block; margin:0 auto; width:198px;}
 
 .guide {text-align:center; background:#231f20;}
 .guide img{display:inline-block;}
@@ -185,7 +195,9 @@ ul.list-comments li p a {color:#6896ea;}
 .layer-pop .tb_pop.pop-3 textarea{width:744px; height:115px; font-family:RixSGo L, sans-serif; padding:30px; font-size:18px;}
 .layer-pop .tb_pop input[type=image]{margin-top:20px;}
 
-.layer-pop .tb_alert{width:543px; height:276px; position:absolute; top:170px; left:175px;}
+
+.layer-pop .tb_pop input[type=submit] {margin-top:20px; width:100px; height:40px; line-height:40px; color:#fff; background-color:#231f20; border:0; text-align:center; }
+.layer-pop .tb_alert{width:543px; height:276px; position:absolute; top:170px; left:175px;} 
 
 /* movie event */
 
@@ -201,42 +213,52 @@ ul.list-comments li p a {color:#6896ea;}
 .movie_layer .m_close{display:block; position:absolute; top:10px; right:10px;}
 
 
-/* 상품 목록 */
-ul.list-products { overflow: hidden; margin: 0px -4px; }
-ul.list-producs.fullsize { margin: 0px -5px; }
-ul.list-products li { float: left; padding: 30px 4px 21px 4px; width: 226px; }
-ul.list-products.fullsize li { padding-right: 5px; padding-left: 5px; }
+/* 어린왕자 이벤트 */
+#contents .container .little_prince {width:100%; margin:0 auto; font-family:'RixSGo L', sans-serif;}
+.little_prince .lp_header {position:relative; padding-top:165px; height:695px; background:url(../images/event/little_prince_01.jpg) no-repeat 50% 0; background-size:cover; text-align:center;}
+.little_prince .lp_header p {font-size:67px; color:#ffe001; line-height:1.2;}
+.little_prince .lp_header p span {display:block; font-size:73px; font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_header h1 {margin-top:375px; font-size:16px; color:#23456c; line-height:1.5;}
+.little_prince .lp_header h1 span {display:block; margin-bottom:10px; font-size:24px;}
+.little_prince .lp_header h1 span strong {color:#23456c;}
+.little_prince .lp_header .scroll {position:absolute; top:475px; left:50%; margin-left:-31px; width:63px; height:63px; font-size:10px; color:#2f5982; padding-top:18px; box-sizing:border-box; background:url(../images/event/little_prince_btn_scroll.png) no-repeat;}
+.little_prince .lp_apply {position:relative;padding-top:55px; height:595px; z-index:10;}
+.little_prince .lp_apply h2 {font-size:40px; text-align:center; color:#231f20; line-height:1.4; font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_apply .howto {margin:25px auto 0 auto; padding:110px 0 125px 580px; width:360px; background:url(../images/event/little_prince_card.png) no-repeat;}
+.little_prince .lp_apply .howto ul li {margin-bottom:20px; font-size:16px; padding-left:11px; background:url(../images/event/little_prince_bullet_01.png) no-repeat 0 2px; color:#231f20;}
+.little_prince .lp_apply .howto ul li span {margin-right:17px;}
+.little_prince .lp_apply .howto ul li em {font-style:normal; font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_apply .howto p {position:relative; margin-top:35px; padding-left:45px; color:#423f3f;}
+.little_prince .lp_apply .howto p:after {content:''; position:absolute; top:4px; left:0; display:block; width:35px; height:1px; background:#231f20;}
+.little_prince .lp_apply .howto p span {display:block; margin-top:5px; font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_apply .howto a {display:block; margin:30px 0 0 50px; width:189px; height:53px;background:url(../images/event/little_prince_btn_fb.png) no-repeat; text-indent:-9999px;}
+.little_prince .lp_apply .howto .share_info {margin:18px 0 0 50px;}
+.little_prince .lp_img {position:relative;}
+.little_prince .lp_img > p {padding:100px 0; background:#231f20; color:#fff; line-height:1.4; font-size:36px; text-align:center;}
+.little_prince .lp_img > p span {display:block; font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_img > p.gift {padding-top:810px; padding-bottom:0; height:50px; font-size:20px; color:#fff; text-align:center; background:url(../images/event/little_prince_02.jpg) 50% 0;}
+.little_prince .lp_img .img_msg {position:absolute; top:330px; right:30px; font-size:14px; color:#cacaca; text-shadow:0 0 3px rgba(0,0,0,.5);}
+.little_prince .lp_detail {padding:80px 0; background:#f9f9f9;}
+.little_prince .lp_detail > ul {margin:0 auto; width:940px;}
+.little_prince .lp_detail > ul:after {content:''; display:block; clear:both;}
+.little_prince .lp_detail > ul > li {float:left; font-size:15px; color:#312e2a; padding-left:13px; background:url(../images/event/little_prince_bullet_01.png) no-repeat 0 2px;}
+.little_prince .lp_detail > ul > li .title {font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_detail .inner {margin-top:10px;}
+.little_prince .lp_detail .inner li {margin-top:5px; padding-left:10px; color:#767676; background:url(../images/event/little_prince_bullet_02.png) no-repeat 0 10px; font-size:13px; line-height:1.4;}
+.little_prince .lp_detail .inner li:first-child {margin-top:0;}
+.little_prince .lp_detail > ul > li.price {float:right; width:470px;}
+.little_prince .lp_detail > ul > li.rule {clear:left; margin-top:70px; width:360px;}
+.little_prince .lp_detail .inner li span {display:block; font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_detail > ul > li.price p {margin-top:40px; padding-left:15px; text-indent:-15px; color:#767676; line-height:1.4; font-size:13px;}
 
-	figure.product { }
-	figure.product .frame { height: 191px; width: 226px; text-align: center; background-color: #f3f3f4; }
-	figure.product figcaption { padding: 0 10px 0 6px; font-size: 13px; line-height: 18px; }
+.lp_cmts {margin-top:70px; padding-bottom:7px; font-size:15px;}
+.lp_cmts span {display:inline-block; margin-right:7px; padding:7px 17px; color:#fff; border-top:1px solid #d3d2d2; background:#231f20; vertical-align:middle;}
 
-	figure.product p.icons { margin-top: 13px; margin-bottom: 5px; height: 20px; }
-	figure.product p.icons span { position: relative; padding: 2px 4px; display: inline-block; font-size: 10px; color: #fff; font-weight: 400; line-height: 12px; letter-spacing: -0.1em; background-color: #231f20; }
-	figure.product p.icons span:after { content: ''; position: absolute; bottom: -4px; left: 12px; display: block; height: 4px; width: 6px; background: url(../images/shop/bg_arrow04.png) left top no-repeat; }
-
-	figure.product em.brand {display:block; height:36px; color: #231f20; font-family:'RixSGo B', sans-serif; font-weight:normal; font-style: normal; }
-	figure.product p.title { height: 45px; color: #777; }
-
-	figure.product p.price { padding-right: 7px; font-family: 'Alegreya', serif; font-style: italic; text-align: right; }
-	figure.product p.price > a.btn-wish { float: left; margin-top: 2px; display: inline-block; height: 18px; width: 18px; text-align: left; text-indent: -9999px; background: url(../images/shop/btn_wish01.png) left top no-repeat; }
-	figure.product p.price > a.btn-wish.on { background-position: -18px 0; }
-	figure.product p.price > .dc-price {font-family:'Alegreya', serif; font-style:italic; font-weight:bold; font-size: 20px; color: #231f20; line-height: 18px; }
-	figure.product p.price > .price { margin-left: 8px; font-size: 20px; color: #b9b9b9; line-height: 18px; }
-
-
-
-/* 상품 정렬 */
-h1.shop-sub-title + div.sorting { margin-top: -35px; padding: 6px 12px 0 0; height: 28px; text-align: right; border-bottom: 0px none; }
-div.sorting { padding: 6px 12px 0 0; height: 28px; text-align: right; border-bottom: 1px solid #231f20; }
-div.sorting a { margin: 0 6px; display: inline-block; height: 25px; cursor: pointer; font-size: 11px; color: #777; font-weight: 400; line-height: 25px; }
-div.sorting a:hover,
-div.sorting a.on { position: relative; color: #000; /*font-weight: 700; */}
-
-div.sorting a:hover:after,
-div.sorting a.on:after { content: ''; z-index: 10; position: absolute; right: -3px; bottom: -4px; left: -3px; display: block; height: 3px; background-color: #231f20; }
-div.sorting .cnt { position: relative; padding: 0 0 0 20px; font-size: 12px; color: #777; font-weight: 400; line-height: 26px; }
-div.sorting .cnt > em { font-size: 12px; color: #231f20; font-family:'RixSGo B', sans-serif; font-weight:normal; font-style: normal; }
-div.sorting .cnt:after { content: '|'; position: absolute; top: -6px; left: 5px; display: block; font-size: 9px; color: #777; }
+#little_prince_pop {position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/little_prince_bg_curtain.png); z-index:100; display:none;}
+#little_prince_pop .little_prince_pop_content {position:fixed; top:50%; left:50%; margin-top:-130px; margin-left:-265px; width:530px; height:260px; background:#fff; border:7px solid #363133;}
+#little_prince_pop .little_prince_pop_content p {margin-top:70px; font-size:18px; line-height:1.6; text-align:center;}
+#little_prince_pop .little_prince_pop_content p span {color:#231f20;}
+#little_prince_pop .little_prince_pop_content .confirm {display:block; margin:30px auto 0 auto; width:96px; height:26px; line-height:26px; border:3px solid #333; color:#231f20; text-align:center;}
+#little_prince_pop .close{position:absolute; display:block; top:20px; right:20px;}
 
 

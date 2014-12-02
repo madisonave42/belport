@@ -633,11 +633,11 @@ $(function(){
 	})();
 	
 	/* textarea */
-	(function(){
-		$('textarea').on('focus', function(){
-			$(this).val('');
-		});
-	})();
+	// (function(){
+		// $('textarea').on('focus', function(){
+			// $(this).val('');
+		// });
+	// })();
 
 
 	//alertPop.success();
