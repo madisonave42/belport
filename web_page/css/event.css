@@ -104,7 +104,8 @@ ul.list-comments li p a {color:#6896ea;}
 @media all and (max-width:640px){
 	h1.sub-title {width:85%; line-height:1.2;}
 	fieldset.form-comments {padding:10px;}
-	fieldset.form-comments textarea {margin:0; padding:2%; width:96%; height:100px;}
+	fieldset.form-comments textarea,
+	.no-pic-cmt fieldset.form-comments textarea {margin:0; padding:2%; width:96%; height:100px;}
 	fieldset.form-comments input[type=button] {position:static; display:block; margin-top:15px; width:100%; height:44px; -webkit-appearance: none;}
 	.no-pic-cmt ul.list-comments li {padding:10px;}
 	ul.list-comments li .date {float:right;}
@@ -250,9 +251,14 @@ ul.list-comments li p a {color:#6896ea;}
 .little_prince .lp_detail > ul > li.rule {clear:left; margin-top:70px; width:360px;}
 .little_prince .lp_detail .inner li span {display:block; font-family:'RixSGo B', sans-serif;}
 .little_prince .lp_detail > ul > li.price p {margin-top:40px; padding-left:15px; text-indent:-15px; color:#767676; line-height:1.4; font-size:13px;}
+.little_prince + #iframeComment {display:block; margin:0 auto; width:936px;}
+@media all and (max-width:1000px){
+	.little_prince + #iframeComment {width:90%;}
+}
 
-.lp_cmts {margin-top:70px; padding-bottom:7px; font-size:15px;}
-.lp_cmts span {display:inline-block; margin-right:7px; padding:7px 17px; color:#fff; border-top:1px solid #d3d2d2; background:#231f20; vertical-align:middle;}
+
+.lp_cmts {margin-top:70px; padding-left:115px; padding-bottom:7px; font-size:15px; text-indent:-115px;}
+.lp_cmts span {display:inline-block; margin-right:7px; width:105px; height:30px; line-height:30px; text-align:center; color:#fff; border-top:1px solid #d3d2d2; background:#231f20; vertical-align:middle; text-indent:0;}
 
 #little_prince_pop {position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/little_prince_bg_curtain.png); z-index:100; display:none;}
 #little_prince_pop .little_prince_pop_content {position:fixed; top:50%; left:50%; margin-top:-130px; margin-left:-265px; width:530px; height:260px; background:#fff; border:7px solid #363133;}

@@ -1,5 +1,5 @@
 #contents {padding-bottom:40px;}
-#contents .container.index {width:1014px; padding-bottom:30px;}
+#contents .container.index {width:1014px; padding-bottom:30px; box-shadow:0 0 45px rgba(0,0,0,.45);}
 #contents .container.index .main-wrap {margin-top:0; margin-bottom:70px; width:1014px;}
 #contents .container.index .main-wrap > section,
 #contents .container.index .main-wrap > div {float:left; margin:0;}
@@ -24,6 +24,11 @@
 .rich_banner.second .rich_banner_image{height:100%; position:relative; left:50%; margin-left:-960px;}
 .rich_banner.second .rich_banner_large_text{display:block; position:absolute; top:27px; left:50%; margin-left:-470px;}
 .rich_banner.second .rich_banner_small_text{display:none; position:absolute; top:48px; left:50%; margin-left:-158px;}
+
+.rich_banner.third{display:none;}
+.rich_banner.third .rich_banner_image{height:100%; position:relative; left:50%; margin-left:-960px;}
+.rich_banner.third .rich_banner_large_text{display:block; position:absolute; top:74px; left:50%; margin-left:-459px;}
+.rich_banner.third .rich_banner_small_text{display:none; position:absolute; top:25px; left:50%; margin-left:0;}
 
 .rich_banner_wrap .btn_toggle{display:block; width:41px; height:41px; text-indent:-99999em;
 	background:url(../images/common/btn_toggle.png) no-repeat; position:absolute; top:0; left:50%; margin-left:427px;
@@ -83,7 +88,7 @@
 .products .slides .slidesjs-pagination li {float:left;}
 .products .slides .slidesjs-pagination .slidesjs-pagination-item a {background-image:url(../images/index/bg_page_white.png);}
 
-#contents .container.index .main-wrap .side-banner {position:absolute; top:0; right:-179px; padding:8px; width:149px; height:404px; background:#fff; z-index:10;}
+#contents .container.index .main-wrap .side-banner {position:absolute; top:0; right:-179px; padding:8px; width:149px; height:404px; background:#eaeaea; z-index:10;}
 #contents .container.index .main-wrap .side-banner .slidesjs-previous {position:absolute; left:8px; bottom:8px; z-index:10;}
 #contents .container.index .main-wrap .side-banner .slidesjs-next {position:absolute; right:8px; bottom:8px; z-index:10;}
 #contents .container.index .main-wrap .side-banner .current-page {position:absolute; bottom:11px; left:0; width:100%; text-align:center; font-size:12px;}

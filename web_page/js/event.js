@@ -47,7 +47,8 @@ $(function(){
 			var dimension = [
 				//{'height':164, "top":-24, 'marginLeft':-58},
 				{'height':164, "top":0, 'marginLeft':-220},
-				{'height':149, "top":-16, 'marginLeft':-27}
+				{'height':149, "top":-16, 'marginLeft':-27},
+				{'height':149, "top":0, 'marginLeft':-50}
 			];
 			
 			$('.rich_banner_wrap .btn_toggle').on('click', function(e){
