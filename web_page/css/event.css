@@ -77,11 +77,11 @@ fieldset.form-comments input[type=button] { position: absolute; top: 20px; right
 .my_comment .date { font-size: 13px; color: #231f20; }
 .my_comment p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
 .my_comment p a {color:#6896ea;}
+.my_comment #btn_del { position: absolute; top: 15px; right: 15px; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat; cursor:pointer;}
 
 /* 이벤트 상세 댓글 목록 */
 ul.list-comments {border-top:1px solid #d3d0cf;}
 ul.list-comments li { position: relative; padding:20px 55px 20px 15px; display: block; border-bottom: 1px solid #d3d0cf; min-height:60px;}
-ul.list-comments li a.btn-delete { position: absolute; top: 15px; right: 0; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat; }
 ul.list-comments li > img {float:left;width:60px;}
 ul.list-comments li > div,
 ul.list-comments li > p {margin-left:70px;}
@@ -257,7 +257,7 @@ ul.list-comments li p a {color:#6896ea;}
 }
 
 
-.lp_cmts {margin-top:70px; padding-left:115px; padding-bottom:7px; font-size:15px; text-indent:-115px;}
+.lp_cmts {padding-top:70px; padding-left:115px; padding-bottom:7px; font-size:15px; text-indent:-115px;}
 .lp_cmts span {display:inline-block; margin-right:7px; width:105px; height:30px; line-height:30px; text-align:center; color:#fff; border-top:1px solid #d3d2d2; background:#231f20; vertical-align:middle; text-indent:0;}
 
 #little_prince_pop {position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/little_prince_bg_curtain.png); z-index:100; display:none;}
@@ -267,4 +267,121 @@ ul.list-comments li p a {color:#6896ea;}
 #little_prince_pop .little_prince_pop_content .confirm {display:block; margin:30px auto 0 auto; width:96px; height:26px; line-height:26px; border:3px solid #333; color:#231f20; text-align:center;}
 #little_prince_pop .close{position:absolute; display:block; top:20px; right:20px;}
 
+/* 보테가베르데이벤트 */
+#contents .container .bottega {width:100%; margin:0 auto;}
+.bottega .header {position:relative}
+.bottega .header .bg_movie_wrap {width:100%; height:%; overflow:hidden; background:#000;}
+.bottega .header .bg_movie_wrap.no_movie {background:#000 url(../images/event/bottega_bg_poster.jpg) no-repeat 50% 0; background-size:cover}
+.bottega .header #bg_movie {width:100%; height:100%;}
+.bottega .header .title {position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/bottega_bg_pattern.png); z-index:1;}
+.bottega .header .title img {position:absolute; top:50%; left:50%; width:503px; height:245px; margin:-225px 0 0 -251px;}
+.bottega .header .list {position:absolute; bottom:0; left:0; width:100%; height:217px; background:url(../images/event/bottega_bg_header.png)}
+.bottega .header .list img {display:block; margin:68px auto 0 auto;}
 
+#bv_evt_01 {padding-top:65px;}
+#bv_evt_01 h1 {margin-bottom:35px; text-align:center;}
+#bv_evt_01 h1 img {display:inline;}
+
+#bv_evt_01 .birthday .check_day {text-align:center; font-size:20px; color:#231f20; line-height:53px; font-weight:bold; font-family:'RixSGo M', sans-serif;}
+#bv_evt_01 .birthday .check_day span {position:relative; font-size:0;vertical-align:middle;}
+#bv_evt_01 .birthday .check_day span input[type=radio] {position:absolute; opacity:0; z-index:-1;}
+#bv_evt_01 .birthday .check_day span label {display:inline-block; width:95px; height:53px; line-height:53px; text-align:center; font-size:20px; background:#f1f1f1; color:#b1b1b1; cursor:pointer;}
+#bv_evt_01 .birthday .check_day span.checked label {background:#231f20; color:#fff;}
+#bv_evt_01 .birthday .check_day select {margin:0 7px 0 15px; border:3px solid #231f20; width:95px; height:53px; box-sizing:border-box; font-size:20px; vertical-align:middle;}
+#bv_evt_01 .birthday .check_day select.year {width:190px;}
+#bv_evt_01 .birthday .check_day .btn_confirm {display:block; margin:30px auto 0 auto; width:115px;}
+
+#bv_evt_01 .birthday .movie_list {margin-top:70px; padding:20px 0 30px; background:#231f20;}
+#bv_evt_01 .birthday .movie_list ul {margin:0 6%; text-align:center; font-size:0;}
+#bv_evt_01 .birthday .movie_list ul li {position:relative; display:inline-block; margin:0 3px; margin-top:10px; width:135px; height:108px;}
+#bv_evt_01 .birthday .movie_list ul li > p {font-size:13px; color:#6f6f6f; text-align:center;}
+#bv_evt_01 .birthday .movie_list ul li a {position:absolute; bottom:0; left:0;z-index:1}
+#bv_evt_01 .birthday .movie_list ul li .cover {position:absolute; bottom:0; left:0; width:135px; height:82px; background:url(../images/event/bottega_bg_header.png); z-index:2}
+#bv_evt_01 .birthday .movie_list ul li.yourday > p,
+#bv_evt_01 .birthday .movie_list ul li.active > p {color:#f6f6f6;}
+#bv_evt_01 .birthday .movie_list ul li a { z-index:2}
+#bv_evt_01 .birthday .movie_list ul li.active .cover {display:none;}
+#bv_evt_01 .birthday .movie_list ul li.yourday .cover {bottom:-2px; left:-2px; width:139px; height:86px; background:#fff; z-index:1;}
+#bv_evt_01 .birthday .movie_list .btn_full {position:relative; display:block; margin:24px auto 0 auto; width:135px;}
+#bv_evt_01 .birthday .movie_list .btn_full .cover {position:absolute; bottom:0; left:0; width:135px; height:27px; background:url(../images/event/bottega_bg_header.png); z-index:2}
+#bv_evt_01 .birthday .movie_list .btn_full.active .cover {display:none;}
+
+#bv_evt_01 .gift {padding-top:50px; height:430px; background:url(../images/event/bottega_bg_share.png) no-repeat 50% 0; background-size:cover; text-align:center;}
+#bv_evt_01 .gift img{display:inline;}
+#bv_evt_01 .gift_info img{margin:0 auto; width:980px;}
+
+#bv_evt_01 .gallery {position:relative;}
+#bv_evt_01 .gallery h2 {padding:65px 0; text-align:center; background:#f9f9f9;}
+#bv_evt_01 .gallery h2 img {display:inline;}
+#bv_evt_01 .gallery ul {overflow:hidden;}
+#bv_evt_01 .gallery ul li {float:left;}
+#bv_evt_01 .gallery ul li img {width:100%;}
+#bv_evt_01 .gallery ul li.mon {width:59.5625%;}
+#bv_evt_01 .gallery ul li.tue {width:40.4375%;}
+#bv_evt_01 .gallery ul li.wed {width:49.6875%;}
+#bv_evt_01 .gallery ul li.thu {width:50.3125%;}
+#bv_evt_01 .gallery ul li.fri {width:29.625%;}
+#bv_evt_01 .gallery ul li.sat {width:30.5625%;}
+#bv_evt_01 .gallery ul li.sun {width:39.8125%;}
+#bv_evt_01 .gallery ul li a {display:block; position:relative;}
+#bv_evt_01 .gallery ul li a .over {position:absolute; top:0; left:0; width:100%;}
+#bv_evt_01 .gallery .gallery_curtain {display:none;position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/bottega_bg_gallery.png); z-index:10;}
+
+#bv_evt_02 {text-align:center;}
+#bv_evt_02 h1 {padding-top:70px;}
+#bv_evt_02 > img {display:inline;}
+#bv_evt_02 h1 img {display:inline;}
+#bv_evt_02 .gift_box {position:relative; padding-top:10px; height:340px;}
+#bv_evt_02 .gift_box img {margin:0 auto; margin-top:30px; width:270px;}
+
+#bv_evt_02 .info_box {margin-top:70px; padding-top:60px; background:#f5f5f5;}
+#bv_evt_02 .info_box img {margin:0 auto; width:1019px;}
+
+#bv_evt_03 h1 {background:url(../images/event/bottega_bg_ev03.png)}
+#bv_evt_03 h1 img {margin:0 auto; width:980px;}
+#bv_evt_03 > div {padding-top:60px; text-align:center;}
+#bv_evt_03 > div img {display:inline;}
+
+.bottega iframe {display:block; margin:0 auto; margin-bottom:30px; width:90%;}
+
+.layer_popup {display:none; position:absolute; left:50%; z-index:20;}
+.layer_popup img {display:block;}
+.btn_close_layer {position:absolute; top:10px; right:10px;}
+
+.day_pop {top:1013px; margin-left:-480px; width:960px;}
+
+.box_open {top:3000px; margin-left:-279px; width:558px; height:583px; background:url(../images/event/bottega_box_open.png) no-repeat 50% 0;}
+.box_open .gift_paper {position:absolute; top:50%; left:50%; margin-left:-259px; margin-top:-80px; width:517px; height:281px; background:url(../images/event/bottega_box_paper.png) no-repeat; text-align:center;}
+.box_open .gift_paper .title {padding-top:30px; font-size:23px; color:#231f20; line-height:1.4;}
+.box_open .gift_paper .title > span {font-size:30px;}
+.box_open .gift_paper .title > span span {font-weight:bold;}
+.box_open .gift_paper .check_gift {font-weight:bold;}
+.box_open .gift_paper p {margin-top:25px; color:#717171; font-size:13px;}
+.box_open .gift_paper p a {display:inline-block; margin-left:5px; padding:3px 7px; border:1px solid #717171;}
+.box_open .gift_paper .check_gift {display:block; margin:15px auto 0; width:105px; height:35px; line-height:35px; background:#231f20; color:#fff; text-align:center;}
+.box_open .gift_paper .btn_close_layer {position:absolute; top:15px; right:15px;}
+
+.movie {top:1056px; margin-left:-382px; width:764px; height:430px;}
+.movie a {position:absolute; top:-46px; left:50%;}
+/* .movie .btn_share_ks {margin-left:-60px;} */
+.movie .btn_share_fb {margin-left:-40px;}
+.movie .btn_close_layer {margin-left:4px;}
+
+.prize {top:1745px; margin-left:-347px; width:695px;}
+
+.wallpaper {margin-left:-132px; padding-top:66px; width:264px; height:477px; background:url(../images/event/bottega_bg_phone.png) no-repeat 50%; text-align:center;}
+.wallpaper img {display:inline;}
+.wallpaper .btn_close_layer {top:-20px; right:-25px;}
+
+.bv_cmts {padding-top:70px; width:445px; background:url(../images/event/bottega_bg_reply.png) no-repeat 100% 90%;}
+.bv_cmts h1 {margin-bottom:5px; font-size:15px; font-weight:bold;}
+.bv_cmts p {padding:0 102px 12px 0; font-size:13px; line-height:1.4;}
+.bv_cmts p em {font-style:normal; color:#ff0901;}
+
+.bv_login img {display:inline;}
+.bv_login .close {cursor:pointer;}
+
+
+@media all and (max-width:480px){
+	.bv_cmts {width:auto; background-position:100% 95%;}
+}

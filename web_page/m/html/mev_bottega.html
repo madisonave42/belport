@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<head>
+<meta name="description" content="벨포트" />
+<meta name="keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<title>벨포트</title>
+
+<!-- 201411 renewal add : Start -->
+<link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=RixSGo+L:400|RixSGo+M:400|RixSGo+B:400">
+<link rel="stylesheet" type="text/css" href="../../css/brand.css" />
+<script src="../../js/lib/jquery-1.11.0.min.js"></script>
+
+
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/common.js"></script>
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/goods_list_action.js"></script>
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery-1.9.1.min.js"></script>
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery.mobile-1.1.1.js"></script>
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery.cookie.js"></script>
+
+<script src="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/js/jquery.slides.min.js"></script>
+
+<script src="http://www.belport.co.kr/m2/lib/js/mobileAction.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/mobileCommon.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/mobileDisplay.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/swipe/swipe.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/iscroll/iscroll.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/mobileCommon2.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/attendance.js"></script>
+
+<script type="text/javascript">
+function showSearchArea() {
+	if($(".search-area").is(':hidden') == true) {
+
+		$(".search-area").slideDown(30);
+	}
+	else {
+
+		$(".search-area").slideUp(0);
+	}
+}
+
+function showCateArea() {
+	
+	var now_cate = $("[name=now_cate]").val();
+
+	if($("#cate-area").is(':hidden') == true) {
+		$("#page_title").hide();
+		$(".content").hide();
+		$(".content_goods").hide();
+		//$("body").addClass('back_bg');
+		$("#cate-area").slideDown(30);
+		$('.top_path').show();
+		getCategoryData(now_cate);
+	}
+	else {
+		$("#cate-area").hide();
+		//$("body").removeClass('back_bg');
+		$("#page_title").show();
+		$(".content").show();
+
+	}
+}
+
+function goHome() {
+	document.location.href="/" + getMobileHomepath() + "/index.php";
+}
+
+function goMenu(page_nm) {
+	switch(page_nm) {
+		case "my" :
+			document.location.href="/" + getMobileHomepath() + "/myp/menu_list.php";
+			break;
+		case "cart" :
+			document.location.href="/" + getMobileHomepath() + "/goods/cart.php";
+			break;
+		case "wish" :
+			document.location.href="/" + getMobileHomepath() + "/myp/wishlist.php";
+			break;
+		case "login" :
+			document.location.href="/" + getMobileHomepath() + "/mem/login.php";
+			break;
+		case "logout" :
+				document.location.href="/" + getMobileHomepath() + "/mem/logout.php";
+			break;
+		case "viewgoods" :
+				document.location.href="/" + getMobileHomepath() + "/myp/viewgoods.php";
+			break;
+	}
+}
+
+function searchKw() {
+	if($("[name=search_key]").val()) {
+		document.location.href="/" + getMobileHomepath() + "/goods/list.php?kw=" + $("[name=search_key]").val();
+	}
+	else {
+		alert("검색 키워드를 입력해 주시기 바랍니다");
+		return;
+	}
+}
+
+function getMobileHomepath() {
+	//각 URL 최상위 홈PATH를 구한다. 모바일의 홈이 여러 종류일수 있으므로  2012-09-20 khs
+	var path1 = document.location.pathname;
+
+	if (path1.charAt(0) == '/')	{
+		path1 = path1.substring(1);
+	}
+	var x = path1.split("/");
+
+	return x[0];
+}
+
+function showCategoryMsg(message) {
+
+	var sec = 1000;
+
+	$("[id=goodsres-hide] .text_msg").text(message);
+	$("[id=goodsres-hide]").fadeIn(300);
+
+	setTimeout( function() {
+		$("[id=goodsres-hide]").fadeOut(300);
+	}, sec);
+}
+
+// 201411 추가
+function closeFix(){
+	$('.fix_layer').hide();
+}
+
+function openMenu(){
+	$('.sidemenu').stop().animate({left:0}, 200);
+	$('.dimm').show();
+}
+
+function closeMenu(){
+	$('.sidemenu').stop().animate({left:-260}, 200);
+	$('.dimm').hide();
+}
+
+$(document).ready(function(){
+	$.ajax({
+		"url" : "/m2/proc/mAjaxAction.php",
+		"type" : "post",
+		"data" : {
+			"mode" : "get_cart_item"
+		},
+		"cash" : false,
+		"dataType" : "json",
+		"success" : function(cartItem)
+		{
+			if (cartItem.quantity) {
+				$("#cart-btn .cart-item-quantity").text(" ("+cartItem.quantity.toString()+")");
+			}
+		}
+	});
+
+	try {
+		var todayGoodsMobileIdx = $.cookie('todayGoodsMobileIdx');
+		
+		if(todayGoodsMobileIdx != "undefined" && todayGoodsMobileIdx != "") {
+			
+			var goods_idx = todayGoodsMobileIdx.split(',');
+			var view_cnt = goods_idx.length - 1;
+			$("#viewgoods-btn .viewgoods-quantity").text(" ("+view_cnt.toString()+")");
+		}
+	}
+	catch(e) {}
+
+});
+
+</script>
+<link rel="stylesheet" type="text/css" href="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/css/style.css" />
+<link rel="stylesheet" type="text/css" href="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/css/attendance.css" />
+<style type="text/css">
+.cart-item-quantity{font-weight:normal;}
+.viewgoods-quantity{font-weight:normal;}
+
+#goodsres-hide2 {display:none;} 
+.goodsres_wrap {position : fixed;left : 10%;width : 80%;background : #ffffff;display : block;border-radius:1em;box-shadow:2px 2px 4px #7f7f7f;z-index: 1000; bottom:20%;}
+.goodsres_wrap .goodsres_title {background:#313030;width:100%;border-top-left-radius:1em;border-top-right-radius:1em;height:45px;border-bottom:solid 1px #b2b2b2;margin-bottom:6px;}
+.goodsres_wrap .goodsres_title .title{padding-left:14px;line-height:45px;font-size:16px;font-weight:bold;color:#FFFFFF;font-family:dotum;}
+.goodsres_wrap .goodsres_msg { padding:15px; }
+.goodsres_wrap .goodsres_msg .text_msg{ font-size:12px; color:#353535;}
+
+</style>
+<!--<link rel="stylesheet" href="/shop/data/skin_mobileV2/belport/style_screen.css" type="text/css" media="screen and (min-width: 321px)"  />-->
+
+<!-- [D] 어린왕자 페이지 스타일-->
+<style type="text/css">
+	.hidden_text {position:absolute; top:-9999px;}
+	.bottega img {display:block; width:100%;}
+	#bv_evt_01 .birthday .check_day {text-align:center; font-size:14px; color:#231f20; line-height:25px; font-weight:bold;}
+	#bv_evt_01 .birthday .check_day span {position:relative; font-size:0;}
+	#bv_evt_01 .birthday .check_day span input[type=radio] {position:absolute; opacity:0;}
+	#bv_evt_01 .birthday .check_day span label {display:inline-block; width:35px; height:25px; line-height:25px; text-align:center; font-size:14px; background:#f1f1f1; color:#b1b1b1;}
+	#bv_evt_01 .birthday .check_day span input:checked + label {background:#231f20; color:#fff;}
+	#bv_evt_01 .birthday .check_day select {margin:0 5px 0 3px; border:2px solid #231f20; width:35px; height:25px; box-sizing:border-box; -webkit-appearance:none; background:url(../new/images/event/bottega_bg_select.png) no-repeat 95% 50%;}
+	#bv_evt_01 .birthday .check_day select.year {width:70px;}
+	#bv_evt_01 .birthday .check_day .btn_confirm {display:block; margin:15px auto 0 auto; width:40px; height:40px; border-radius:100%; line-height:40px; color:#fff; font-weight:bold; background:#231f20;}
+
+	#bv_evt_01 .birthday .movie_list {margin-top:25px; padding:15px 0 25px; background:#231f20;}
+	#bv_evt_01 .birthday .movie_list ul {text-align:center;}
+	#bv_evt_01 .birthday .movie_list ul li {display:inline-block; margin:10px 1px 0; width:23%;}
+	#bv_evt_01 .birthday .movie_list ul li .cover {position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.6);}
+	#bv_evt_01 .birthday .movie_list ul li.yourday .cover,
+	#bv_evt_01 .birthday .movie_list ul li.active .cover {display:none;}
+	#bv_evt_01 .birthday .movie_list ul li > div {position:relative;}
+	#bv_evt_01 .birthday .movie_list ul li.yourday > div {outline:1px solid #fff; outline-offset:1px;}
+	#bv_evt_01 .birthday .movie_list ul li > p {font-size:12px; color:#6f6f6f;}
+	#bv_evt_01 .birthday .movie_list ul li.yourday > p,
+	#bv_evt_01 .birthday .movie_list ul li.active > p {color:#f6f6f6;}
+	#bv_evt_01 .birthday .movie_list .btn_full {position:relative; display:block; margin:24px auto 0 auto; width:135px;}
+	#bv_evt_01 .birthday .movie_list .btn_full .cover {position:absolute; bottom:0; left:0; width:135px; height:27px; background:rgba(0,0,0,.5); z-index:2}
+	#bv_evt_01 .birthday .movie_list .btn_full.active .cover {display:none;}
+
+	#bv_evt_01 .gift {position:relative; background:url(../new/images/event/bottega_03.jpg) no-repeat 50% 100%; background-size:cover; padding-top:100%;}
+	#bv_evt_01 .gift .gift_wrap {position:absolute; top:0; left:0; padding-top:10%; width:100%;} 
+	#bv_evt_01 .gift .gift_wrap > a {display:block; margin:0 auto; width:170px; height:35px; line-height:35px; color:#fff; box-sizing:border-box; text-align:center;}
+	#bv_evt_01 .gift a.btn_ev01_apply {margin-bottom:4%; background:rgba(255,255,255,.45)}
+	#bv_evt_01 .gift a.btn_ev01_fb,
+	#bv_evt_01 .gift a.btn_ev01_ks {margin-bottom:3%; border:2px solid #fff;}
+	#bv_evt_01 .gift a.btn_ev01_fb {background:url(../new/images/event/bottega_btn_fb.png) no-repeat 20px 50%; background-size:8px auto;}
+	#bv_evt_01 .gift a.btn_ev01_ks {background:url(../new/images/event/bottega_btn_ks.png) no-repeat 12px 50%; background-size:7px auto;}
+	#bv_evt_01 .gift a.btn_ev01_info {margin-top:3%; border:2px solid #fff;}
+	#bv_evt_01 .gift p.info {margin-bottom:3%; font-size:11px; color:#fff; text-align:center;}
+	#bv_evt_01 .gift p.info span {display:block; font-size:13px; font-weight:bold;}
+	#bv_evt_01 .gift .login p {margin:5% auto 3% auto; font-size:11px; color:#aaa; text-align:center;}
+	#bv_evt_01 .gift .login p:before {content:''; display:inline-block; margin-right:3px; border-left:4px solid #aaa; border-top:3px solid transparent; border-bottom:3px solid transparent; }
+	#bv_evt_01 .gift .login {margin-top:3%; text-align:center;}
+	#bv_evt_01 .gift .login a {display:inline-block; font-size:13px; color:#fff;}
+	#bv_evt_01 .gift .login a:last-child {margin-left:15px; padding-left:15px; border-left:1px solid #fff;}
+
+	#bv_evt_01 #bottega_slides {position:relative;}
+	#bv_evt_01 .gallery .slidesjs-navigation {position:absolute; top:50%; margin-top:-18px; width:36px; height:36px; background:url(../new/images/event/bottega_btn_arrow.png) no-repeat; text-indent:-9999px; z-index:10;}
+	#bv_evt_01 .gallery .slidesjs-previous {left:0;}
+	#bv_evt_01 .gallery .slidesjs-next {right:0; background-position:-36px 0;}
+	#bv_evt_01 .gallery .slidesjs-pagination {display:none;}
+	
+	#bv_evt_02 .gift_box {position:relative; padding-top:1px;height:170px;}
+	#bv_evt_02 .gift_box img {margin:0 auto; margin-top:15px; width:140px;}
+	
+	#bv_evt_02 p {color:#231f20; text-align:center;}
+	#bv_evt_02 .btns {text-align:center;}
+	#bv_evt_02 .btns a {display:inline-block; width:90px; height:25px; line-height:25px; text-align:center; color:#fff; background:#231f20;}
+	#bv_evt_02 p.info_addr {margin-top:20px; color:#717171;}
+	#bv_evt_02 p.info_addr:before {content:''; display:inline-block; margin-right:3px; border-left:4px solid #717171; border-top:3px solid transparent; border-bottom:3px solid transparent;}
+	#bv_evt_02 p.info_addr a {display:inline-block; margin-left:5px; padding:2px 4px; border:1px solid #717171; color:#717171;}
+	
+	.bottega iframe {display:block; margin:0 auto; margin-bottom:30px; width:90%;}
+	
+	.curtain {position:absolute; top:0; left:0; width:100%; background:url(../new/images/event/bg_layer_popup.png); z-index:10;}
+	
+	
+	.layer_popup {display:none; position:absolute; top:20px; left:0; width:100%; z-index:20;}
+	.layer_popup img {display:block; width:100%;}
+	.btn_close_layer {position:absolute; top:10px; right:10px;}
+	
+	.box_open {top:3000px; left:0; width:100%; padding-top:100%; margin:0 auto; background:url(../new/images/event/bottega_box_open.png) no-repeat 50% 0; background-size:100%;}
+	.box_open .gift_paper {position:absolute; top:50%; left:50%; margin-left:-155px; margin-top:-40px; width:310px; height:170px; background:url(../new/images/event/bottega_box_paper.png) no-repeat; background-size:100%; text-align:center;}
+	.box_open .gift_paper .title {padding-top:15px; font-size:16px; color:#231f20;}
+	.box_open .gift_paper .title > span {font-size:18px;}
+	.box_open .gift_paper .title > span span {font-weight:bold;}
+	.box_open .gift_paper .check_gift {font-weight:bold;}
+	.box_open .gift_paper p {margin:10px 0 0 0; color:#717171; font-size:11px;}
+	.box_open .gift_paper p a {display:inline-block; margin-left:5px; padding:2px 4px; border:1px solid #717171;}
+	.box_open .gift_paper .check_gift {display:block; margin:10px auto 0; width:70px; height:25px; line-height:25px; background:#231f20; color:#fff; text-align:center;}
+	.box_open .gift_paper .btn_close_box {position:absolute; top:15px; right:15px; width:20px;}
+	
+	.movie a {position:absolute; top:-50px; left:50%;}
+	.movie .btn_share_ks {margin-left:-70px;}
+	.movie .btn_share_fb {margin-left:-18px;}
+	.movie .btn_close_layer {margin-left:35px; right:auto;}
+	
+	.wallpaper {padding-top:67px; height:477px; background:url(../new/images/event/bottega_bg_phone.png) no-repeat 50%; text-align:center;}
+	.wallpaper img {display:inline; width:auto;}
+	.wallpaper .btn_close_layer {top:-20px; right:5px;}
+</style>
+
+</head>
+
+<body>
+
+<div id="dynamic"></div>
+
+<div id="wrap">
+
+<header>
+<div class="gnb">
+	<div class="btn_sidemenu" onclick="javascript:openMenu();"><img src="http://belport.co.kr/shop/data/skin_mobileV2/belport/new/images/main/btn_m_menu.png" /></div>
+	<div id="logo">
+		<a href="javascript:goHome();"><img src="http://belport.co.kr/shop/data/skin_mobileV2/belport/new/images/main/m_logo.png" alt="벨포트" title="벨포트" height="35px"/></a>
+	</div>
+	<div id="logo-right">
+		<!--<div id="search-btn" onClick="javascript:showSearchArea();"><img src="http://belport.co.kr/shop/data/skin_mobileV2/belport/new/images/main/seach.png" /></div>-->
+		<div class="top_global" >
+			<!--<span onClick="javascript:goMenu('my');" >마이페이지</span>-->
+			<span onClick="javascript:goMenu('login');" >로그인</span></div>
+	</div>
+</div>
+<!--
+<div class="search-area">
+	<div id="search-box">
+		<input type="text" name="search_key" placeholder="검색어를 입력해 주세요"/>
+	</div>
+	<div id="search-box-btn" onclick="javascript:searchKw();" >검색</div>
+</div>
+-->
+<div class="new-menu-area">
+	<div id="category-btn" onClick="javascript:showCateArea();">SHOP<div class="bar_area"></div></div>
+	<div id="cart-btn" onClick="javascript:goMenu('cart');">BRAND</div>
+	<div id="viewgoods-btn" onClick="javascript:location.href='/m2/event/event.php'">EVENT</div>
+	<div id="more-view-btn"><div class="bar_area"></div>INSIDE.B</div>
+	<div id="more-view-menu" style="display: none;">
+		<ul>
+			<li class="item wishlist">Wish List</li>
+			<li class="item goods-review">상품후기</li>
+			<li class="item goods-qna">상품문의</li>
+			<li class="item community">게시판</li>
+		</ul>
+	</div>
+</div>
+
+<div class="sidemenu">
+	
+	<ul class="top">
+		<li><a href="#">로그아웃</a></li>
+		<li><a href="#">마이벨포트</a></li>
+		<li><a href="#">장바구니</a></li>
+		<li><a href="#" onclick="javascript:closeMenu();"><img src="http://belport.co.kr/shop/data/skin_mobileV2/belport/new/images/main/menu_close.png" /></a></li>
+	</ul>
+	
+	<ul class="middle">
+		<li><a href="#">SHOP</a></li>
+		<li><a href="#">BRAND</a></li>
+		<li><a href="#">EVENT</a></li>
+		<li><a href="#">INSIDE.B</a></li>
+	</ul>
+	
+	<ul class="bottom">
+		<li><a href="#">ABOUT BELPORT</a></li>
+		<li><a href="#">공지사항</a></li>
+		<li><a href="#">고객센터</a></li>
+		<li><a href="#">매장안내</a></li>
+	</ul>
+	
+	<div class="tel"><a href="tel:080-508-6631">080-508-6631</a></div>
+	
+	
+</div>
+
+</header>
+<section id="cate-area">
+	<div class="top_title"><div class="title">카테고리</div></div>
+	<div class="top_path"><div class='now_path'><div class='pathitem activeitem allpath' onClick='javascript:cateSelect("");'>전체카테고리</div></div></div>
+	<div class="now_cate">
+
+		<input type="hidden" name="now_cate" value="" />
+	</div>
+	<div class="cate_path">
+	</div>
+	<div class="cate_list">
+	</div>
+
+</section>
+<div class="clearb"></div>
+
+<section id="goodsres-hide" class="content_goods">
+	<div class="pop_back">
+		<div class="pop_effect">
+			<div class="text_msg"></div>
+		</div>
+	</div>
+</section>
+
+<section id="goodsres-hide2" class="content_goods">
+	<div class="goodsres_wrap">
+		<div class="goodsres_title"><div class="title">알림</div></div>
+		<div class="goodsres_msg"><div class="text_msg"></div></div>
+	</div>
+</section>
+
+<!-- Start : 출석체크 템플릿 -->
+<section id="attendance-popup" style="display: none;" data-root-dir="/m2">
+	<h1 id="attendance-title"></h1>
+	<div id="attendance-close">닫기</div>
+	<div id="attendance-info-straight" class="condition-type">
+		<div class="attendance-period">
+			<span class="attendance-start-date"></span> ~ <span class="attendance-end-date"></span> 까지
+		</div>
+		<div class="attendance-description">
+			연속 <span class="attendance-condition-period"></span>일 이상 출석하면 적립금이 차곡차곡!
+		</div>
+	</div>
+	<div id="attendance-info-sum" class="condition-type">
+		<div class="attendance-period">
+			기간 : <span class="attendance-start-date"></span> ~ <span class="attendance-end-date"></span> 안에
+		</div>
+		<div class="attendance-description">
+			<span class="attendance-condition-period"></span>일 이상 출석하면 적립금이 차곡차곡!
+		</div>
+	</div>
+	<h2 id="attendance-calendar-title">
+		<button id="attendance-calendar-previous-month">이전 달</button>
+		<span id="attendance-calendar-month">
+			<span id="attendance-calendar-month-1">January</span>
+			<span id="attendance-calendar-month-2">February</span>
+			<span id="attendance-calendar-month-3">March</span>
+			<span id="attendance-calendar-month-4">April</span>
+			<span id="attendance-calendar-month-5">May</span>
+			<span id="attendance-calendar-month-6">June</span>
+			<span id="attendance-calendar-month-7">July</span>
+			<span id="attendance-calendar-month-8">August</span>
+			<span id="attendance-calendar-month-9">September</span>
+			<span id="attendance-calendar-month-10">October</span>
+			<span id="attendance-calendar-month-11">November</span>
+			<span id="attendance-calendar-month-12">December</span>
+		</span>
+		<span id="attendance-calendar-year"></span>
+		<button id="attendance-calendar-next-month">다음 달</button>
+	</h2>
+	<table id="attendance-date-list">
+		<tbody>
+			<tr class="attendance-calendar-date-floor">
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+<!-- End : 출석체크 템플릿 -->
+
+<!-- [D] 보테가베르데 이벤트 페이지 : Start -->
+
+<script type="text/javascript" src="http://belport.co.kr/shop/data/skin/belport/jquery-ui-1.10.4.custom.min.js"></script>
+<!-- [D] 음력을 양력으로 변환하는 스크립트 -->
+<script type="text/javascript" src="http://belport.co.kr/shop/data/skin/belport/lunar.js"></script>
+<script type="text/javascript">
+	function resizeIFrame(iframeId) {
+		try {
+			var innerBody = (iframeId.contentWindow || iframeId.contentDocument);
+			if (innerBody.document) {
+			innerBody = innerBody.document;
+			}
+			innerBody = innerBody.getElementsByTagName('body')[0];
+
+			iframeId.style.height = 'auto';
+			
+			var innerHeight = innerBody.scrollHeight + (innerBody.offsetHeight - innerBody.clientHeight);
+			
+			iframeId.style.height = innerHeight + 'px';
+			
+			if(document.all) {
+				innerBody.attachEvent('onclick',parent.do_resize);
+				innerBody.attachEvent('onkeyup',parent.do_resize);
+			} else {
+				innerBody.addEventListener("click", parent.do_resize, false);
+				innerBody.addEventListener("keyup", parent.do_resize, false);
+			}
+		}
+		catch (e) {
+		}
+	}
+	
+	/* 기프트박스 오픈 애니메이션 */
+	function openGiftBox() {
+		var box = $('#bv_evt_02 .gift_box img');
+		$('.box_open').css({
+			top: box.offset().top - 100
+		});
+		
+		box.animate({
+			marginTop:12,
+			width:145
+		}, 1100, 'easeOutElastic').animate({
+			marginTop:8,
+			width:150
+		}, 1200, 'easeOutElastic').animate({
+			marginTop: -10,
+			width: 190,
+			opacity: 0
+		}, 600, 'easeOutQuart', function() {
+			showPopup();
+			$('.box_open').css({
+				top:'-=10'
+			}).show().animate({
+					top: '+=10'
+				}, 500, 'easeOutBack', function() {
+					box.css({
+						marginTop: 15,
+						width: 140,
+						opacity: 1
+					});
+				});
+			});
+		
+	}
+	
+	/* 팝업열기 */
+	function showPopup(el) { // el은 제이쿼리 오브젝트
+		$('.curtain').height($(document).height()).show();
+		if (el) {
+			el.show();
+		}
+	}
+
+	$(function() {
+		/* 날짜 옵션 추가 */
+		(function(){
+			var checkDay = $('.check_day'),
+				yearSelect = checkDay.find('.year'),
+				monthSelect = checkDay.find('.month'),
+				daySelect = checkDay.find('.day'),
+				btnCheckDay = $('.check_day .btn_confirm'),
+				currentYear = 1900,
+				endYear = 2014,
+				isLunar = false,
+				dayText = '';
+				
+			while (currentYear <= endYear ) {
+				yearSelect.append($('<option>', {
+					value : currentYear,
+					text : currentYear
+				}));
+				currentYear++;
+			}
+			yearSelect.find('option:last-child').attr('selected','selected');
+			
+			for (var i = 1; i < 13; i++) {
+				monthSelect.append($('<option>', {
+					value : i,
+					text : i
+				}));
+			}
+			
+			for (var j = 1; j < 32; j++) {
+				daySelect.append($('<option>', {
+					value : j,
+					text : j
+				}));
+			}
+			
+			/* 요일 체크 */
+			btnCheckDay.on('click', function(e) {
+				var  target = {
+						year : yearSelect.val(),
+						month : monthSelect.val(),
+						day: daySelect.val()
+					},
+					targetDate = '',
+					day;
+				
+				// 음력을 양력으로 변환
+				if (checkDay.find('input:checked').attr('id') === 'check_day_l') {
+					target = Lunar.prototype.lunarToSolar(target.year, target.month, target.day, 0);
+				}
+				
+				targetDate = target.month + '/' + target.day + '/' + target.year;
+				
+				day = new Date(targetDate).getDay();
+				
+				$('input.day_of_week').val(day);
+				
+				// 페이지상 요일순서는 월요일부터 시작이라 인덱스 변환
+				day--;
+				if (day < 0) {
+					day = 6;
+				}
+				
+				$('.movie_list').find('li').addClass('active').eq(day).removeClass('active').addClass('yourday');
+				$('.movie_list').find('.btn_full').addClass('active');
+				
+				// 요일별 팝업 열기
+				switch (day) {
+					case 0: dayText = '.mon';
+						break;
+					case 1: dayText = '.tue';
+						break;
+					case 2: dayText = '.wed';
+						break;
+					case 3: dayText = '.thu';
+						break;
+					case 4: dayText = '.fri';
+						break;
+					case 5: dayText = '.sat';
+						break;
+					case 6: dayText = '.sun';
+						break;
+				}
+				
+				dayText = $(dayText).css({
+					top: $(this).offset().top - 150
+				});
+				
+				showPopup(dayText);
+				
+				e.preventDefault();
+			});
+				
+		})();
+		
+		/* 동영상 팝업 */
+		$('.btn_movie_pop').on('click', function(e) {
+			var moviePop = $('.movie'),
+				url = 'http://www.youtube.com/embed/' + $(this).attr('data-id') + '?rel=0&autoplay=1';
+			
+			moviePop.css({
+				top: $('#bv_evt_01').offset().top + 100,
+				height: $(window).width() * 0.6
+			});
+			
+			$('.layer_popup').hide();
+			moviePop.find('.movie_id').val($(this).attr('data-id'));
+			moviePop.find('iframe').attr('src', url);
+			showPopup(moviePop);
+		
+			e.preventDefault();
+		});
+		
+		/* 경품소개 팝업 */
+		/*
+		$('.btn_ev01_info').on('click', function(e){
+			var prize = $('.prize');
+			prize.css({
+				top: $(this).offset().top - 200
+			});
+			showPopup(prize);
+			e.preventDefault();
+		});
+		*/
+		
+		/* 갤러리 슬라이드 */
+		$("#bottega_slides").slidesjs({
+			width: 640,
+			height: 255
+		});
+		
+		/* 갤러리 월페이퍼 */
+		$('#bottega_slides .show_wall').on('click', function(e){
+			var wall = $('.wallpaper'),
+				link = wall.find('.wall_link').attr('href'),
+				src = wall.find('.wall_link img').attr('src'),
+				gallery = $('#bottega_slides'),
+				margin = gallery.offset().top + gallery.height() / 2 - 250;
+			wall.css({
+				top: margin
+			});
+			link = link.replace(/wall_\S*\./, $(this).attr('data-img') + '.');
+			src = src.replace(/wall_\S*\./, $(this).attr('data-img') + '.');
+			wall.find('.wall_link').attr('href', link);
+			wall.find('.wall_link img').attr('src', src);
+			$('.gallery_curtain').show();
+			showPopup(wall);
+			e.preventDefault();
+		});
+
+		/* 팝업닫기 공통 */
+		$('.btn_close_layer').on('click', function(e) {
+			$('.curtain').hide();
+			$('.layer_popup').hide();
+			e.preventDefault();
+		});
+	});
+</script>
+
+<section class="bottega">
+	<div class="header">
+		<img src="../images/event/bottega_01.jpg" alt="내가 맞춰 볼까? 네가 태어난 요일!" />
+		<div class="hidden_text">
+			<h1>내가 맞춰 볼까? 네가 태어난 요일!</h1>
+			<p>12월, 김우빈이 준비한 특별한 선물!!</p>
+			<ul>
+				<li>참여 회원에게 드리는 특별한 선물</li>
+				<li>신규회원 전원에게 드리는 특별한 선물</li>
+				<li>구매고객 전원에게 드리는 특별한 선물</li>
+			</ul>
+		</div>
+	</div>
+	<section id="bv_evt_01">
+		<h1><img src="../images/event/bottega_02.jpg" alt="내가 맞춰 볼까? 네가 태어난 요일!" /></h1>
+		<div class="birthday">
+			<div class="check_day">
+				<span>
+					<input type="radio" name="type" id="check_day_s" checked="checked" /><label for="check_day_s">양력</label>
+				</span>
+				<span>
+					<input type="radio" name="type" id="check_day_l" /><label for="check_day_l">음력</label>
+				</span>
+				<!-- [D] 년월일 옵션은 스크립트로 생성 -->
+				<select class="year"></select>년
+				<select class="month"></select>월
+				<select class="day"></select>일
+				<a href="#" class="btn_confirm">GO</a>
+			</div>
+			<div class="movie_list">
+				<ul>
+					<li>
+						<p>MON</p>
+						<div>
+							<a href="http://youtu.be/cssX08dx5Lo" data-id="cssX08dx5Lo" class="btn_movie_pop"><img src="../images/event/bottega_thumb_mon.jpg" alt="월요일 영상보기" /></a>
+							<span class="cover"></span>
+						</div>
+					</li>
+					<li>
+						<p>TUE</p>
+						<div>
+							<a href="http://youtu.be/RFW2bM-nlxg" data-id="RFW2bM-nlxg" class="btn_movie_pop"><img src="../images/event/bottega_thumb_tue.jpg" alt="화요일 영상보기" /></a>
+							<span class="cover"></span>
+						</div>
+					</li>
+					<li>
+						<p>WED</p>
+						<div>
+							<a href="http://youtu.be/jCa_lUzsBW8" data-id="jCa_lUzsBW8" class="btn_movie_pop"><img src="../images/event/bottega_thumb_wed.jpg" alt="수요일 영상보기" /></a>
+							<span class="cover"></span>
+						</div>
+					</li>
+					<li>
+						<p>THU</p>
+						<div>
+							<a href="http://youtu.be/HspzccHyabg" data-id="HspzccHyabg" class="btn_movie_pop"><img src="../images/event/bottega_thumb_thu.jpg" alt="목요일 영상보기" /></a>
+							<span class="cover"></span>
+						</div>
+					</li>
+					<li>
+						<p>FRI</p>
+						<div>
+							<a href="http://youtu.be/xPXMZq6Zp8A" data-id="xPXMZq6Zp8A" class="btn_movie_pop"><img src="../images/event/bottega_thumb_fri.jpg" alt="금요일 영상보기" /></a>
+							<span class="cover"></span>
+						</div>
+					</li>
+					<li>
+						<p>SAT</p>
+						<div>
+							<a href="http://youtu.be/_cBig6RC1YU " data-id="_cBig6RC1YU" class="btn_movie_pop"><img src="../images/event/bottega_thumb_sat.jpg" alt="토요일 영상보기" /></a>
+							<span class="cover"></span>
+						</div>
+					</li>
+					<li>
+						<p>SUN</p>
+						<div>
+							<a href="http://youtu.be/A-Vov66PCCQ" data-id="A-Vov66PCCQ" class="btn_movie_pop"><img src="../images/event/bottega_thumb_sun.jpg" alt="일요일 영상보기" /></a>
+							<span class="cover"></span>
+						</div>
+					</li>
+				</ul>
+				<div class="btn_full">
+					<a href="http://youtu.be/_S4cCjLuF7I" data-id="_S4cCjLuF7I" class="btn_movie_pop">
+						<img src="../images/event/bottega_btn_full.png" alt="풀버전 영상 보러가기" />
+					</a>
+					<span class="cover"></span>
+				</div>
+			</div>
+		</div>
+		<div class="gift">
+			<div class="gift_wrap">
+				<div class="hidden_text">
+					<h2>경품 응모하기</h2>
+					<p>페이스북은 PC와 모바일에서, 카카오톡은 모바일에서 응모 가능합니다.<p>
+				</div>
+				<a href="#" class="btn_ev01_apply">응모하기</a>
+				<p class="info"><span>당신의 태어난 요일을 친구들에게 알려 주세요.</span>공유하는 순간 혜택의 확률이 높아집니다.</p>
+				<a href="#" class="btn_ev01_fb">페이스북 공유하기</a>
+				<a href="#" class="btn_ev01_ks">카카오스토리 공유하기</a>
+				
+				<div class="login">
+					<p>페이스북으로 로그인하시면 훨씬 더 간편합니다.</p>
+					<a href="#">회원가입</a>
+					<a href="#">페이스북 로그인</a>
+				</div>
+			</div>
+		</div>
+		<div class="gift_info">
+			<img src="../images/event/bottega_03_01.jpg" alt="경품 소개 7명 김우빈 SET (25만원 상당) 보테가 베르데 원위크에디션 (요일별 정품 7종/10만원 상당) 김우빈 다이어리 김우빈 화보집 타마지갑 (12만원 상당)" />
+		</div>
+		<div class="gallery">
+			<img src="../images/event/bottega_04.jpg" alt="김우빈 GALLERY Smartphone Wallpaper - 내가 알려줄게. 네가 태어난 요일" />
+			<div id="bottega_slides">
+				<a href="#" class="show_wall" data-img="wall_mon"><img src="../images/event/bottega_gallery_mon.jpg" alt="" /></a>
+				<a href="#" class="show_wall" data-img="wall_tue"><img src="../images/event/bottega_gallery_tue.jpg" alt="" /></a>
+				<a href="#" class="show_wall" data-img="wall_wed"><img src="../images/event/bottega_gallery_wed.jpg" alt="" /></a>
+				<a href="#" class="show_wall" data-img="wall_thu"><img src="../images/event/bottega_gallery_thu.jpg" alt="" /></a>
+				<a href="#" class="show_wall" data-img="wall_fri"><img src="../images/event/bottega_gallery_fri.jpg" alt="" /></a>
+				<a href="#" class="show_wall" data-img="wall_sat"><img src="../images/event/bottega_gallery_sat.jpg" alt="" /></a>
+				<a href="#" class="show_wall" data-img="wall_sun"><img src="../images/event/bottega_gallery_sun.jpg" alt="" /></a>
+			</div>
+		</div>
+	</section>
+	<section id="bv_evt_02">
+		<h1><img src="../images/event/bottega_05.jpg" alt="12월, 신규 회원 전원에게 드리는 김우빈의 특별한 선물" /></h1>
+		<div class="gift_box">
+			<img src="../images/event/bottega_box_close.png" alt="" />
+		</div>
+		<p>내 선물은 무엇인지 지금 바로 확인해 보세요.</p>
+		<div class="btns">
+			<a href="#">회원가입</a>
+			<a href="#" class="btn_check_gift" onclick="openGiftBox(); return false;">선물확인</a>
+		</div>
+		<p class="info_addr">선물 받으실 주소를 꼭 입력해 주세요. <a href="#">주소 입력하러 가기</a></p>
+		<img src="../images/event/bottega_06.jpg" alt="경품 소개" />
+		<div class="hidden_text">
+			<p>7명 김우빈 원위크 에디션(10만원 상당), 보테가 베르데 원위크 에디션 (요일별 정품 7종/10만원 상당)</p>
+			<p>70명 김우빈 다이어리(2만원 상당)</p>
+			<p>700명 김우빈 화보집</p>
+			<p>그 외 전원 투위크 5,000원 할인 쿠폰 (쿠폰 발급일로부터 2주 내 사용가능)</p>
+		</div>
+	</section>
+	<section id="bv_evt_03">
+		<h1><img src="../images/event/bottega_07.jpg" alt="12월, 구매 고객 전원에게 드리는 김우빈의 특별한 선물" /></h1>
+		<div class="hidden_text">
+			<ul>
+				<li>김우빈 화보집 구매 고객 전원</li>
+				<li>타마 지갑 10만원 이상</li>
+				<li>김우빈 다이어리 5만원 이상</li>
+			</ul>
+			<h2>이벤트 기간</h2>
+			<p>2014.12.8 (월) ~ 2015.1.4 (일)</p>
+			<h2>경품 당첨 안내</h2>
+			<p>당첨자 공지: 공지사항</p>
+			<p>배송일: 2015.1.7(수) 일괄배송</p>
+			<h2>안내 사항</h2>
+			<p>12월 진행 모든 이벤트는 한 ID 당 1회 경품 제공됩니다. (구매 금액별 사은품은 중복 증정)</p>
+			<p>2015. 1. 4. 까지 배송 주소 입력이 안된 회원에게는 발송하지 않습니다.</p>
+			<p>정확하지 않은 주소로 인해 반송된 경품은 재 발송 하지 않습니다.</p>
+			<p>본 이벤트의 내용은 별도 고지 없이 변경될 수 있습니다.</p>
+			<p>이벤트 담당자 및 문의전화 안내 : 디지털다임 김슬기 매니저(02.790.7765)</p>
+		</div>
+	</section>
+	
+	<!-- [D] 댓글영역 -->
+	<iframe onload="resizeIFrame(this);" id="iframeComment" name="iframeComment" src="http://belport.co.kr/shop/evt/event_comment.php?e_no=4" scrolling="no" frameborder="0" height="1300" width="100%"></iframe>
+	
+</section>
+	
+<!-- [D] 보테가베르데 이벤트 페이지 : END -->
+
+<section id='footer'>
+	<div class='company'>
+		<div class="bottom_menu">
+			<div class="bottom_menu_contents">
+				<table>
+					<tr>
+						<td class="faq"><a href="/m2/proc/faq.php">FAQ</a></td>
+						<td><a href="/shop/?pc" title="PC버전으로 보기" class="btn_pcmode">PC버전</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class='lineinfo'>
+				<table>
+					<tr>
+						<td class='title_r'>상호</td>
+						<td>(주) 벨포트</td>
+					</tr>
+					<tr>
+						<td class='title_r'>대표이사</td>
+						<td>민영훈</td>
+					</tr>
+					<tr>
+						<td class='title_r'>주소</td>
+						<td>서울특별시 강남구  삼성로 570 (대한해운 사옥) 9층</td>
+					</tr>
+					<tr>
+						<td class='title_r'>고객센터</td>
+						<td class="num"><a href="/m2/service/customer.php">080-508-6631</a></td>
+					</tr>
+					<tr>
+						<td class='title_r'>사업자번호</td>
+						<td class="num">220-88-60804</td>
+					</tr>
+					<tr>
+						<td class='title_r'>통신판매업신고</td>
+						<td>제2013-서울강남-02382호</td>
+					</tr>
+				</table>
+		</div>
+	</div>
+	
+	<div class="copyright">
+		<div class='lineinfo'>COPYRIGHT (C) 벨포트 ALL RIGHTS RESERVED.</div>
+		<div class="service_menu">
+			<a href="/m2/service/agrmt.php">이용약관</a>
+			<a href="/m2/service/private.php">개인정보취급방침</a>
+		</div>
+	</div>
+</section>
+<div class="dimm"> </div>
+</div>
+
+<iframe class="" id="ifrmHidden" name="ifrmHidden" src='/shop/blank.php'></iframe>
+
+<div class="curtain"></div>
+
+<!-- [D] 보테가베르데 팝업 -->
+<div class="bottega_popups">
+	<!-- [D] 요일별 제품 팝업 -->
+	<div class="day_pop mon layer_popup">
+		<img src="../images/event/bottega_daypop_mon.jpg" alt="" />
+		<a href="#" data-id="cssX08dx5Lo" class="btn_movie_pop" />
+			<img src="../images/event/bottega_daypop_mon_view.jpg" alt="월요일 제품보기" />
+		</a>
+		<a href="#" class="btn_close_layer"><img src="../images/event/btn_close.png" alt="" class="팝업닫기" /></a>
+	</div>
+	<div class="day_pop tue layer_popup">
+		<img src="../images/event/bottega_daypop_tue.jpg" alt="" />
+		<a href="#" data-id="RFW2bM-nlxg" class="btn_movie_pop" />
+			<img src="../images/event/bottega_daypop_tue_view.jpg" alt="화요일 제품보기" />
+		</a>
+		<a href="#" class="btn_close_layer"><img src="../images/event/btn_close.png" alt="" class="팝업닫기" /></a>
+	</div>
+	<div class="day_pop wed layer_popup">
+		<img src="../images/event/bottega_daypop_wed.jpg" alt="" />
+		<a href="#" data-id="jCa_lUzsBW8" class="btn_movie_pop" />
+			<img src="../images/event/bottega_daypop_wed_view.jpg" alt="수요일 제품보기" />
+		</a>
+		<a href="#" class="btn_close_layer"><img src="../images/event/btn_close.png" alt="" class="팝업닫기" /></a>
+	</div>
+	<div class="day_pop thu layer_popup">
+		<img src="../images/event/bottega_daypop_thu.jpg" alt="" />
+		<a href="#" data-id="HspzccHyabg" class="btn_movie_pop" />
+			<img src="../images/event/bottega_daypop_thu_view.jpg" alt="목요일 제품보기" />
+		</a>
+		<a href="#" class="btn_close_layer"><img src="../images/event/btn_close.png" alt="" class="팝업닫기" /></a>
+	</div>
+	<div class="day_pop fri layer_popup">
+		<img src="../images/event/bottega_daypop_fri.jpg" alt="" />
+		<a href="#" data-id="xPXMZq6Zp8A" class="btn_movie_pop" />
+			<img src="../images/event/bottega_daypop_fri_view.jpg" alt="금요일 제품보기" />
+		</a>
+		<a href="#" class="btn_close_layer"><img src="../images/event/btn_close.png" alt="" class="팝업닫기" /></a>
+	</div>
+	<div class="day_pop sat layer_popup">
+		<img src="../images/event/bottega_daypop_sat.jpg" alt="" />
+		<a href="#" data-id="_cBig6RC1YU" class="btn_movie_pop" />
+			<img src="../images/event/bottega_daypop_sat_view.jpg" alt="토요일 제품보기" />
+		</a>
+		<a href="#" class="btn_close_layer"><img src="../images/event/btn_close.png" alt="" class="팝업닫기" /></a>
+	</div>
+	<div class="day_pop sun layer_popup">
+		<img src="../images/event/bottega_daypop_sun.jpg" alt="" />
+		<a href="#" data-id="A-Vov66PCCQ" class="btn_movie_pop" />
+			<img src="../images/event/bottega_daypop_sun_view.jpg" alt="일요일 제품보기" />
+		</a>
+		<a href="#" class="btn_close_layer"><img src="../images/event/btn_close.png" alt="" class="팝업닫기" /></a>
+	</div>
+	
+	<!-- [D] 요일별 영상 팝업 -->
+	<div class="movie layer_popup">
+		<!-- [D] 요일 체크값이 아래 input에 들어갑니다. 0:일 ~ 6:토 -->
+		<input type="hidden" class="day_of_week" />
+		<!-- [D] 공유될 영상 아이디값이 아래 input에 들어갑니다. -->
+		<input type="hidden" class="movie_id" />
+		<iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+		<a href="#" class="btn_share_ks">
+			<img src="../images/event/btn_share_ks.png" alt="카카오스토리공유하기"/>
+		</a>
+		<a href="#" class="btn_share_fb">
+			<img src="../images/event/btn_share_fb.png" alt="페이스북공유하기"/>
+		</a>
+		<a href="#" class="btn_close_layer">
+			<img src="../images/event/btn_share_close.png" alt="동영상 닫기"/>
+		</a>
+	</div>
+	
+	<!-- [D] 경품소개 팝업 -->
+	<div class="prize layer_popup">
+		<img src="../images/event/info_prize.jpg" alt=""/>
+		<a href="#" class="btn_close_layer"><img src="../images/event/btn_close.png" alt="" class="팝업닫기" /></a>
+	</div>
+	
+	<!-- [D] 기프트박스 오픈 팝업 -->
+	<!-- [D] span#gift_name의 텍스트를 상품에 맞게 변경후 openGiftBox 호출 -->
+	<div class="box_open layer_popup">
+		<div class="gift_paper">
+			<p class="title">
+				당신을 위한 특별한 선물은<br />
+				<span>
+					<span id="gift_name">김우빈 다이어리</span> 입니다.
+				</span>
+			</p>
+			<p>받으실 주소를 한 번 더 확인해 주세요.<a href="#" href="#">주소 수정하기</a></p>
+			<a href="#" class="check_gift">선물확인</a>
+			<a href="#" class="btn_close_layer"><img src="../images/event/btn_close.png" alt="" /></a>
+		</div>
+	</div>
+	
+	<!-- [D] 월페이퍼 팝업 -->
+	<div class="wallpaper layer_popup">
+		<a href="http://belport.co.kr/shop/evt/images/event/data/wall_wed.jpg" target="_blank" title="월페이퍼 보기" class="wall_link">
+			<img src="../images/event/bottega_wall_mon.jpg" alt="" />
+		</a>
+		<a href="#" class="btn_close_layer"><img src="../images/event/btn_share_close.png" alt="" class="팝업닫기" /></a>
+	</div>
+	
+</div>
+
+</body>
+</html>

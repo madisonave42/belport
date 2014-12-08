@@ -94,7 +94,7 @@
 .inside-b .detail_view .heading p span.bar { font-size: 11px; color: #d3d0cf; }
 .inside-b .detail_view .body { padding: 40px 17px; line-height:1.6; }
 .inside-b .detail_view .body p { margin-bottom:1.5em; line-height:1.5; }
-.inside-b .detail_view .body img { margin-bottom: 10px; }
+.inside-b .detail_view .body img { margin-bottom: 10px; max-width:100%;}
 
 
 
