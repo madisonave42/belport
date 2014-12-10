@@ -359,6 +359,22 @@ $(function(){
 		}
 	})();
 	
+	// Join now 슬라이드
+	(function() {
+		var joinNow = $('#join-now-slide');
+		if (joinNow.length != 0 && joinNow.children().length > 1) {
+			joinNow.slidesjs({
+        width: 216,
+        height: 333,
+				effect: {
+					slide: {
+						speed: 500
+					}
+				}
+      });
+		}
+	})();
+	
 	// 사이드 배너 슬라이드
 	(function() {
 		var sideBanner = $('.side-banner');

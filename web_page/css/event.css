@@ -225,14 +225,15 @@ ul.list-comments li p a {color:#6896ea;}
 .little_prince .lp_header .scroll {position:absolute; top:475px; left:50%; margin-left:-31px; width:63px; height:63px; font-size:10px; color:#2f5982; padding-top:18px; box-sizing:border-box; background:url(../images/event/little_prince_btn_scroll.png) no-repeat;}
 .little_prince .lp_apply {position:relative;padding-top:55px; height:595px; z-index:10;}
 .little_prince .lp_apply h2 {font-size:40px; text-align:center; color:#231f20; line-height:1.4; font-family:'RixSGo B', sans-serif;}
-.little_prince .lp_apply .howto {margin:25px auto 0 auto; padding:110px 0 125px 580px; width:360px; background:url(../images/event/little_prince_card.png) no-repeat;}
+.little_prince .lp_apply .howto {margin:25px auto 0 auto; padding:45px 0 125px 580px; width:360px; background:url(../images/event/little_prince_card.png) no-repeat;}
 .little_prince .lp_apply .howto ul li {margin-bottom:20px; font-size:16px; padding-left:11px; background:url(../images/event/little_prince_bullet_01.png) no-repeat 0 2px; color:#231f20;}
 .little_prince .lp_apply .howto ul li span {margin-right:17px;}
 .little_prince .lp_apply .howto ul li em {font-style:normal; font-family:'RixSGo B', sans-serif;}
 .little_prince .lp_apply .howto p {position:relative; margin-top:35px; padding-left:45px; color:#423f3f;}
 .little_prince .lp_apply .howto p:after {content:''; position:absolute; top:4px; left:0; display:block; width:35px; height:1px; background:#231f20;}
 .little_prince .lp_apply .howto p span {display:block; margin-top:5px; font-family:'RixSGo B', sans-serif;}
-.little_prince .lp_apply .howto a {display:block; margin:30px 0 0 50px; width:189px; height:53px;background:url(../images/event/little_prince_btn_fb.png) no-repeat; text-indent:-9999px;}
+.little_prince .lp_apply .howto .preview_letter {display:block; margin:35px 0 0 50px; width:189px; height:53px;background:url(../images/event/little_prince_btn_info.png) no-repeat; text-indent:-9999px;}
+.little_prince .lp_apply .howto .send_letter {display:block; margin:10px 0 0 50px; width:189px; height:53px;background:url(../images/event/little_prince_btn_fb.png) no-repeat; text-indent:-9999px;}
 .little_prince .lp_apply .howto .share_info {margin:18px 0 0 50px;}
 .little_prince .lp_img {position:relative;}
 .little_prince .lp_img > p {padding:100px 0; background:#231f20; color:#fff; line-height:1.4; font-size:36px; text-align:center;}
@@ -260,8 +261,10 @@ ul.list-comments li p a {color:#6896ea;}
 .lp_cmts {padding-top:70px; padding-left:115px; padding-bottom:7px; font-size:15px; text-indent:-115px;}
 .lp_cmts span {display:inline-block; margin-right:7px; width:105px; height:30px; line-height:30px; text-align:center; color:#fff; border-top:1px solid #d3d2d2; background:#231f20; vertical-align:middle; text-indent:0;}
 
-#little_prince_pop {position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/little_prince_bg_curtain.png); z-index:100; display:none;}
+#little_prince_pop,
+#little_prince_pop_02 {position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/little_prince_bg_curtain.png); z-index:100; display:none;}
 #little_prince_pop .little_prince_pop_content {position:fixed; top:50%; left:50%; margin-top:-130px; margin-left:-265px; width:530px; height:260px; background:#fff; border:7px solid #363133;}
+#little_prince_pop_02 .little_prince_pop_content {position:absolute; top:1000px; left:50%; margin-left:-419px; width:839px; height:932px;}
 #little_prince_pop .little_prince_pop_content p {margin-top:70px; font-size:18px; line-height:1.6; text-align:center;}
 #little_prince_pop .little_prince_pop_content p span {color:#231f20;}
 #little_prince_pop .little_prince_pop_content .confirm {display:block; margin:30px auto 0 auto; width:96px; height:26px; line-height:26px; border:3px solid #333; color:#231f20; text-align:center;}
@@ -356,7 +359,8 @@ ul.list-comments li p a {color:#6896ea;}
 .box_open .gift_paper .title > span {font-size:30px;}
 .box_open .gift_paper .title > span span {font-weight:bold;}
 .box_open .gift_paper .check_gift {font-weight:bold;}
-.box_open .gift_paper p {margin-top:25px; color:#717171; font-size:13px;}
+.box_open .gift_paper p {margin-top:15px; color:#717171; font-size:13px;}
+.box_open .gift_paper p.coution {margin-top:15px; font-weight:bold;}
 .box_open .gift_paper p a {display:inline-block; margin-left:5px; padding:3px 7px; border:1px solid #717171;}
 .box_open .gift_paper .check_gift {display:block; margin:15px auto 0; width:105px; height:35px; line-height:35px; background:#231f20; color:#fff; text-align:center;}
 .box_open .gift_paper .btn_close_layer {position:absolute; top:15px; right:15px;}

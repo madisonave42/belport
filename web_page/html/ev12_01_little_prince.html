@@ -295,6 +295,7 @@
 					</ul>
 					<p>본 이벤트는 12월 28일까지 진행합니다. <span> 많은 분들께 당신의 따뜻한 마음을 전하세요.</span></p>
 					<!-- [D] 레이어 팝업은 가장 하단에 있음 -->
+					<a href="#" class="preview_letter">이벤트 미리보기</a>
 					<a href="#" class="send_letter">참여하기</a>
 					<div class="share_info">
 						<img src="../images/event/little_prince_info_sns.png" alt="공유안내: PC에서는 페이스북, 모바일 기기에서는 페이스북과 카카오톡으로 전송하실 수 있습니다." title="PC에서는 페이스북, 모바일 기기에서는 페이스북과 카카오톡으로 전송하실 수 있습니다." />
@@ -658,6 +659,7 @@
 </footer>
 
 <!-- [D] showLpPop 함수 호출시 팝업표시됩니다. -->
+<!-- 
 <div id="little_prince_pop">
 	<div class="little_prince_pop_content">
 		<p>원활한 경품 배송을 위해<br /><span>“마이 벨포트”</span>에서 주소를 확인해 주세요.</p>
@@ -665,6 +667,18 @@
 		<a href="#" class="close"><img src="../images/event/btn_close.png" alt="안내팝업 닫기" /></a>
 	</div>
 </div>
+-->
+
+<!-- [D] showLpPop 함수 호출시 팝업표시됩니다. -->
+<div id="little_prince_pop_02">
+	<div class="little_prince_pop_content">
+		<img src="../images/event/little_prince_pop_info.png" alt="" usemap="#preview_link" />
+		<map id="preview_link" name="preview_link">
+			<area shape="rect" coords="782,28,803,49" href="#" alt="미리보기 팝업닫기" class="btn_close_letter" />
+		</map>
+	</div>
+</div>
+
 <!-- [D] 어린왕자 페이지 스크립트 -->
 <<script type="text/javascript">
 	(function() {
@@ -685,6 +699,16 @@
 		window.showLpPop = function() {
 			$('#little_prince_pop').height($(document).height()).show();
 		};
+		
+		$('.preview_letter').on('click', function(e) {
+			$('#little_prince_pop_02').height($(document).height()).show();
+			e.preventDefault();
+		});
+		
+		$('.btn_close_letter').on('click', function(e){
+			$('#little_prince_pop_02').hide();
+			e.preventDefault();
+		});
 	})();
 </script>
 
