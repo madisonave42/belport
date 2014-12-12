@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width, height=device-height" />
+	<title>벨포트 회원가입</title>
+	<style type="text/css">
+		html, body, header, h1, div, form, fieldset, label, input, footer, p {margin:0; padding:0; border:0;}
+		body {background-color:#222020;}
+		body:after {content:''; position:absolute; bottom:44px; left:0; display:block; width:100%; height:710px; background:#fff url(images/bg.png) no-repeat 42.5% 100%; z-index:1;}
+		header {position:absolute; top:90px; left:50%; margin-left:-99px; width:198px; z-index:10;}
+		.form-signup {position:absolute; top:50%; left:50%; display:block; margin:-130px 0 0 -223px; padding:30px 25px; width:406px; height:265px; background-color:#fff; font-size:16px; font-weight:bold; z-index:10;}
+		.form-signup label {display:block; margin-top:20px; color:#808080;}
+		.form-signup label:first-child {margin-top:0;}
+		.form-signup fieldset input {display:block; margin-top:10px; width:100%; height:53px; font-size:20px; box-sizing:border-box; border:1px solid #dadada; background:#eaeaea url(images/icon.png) no-repeat; border-radius:3px;}
+		.form-signup input[type=submit] {-webkit-appearance:none; display:block; margin:30px auto 0; width:144px; height:50px; line-height:50px; text-align:center; color:#fff; background-color:#222; font-size:16px; font-weight:bold;}
+		.form-signup .name {background-position:12px 16px;}
+		.form-signup .contact {background-position:12px -89px;}
+		footer {position:fixed; bottom:0; left:0; width:100%; z-index:10;}
+		footer p {line-height:44px; color:#999; text-align:center; font-size:12px;}
+		media all and (max-width:)
+	</style>
+</head>
+<body>
+	<header>
+		<h1><img src="images/logo.png" alt="Belport" /></h1>
+	</header>
+	<div class="form-signup">
+		<form action="#">
+			<fieldset>
+				<label for="name">이름</label>
+				<input type="text" id="name" class="name" />
+				<label for="contact">전화번호</label>
+				<input type="tel" id="contact" class="contact" />
+			</fieldset>
+			<input type="submit" value="확인" />
+		</form>
+	</div>
+	<footer>
+		<p>Copyright 2014 BELPORT Co.,Ltd. All rights reserved.</p>
+	</footer>
+</body>
+</html>
