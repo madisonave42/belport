@@ -151,6 +151,7 @@ header.scroll>h1>a{
 	background-color:#231f20;
 	border-bottom:3px solid #0f0f0f;
 	position:relative;
+	z-index:90;
 }
 #gnb>h1.scroll{
 	width:37px; height:37px; background:url(../images/common/logo_small.png) no-repeat;
@@ -350,9 +351,20 @@ header.scroll>h1>a{
 }
 #gnb .sub_menu .sub_event li img {
 	display:block;
+}
+#gnb .sub_menu .sub_event li a {
+	display:block;
 	margin-top:7px;
 	margin-bottom:10px;
+	padding:0;
+	width:331px;
+	height:199px;
+	line-height:0;
+	border:none;
+	text-align:center;
+	color:#000;
 }
+/*
 #gnb .sub_menu .sub_event li a {
 	display:block;
 	margin-top:15px;
@@ -364,6 +376,7 @@ header.scroll>h1>a{
 	text-align:center;
 	color:#000;
 }
+*/
 
 header .header_util {
 	position:absolute;
@@ -455,10 +468,10 @@ header .about_belport {
 	text-transform:uppercase;
 }
 
-header .rich_banner_wrap{width:1016px; height:140px; position:absolute; left:50%; margin-left:-508px; top:162px; z-index:80;}
+header .rich_banner_wrap{width:1016px; height:140px; position:absolute; left:50%; margin-left:-508px; top:162px; z-index:80; overflow:hidden;}
 header .rich_banner{position:absolute; top:0; left:0; width:100%; overflow:hidden;}
-header .rich_banner.first .rich_banner_image{height:164px; top:-24px; left:50%; margin-left:-58px; position:relative;}
-header .rich_banner.first .rich_banner_small_text{position:absolute; top:35px; left:50%; margin-left:-152px;}
+header .rich_banner.first .rich_banner_image{height:149px; top:0px; left:50%; margin-left:-50px; position:relative;}
+header .rich_banner.first .rich_banner_small_text{position:absolute; top:25px; left:50%; margin-left:5px;}
 header .rich_banner.second{display:none;}
 header .rich_banner.second .rich_banner_image{height:149px; position:relative; top:-16px; left:50%; margin-left:-27px;}
 header .rich_banner.second .rich_banner_small_text{position:absolute; top:48px; left:50%; margin-left:-158px;}
@@ -485,7 +498,7 @@ header .floating_banner .btn_close{
 	top:17px;
 	right:36px;
 }
-  
+
 /* Bottom Nav */
 #bottom_nav {
 	border-top:1px solid #231f20;
@@ -537,7 +550,7 @@ header .floating_banner .btn_close{
 #bottom_nav nav > ul > li > a {
 	display:block;
 	padding-left:12px;
-	width:221px;
+	width:218px;
 	height:51px;
 	line-height:51px;
 	font-size:14px;
@@ -593,7 +606,7 @@ header .floating_banner .btn_close{
 }
 #bottom_nav .bottom_brand ul li a.best_brand {
 	color:#fff;
-	font-family:'RixSGO M', sans-serif;
+	font-family:'RixSGo M', sans-serif;
 }
 #bottom_nav .bottom_sitemap .col{
 	float:left;
@@ -825,6 +838,9 @@ footer .copyright {
 	font-weight:500;
 }
 
+#contents .container.index {
+	width:1016px;
+}
 #contents .container > section,
 #contents .container > div {
 	margin:50px auto 0;
@@ -834,7 +850,7 @@ footer .copyright {
 	width:450px;
 }
 
-.btn_top {position:fixed; top:-45px; left:50%; margin-left:521px; width:45px; height:45px;z-index:9999;}
+.btn_top {position:fixed; top:-45px; left:50%; margin-left:521px; width:45px; height:45px;}
 
 /* loader */
 .loader{position:absolute; top:80px; left:0; width:100%; height:100%; background:#fff; text-align:center;}
@@ -847,6 +863,7 @@ ul.list-products li figure.product .frame{width:226px; height:191px;}
 ul.list-products li figure.product .frame a{display:block; border:1px solid #e2e2e2;}
 ul.list-products li figure.product .frame a:hover{border:1px solid #979797;}
 ul.list-products li figure.product .frame a img{width:224px; height:189px;}
+
 
 /* ==========================================================
  * popup layout
@@ -924,7 +941,7 @@ ul.list-products li.none img{display:inline-block;}
 .paging>a strong {display:block; background:#231f20; color:#f3f3f4; font-weight:normal;}
 .paging>a:hover {background:#777; color:#f3f3f4;}
 .paging>a.arrow {width:28px; height:28px; text-indent:-9999em; border:1px solid #d3d2d2;}
-.paging>a.arrow:before {float:left; width:100%; text-align:center; text-indent:0; line-height:25px; font-size:20px;}
+.paging>a.arrow:before {float:left; width:100%; text-align:center; text-indent:0; line-height:30px; font-size:20px;}
 .paging>a.first:before {content:'\00AB';}
 .paging>a.prev:before {content:'\2039';}
 .paging>a.next:before {content:'\203A';}
@@ -991,7 +1008,7 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 .survey hgroup .current_step > em { font-style: normal; }
 .survey hgroup .current_step > em.current { position: absolute; top: 0; left: 0; color: #231f20; }
 .survey hgroup .current_step > em.total { position: absolute; bottom: 0; right: 0; }
-.survey hgroup .current_step > .per { position: absolute; top: 50%; left: 50%; margin: -5px 0 0 -4px; display: block; height: 10px; width: 9px; text-indent: -9999em; background: url(../images/member/bg_per01.png) left top no-repeat; }
+.survey hgroup .current_step > .per { position: absolute; top: 50%; left: 50%; margin: -5px 0 0 -4px; display: block; height: 10px; width: 9px; text-indent: -9999em; background: url(./images/member/bg_per01.png) left top no-repeat; }
 
 
 .survey .select_section { margin: 44px -12px 0 -12px; text-align: center; }
@@ -1007,8 +1024,8 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 /* tester box - review */
 .popup.survey .select_section { margin: 30px -12px 0 -12px; padding: 65px 0 40px 0; text-align: center; background-color: #f3f3f4; }
 .popup.survey .select_section li label { padding-right: 10px; width: 148px; background-color: #fff; }
-.survey .select_section li input.purchase + label { background: #fff url(../images/shop/bg_purchase.jpg) left top no-repeat; }
-.survey .select_section li input.douknow + label { background: #fff url(../images/shop/bg_douknow.jpg) left top no-repeat; }
+.survey .select_section li input.purchase + label { background: #fff url(./images/shop/bg_purchase.jpg) left top no-repeat; }
+.survey .select_section li input.douknow + label { background: #fff url(./images/shop/bg_douknow.jpg) left top no-repeat; }
 
 /* ONLY 텍스트형 선택 */
 .survey .select_section.only_txt li label { position: relative; padding: 0px; display: inline-block; height: 39px; width: 313px; font-size: 14px; color: #777; font-weight: 500; text-align: center; line-height: 39px; cursor: pointer; border: 2px solid #aba8a7; background-color: #f3f3f4; }
@@ -1017,12 +1034,12 @@ input[type=submit].small{width:118px; height:34px; line-height:34px;}
 
 
 /* skin type */
-.survey .select_section li input.skin_type + label { background: #f3f3f4 url(../images/member/bg_skin_type.jpg) left top no-repeat; }
-.survey .select_section li input.skin_tone + label { background: #f3f3f4 url(../images/member/bg_skin_tone.jpg) left top no-repeat; }
-.survey .select_section li input.skin_trouble + label { background: #f3f3f4 url(../images/member/bg_skin_trouble.jpg) left top no-repeat; }
-.survey .select_section li input.hair_trouble + label { background: #f3f3f4 url(../images/member/bg_hair_trouble.jpg) left top no-repeat; }
-.survey .select_section li input.body_trouble + label { background: #f3f3f4 url(../images/member/bg_body_trouble.jpg) left top no-repeat; }
-.survey .select_section li input.makeup_type + label { background: #f3f3f4 url(../images/member/bg_makeup_type.jpg) left top no-repeat; }
+.survey .select_section li input.skin_type + label { background: #f3f3f4 url(./images/member/bg_skin_type.jpg) left top no-repeat; }
+.survey .select_section li input.skin_tone + label { background: #f3f3f4 url(./images/member/bg_skin_tone.jpg) left top no-repeat; }
+.survey .select_section li input.skin_trouble + label { background: #f3f3f4 url(./images/member/bg_skin_trouble.jpg) left top no-repeat; }
+.survey .select_section li input.hair_trouble + label { background: #f3f3f4 url(./images/member/bg_hair_trouble.jpg) left top no-repeat; }
+.survey .select_section li input.body_trouble + label { background: #f3f3f4 url(./images/member/bg_body_trouble.jpg) left top no-repeat; }
+.survey .select_section li input.makeup_type + label { background: #f3f3f4 url(./images/member/bg_makeup_type.jpg) left top no-repeat; }
 
 /* skin bg position */
 .survey .select_section li input + label[for=sel_1] { background-position: 0px 0px; }
@@ -1095,3 +1112,31 @@ ol.list-sub > li { position: relative; padding-left: 17px; font-size: 12px; colo
 ol.list-sub > li:after { content: attr(value); position: absolute; top: 0; left: 0px; font-size: 12px; color: #777; line-height: 25px; }
 
 
+/*==================================================
+ * 입점문의팝업
+ ===================================================*/
+.inquiry-pop-container {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:url(../images/index/bg_view_detail.png); z-index:100;}
+.inquiry-pop {position:absolute; top:50%; left:50%; margin-top:-318px; margin-left:-469px; padding:30px; width:855px; height:555px; border:12px solid #231f20; background:#fff;}
+.inquiry-pop em {margin:0 2px; font-family:'RixSGo M', sans-serif; color:#ed6851;	font-style:normal;}
+.inquiry-pop .inquiry-header h1 {display:inline; font-family:'RixSGo B', sans-serif; font-size:30px;}
+.inquiry-pop .inquiry-header p {display:inline; margin-left:17px; font-size:12px; color:#767676; vertical-align:baseline;}
+.inquiry-form {margin-top:19px; border-top:2px solid #231f20; overflow:hidden;}
+.inquiry-form > div {float:left; width:50%; border-bottom:1px solid #efefef;}
+.inquiry-form > div.address {width:100%;}
+.inquiry-form label {float:left; width:120px; box-sizing:border-box; padding-left:15px; height:59px; line-height:59px; font-family:'RixSGo M', sans-serif; font-size:12px; color:#242424; background-color:#f3f3f3;}
+.inquiry-form input {display:inline-block; margin:13px 0 0 20px; width:266px;}
+.inquiry-form input[type=file] {border:1px solid #D3D0CF;}
+.inquiry-form select {display:inline-block; margin:13px 0 0 20px; height:34px; border:1px solid #D3D0CF;}
+.inquiry-form textarea {display:inline-block; margin:13px 0 0 20px; padding:0; width:266px; height:117px; border:1px solid #D3D0CF; resize:none; font-family:'RixSGo L', sans-serif;}
+.inquiry-form .address input {width:694px;}
+.inquiry-form .message label,
+.inquiry-form .attach label {height:148px;}
+.inquiry-form .attach p {display:inline-block; margin:7px 0 0 20px;}
+
+.inquiry-pop .confirm {margin-top:20px; text-align:center; font-size:0;}
+.inquiry-pop .confirm input,
+.inquiry-pop .confirm a {display:inline-block;margin:0 5px; width:118px; height:34px; line-height:29px; box-sizing:border-box; font-family:'RixSGo B', sans-serif; font-size:13px; text-align:center; border:2px solid #231f20; vertical-align:middle;}
+.inquiry-pop .confirm input {color:#fff; background:#231f20;}
+.inquiry-pop .confirm a {color:#231f20;}
+
+.inquiry-pop > .btn-close-inquiry {position:absolute; top:30px; right:30px;}
