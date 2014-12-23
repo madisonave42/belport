@@ -288,6 +288,11 @@
 										<input type="file" id="file" />
 										<p>※파일용량 최대 5MB</p>
 									</div>
+									<div class="captcha">
+										<label for="captcha">자동등록방지<em>(*)</em></label>
+										<img id="captcha" src="../images/temp/captcha.png" alt="CAPTCHA Image" align="absmiddle"/> <input type="text" id="captcha_code" name="captcha_code" size="10" maxlength="6"  class="inquiry_title2"/> 
+										<a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false"><img src="../images/temp/btn_recaptcha.png" alt="다른 수식보기" /></a> 
+									</div>
 								</div>
 								<div class="confirm">
 									<input type="submit" value="등록" />

@@ -1116,7 +1116,7 @@ ol.list-sub > li:after { content: attr(value); position: absolute; top: 0; left:
  * 입점문의팝업
  ===================================================*/
 .inquiry-pop-container {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:url(../images/index/bg_view_detail.png); z-index:100;}
-.inquiry-pop {position:absolute; top:50%; left:50%; margin-top:-318px; margin-left:-469px; padding:30px; width:855px; height:555px; border:12px solid #231f20; background:#fff;}
+.inquiry-pop {position:absolute; top:50%; left:50%; margin-top:-348px; margin-left:-469px; padding:30px; width:855px; height:615px; border:12px solid #231f20; background:#fff;}
 .inquiry-pop em {margin:0 2px; font-family:'RixSGo M', sans-serif; color:#ed6851;	font-style:normal;}
 .inquiry-pop .inquiry-header h1 {display:inline; font-family:'RixSGo B', sans-serif; font-size:30px;}
 .inquiry-pop .inquiry-header p {display:inline; margin-left:17px; font-size:12px; color:#767676; vertical-align:baseline;}
@@ -1132,6 +1132,10 @@ ol.list-sub > li:after { content: attr(value); position: absolute; top: 0; left:
 .inquiry-form .message label,
 .inquiry-form .attach label {height:148px;}
 .inquiry-form .attach p {display:inline-block; margin:7px 0 0 20px;}
+.inquiry-form .captcha {width:100%;}
+.inquiry-form .captcha img {display:inline;vertical-align:middle;}
+.inquiry-form .captcha #captcha {display:inline-block; margin:13px 0px 0px 20px;}
+.inquiry-form .captcha a {position:relative; top:6px; display:inline-block; margin-left:5px;}
 
 .inquiry-pop .confirm {margin-top:20px; text-align:center; font-size:0;}
 .inquiry-pop .confirm input,
