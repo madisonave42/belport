@@ -123,6 +123,8 @@
 	<link rel="icon" href="../images/common/favicon.ico" type="image/x-icon">
 	<link href='http://fonts.googleapis.com/css?family=Alegreya:400italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=RixSGo+L:400|RixSGo+M:400|RixSGo+B:400" />
+	<link rel="stylesheet" href="../css/lib/photoswipe.css" />
+	<link rel="stylesheet" href="../css/lib/photoswipe-skin/default-skin.css" />
 	<link rel="stylesheet" href="../css/style.css" />
 	<link rel="stylesheet" href="../css/<?php echo $css ?>.css" />
 	
@@ -130,6 +132,8 @@
 	<script src="../js/lib/jquery-ui-1.10.4.custom.min.js"></script>
 	<script src="../js/lib/jquery.masonry.min.js" type="text/javascript"></script>
 	<script src="../js/lib/jquery.slides.min.js" type="text/javascript"></script>
+	<script src="../js/lib/photoswipe.min.js" type="text/javascript"></script>
+	<script src="../js/lib/photoswipe-ui-default.min.js" type="text/javascript"></script>
 	<script src="../js/function.js"></script>
 	<script src="../js/event.js"></script>
 </head>

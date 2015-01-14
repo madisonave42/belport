@@ -46,7 +46,7 @@ $(function(){
 			
 			var dimension = [
 				//{'height':164, "top":-24, 'marginLeft':-58},
-				{'height':149, "top":0, 'marginLeft':-50},
+				{'height':149, "top":0, 'marginLeft':-150},
 				{'height':149, "top":-16, 'marginLeft':-27}
 			];
 			

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<head>
+<meta name="description" content="벨포트" />
+<meta name="keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<title>벨포트</title>
+
+<!-- 201411 renewal add : Start -->
+<link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=RixSGo+L:400|RixSGo+M:400|RixSGo+B:400">
+<!-- [D] 이벤트 스타일 추가-->
+<link rel="stylesheet" href="../../css/lib/photoswipe.css" />
+<link rel="stylesheet" href="../../css/lib/photoswipe-skin/default-skin.css" />
+
+<link rel="stylesheet" type="text/css" href="../../css/brand.css" />
+<script src="../../js/lib/jquery-1.11.0.min.js"></script>
+
+<!-- [D] 이벤트 스크립트 추가-->
+<script src="../../js/lib/photoswipe.min.js" type="text/javascript"></script>
+<script src="../../js/lib/photoswipe-ui-default.min.js" type="text/javascript"></script>
+
+
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/common.js"></script>
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/goods_list_action.js"></script>
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery-1.9.1.min.js"></script>
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery.mobile-1.1.1.js"></script>
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery.cookie.js"></script>
+
+<script src="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/js/jquery.slides.min.js"></script>
+
+<script src="http://www.belport.co.kr/m2/lib/js/mobileAction.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/mobileCommon.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/mobileDisplay.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/swipe/swipe.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/iscroll/iscroll.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/mobileCommon2.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/attendance.js"></script>
+
+<script type="text/javascript">
+function showSearchArea() {
+	if($(".search-area").is(':hidden') == true) {
+
+		$(".search-area").slideDown(30);
+	}
+	else {
+
+		$(".search-area").slideUp(0);
+	}
+}
+
+function showCateArea() {
+	
+	var now_cate = $("[name=now_cate]").val();
+
+	if($("#cate-area").is(':hidden') == true) {
+		$("#page_title").hide();
+		$(".content").hide();
+		$(".content_goods").hide();
+		//$("body").addClass('back_bg');
+		$("#cate-area").slideDown(30);
+		$('.top_path').show();
+		getCategoryData(now_cate);
+	}
+	else {
+		$("#cate-area").hide();
+		//$("body").removeClass('back_bg');
+		$("#page_title").show();
+		$(".content").show();
+
+	}
+}
+
+function goHome() {
+	document.location.href="/" + getMobileHomepath() + "/index.php";
+}
+
+function goMenu(page_nm) {
+	switch(page_nm) {
+		case "my" :
+			document.location.href="/" + getMobileHomepath() + "/myp/menu_list.php";
+			break;
+		case "cart" :
+			document.location.href="/" + getMobileHomepath() + "/goods/cart.php";
+			break;
+		case "wish" :
+			document.location.href="/" + getMobileHomepath() + "/myp/wishlist.php";
+			break;
+		case "login" :
+			document.location.href="/" + getMobileHomepath() + "/mem/login.php";
+			break;
+		case "logout" :
+				document.location.href="/" + getMobileHomepath() + "/mem/logout.php";
+			break;
+		case "viewgoods" :
+				document.location.href="/" + getMobileHomepath() + "/myp/viewgoods.php";
+			break;
+	}
+}
+
+function searchKw() {
+	if($("[name=search_key]").val()) {
+		document.location.href="/" + getMobileHomepath() + "/goods/list.php?kw=" + $("[name=search_key]").val();
+	}
+	else {
+		alert("검색 키워드를 입력해 주시기 바랍니다");
+		return;
+	}
+}
+
+function getMobileHomepath() {
+	//각 URL 최상위 홈PATH를 구한다. 모바일의 홈이 여러 종류일수 있으므로  2012-09-20 khs
+	var path1 = document.location.pathname;
+
+	if (path1.charAt(0) == '/')	{
+		path1 = path1.substring(1);
+	}
+	var x = path1.split("/");
+
+	return x[0];
+}
+
+function showCategoryMsg(message) {
+
+	var sec = 1000;
+
+	$("[id=goodsres-hide] .text_msg").text(message);
+	$("[id=goodsres-hide]").fadeIn(300);
+
+	setTimeout( function() {
+		$("[id=goodsres-hide]").fadeOut(300);
+	}, sec);
+}
+
+// 201411 추가
+function closeFix(){
+	$('.fix_layer').hide();
+}
+
+function openMenu(){
+	$('.sidemenu').stop().animate({left:0}, 200);
+	$('.dimm').show();
+}
+
+function closeMenu(){
+	$('.sidemenu').stop().animate({left:-260}, 200);
+	$('.dimm').hide();
+}
+
+$(document).ready(function(){
+	$.ajax({
+		"url" : "/m2/proc/mAjaxAction.php",
+		"type" : "post",
+		"data" : {
+			"mode" : "get_cart_item"
+		},
+		"cash" : false,
+		"dataType" : "json",
+		"success" : function(cartItem)
+		{
+			if (cartItem.quantity) {
+				$("#cart-btn .cart-item-quantity").text(" ("+cartItem.quantity.toString()+")");
+			}
+		}
+	});
+
+	try {
+		var todayGoodsMobileIdx = $.cookie('todayGoodsMobileIdx');
+		
+		if(todayGoodsMobileIdx != "undefined" && todayGoodsMobileIdx != "") {
+			
+			var goods_idx = todayGoodsMobileIdx.split(',');
+			var view_cnt = goods_idx.length - 1;
+			$("#viewgoods-btn .viewgoods-quantity").text(" ("+view_cnt.toString()+")");
+		}
+	}
+	catch(e) {}
+
+});
+
+</script>
+<link rel="stylesheet" type="text/css" href="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/css/style.css" />
+<link rel="stylesheet" type="text/css" href="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/css/attendance.css" />
+<style type="text/css">
+.cart-item-quantity{font-weight:normal;}
+.viewgoods-quantity{font-weight:normal;}
+
+#goodsres-hide2 {display:none;} 
+.goodsres_wrap {position : fixed;left : 10%;width : 80%;background : #ffffff;display : block;border-radius:1em;box-shadow:2px 2px 4px #7f7f7f;z-index: 1000; bottom:20%;}
+.goodsres_wrap .goodsres_title {background:#313030;width:100%;border-top-left-radius:1em;border-top-right-radius:1em;height:45px;border-bottom:solid 1px #b2b2b2;margin-bottom:6px;}
+.goodsres_wrap .goodsres_title .title{padding-left:14px;line-height:45px;font-size:16px;font-weight:bold;color:#FFFFFF;font-family:dotum;}
+.goodsres_wrap .goodsres_msg { padding:15px; }
+.goodsres_wrap .goodsres_msg .text_msg{ font-size:12px; color:#353535;}
+
+</style>
+<!--<link rel="stylesheet" href="/shop/data/skin_mobileV2/belport/style_screen.css" type="text/css" media="screen and (min-width: 321px)"  />-->
+
+<!-- [D] 이벤트 스타일 -->
+<style type="text/css">
+	.hn_contents img {display:block;}
+</style>
+</head>
+
+<body>
+
+<div id="dynamic"></div>
+
+<div id="wrap">
+
+<header>
+<div class="gnb">
+	<div class="btn_sidemenu" onclick="javascript:openMenu();"><img src="../../images/main/btn_m_menu.png" /></div>
+	<div id="logo">
+		<a href="javascript:goHome();"><img src="../../images/main/m_logo.png" alt="벨포트" title="벨포트" height="35px"/></a>
+	</div>
+	<div id="logo-right">
+		<!--<div id="search-btn" onClick="javascript:showSearchArea();"><img src="../../images/main/seach.png" /></div>-->
+		<div class="top_global" >
+			<!--<span onClick="javascript:goMenu('my');" >마이페이지</span>-->
+			<span onClick="javascript:goMenu('login');" >로그인</span></div>
+	</div>
+</div>
+<!--
+<div class="search-area">
+	<div id="search-box">
+		<input type="text" name="search_key" placeholder="검색어를 입력해 주세요"/>
+	</div>
+	<div id="search-box-btn" onclick="javascript:searchKw();" >검색</div>
+</div>
+-->
+<div class="new-menu-area">
+	<div id="category-btn" onClick="javascript:showCateArea();">SHOP<div class="bar_area"></div></div>
+	<div id="cart-btn" onClick="javascript:goMenu('cart');">BRAND</div>
+	<div id="viewgoods-btn" onClick="javascript:location.href='/m2/event/event.php'">EVENT</div>
+	<div id="more-view-btn"><div class="bar_area"></div>INSIDE.B</div>
+	<div id="more-view-menu" style="display: none;">
+		<ul>
+			<li class="item wishlist">Wish List</li>
+			<li class="item goods-review">상품후기</li>
+			<li class="item goods-qna">상품문의</li>
+			<li class="item community">게시판</li>
+		</ul>
+	</div>
+</div>
+
+<div class="sidemenu">
+	
+	<ul class="top">
+		<li><a href="#">로그아웃</a></li>
+		<li><a href="#">마이벨포트</a></li>
+		<li><a href="#">장바구니</a></li>
+		<li><a href="#" onclick="javascript:closeMenu();"><img src="../../images/main/menu_close.png" /></a></li>
+	</ul>
+	
+	<ul class="middle">
+		<li><a href="#">SHOP</a></li>
+		<li><a href="#">BRAND</a></li>
+		<li><a href="#">EVENT</a></li>
+		<li><a href="#">INSIDE.B</a></li>
+	</ul>
+	
+	<ul class="bottom">
+		<li><a href="#">ABOUT BELPORT</a></li>
+		<li><a href="#">공지사항</a></li>
+		<li><a href="#">고객센터</a></li>
+		<li><a href="#">매장안내</a></li>
+	</ul>
+	
+	<div class="tel"><a href="tel:080-508-6631">080-508-6631</a></div>
+	
+	
+</div>
+
+</header>
+<section id="cate-area">
+	<div class="top_title"><div class="title">카테고리</div></div>
+	<div class="top_path"><div class='now_path'><div class='pathitem activeitem allpath' onClick='javascript:cateSelect("");'>전체카테고리</div></div></div>
+	<div class="now_cate">
+
+		<input type="hidden" name="now_cate" value="" />
+	</div>
+	<div class="cate_path">
+	</div>
+	<div class="cate_list">
+	</div>
+
+</section>
+<div class="clearb"></div>
+
+<section id="goodsres-hide" class="content_goods">
+	<div class="pop_back">
+		<div class="pop_effect">
+			<div class="text_msg"></div>
+		</div>
+	</div>
+</section>
+
+<section id="goodsres-hide2" class="content_goods">
+	<div class="goodsres_wrap">
+		<div class="goodsres_title"><div class="title">알림</div></div>
+		<div class="goodsres_msg"><div class="text_msg"></div></div>
+	</div>
+</section>
+
+<!-- Start : 출석체크 템플릿 -->
+<section id="attendance-popup" style="display: none;" data-root-dir="/m2">
+	<h1 id="attendance-title"></h1>
+	<div id="attendance-close">닫기</div>
+	<div id="attendance-info-straight" class="condition-type">
+		<div class="attendance-period">
+			<span class="attendance-start-date"></span> ~ <span class="attendance-end-date"></span> 까지
+		</div>
+		<div class="attendance-description">
+			연속 <span class="attendance-condition-period"></span>일 이상 출석하면 적립금이 차곡차곡!
+		</div>
+	</div>
+	<div id="attendance-info-sum" class="condition-type">
+		<div class="attendance-period">
+			기간 : <span class="attendance-start-date"></span> ~ <span class="attendance-end-date"></span> 안에
+		</div>
+		<div class="attendance-description">
+			<span class="attendance-condition-period"></span>일 이상 출석하면 적립금이 차곡차곡!
+		</div>
+	</div>
+	<h2 id="attendance-calendar-title">
+		<button id="attendance-calendar-previous-month">이전 달</button>
+		<span id="attendance-calendar-month">
+			<span id="attendance-calendar-month-1">January</span>
+			<span id="attendance-calendar-month-2">February</span>
+			<span id="attendance-calendar-month-3">March</span>
+			<span id="attendance-calendar-month-4">April</span>
+			<span id="attendance-calendar-month-5">May</span>
+			<span id="attendance-calendar-month-6">June</span>
+			<span id="attendance-calendar-month-7">July</span>
+			<span id="attendance-calendar-month-8">August</span>
+			<span id="attendance-calendar-month-9">September</span>
+			<span id="attendance-calendar-month-10">October</span>
+			<span id="attendance-calendar-month-11">November</span>
+			<span id="attendance-calendar-month-12">December</span>
+		</span>
+		<span id="attendance-calendar-year"></span>
+		<button id="attendance-calendar-next-month">다음 달</button>
+	</h2>
+	<table id="attendance-date-list">
+		<tbody>
+			<tr class="attendance-calendar-date-floor">
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+<!-- End : 출석체크 템플릿 -->
+
+<!-- [D] 이벤트 본문 -->
+<section class="new_year">
+	<h1 style="position:absolute;top:-9999px;">Happy New Year</h1>
+	<div class="hn_contents">
+		<img src="../images/event/y2015/m01/new_year_01.jpg" alt="" />
+		<img src="../images/event/y2015/m01/new_year_02.jpg" alt="" />
+		<a href="#" class="btn_show_booklet">
+			<img src="../images/event/y2015/m01/new_year_03.jpg" alt="" />
+		</a>
+		<img src="../images/event/y2015/m01/new_year_04.jpg" alt="" />
+		<img src="../images/event/y2015/m01/new_year_05.jpg" alt="" />
+		<img src="../images/event/y2015/m01/new_year_06.jpg" alt="" />
+		<img src="../images/event/y2015/m01/new_year_07.jpg" alt="" />
+	</div>
+	
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="pswp__bg"></div>
+		<div class="pswp__scroll-wrap">
+			<div class="pswp__container">
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+			</div>
+
+			<div class="pswp__ui pswp__ui--hidden">
+					<div class="pswp__top-bar">
+							<div class="pswp__counter"></div>
+							<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+							<!-- <button class="pswp__button pswp__button--share" title="Share"></button> -->
+							<!-- <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> -->
+							<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+							<div class="pswp__preloader">
+									<div class="pswp__preloader__icn">
+										<div class="pswp__preloader__cut">
+											<div class="pswp__preloader__donut"></div>
+										</div>
+									</div>
+							</div>
+					</div>
+					<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+							<div class="pswp__share-tooltip"></div> 
+					</div>
+					<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+					</button>
+					<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+					</button>
+					<div class="pswp__caption">
+							<div class="pswp__caption__center"></div>
+					</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		var openPhotoSwipe = function() {
+			var pswpElement = document.querySelectorAll('.pswp')[0];
+			var items = [
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_01.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_02.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_03.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_04.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_05.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_06.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_07.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_08.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_09.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_10.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_11.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_12.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_13.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_14.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_15.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_16.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_17.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_18.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_19.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_20.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_21.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_22.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_23.jpg',
+					w: 1024,
+					h: 646
+				},
+				{
+					src: '../../images/event/y2015/m01/booklet/booklet_24.jpg',
+					w: 1024,
+					h: 646
+				}
+			];
+
+			var options = {
+				history: false,
+				focus: false,
+
+				showAnimationDuration: 0,
+				hideAnimationDuration: 0
+			};
+
+			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+			gallery.init();
+		};
+		
+		$('.btn_show_booklet').on('click', function(e) {
+			openPhotoSwipe();
+			e.preventDefault();
+		});
+	</script>
+</section>
+<!-- // [D] 이벤트 본문 -->
+
+<section id='footer'>
+	<div class='company'>
+		<div class="bottom_menu">
+			<div class="bottom_menu_contents">
+				<table>
+					<tr>
+						<td class="faq"><a href="/m2/proc/faq.php">FAQ</a></td>
+						<td><a href="/shop/?pc" title="PC버전으로 보기" class="btn_pcmode">PC버전</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class='lineinfo'>
+				<table>
+					<tr>
+						<td class='title_r'>상호</td>
+						<td>(주) 벨포트</td>
+					</tr>
+					<tr>
+						<td class='title_r'>대표이사</td>
+						<td>민영훈</td>
+					</tr>
+					<tr>
+						<td class='title_r'>주소</td>
+						<td>서울특별시 강남구  삼성로 570 (대한해운 사옥) 9층</td>
+					</tr>
+					<tr>
+						<td class='title_r'>고객센터</td>
+						<td class="num"><a href="/m2/service/customer.php">080-508-6631</a></td>
+					</tr>
+					<tr>
+						<td class='title_r'>사업자번호</td>
+						<td class="num">220-88-60804</td>
+					</tr>
+					<tr>
+						<td class='title_r'>통신판매업신고</td>
+						<td>제2013-서울강남-02382호</td>
+					</tr>
+				</table>
+		</div>
+	</div>
+	
+	<div class="copyright">
+		<div class='lineinfo'>COPYRIGHT (C) 벨포트 ALL RIGHTS RESERVED.</div>
+		<div class="service_menu">
+			<a href="/m2/service/agrmt.php">이용약관</a>
+			<a href="/m2/service/private.php">개인정보취급방침</a>
+		</div>
+	</div>
+</section>
+<div class="dimm"> </div>
+</div>
+
+<iframe class="" id="ifrmHidden" name="ifrmHidden" src='/shop/blank.php'></iframe>
+</body>
+</html>
