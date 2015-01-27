@@ -1,0 +1,14 @@
+html, body {margin:0; padding:0;}
+.concert {position:relative; margin:0 auto; width:960px;}
+.concert img {display:block; border:0;}
+.concert h1 {position:absolute; top:-9999px;}
+.concert .contents img {display:block;}
+.concert .section-05 .message {padding-bottom:50px; height:650px;}
+.concert .section-05 .message iframe {width:100%; height:100%;}
+
+.curtain {display:none; position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/bg_curtain.png); z-index:10;}
+
+#pop-map {position:fixed; top:-9999px; left:50%; margin:-325px 0 0 -355px; z-index:20;}
+#pop-map .map-frame {width:710px; height:645px;}
+#pop-map .map-frame iframe {width:100%; height:100%;}
+#pop-map .btn-close {position:absolute; top:-40px; right:0;}

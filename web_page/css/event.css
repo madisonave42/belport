@@ -1,3 +1,7 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, img, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, table, caption, tbody, tfoot, thead, tr, th, td {
+	font-family:'RixSGo L', sans-serif;
+}
+
 /*==================================================
  * EVENT 공통 스타일
  ===================================================*/
@@ -264,14 +268,14 @@ ul.list-comments li p a {color:#6896ea;}
 #little_prince_pop,
 #little_prince_pop_02 {position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/little_prince_bg_curtain.png); z-index:100; display:none;}
 #little_prince_pop .little_prince_pop_content {position:fixed; top:50%; left:50%; margin-top:-130px; margin-left:-265px; width:530px; height:260px; background:#fff; border:7px solid #363133;}
-#little_prince_pop_02 .little_prince_pop_content {position:absolute; top:1000px; left:50%; margin-left:-419px; width:839px; height:932px;}
+#little_prince_pop_02 .little_prince_pop_content {position:absolute; top:1100px; left:50%; margin-left:-419px; width:839px; height:932px;}
 #little_prince_pop .little_prince_pop_content p {margin-top:70px; font-size:18px; line-height:1.6; text-align:center;}
 #little_prince_pop .little_prince_pop_content p span {color:#231f20;}
 #little_prince_pop .little_prince_pop_content .confirm {display:block; margin:30px auto 0 auto; width:96px; height:26px; line-height:26px; border:3px solid #333; color:#231f20; text-align:center;}
 #little_prince_pop .close{position:absolute; display:block; top:20px; right:20px;}
 
 /* 보테가베르데이벤트 */
-#contents .container .bottega {width:100%; margin:0 auto;}
+#contents .container .bottega {width:100%; margin:0 auto; font-family:'RixSGo L', sans-serif;}
 .bottega .header {position:relative}
 .bottega .header .bg_movie_wrap {width:100%; height:%; overflow:hidden; background:#000;}
 .bottega .header .bg_movie_wrap.no_movie {background:#000 url(../images/event/bottega_bg_poster.jpg) no-repeat 50% 0; background-size:cover}
@@ -294,7 +298,7 @@ ul.list-comments li p a {color:#6896ea;}
 #bv_evt_01 .birthday .check_day select.year {width:190px;}
 #bv_evt_01 .birthday .check_day .btn_confirm {display:block; margin:30px auto 0 auto; width:115px;}
 
-#bv_evt_01 .birthday .movie_list {margin-top:70px; padding:20px 0 30px; background:#231f20;}
+#bv_evt_01 .birthday .movie_list {margin-top:70px; padding:20px 0 30px; background:#231f20; text-align:center;}
 #bv_evt_01 .birthday .movie_list ul {margin:0 6%; text-align:center; font-size:0;}
 #bv_evt_01 .birthday .movie_list ul li {position:relative; display:inline-block; margin:0 3px; margin-top:10px; width:135px; height:108px;}
 #bv_evt_01 .birthday .movie_list ul li > p {font-size:13px; color:#6f6f6f; text-align:center;}
@@ -305,9 +309,12 @@ ul.list-comments li p a {color:#6896ea;}
 #bv_evt_01 .birthday .movie_list ul li a { z-index:2}
 #bv_evt_01 .birthday .movie_list ul li.active .cover {display:none;}
 #bv_evt_01 .birthday .movie_list ul li.yourday .cover {bottom:-2px; left:-2px; width:139px; height:86px; background:#fff; z-index:1;}
-#bv_evt_01 .birthday .movie_list .btn_full {position:relative; display:block; margin:24px auto 0 auto; width:135px;}
+#bv_evt_01 .birthday .movie_list .btn_full {position:relative; display:inline-block; margin:24px 2px 0 2px; width:135px;}
+#bv_evt_01 .birthday .movie_list .btn_making {position:relative; display:inline-block; margin:24px 2px 0 2px; width:135px;}
 #bv_evt_01 .birthday .movie_list .btn_full .cover {position:absolute; bottom:0; left:0; width:135px; height:27px; background:url(../images/event/bottega_bg_header.png); z-index:2}
 #bv_evt_01 .birthday .movie_list .btn_full.active .cover {display:none;}
+#bv_evt_01 .birthday .movie_list .btn_making .cover {position:absolute; bottom:0; left:0; width:135px; height:27px; background:url(../images/event/bottega_bg_header.png); z-index:2}
+#bv_evt_01 .birthday .movie_list .btn_making.active .cover {display:none;}
 
 #bv_evt_01 .gift {padding-top:50px; height:430px; background:url(../images/event/bottega_bg_share.png) no-repeat 50% 0; background-size:cover; text-align:center;}
 #bv_evt_01 .gift img{display:inline;}
@@ -348,6 +355,8 @@ ul.list-comments li p a {color:#6896ea;}
 .bottega iframe {display:block; margin:0 auto; margin-bottom:30px; width:90%;}
 
 .layer_popup {display:none; position:absolute; left:50%; z-index:20;}
+.layer_popup p,
+.layer_popup span { font-family:'RixSGo L', sans-serif;}
 .layer_popup img {display:block;}
 .btn_close_layer {position:absolute; top:10px; right:10px;}
 
@@ -357,7 +366,7 @@ ul.list-comments li p a {color:#6896ea;}
 .box_open .gift_paper {position:absolute; top:50%; left:50%; margin-left:-259px; margin-top:-80px; width:517px; height:281px; background:url(../images/event/bottega_box_paper.png) no-repeat; text-align:center;}
 .box_open .gift_paper .title {padding-top:30px; font-size:23px; color:#231f20; line-height:1.4;}
 .box_open .gift_paper .title > span {font-size:30px;}
-.box_open .gift_paper .title > span span {font-weight:bold;}
+.box_open .gift_paper .title > span span {position:relative; top:-3px; font-weight:bold;}
 .box_open .gift_paper .check_gift {font-weight:bold;}
 .box_open .gift_paper p {margin-top:15px; color:#717171; font-size:13px;}
 .box_open .gift_paper p.coution {margin-top:15px; font-weight:bold;}
@@ -389,3 +398,179 @@ ul.list-comments li p a {color:#6896ea;}
 @media all and (max-width:480px){
 	.bv_cmts {width:auto; background-position:100% 95%;}
 }
+
+/* 제품리스트 */
+ul.list-products {overflow:hidden; padding-bottom:30px;}
+ul.list-products li {float:left; padding:30px 5px 21px 5px; width:226px; }
+ul.list-products li figure.product:after {display:none;}
+
+figure.product {text-align:left; background:none;}
+figure.product .frame {height:191px; width:226px; text-align:center; background-color:#f5f5f5;}
+figure.product figcaption {padding:0 10px 0 6px; font-size:13px; line-height:18px; }
+
+figure.product em.brand {display:block; color:#202020;font-family:'RixSGo B', sans-serif; font-weight:normal; font-style:normal;}
+figure.product p.title {height:45px; color:#777; }
+
+figure.product p.price {text-align:right;}
+figure.product p.price .btn_cart{position:relative; top:-3px; float:left; display:block; width:90px; height:31px; line-height:31px; text-align:center; color:#fff; background:#767676;}
+
+figure.product p.price > .dc-price {font-family:'Alegreya', serif; font-style:italic; font-weight:bold; font-size:20px; color:#2b282a; line-height:18px; }
+
+/* 상품 상세 특징 */
+section.spec { position: relative; padding: 0 0 0 295px; width: 641px; }
+section.spec header { position: absolute; top: 0; left: 16px; padding: 0; min-width: inherit; width: 200px; background-color: transparent; }
+section.spec header h1 { position: relative; margin: 0; padding: 26px 0 0 0; width: 100%; font-size: 12px; color: #231f20; text-align: left; background-color: transparent; }
+section.spec header h1 > span { position: absolute; top: 0; left: 0; display: block; font-size: 12px; color: #ed6851; font-weight: 400; }
+section.spec header h1 > span:after { content: ''; position: absolute; bottom: -7px; left: 0; display: block; height: 1px; width: 8px; background-color: #d3d0cf; }
+section.spec header .rules { padding-top: 19px; }
+section.spec header .rules > span { margin-right: 5px; display: block; height: 27px; width: 27px; text-indent: -9999em; }
+section.spec header .rule01 { background: url(./images/shop/icon_rules01.png) left top no-repeat; }
+
+section.spec-content { margin: 0; padding: 11px 0 60px 0px; width: 641px; border-top: 1px solid #d3d0cf; }
+section.spec-content > h1 { margin-top: 12px; font-size: 18px; color: #231f20; line-height: 24px; }
+section.spec-content > .desc { margin-top: 6px; font-size: 13px; color: #777; font-weight: 300; line-height: 19px; }
+section.spec-content > .images { margin-top: 20px; }
+section.spec-content > table.info { margin-top: 14px; border-top: 2px solid #231f20; }
+table.info tbody th { padding: 20px 0 20px 15px; font-size: 12px; color: #231f20;  font-family:'RixSGo B', sans-serif; font-weight:normal; text-align: left; border-bottom: 1px solid #d3d0cf; background-color: #f3f3f4; }
+table.info tbody td { padding: 20px 10px 20px 15px; font-size: 12px; color: #777; font-weight: 400; line-height: 20px; border-bottom: 1px solid #d3d0cf; }
+
+
+/* 더 맑음 콘서트 */
+#contents .container > section.concert {position:relative; margin:0; width:100%;}
+.concert > div {position:relative;}
+.concert > div .bg {width:100%; min-width:980px; overflow:hidden; text-align:center; z-index:10;}
+.concert > div .bg img {position:relative; left:50%; display:block; width:100%; min-width:1600px;}
+.concert > div .text {position:absolute; top:0; left:0; width:100%; height:100%; z-index:20;}
+
+.concert .text > img {position:absolute; top:50%; left:50%;}
+
+.concert .scroll {display:none; position:absolute; bottom:35px; left:50%; margin-left:-37px; width:74px; height:74px; background:url(../images/event/y2015/m01/concert_scroll_down.png) no-repeat;}
+
+.concert .section_01 .t_01 {margin-top:-380px; margin-left:-313px;}
+.concert .section_01 .t_02 {top:auto; bottom:72px; margin-left:-512px;}
+
+.concert .section_02 .t_01 {top:16.5%; margin-left:-227px;}
+.concert .section_02 .t_02 {margin-top:-52px; margin-left:-344px;}
+.concert .section_02 .t_03 {top:auto; bottom:12.5%; margin-left:76px;}
+
+.concert .section_03 .t_01 {top:13%; margin-left:-246px;}
+.concert .section_03 .t_02 {margin-top:-21px; margin-left:-208px;}
+.concert .section_03 .t_03 {top:auto; bottom:1%; margin-left:-624px;}
+
+.concert .section_04 .t_01 {margin-top:-436px; margin-left:-508px;}
+
+.concert .section_05 .t_01 {margin-top:-210px; margin-left:-436px;}
+
+.concert .section_06 .t_01 {margin-top:-253px; margin-left:-352px;}
+
+.concert .section_banner .t_01 {margin-top:-49px; margin-left:-506px;}
+
+.concert .slidesjs-navigation {position:absolute; width:21px; height:32px; background:url(../images/event/y2015/m01/concert_arrow.png) no-repeat; z-index:10; text-indent:-9999px;}
+
+.concert .section_07 .howto {position:absolute; top:50%; left:50%; margin-top:-335px; margin-left:-481px; width:962px; height:568px;}
+.concert .section_07 .howto > img {display:block; margin:0 auto 18px auto;}
+.concert .section_07 .howto .howto_slides {position:relative; margin:0 auto; width:960px;}
+.concert .section_07 .howto .howto_slides > div {padding:0 45px;}
+.concert .section_07 .howto .howto_slides .slidesjs-previous {top:140px; left:0;}
+.concert .section_07 .howto .howto_slides .slidesjs-next {top:140px; right:0; background-position:-60px 0;}
+
+.concert .section_08 .faq {position:absolute; top:50%; left:50%; margin-top:-155px; margin-left:-578px; width:1156px; height:466px;}
+.concert .section_08 .faq .faq_slides {position:relative; margin:0 auto; width:1156px;}
+.concert .section_08 .faq .faq_slides > div {padding:0 45px;}
+.concert .section_08 .faq .faq_slides .slidesjs-previous {top:148px; left:0;}
+.concert .section_08 .faq .faq_slides .slidesjs-next {top:148px; right:0; background-position:-60px 0;}
+
+.concert .section_09 .top_products {margin:0 auto; width:980px;}
+.concert .section_09 .top_products .product_tab {margin:45px 100px 0; padding:0 30px; border-bottom:1px solid #231f20;}
+.concert .section_09 .top_products .product_tab ul {overflow:hidden;}
+.concert .section_09 .top_products .product_tab ul li {float:left; width:25%;}
+.concert .section_09 .top_products .product_tab ul li a {display:block; height:45px; line-height:45px; text-align:center; border-bottom:4px solid #fff; font-size:16px; color:#231f20;}
+.concert .section_09 .top_products .product_tab ul li a:hover,
+.concert .section_09 .top_products .product_tab ul li a.on {border-bottom-color:#231f20;}
+.concert .list-products li {margin:60px 9px 0; padding:0; padding-bottom:5px; border-bottom:1px solid #e2e2e2;}
+.concert .list-products li figure.product .frame {position:relative; height:auto;}
+.concert .list-products li figure.product .frame a img {width:100%; height:auto;}
+.concert .list-products li figure.product .frame a .over {display:none; position:absolute; top:0; left:0; box-sizing:border-box; width:100%; height:100%; border:1px solid #E2E2E2; background:url(../images/event/y2015/m01/concert_list_over.png) no-repeat 50% 50%; text-indent:-9999px;}
+.concert .list-products li figure.product .frame a:hover .over {display:block;}
+.concert .list-products li figure.product p.title {color:#202020; font-weight:600; font-family:'RixSGO M', sans-serif; height:40px;}
+.concert .list-products li figure.product p.desc {height:35px; color:##777; font-size:12px; font-family:'RixSGO M', sans-serif;}
+.concert .list-products li figure.product p.size {margin-top:10px; color:#202020;  font-family:'RixSGO B', sans-serif;}
+.concert .list-products li figure.product p.price {text-align:left; font-size:20px;}
+.concert .list-products li figure.product p.price .original {font-family: "Alegreya",serif; font-style: italic; font-size: 20px; color: #777;}
+.concert .list-products li figure.product p.price a {float:right; margin-top:1px; font-size:12px; color:#231f20; font-weight:600; text-decoration:underline;}
+
+.concert .product em.brand {margin-top:20px;}
+
+.concert .section_10 .t_01 {margin-top:-140px; margin-left:-585px;}
+.concert .section_10 .set_links {position:absolute; top:50%; left:50%; margin-top:-140px; margin-left:-585px; width:1171px; height:375px;}
+.concert .section_10 .set_links a {position:absolute; top:0; width:375px; height:375px; background:url(../images/event/y2015/m01/concert_blank.png); text-indent:-9999px;}
+.concert .section_10 .set_links a:hover {background:url(../images/event/y2015/m01/concert_text_10_over.png) no-repeat 50% 50%;}
+.concert .section_10 .set_link_01 {left:0;}
+.concert .section_10 .set_link_02 {left:398px;}
+.concert .section_10 .set_link_03 {left:795px;}
+
+.concert .section_11 .t_01 {margin-top:-122px; margin-left:-432px;}
+
+.concert .concert_pop {position:fixed; top:-9999px; left:50%; margin:-325px 0 0 -355px; z-index:101;}
+.concert .concert_pop .btn_close {position:absolute; top:0; right:-48px;}
+
+.curtain {display:none; position:absolute!important; top:0; left:0; width:100%; height:100%; background:url(../images/event/y2015/m01/concert_bg_curtain.png); z-index:100;}
+
+#concert_side {position:fixed; top:113px; right:0; z-index:10000;}
+
+#pop_where .map_frame {width:710px; height:645px;}
+#pop_where .map_frame iframe {width:100%; height:100%;}
+
+#centerLayer {z-index:99999;}
+/* 이승기 프로포즈 */
+#contents .container > section.propose {margin-top:0; width:100%; min-width:1100px;}
+.propose .title_img,
+.propose .detail,
+.propose .text {text-align:center;}
+.propose .title_img img,
+.propose .detail img,
+.propose .text img {display:block; margin:0 auto; width:1100px;}
+.propose .title_img {padding-top:50px; background:url(../images/event/y2015/m01/propose_bg.jpg) no-repeat 50% 0; background-size:cover;}
+.propose .detail {background:#e8728b;}
+.propose .text {background:#fafafa;}
+.propose .input_section {margin:0 auto; width:980px; padding-top:100px; overflow:hidden;}
+.propose .input_section > div {position:relative; float:left; box-sizing:border-box; margin-bottom:20px;}
+.propose .input_section .name,
+.propose .input_section .contact {width:50%;}
+.propose .input_section .text,
+.propose .input_section .attach {width:100%;}
+.propose .input_section .name {padding-right:10px;}
+.propose .input_section .contact {padding-left:10px;}
+.propose .input_section input,
+.propose .input_section textarea {box-sizing:border-box; width:100%; background-color:#fafafa; border:0;}
+.propose .input_section input {padding:0 30px 0 200px; height:100px; font-size:30px;}
+.propose .input_section textarea {padding:30px; font-size:16px; font-family:'RixSGO L', sans-serif; height:500px;}
+.propose .input_section label {position:absolute; top:33px; left:35px; font-size:30px;}
+.propose .input_section .attach {position:relative;padding:35px 100px 35px 300px; background:#fafafa;}
+.propose .input_section .attach .icon {display:none; position:absolute; top:30px; right:30px; width:44px; height:45px; background:url(../images/event/y2015/m01/propose_icon_clip.png) no-repeat;}
+.propose .input_section .attach input {box-sizing:content-box; font-size:20px; width:100%; height:30px; background:none; padding:0;}
+
+.propose .input_section .submit {float:none; clear:both; padding-bottom:100px; padding-top:70px; text-align:center;}
+.propose .input_section .submit input,
+.propose .input_section .submit img {padding:0; width:auto; height:auto;}
+.propose .input_section .submit input,
+.propose .input_section .submit a {display:inline-block; margin:0 14px; vertical-align:middle;}
+
+.propose .popup {position:fixed; top:-9999px; left:50%; margin:-325px 0 0 -355px; z-index:101;}
+.propose .popup .btn_close {position:absolute; top:0; right:-48px;}
+
+#pop_preview {margin:-350px 0 0 -350px; padding:50px; width:600px; height:600px; background:#fff; border-width:9px;}
+#pop_preview > div {padding-right:10px; height:600px; overflow-y:auto; overflow-x:hidden;}
+#pop_preview p {margin-top:20px; font-size:20px; font-family:'RixSGO B', sans-serif; color:#333; font-weight:bold;}
+#pop_preview p span {display:block; margin-top:10px; padding:20px; box-sizing:border-box; width:100%; color:#333; background:#fafafa; font-size:15px; font-weight:normal;}
+#pop_preview .msg {margin-top:10px; padding:20px; box-sizing:border-box; width:100%; color:#333; background:#fafafa;}
+#pop_preview .msg pre {line-height:1.2; width:100%; word-break:break-all; font-family:'RixSGO L', sans-serif; font-size:15px;
+ white-space: pre-wrap;       /* CSS 3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word; }
+#pop_preview .img {margin-top:20px;}
+
+#pop_preview p:first-child {margin-top:0;}
+

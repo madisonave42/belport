@@ -1,0 +1,23 @@
+/* ↓절대 삭제하시면 안됩니다.*/
+#wrapBody,
+.event_partner { width:100% !important; }
+.event_inner { width:960px; margin:0 auto;  }
+/* ↑절대 삭제하시면 안됩니다.*/
+
+/* ↓ 여기서부터 이벤트 css 내용 자유롭게 넣어주시면 됩니다. */
+#belport-event {position:relative; margin:0 auto; width:960px; overflow:hidden;}
+#belport-event img {display:block;}
+#belport-event h2 {position:absolute; top:-9999px;}
+#belport-event .contents img {display:block;}
+#belport-event .section-05 .message {padding-bottom:50px; height:700px;}
+#belport-event .section-05 .message iframe {width:100%; height:100%;}
+
+.curtain {display:none; position:absolute; top:0; left:0; width:100%; height:5000px; background:url(../img/bg_curtain.png); z-index:10;}
+
+#pop-map {position:absolute; top:-9999px; left:50%; margin-left:-355px; z-index:20;}
+#pop-map .map-frame {width:710px; height:645px;}
+#pop-map .map-frame iframe {width:100%; height:100%;}
+#pop-map .btn-close {position:absolute; top:-40px; right:0;}
+
+.show-pop .curtain {display:block;}
+.show-pop #pop-map {top:2400px;}

@@ -1,0 +1,439 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ko">
+<head>
+<title>DEV - 싸니까 믿으니까 - 인터파크 티켓</title>
+<style>
+body{
+scrollbar-3dlight-color:#FFFFFF;
+scrollbar-arrow-color:#C3C3C3;
+scrollbar-track-color:#FFFFFF;
+scrollbar-darkshadow-color:#FFFFFF;
+scrollbar-face-color:#FFFFFF;
+scrollbar-highlight-color:#C3C3C3;
+scrollbar-shadow-color:#C3C3C3;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="Title" content="인터파크 티켓"/>
+<link rel="shortcut icon" href="http://ticketimage.interpark.com/TicketImage/main/100506_main/interpark.ico">
+<!-- Select include start -->
+
+
+
+<!-- Select include end-->
+<link href="http://ticketimage.interpark.com/TicketImage/main/100506_main/import_base2.css" rel="stylesheet" id="TCssNo1">
+<link href="http://ticketimage.interpark.com/TicketImage/main/100506_sub/common_info.css" rel="stylesheet" id="TCssNo2">
+<link href="http://ticketimage.interpark.com/TicketImage/main/100506_main/common.css" rel="stylesheet" type="text/css" >
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<script type="text/javascript">
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+
+
+
+/*----------------	 상품정보 페이지 LINK---------------*/
+
+function GoodsGo(strGroupCode, strGoodsCode){
+	self.location.href = "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?MN=Y&GroupCode=" 
+						+ strGroupCode + "&GoodsCode=" +	strGoodsCode;
+}
+
+/// Tiki 상품페이지 링크
+function TikiGoodsGo(strValue){
+	self.location.href = "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?MN=N&GroupCode=" 
+						+ strValue ;
+	}
+	
+	
+/// 영화 페이지 링크
+function MovieGoodsGo(strGroupCode){
+	self.location.href = "http://movie.interpark.com/Movie/Main/IMGoodsInfo.asp?GroupCode=" 
+						+ strGroupCode ;
+	}	
+	
+	
+/******* 이벤트 페이지 링크 ****************/	
+function EventGo(i_Value, i_Flag){
+	
+	if(i_Flag == "Y"){						//사용자정보를 받는 이벤트
+		self.location.href = "/Event/EventKind.asp?Eventseq=" +	i_Value;
+		}
+	else if(i_Flag == "N"){					//정보성 이벤트(프레임있는이벤트 페이지)
+		self.location.href = "/Event/EventFraim.asp?Eventseq=" + i_Value;
+		}	
+	else{									//프레임없는 이벤트페이지							
+		//self.location.href = "/Event/Templet/" + i_Value +".html";
+		self.location.href = "/Event/EventNoFraim.asp?Eventseq=" + i_Value;
+		}
+	}	
+	
+	
+///////////////////////////////////
+//		공연장 페이지 LINK
+
+function PlaceGo(i_Value){
+	self.location.href = "http://ticket.interpark.com/TPPlace/Main/TPPlace_Detail.asp?PlaceCode=" +	i_Value;
+}
+//-->
+
+function TopCheck(form)
+{
+	if(form.STxt.value ==""){
+		alert("검색할 공연명을 입력하세요")
+		form.STxt.focus();
+		return false;
+		}
+	else{	
+		return true;
+		}
+
+}
+
+</script>
+
+<!-- 귀베너 시작 -->
+<script type="text/javascript" src="/Lib/js/playBanner.asp"> </script>
+
+<script type="text/javascript" src="/Lib/js/TPBanner.js"> </script>
+<!-- 귀베너 끝 -->
+
+<!-- 쇼핑바 시작 -->
+<script type="text/javascript" src="/Lib/js/MainShoppingBar.js"> </script>
+<!-- 쇼핑바 끝 -->
+
+<!--공연 네비게이션 시작-->
+
+<script type="text/javascript" src="/Lib/js/Navigation.js"> </script>
+<script type="text/javascript" src="/Search/Auto/SearchAutoComplete.js"> </script>
+<!-- base64.js -->
+<script type="text/javascript" src="/Lib/js/base64.js?ver=201304"></script>   
+<!-- S: 20121009 GateWayBar -->
+<script type="text/javascript" src="/Lib/js/GatewayBar.js?ver=201410"></script>   
+<!-- E: 20121009 GateWayBar -->
+<!-- s: GNB -->
+<div id="wrapGNB">
+	<div class="gnbTicket">
+		<!-- e: 상단우측 네비 -->
+		<h1 class="logo2014"  id="gnbInparkLogo">
+
+			<a href="http://www.interpark.com/malls/index.html?gateTp=1" class="interpark" id="InterLogo">싸니까 믿으니까 인터파크니까 </a>
+
+			<a href="http://ticket.interpark.com/" class="ticket">인터파크 티켓</a>
+		</h1>
+		<!--컬쳐bar 시작 >> 위치 변경 불가 -->
+		<script type="text/javascript" src="/Lib/js/CulturelandBar.js"></script>				
+		<!--컬쳐bar 끝-->
+		<!-- s: 검색박스 -->
+		<div class="search">
+			<form name='AllSearch' id='AllSearch' method='Post' onSubmit="javascript:goSearch(); return false;">
+				<h2>검색</h2>
+				<fieldset>
+					<legend>검색폼</legend>
+					<div class="box">
+						<input type="text" id="Nav_SearchWord" name="Nav_SearchWord" onmousedown="SearchAC.setInitSearch(event);" onkeypress="if (event.keyCode == 13) {Nav_Search(); return false;}" title="검색어입력">					
+					</div>			
+					<div id="scbt" class="btn">
+						<a onClick="Nav_Search();" href="#"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/bt_newSearch09.gif" alt="검색" /></a>
+					</div>
+				</fieldset>
+			</form>			
+			<!--s: 자동완성 레이어 --> 
+			<div id="SearchAC_Layer" name="SearchAC_Layer" style="display:none;" class="Search_At">
+				<div class="searchAC">
+					<h3>검색 자동완성 기능</h3>
+					<div class="result">
+						<h4>검색 자동완성 결과</h4>
+						<!-- s: 검색결과 -->
+						<div id="SearchAC_List"></div>
+						<div id="SearchAC_Detail"></div>
+						<!-- e: 검색결과 -->
+					</div><!-- //result -->
+					<div class="check">
+						<label><input type="checkbox" name="searchoff" id="searchoff" onClick="SearchAC.close_layer();">검색어 자동완성 기능 끄기</label>
+						<a href="javascript:SearchAC.layer_hide();" onFocus="this.blur();"><img border="0" src="http://ticketimage.interpark.com/TicketImage/event/100707/btn_t_close.gif"  alt="닫기" /></a>
+					</div><!-- //check -->
+				</div><!-- //searchAC -->			
+			</div><!-- //SearchAC_Layer -->			
+			<!--e: 자동완성 레이어 --> 
+			<form style="margin: 0pt; padding: 0pt;">
+				<div style="display: none;" class="searchList" id="_rs_box_mall">
+				<!--<div style="visibility: hidden;" class="searchList" id="_rs_box_mall">-->
+					<!-- s: 검색결과 있는 경우 -->
+					<div id="_rs_box_qrys_mall" class="srchBox"></div>
+					<div class="actWord">
+						<div id="help_layer" class="help_layer"><img alt="검색" src="http://ticketimage.interpark.com/TicketImage/main/100506_main/img_searchhelp_layer.gif"></div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- e: 검색박스 -->
+		<!-- s: 핫클립 -->
+		<dl class="hotClip">
+			<dt><img alt="HOT CLIP" src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_hotclip.gif"></dt>
+			<dd>
+			<script type="text/javascript" src="http://xml.interpark.com/Ticket/Welcom/welcom_hotclip.js"></script>
+			<script type="text/javascript" src="/Lib/js/HotClip.js"> </script>
+			</dd>
+		</dl>
+		<!-- e: 핫클립 -->
+		<!-- s: 우상단 배너 -->
+ 		<div class="gnb_Ad1"><script type="text/javascript">//PlayBanner_asp_BN12();</script></div>
+		<div class="gnb_Ad2"><span class="ad_bar"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_ad_bar.gif" alt=""></span><script type="text/javascript">//PlayBanner_asp_BN11();</script></div>
+		<!-- e: 우상단 배너 -->
+	</div>
+	<!-- s: 티켓GNB 주메뉴 -->
+	<div class="gnbTicketM">
+		<h2>장르별 메뉴</h2>
+		<ul class="gnb_Lm">
+			<li class="first"><a href="http://ticket.interpark.com/MusicalIndex.asp?tid1=main_gnb&tid2=category&tid3=musical&tid4=musical"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_lm_musical.gif" alt="뮤지컬"></a></li>
+			<li><a href="http://ticket.interpark.com/ConcertIndex.asp?tid1=main_gnb&tid2=category&tid3=concert&tid4=concert"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_lm_concert.gif" alt="콘서트"></a></li>
+			<li><a href="http://ticket.interpark.com/DramaIndex.asp?tid1=main_gnb&tid2=category&tid3=drama&tid4=drama"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_lm_play.gif" alt="연극"></a></li>
+			<li><a href="http://ticket.interpark.com/ClassicIndex.asp?tid1=main_gnb&tid2=category&tid3=classic&tid4=classic"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_lm_classic.gif" alt="클래식/무용"></a></li>
+			<li><a href="http://sports.interpark.com/SportsIndex.asp?tid1=main_gnb&tid2=category&tid3=sport&tid4=sport"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_lm_sportsleisure.gif" alt="스포츠/스키"></a></li>
+			<li><a href="http://ticket.interpark.com/LesIndex.asp?tid1=main_gnb&tid2=category&tid3=exhibition&tid4=exhibition"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_lm_exhibition_v2.gif" alt="전시/체험"></a></li>
+			<li><a href="http://ticket.interpark.com/TPFamilyIndex.asp?tid1=main_gnb&tid2=category&tid3=family&tid4=family"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_lm_family.gif" alt="아동/가족"></a></li>
+			<li><a href="http://ticket.interpark.com/tiki/Special/TPRegionMain.asp?tid1=main_gnb&tid2=category&tid3=local_main&tid4=local_main"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_lm_area.gif" alt="지역"></a></li>
+		</ul>
+		<ul class="gnb_Cm_N">
+			<li class="first"><a href="http://ticket.interpark.com/Ranking/TPBoxOfficemain.asp?tid1=main_gnb&tid2=category&tid3=ranking&tid4=ranking"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_rm_ranking.gif" alt="랭킹"></a></li>
+			<li><a href="http://ticket.interpark.com/TPPlace/Main/TPPlaceMainIndex.asp?tid1=main_gnb&tid2=special_cate&tid3=place&tid4=place"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_rm_theater.gif" alt="공연장"></a></li>
+			<li><a href="http://ticket.interpark.com/DaeHakNo/index.asp?tid1=main_gnb&tid2=special_cate&tid3=daehakro&tid4=daehakro"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_rm_daehangno.gif" alt="대학로"></a></li>
+		</ul>
+		<ul class="gnb_Rm">
+			<li><a href="http://ticket.interpark.com/tiki/index.asp?tid1=main_gnb&tid2=service&tid3=tiki&tid4=tiki"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_rm_tiki.gif" alt="TiKi"></a></li>
+			<li><a href="http://ticket.interpark.com/Community/Play/Event/main.asp?tid1=main_gnb&tid2=service&tid3=event&tid4=event"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_rm_event.gif" alt="이벤트"></a></li>
+			<li><a href="http://ticket.interpark.com/Community/Play/Talk/main.asp?tid1=main_gnb&tid2=service&tid3=community&tid4=community"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_rm_community.gif" alt="커뮤니티"></a></li>
+		</ul>
+		<ul class="gnb_RRm">
+			<li><a href="http://www.playdb.co.kr/?tid1=main_gnb&tid2=playdb&tid3=playdb&tid4=playdb" target="_blank"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_rm_playdb.gif" alt="플레이DB"></a></li>
+			<li id="MovieLogo">
+			
+			<a href="http://movie.interpark.com/Movie/?tid1=main_gnb&tid2=movie&tid3=movie&tid4=movie"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/gnb_rm_movie.gif" alt="영화"></a>
+			
+			</li>			
+		</ul>
+	</div>
+	<!-- e: 티켓GNB 주메뉴 -->
+</div>
+<!-- e: GNB -->
+<!--공연 네비게이션 끝-->
+
+
+<div class="event_partner" id="wrapBody">
+	<div class="event_inner">
+	<!-- 이벤트 내용 넣는 곳 -->
+		<link href="../css/event.css" rel="stylesheet" type="text/css" >
+		<div id="belport-event">
+			<h2>더 맑음 콘서트</h2>
+			<div class="contents">
+				<div class="section-01">
+					<img src="../img/img_01.jpg" alt="" />
+				</div>
+				<div class="section-02">
+					<img src="../img/img_02.jpg" alt="" />
+				</div>
+				<div class="section-03">
+					<img src="../img/img_03.jpg" alt="" usemap="#map-link" />
+					<map name="map-link">
+						<area shape="rect" coords="285,332,674,397" href="#pop-map" alt="오시는길" onclick="document.getElementById('belport-event').className='show-pop';return false;" />
+					</map>
+				</div>
+				<div class="section-04">
+					<img src="../img/img_04.jpg" alt="" usemap="#prd-link" />
+					<map name="prd-link">
+						<area shape="rect" coords="289,864,676,927" href="http://www.belport.co.kr/shop/evt/01_Concerts.php#top100" alt="제품구매" target="_blank" />
+					</map>
+				</div>
+				<div class="section-05">
+					<img src="../img/img_05.jpg" alt="" />
+					<div class="message">
+						<iframe src="http://ticket.interpark.com/Promotion/2014/GutenBerg/EventBoard.asp?v=20140827" frameborder="0" scrolling="no"></iframe>
+					</div>
+				</div>
+			</div>
+
+			<div class="curtain"></div>
+
+			<div id="pop-map">
+				<div class="map-frame">
+					<iframe src="http://dna.daum.net/include/tools/routemap/map_view.php?width=710&height=644&latitude=37.592853237281176&longitude=127.02482001145444&contents=&zoom=4" width="710" height="700" scrolling="no" frameborder="0"></iframe>
+				</div>
+				<a href="#" class="btn-close" onclick="document.getElementById('belport-event').className='';return false;">
+					<img src="../img/close_pop.png" alt=""/>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- s: Footer -->
+
+<div id="wrapFooter">
+	<!-- s: Service_Ticket_All -->
+	<div class="Service_Ticket_All">
+		<!-- s: Copyright -->
+		<div class="Ticket_Footer">
+			<!-- s: Company -->
+			<dl class="INT">
+				<dt><span>인터파크 INT</span><a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp" target="_blank"><img src="http://ticketimage.interpark.com/Movie/banner_image/201204/120410_footer_txt.jpg" alt="사업자정보확인"></a></dt>
+				<dd><address>135-880 서울시 강남구 삼성로 512 삼성동빌딩 10층(삼성동)</address><br>대표이사 김동업<br>사업자등록번호 214-87-98889 ㅣ 통신판매업신고 강남 02549호<br>Copyright 2015 INTERPARK INT All rights reserved.</dd>
+			</dl>
+			<!-- e: Company -->
+			<!-- s: 고객센터 -->
+			<dl class="CsTicket">
+				<dt>고객센터</dt> <a href="http://ticket.interpark.com/HelpDesk/HelpDeskMain.asp"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/bn_MainFAQ.gif" alt="FAQ"></a>
+				<dd>전화 1544-1555 | 팩스 02-532-4003<br />개인정보보유기간 : 회원탈퇴시까지<br>개인정보관리책임자 : 윤혜정 <a href="mailto:cpo@interpark.com" target="_blank">cpo@interpark.com</a></dd>
+			</dl>
+			<!-- e: 고객센터 -->
+			<!-- s: 예매가이드 -->
+			<dl class="GuideTicket">
+				<dt>예매가이드</dt>
+				<dd>
+					<span><a href="http://ticket.interpark.com/TiKi/Info/BookingGuide.asp?Url=guide_01.html">장르별 예매방법</a></span>
+					<span class="gray_bar">|</span>
+					<span><a href="http://ticket.interpark.com/TiKi/Info/BookingGuide.asp?Url=guide_04.html">결제방법</a></span>
+					<span class="gray_bar">|</span>
+					<span><a href="http://ticket.interpark.com/TiKi/Info/BookingGuide.asp?Url=guide_11.html">수수료</a></span>
+					<span class="gray_bar">|</span>
+					<span><a href="http://ticket.interpark.com/TiKi/Info/BookingGuide.asp?Url=guide_05.html">취소/환불</a></span>
+					<span><a href="http://ticket.interpark.com/TiKi/Info/BookingGuide.asp?Url=guide_07.html">배송/티켓수령</a></span>
+					<span class="gray_bar">|</span>
+					<span><a href="http://ticket.interpark.com/tiki/TPEvent/TPAlwaysCardDiscount.asp?&tid1=scroll_out&tid2=footer&tid3=event&tid4=card">제휴/할인카드</a></span>
+					<span class="gray_bar">|</span>
+					<span><a href="http://ticket.interpark.com/HelpDesk/FAQSearch.asp">FAQ</a></span>
+				</dd>
+				<dd><a href="http://ticket.interpark.com/webzine/paper/TPNoticeView.asp?bbsno=34&pageno=1&stext=&sflag=&no=11576&groupno=11576&seq=0&KindOfGoods=TICKET&tid1=scroll_out&tid2=guide&tid3=delivery&tid4=notice_1"><img src="http://ticketimage.interpark.com/TicketImage/main/100506_main/bn_superbrand.gif" alt="2010 Brand Olympic Super Brand"></a></dd>
+			</dl>
+			<!-- e: 예매가이드 -->
+			<!-- s: 하단메뉴 -->
+			<dl class="Ticket_bMenu">
+				<dt>인터파크 소개 및 약관</dt>
+				<dd class="first"><b><a href="http://www.interpark.com/gate/info/protect_privacy.html" target="_blank">개인정보취급방침</a></b></dd>
+				<dd><a href="http://www.interpark.com/gate/info/protect_privacy_youth.html" target="_blank">청소년보호정책</a></dd>
+				<dd><a href="http://www.interpark.com/gate/info/mem_clause.html" target="_blank">이용약관</a></dd>
+				<dd><a href="http://ticket.interpark.com/TiKi/Info/ENTInfo.asp?info=c_info_20">티켓판매안내</a></dd>
+				<dd><a href="http://www.interpark.com/int/communication/CompanyInfo.do?_method=list&brd=cpNews&sc.brdNo=943660" target="_blank" title="IR사이트로이동">IR</a></dd>
+				<dd><a href="http://ticket.interpark.com/TiKi/Info/EntInfo.asp?Info=c_info_01.html">회사소개</a></dd>
+				<dd><a href="http://recruit.interpark.com/main/recruit/EnggmntMgt.do?_style=main&_method=list" target="_blank">채용공고</a></dd>
+				<dd><a href="http://www.interpark.com/coupon/CouponAllToday.do?_method=sub3" target="_blank">우수고객제도</a></dd>
+				<dd><a href="http://ticket.interpark.com/TiKi/Info/BookingGuide.asp?Url=guide_01.html">예매안내</a></dd>
+			</dl>
+			<dl class="site_link">
+				<dt>외국어사이트</dt>
+				<dd class="en"><a href="http://ticket.interpark.com/Global/index.asp?lang=en&tid1=scroll_out&tid2=footer&tid3=english&tid4=english" target="_blank">English</a></dd>
+				<dd class="jp"><a href="http://ticket.interpark.com/Global/index.asp?lang=jp&tid1=scroll_out&tid2=footer&tid3=japanese&tid4=japanese" target="_blank">日本語</a></dd>
+				<dd class="ch"><a href="http://ticket.interpark.com/Global/index.asp?lang=ck&tid1=scroll_out&tid2=footer&tid3=chinese&tid4=chinese" target="_blank">中文</a></dd>
+			</dl>
+			<!-- e: 하단메뉴 -->
+		</div>
+		<!-- e: Copyright -->
+	</div>
+	<!-- e: Service_Ticket_All -->
+</div>
+<!-- e: Footer -->
+<!-- 제휴처 함수 호출 시작 -->
+<script type="text/javascript" src="/Include/AddTPFooter.js?v=20"></script>
+<!-- 제휴처 함수 호출 끝 -->
+<!-- S : 플로팅배너 -->
+
+<!-- <script type="text/javascript" src="/Lib/js/TPFloatingBanner.js"></script> -->
+
+<!-- E : 플로팅배너 -->
+<!-- footer end -->
+<!--192.168.28.124-->
+</body>
+<script src="/Include/Mobile/Ipk_PCviewUI_1.0.min.js" defer="defer" type="text/javascript"></script>
+
+<!-- 와이즈로그 함수 호출 시작 -->
+<script type="text/javascript" src="/Wiselog/wise_show.html"></script>
+<!-- 와이즈로그 함수 호출 끝 -->
+</html>
+
+<script language ="javascript">
+
+
+function WindScroll(){
+	
+	//divBanner.style.top = document.body.scrollTop;
+	
+	if(document.body.scrollTop <= MainTable.offsetTop){
+		divBanner.style.top = MainTable.offsetTop;
+		}
+	else{
+		divBanner.style.top = document.body.scrollTop;;
+		}
+		
+		
+	divBanner.style.visibility = "visible";
+	
+}	
+
+function WindReset(){
+	
+	divBanner.style.left = MainTable.offsetLeft + 862;
+	divBanner.style.top = MainTable.offsetTop;
+	///alert(idtbMain.offsetLeft);
+}
+
+
+function TPEventGo(i_Page, i_Width, i_Height){
+	
+	if (""	!= ""){
+		window.open(i_Page,"","toolbar=no,menubar=no,location=no,directories=no,resizable=yes,staus=no,fullscreen=no,width=" + i_Width + ",height=" + i_Height,"");
+		}
+	else{
+		location.href="http://www.ticketpark.com/gate/TPLogin.asp?MN=Y&CPage=B&GPage=";
+		return;
+		}
+}
+function TkEventGo(i_Page, i_Width, i_Height){
+	
+	if (""	!= ""){
+		window.open(i_Page,"","toolbar=no,menubar=no,location=no,directories=no,resizable=yes,staus=no,fullscreen=no,width=" + i_Width + ",height=" + i_Height,"");
+		}
+	else{
+		location.href="http://www.ticketpark.com/gate/TPLogin.asp?MN=Y&CPage=T&GPage=";
+		return;
+		}
+}
+
+
+////////////////////////////
+//상품정보 페이지 link
+var eventseq;
+eventseq = "";
+
+if (eventseq == "delaguarda"){
+	window.open("http://www.ticketpark.com/ticketpark_webmaster/popup/popup1028.html", "Notice", "width=351,height=366,top=0,notoolbars,resizable=yes");
+	} 
+
+// 동일상품이 여러가지여서 상품페이지로 못걸로 검색결과 페이지로 걸경우 링크
+function EventSearch(Txt){		
+	
+	self.location.href = "http://www.ticketpark.com/main/TopSearch.asp?Flag=Search&Stxt=" +Txt ;
+	return false;
+	
+}
+function EPopUp(gubun,i_flag1,i_flag2,i_flag3){
+	var strCook
+	strCook	= getCookie("TSession%5FID"); 
+						
+	if (gubun == "R"){		//예매하기 링크
+		location.href = "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?MN=Y&GroupCode=" + i_flag1;
+	}						
+	else{	
+	if (strCook == ""){
+		document.location.href = "http://ticket.interpark.com/Gate/TPLogin.asp?MN=Y&CPage=B&GPage=http://ticket.interpark.com/event/TopFraim.asp?eventseq=";
+	}
+	else{
+		window.open("http://ticket.interpark.com/Tiki/TPEvent/TPEventApply.asp?EventCode="+i_flag1, "", "width=400,height=400,left=400,scrolls = no")
+		}	
+	}
+}
+
+
+</script>
