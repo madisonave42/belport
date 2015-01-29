@@ -170,17 +170,39 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
  * 오모로비짜 단독페이지
  ===================================================*/
 #contents .container > section.omorovicza {position:relative; margin:0; width:100%;}
-.omorovicza > div {position:relative;}
+.omorovicza > div {position:relative; z-index:2;}
 .omorovicza > div .bg {width:100%; min-width:980px; overflow:hidden; text-align:center; z-index:10;}
 .omorovicza > div .bg img {position:relative; left:50%; display:block; width:100%; min-width:1600px;}
-.omorovicza > div .text {position:absolute; top:0; left:0; width:100%; height:100%; z-index:20;}
 
 .omorovicza .text > img {position:absolute; top:50%; left:50%;}
 
-#chapter_02 .t_01 {top:100px; margin-left:-333px;}
-#chapter_04 .t_01 {top:100px; margin-left:-344px;}
+.omorovicza #chapter_02 .t_01 {top:100px; margin-left:-333px;}
+.omorovicza #chapter_02 .effect {position:absolute; top:-385px; left:0; height:100%; width:100%; overflow:hidden;}
+.omorovicza #chapter_02 .effect > img {position:absolute;}
+.omorovicza #chapter_02 .c_01 {/* top:-385px; */top:0; right:0;}
+.omorovicza #chapter_02 .c_02 {/* top:224px; */top:609px; left:0;}
+.omorovicza #chapter_03 {position:relative;}
+.omorovicza #chapter_04 {z-index:1;}
+.omorovicza #chapter_04 .t_01 {top:100px; margin-left:-344px; z-index:2;}
+.omorovicza #chapter_04 .w_01 {position:absolute; top:50px; left:50%; margin-left:-27px; z-index:2;}
+/* .omorovicza #chapter_04 .w_02 {position:absolute; bottom:-50px; left:0; width:100%;} */
+
+.omorovicza #chapter_04 .w_02 {position:absolute; bottom:0; left:0; width:100%; z-index:1;}
+.omorovicza #chapter_04 .w_02.fixed {position:fixed; top:auto; /* bottom:-400px; */bottom:0; left:0; width:100%;}
+.omorovicza #chapter_04 .w_02.end {top:auto; bottom:0;}
+.omorovicza #chapter_05 .text {position:absolute; top:0; left:0; width:100%; font-size:0; text-align:center;}
+.omorovicza #chapter_05 .text > div {display:inline-block; width:30.625%; min-width:490px;}
+.omorovicza #chapter_05 .text > div a {display:block; position:relative; cursor:default;}
+.omorovicza #chapter_05 .text > div a img {width:100%;}
+.omorovicza #chapter_05 .text > div a .over {position:absolute; top:0; left:0; opacity:0; transition:opacity .5s ease;}
+.omorovicza #chapter_05 .text > div a:hover .over {opacity:1;}
+
+.omorovicza .btn_link a {display:block; margin:0 auto; width:198px;}
 
 #nav {position:fixed; top:50%; right:30px; margin-top:-85px; z-index:99;}
-#nav li {margin-bottom:14px;}
-#nav li a {display:block; width:20px; height:20px; background:url(../images/bg_nav.png) no-repeat; text-indent:-9999px;}
-#nav li a.on {background-position:0 -24px;}
+#nav li {margin-bottom:14px; height:15px;}
+#nav li a {position:relative; display:block; width:100px; font-size:12px; color:#bccee7;}
+#nav li a:after {content:''; position:absolute; top:-1px; right:0; display:block; width:15px; height:15px; background:url(../images/brand/omo_nav.png) no-repeat 0 3px;}
+#nav li a.on:after {background-position:0 -31px;}
+#nav li a span{display:block; position:absolute; top:0; right:20px; width:0; white-space:nowrap; overflow:hidden; text-align:right; opacity:0; transition:all .7s cubic-bezier(0.11,0.66,0.46,1);}
+#nav li a.on span{width:80px; opacity:1;}

@@ -495,7 +495,7 @@ table.info tbody td { padding: 20px 10px 20px 15px; font-size: 12px; color: #777
 .concert .list-products li figure.product p.title {color:#202020; font-weight:600; font-family:'RixSGO M', sans-serif; height:40px;}
 .concert .list-products li figure.product p.desc {height:35px; color:##777; font-size:12px; font-family:'RixSGO M', sans-serif;}
 .concert .list-products li figure.product p.size {margin-top:10px; color:#202020;  font-family:'RixSGO B', sans-serif;}
-.concert .list-products li figure.product p.price {text-align:left; font-size:20px;}
+.concert .list-products li figure.product p.price {text-align:left; font-size:20px; height:20px;}
 .concert .list-products li figure.product p.price .original {font-family: "Alegreya",serif; font-style: italic; font-size: 20px; color: #777;}
 .concert .list-products li figure.product p.price a {float:right; margin-top:1px; font-size:12px; color:#231f20; font-weight:600; text-decoration:underline;}
 
@@ -522,6 +522,26 @@ table.info tbody td { padding: 20px 10px 20px 15px; font-size: 12px; color: #777
 #pop_where .map_frame iframe {width:100%; height:100%;}
 
 #centerLayer {z-index:99999;}
+
+/* 콘서트 - 밸류 페이지 */
+.concert.value .value_section_02 .t_01 {margin-top:-232px; margin-left:-412px;}
+
+.concert.value .value_section_03 .t_01 {margin-top:-140px; margin-left:-585px;}
+.concert.value .value_section_03 .voucher_links {position:absolute; top:50%; left:0; margin-top:-20px; width:100%; text-align:center;}
+.concert.value .value_section_03 .voucher_links li {position:relative; display:inline-block; margin:0 45px;}
+
+.concert.value .value_section_03 .select-numb{margin:20px auto 0; width:70px; height:22px; position:relative; border:1px solid #ccc;}
+.concert.value .value_section_03 .select-numb input{width:30px; height:22px; line-height:22px; margin:0; padding:0; border:0; font-size:12px; text-align:center;}
+.concert.value .value_section_03 .select-numb button{
+	position:absolute; top:0; border:0; padding:0; width:20px; height:22px; text-indent:-99999em;
+	background:url(../images/event/y2015/m01/value_plus_minus.gif) no-repeat;
+}
+.concert.value .value_section_03 .select-numb button.minus{left:0; border-right:1px solid #ccc; background-position:-20px 0;}
+.concert.value .value_section_03 .select-numb button.plus{right:0; border-left:1px solid #ccc;}
+
+.concert.value .value_section_link {height:175px;}
+.concert.value .value_section_link .t_01 {top:0; margin-left:-194px;}
+
 /* 이승기 프로포즈 */
 #contents .container > section.propose {margin-top:0; width:100%; min-width:1100px;}
 .propose .title_img,
