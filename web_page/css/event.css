@@ -527,7 +527,7 @@ table.info tbody td { padding: 20px 10px 20px 15px; font-size: 12px; color: #777
 .concert.value .value_section_02 .t_01 {margin-top:-232px; margin-left:-412px;}
 
 .concert.value .value_section_03 .t_01 {margin-top:-140px; margin-left:-585px;}
-.concert.value .value_section_03 .voucher_links {position:absolute; top:50%; left:0; margin-top:-20px; width:100%; text-align:center;}
+.concert.value .value_section_03 .voucher_links {position:absolute; top:50%; left:0; margin-top:-20px; width:100%; min-width:980px; text-align:center;}
 .concert.value .value_section_03 .voucher_links li {position:relative; display:inline-block; margin:0 45px;}
 
 .concert.value .value_section_03 .select-numb{margin:20px auto 0; width:70px; height:22px; position:relative; border:1px solid #ccc;}
@@ -539,8 +539,18 @@ table.info tbody td { padding: 20px 10px 20px 15px; font-size: 12px; color: #777
 .concert.value .value_section_03 .select-numb button.minus{left:0; border-right:1px solid #ccc; background-position:-20px 0;}
 .concert.value .value_section_03 .select-numb button.plus{right:0; border-left:1px solid #ccc;}
 
-.concert.value .value_section_link {height:175px;}
+.concert.value .value_section_link {height:275px;}
 .concert.value .value_section_link .t_01 {top:0; margin-left:-194px;}
+
+#concert_order {padding:2px; box-shadow: 0 0 10px rgba(0,0,0,0.3); border:0;}
+#concert_order #contents .container > form section {margin-top:0; padding-top:30px; width:910px;}
+#concert_order.layPop .close {top:20px; right:20px; width:21px; height:21px; background:url(../images/event/y2015/m01/value_close_pop.png) no-repeat; cursor:pointer;}
+#concert_order.layPop .close img {display:none;}
+
+#concert_order_list {padding:2px; box-shadow: 0 0 10px rgba(0,0,0,0.3); border:0;}
+#concert_order_list #contents .container > form section {margin-top:0; padding-top:30px; width:910px;}
+#concert_order_list.layPop .close {top:20px; right:20px; width:21px; height:21px; background:url(../images/event/y2015/m01/value_close_pop.png) no-repeat; cursor:pointer;}
+#concert_order_list.layPop .close img {display:none;}
 
 /* 이승기 프로포즈 */
 #contents .container > section.propose {margin-top:0; width:100%; min-width:1100px;}

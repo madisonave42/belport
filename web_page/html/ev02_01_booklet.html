@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- [D] 가이드에 정리되어 있는데로 타이틀 구분해 주어야 함 -->
+	<title>BELPORT</title>
+
+	<!-- For old IE -->
+	<!--[if lt IE 9]>
+	<script src="../js/lib/html5shiv.js"></script>
+	<![endif]-->
+	<!--// For old IE -->
+
+	<link rel="shortcut icon" href="../images/common/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../images/common/favicon.ico" type="image/x-icon">
+	<link href='http://fonts.googleapis.com/css?family=Alegreya:400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=RixSGo+L:400|RixSGo+M:400|RixSGo+B:400" />
+	<!-- [D] 이벤트 스타일 추가 -->
+	<link rel="stylesheet" href="../css/lib/photoswipe.css" />
+	<link rel="stylesheet" href="../css/lib/photoswipe-skin/default-skin.css" />
+	
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/event.css" />
+	<!--<link rel="stylesheet" href="../css/페이지별css" />-->
+
+	<script src="../js/lib/jquery-1.11.0.min.js"></script>
+	<script src="../js/lib/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="../js/lib/jquery.masonry.min.js" type="text/javascript"></script>
+	<script src="../js/lib/jquery.slides.min.js" type="text/javascript"></script>
+	<!-- [D] 이벤트 스크립트 추가 -->
+	<script src="../js/lib/photoswipe.min.js" type="text/javascript"></script>
+	<script src="../js/lib/photoswipe-ui-default.min.js" type="text/javascript"></script>
+	
+	<script src="../js/function.js"></script>
+	<script src="../js/event.js"></script>
+</head>
+<body>
+<div class="skip">
+	<dl>
+		<dt class="hide">바로가기 메뉴</dt>
+		<dd><a href="#container">본문 바로가기</a></dd>
+	</dl>
+</div>
+
+<header>
+
+	<h1><a href="#" class="key_out"><img src="../images/common/logo.png" alt="Belport" /></a></h1>
+
+	<nav id="gnb">
+		<h1 class="hide">GNB</h1>
+		<ul class="main_menu">
+			<li class="main_shop">
+				<a href="#">SHOP</a>
+				<div class="sub_menu">
+					<div class="sub_menu_container">
+						<ul class="sub_emphasis">
+							<li><a href="#">Belport's Pick</a></li>
+							<li><a href="#">New Items</a></li>
+							<li><a href="#">On Sale</a></li>
+							<li><a href="#">Theme Shop</a></li>
+							<li><a href="#">Theme Box</a></li>
+						</ul>
+						<ul class="sub_default first-list">
+							<li><a href="#" class="sub_title">스킨케어</a></li>
+							<li><a href="#">스킨 / 토너</a></li>
+							<li><a href="#">크림 / 오일</a></li>
+							<li><a href="#">에센스 / 세럼</a></li>
+							<li><a href="#">로션 / 에멀젼</a></li>
+							<li><a href="#">클렌저</a></li>
+							<li><a href="#">아이케어</a></li>
+							<li><a href="#">선케어</a></li>
+							<li><a href="#">팩 / 마스크</a></li>
+						</ul>
+						<ul class="sub_default">
+							<li><a href="#" class="sub_title">메이크업</a></li>
+							<li><a href="#">베이스 메이크업</a></li>
+							<li><a href="#">아이 메이크업</a></li>
+							<li><a href="#">립케어 / 립컬러</a></li>
+							<li><a href="#">치크 메이크업</a></li>
+							<li><a href="#">네일 메이크업</a></li>
+						</ul>
+						<ul class="sub_default">
+							<li><a href="#" class="sub_title">바디 &amp; 헤어케어</a></li>
+							<li><a href="#">바디 클렌저</a></li>
+							<li><a href="#">바디 모이스춰라이저</a></li>
+							<li><a href="#">핸드 / 풋 케어</a></li>
+							<li><a href="#">샴푸</a></li>
+							<li><a href="#">컨디셔너 / 트리트먼트</a></li>
+							<li><a href="#">헤어 에센스</a></li>
+							<li><a href="#">헤어 스타일링</a></li>
+							<li><a href="#">기타</a></li>
+						</ul>
+						<ul class="sub_default">
+							<li><a href="#" class="sub_title">맨즈케어</a></li>
+							<li><a href="#">스킨/ 토너</a></li>
+							<li><a href="#">쉐이빙 / 클렌저</a></li>
+							<li><a href="#">로션 / 에센스 / 크림</a></li>
+							<li><a href="#">선크림 / 비비크림</a></li>
+							<li><a href="#" class="sub_title">기타</a></li>
+							<li><a href="#">향수</a></li>
+							<li><a href="#">캔들 / 디퓨저</a></li>
+							<li><a href="#">화장용구</a></li>
+							<li><a href="#">기타</a></li>
+						</ul>
+						<div class="sub_img">
+							<a href="#"><img src="../images/common/gnb_sub_onsale.jpg" alt="On Sale sweet summer sale" /></a>
+						</div>
+					</div>
+					<!-- // .sub_menu_container -->
+				</div>
+				<!-- // .sub_menu -->
+			</li>
+			<li class="main_brand">
+				<a href="#">BRAND</a>
+				<div class="sub_menu">
+					<div class="sub_menu_container">
+						<ul class="sub_emphasis">
+							<li><a href="#">Spotlight</a></li>
+						</ul>
+						<ul class="sub_list first-list">
+							<li><a href="#">[mo]th</a></li>
+							<li><a href="#">Abeauty</a></li>
+							<li><a href="#">Aesop</a></li>
+							<li><a href="#">Bellefontaine</a></li>
+							<li><a href="#">Bobbi Brown</a></li>
+							<li><a href="#">Botani</a></li>
+							<li><a href="#">Bottega Verde</a></li>
+							<li><a href="#">Caudalie</a></li>
+							<li><a href="#">Colorneer</a></li>
+							<li><a href="#">Cowshed</a></li>
+							<li><a href="#">Essentiel</a></li>
+						</ul>
+						<ul class="sub_list">
+							<li><a href="#">Esthederm</a></li>
+							<li><a href="#">Fillerina</a></li>
+							<li><a href="#">Glamourflage</a></li>
+							<li><a href="#">Glossip</a></li>
+							<li><a href="#">Hello, my name...</a></li>
+							<li><a href="#">HURRAW!</a></li>
+							<li><a href="#">Hydra</a></li>
+							<li><a href="#">Jacob Hooy</a></li>
+							<li><a href="#">Korres</a></li>
+							<li><a href="#">La Colline</a></li>
+							<li><a href="#">La Fresh</a></li>
+						</ul>
+						<ul class="sub_list">
+							<li><a href="#">LAINO</a></li>
+							<li><a href="#">LCB</a></li>
+							<li><a href="#">LCN</a></li>
+							<li><a href="#">Lea Journo</a></li>
+							<li><a href="#">Mandarina Duck</a></li>
+							<li><a href="#">Moonshot</a></li>
+							<li><a href="#">NARS</a></li>
+							<li><a href="#">Omorovicza</a></li>
+							<li><a href="#">Sepai</a></li>
+							<li><a href="#">Swiss Perfection</a></li>
+						</ul>
+						<ul class="sub_list">
+							<li><a href="#">Z윤</a></li>
+							<li><a href="#">시크릿 무코타 이지케어</a></li>
+							<li><a href="#">정구호</a></li>
+							<li><a href="#">한창서 팩</a></li>
+							<!-- <li><a href="#" class="link_all_brand">All Brand</a></li> -->
+						</ul>
+						<div class="sub_img">
+							<a href="#"><img src="../images/common/gnb_sub_newbrand.jpg" alt="New Brand Linola" /></a>
+						</div>
+					</div>
+					<!-- // .sub_menu_container -->
+				</div>
+				<!-- // .submenu -->
+			</li>
+			<li class="main_event">
+				<a href="#">EVENT</a>
+				<div class="sub_menu">
+					<div class="sub_menu_container">
+						<ul class="sub_emphasis">
+							<li><a href="#">Tester’s Box</a></li>
+							<li><a href="#">Pop! Choice</a></li>
+							<li class="default first"><a href="#">진행 중 이벤트</a></li>
+							<li class="default"><a href="#">지난 이벤트</a></li>
+						</ul>
+						<ul class="sub_event first-list">
+							<li>
+								<p class="heading">Pop! Choice</p>
+								<img src="../images/common/gnb_sub_popchoice.jpg" alt="피부에 향기를 더하는 배쓰타임" />
+								<p class="title">배쓰 밤 2개 구매 시 바디솝 30g을 선물로 드립니다.</p>
+								<p>기간 :  10월 1일 부터 11월2일까지</p>
+								<a href="#">참여하기</a>
+								<p class="heading">Pop! Choice</p>
+								<img src="../images/common/gnb_sub_popchoice.jpg" alt="피부에 향기를 더하는 배쓰타임" />
+								<p class="title">배쓰 밤 2개 구매 시 바디솝 30g을 선물로 드립니다.</p>
+								<p>기간 :  10월 1일 부터 11월2일까지</p>
+								<a href="#">참여하기</a>
+							</li>
+							<li>
+								<p class="heading">진행 이벤트</p>
+								<img src="../images/common/gnb_sub_event.jpg" alt="벨포트 그랜드 오픈" />
+								<p class="title">벨포트 오픈 기념 포인트 적립이벤트</p>
+								<p>기간 :  10월 1일 부터 11월2일까지</p>
+								<a href="#">참여하기</a>
+							</li>
+						</ul>
+					</div>
+					<!-- // .sub_menu_container -->
+				</div>
+				<!-- // .sub_menu -->
+			</li>
+			<li class="main_inside">
+				<a href="#">INSIDE B.</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="header_util">
+		<ul>
+			<li><a href="#" class="key_out">로그인</a></li>
+			<li><a href="#">회원가입</a></li>
+			<!--<li><a href="#">장바구니<span class="round_box"><span class="round_box_inner">0</span></span></a></li>-->
+			<li class="cart">
+				<a href="#">장바구니</a>
+				<a class="count_bubble">
+					<div class="pr_count">12</div><span></span>
+				</a>
+			</li>
+			<li><a href="#">주문/배송조회</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#" class="btn_search">검색</a></li>
+		</ul>
+	</div>
+
+	<div class="header_search">
+		<form action="" method="get">
+			<input type="text" class="keyword" title="검색 키워드 입력" />
+			<input type="image" class="btn_search_big" id="search" src="../images/common/btn_search_big.png" alt="검색" />
+		</form>
+	</div>
+
+	<a href="#" class="about_belport">About Belport</a>
+
+	<div class="rich_banner_wrap">
+
+		<div class="rich_banner first">
+			<img src="../images/common/rich_banner_1.png" alt="LUCKY BRAND WEEK" class="rich_banner_image" />
+			<a href="http://belport.co.kr/event/event1.php" class="rich_banner_small_text">
+				<img src="../images/common/rich_banner_1_heading_small.png" alt="매일 최대 100분께 정품을 선물합니다!" />
+			</a>
+		</div>
+
+		<div class="rich_banner second">
+			<img src="../images/common/rich_banner_2.png" alt="GET THE TESTER BOX" class="rich_banner_image" />
+			<a href="http://belport.co.kr/event/main.php" class="rich_banner_small_text">
+				<img src="../images/common/rich_banner_2_heading_small.png" alt="매주 화요일 10시 선착순 100분께 정품2종이 담긴 테스터 박스를 드립니다." />
+			</a>
+		</div>
+
+		<div class="btn_arrow">
+			<a href="#" class="btn_prev">이전</a>
+			<a href="#" class="btn_next">다음</a>
+		</div>
+
+	</div>
+
+<!--
+	<div class="floating_banner">
+		<a href="#"><img src="../images/common/floating_banner.png" alt="Beauty Specialty Retail Store brand muse" /></a>
+		<a href="#" class="btn_close"><img src="../images/common/btn_close_floating.png" alt="close" /></a>
+	</div>
+-->
+</header>
+
+<!-- [D] 이벤트 페이지 본문 -->
+<section id="contents" class="event">
+	<h1 class="hide">2015년 2월 북클릿</h1><!-- depth 1 heading -->
+	<!--<nav></nav>-->
+	<section class="container">
+
+		<article class="location">
+			<h1 class="hide">location</h1>
+			<em class="home"><a href="#">Home</a></em>
+			<em>></em>
+			<em class="current">Event</em>
+		</article>
+
+		<h1 class="hide">벨포트의 다양한 매장소식이 담긴 북클릿을 확인하세요.</h1><!-- depth 2 heading -->
+		
+		<!-- detail section : S -->
+		<section class="new_year">
+			<h1 class="hide">Journey into love</h1>
+			<img src="../images/event/y2015/m02/booklet_01.jpg" alt="" />
+			<img src="../images/event/y2015/m02/booklet_02.jpg" alt="" usemap="#booklet" />
+			<map id="booklet" name="booklet">
+				<area shape="rect" coords="563,159,792,212" href="#" alt="" class="btn_show_booklet" />
+				<area shape="rect" coords="563,223,792,276" href="../images/event/y2015/m02/booklet/Journey_into_love_2015_BELPORT.zip" alt="" class="btn_down_booklet" />
+				<area shape="rect" coords="563,287,792,340" href="/shop/board/view.php?id=notice&no=22" alt="" class="btn_offshop" />
+			</map>
+			
+			<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="pswp__bg"></div>
+				<div class="pswp__scroll-wrap">
+					<div class="pswp__container">
+						<div class="pswp__item"></div>
+						<div class="pswp__item"></div>
+						<div class="pswp__item"></div>
+					</div>
+
+					<div class="pswp__ui pswp__ui--hidden">
+							<div class="pswp__top-bar">
+									<div class="pswp__counter"></div>
+									<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+									<!-- <button class="pswp__button pswp__button--share" title="Share"></button> -->
+									<!-- <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> -->
+									<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+									<div class="pswp__preloader">
+											<div class="pswp__preloader__icn">
+												<div class="pswp__preloader__cut">
+													<div class="pswp__preloader__donut"></div>
+												</div>
+											</div>
+									</div>
+							</div>
+							<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+									<div class="pswp__share-tooltip"></div> 
+							</div>
+							<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+							</button>
+							<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+							</button>
+							<div class="pswp__caption">
+									<div class="pswp__caption__center"></div>
+							</div>
+					</div>
+				</div>
+			</div>
+			
+			<script type="text/javascript">
+				$('header .rich_banner_wrap').remove();
+			
+				var openPhotoSwipe = function() { 
+					var pswpElement = $('.pswp')[0];
+					var items = [
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_01.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_02.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_03.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_04.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_05.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_06.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_07.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_08.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_09.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_10.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_11.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_12.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_13.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_14.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_15.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_16.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_17.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_18.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_19.jpg',
+							w: 1024,
+							h: 646
+						},
+						{
+							src: '../images/event/y2015/m02/booklet/booklet_20.jpg',
+							w: 1024,
+							h: 646
+						}
+					];
+
+					var options = {
+						history: false,
+						focus: false,
+						loop: false,
+
+						showAnimationDuration: 0,
+						hideAnimationDuration: 0
+					};
+
+					var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+					gallery.init();
+				};
+				
+				$('.btn_show_booklet').on('click', function(e) {
+					openPhotoSwipe();
+					e.preventDefault();
+				});
+			</script>
+		</section>
+		<!-- detail section : E -->
+
+	</section>
+</section>
+<!-- // [D] 이벤트 페이지 본문 -->
+
+<a href="#top" class="btn_top" title="맨위로"><img src="../images/common/btn_top.jpg" alt="맨위로"/></a>
+<div id="bottom_nav">
+	<div class="bottom_copy">
+		<p class="about">About BELPORT</p>
+		<p>벨포트에서는 엄격한 원칙에 근거하여 선정된 뷰티 브랜드만을 여러분께 소개합니다.</p>
+	</div>
+	<div class="bottom_nav_wrap">
+		<nav>
+			<h1 class="hide">SITE LINK</h1>
+			<ul>
+				<li class="bottom_brand">
+					<a href="#">BRAND ALL</a>
+					<div class="bottom_sub">
+						<ul>
+							<li><a href="#" class="best_brand">Abeauty</a></li>
+							<li><a href="#">Bellefontaine</a></li>
+							<li><a href="#" class="best_brand">Omorovicza</a></li>
+							<li><a href="#">Sepai</a></li>
+							<li><a href="#">Hello, My name Is Nail</a></li>
+							<li><a href="#">MICHEL DESIGN WORKS</a></li>
+							<li><a href="#">Bomb cometics</a></li>
+							<li><a href="#">Caudalie</a></li>
+							<li><a href="#">Colorneer</a></li>
+							<li><a href="#">Bottega Verde</a></li>
+							<li><a href="#" class="best_brand">Caudalie</a></li>
+							<li><a href="#">Colorneer</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Cowshed</a></li>
+							<li><a href="#">Essentiel</a></li>
+							<li><a href="#">Esthederm</a></li>
+							<li><a href="#">Fillerina</a></li>
+							<li><a href="#" class="best_brand">Glamourflage</a></li>
+							<li><a href="#">Glossip</a></li>
+							<li><a href="#">Hello, my name is Nail Polish</a></li>
+							<li><a href="#">HURRAW!</a></li>
+							<li><a href="#">Hydra</a></li>
+							<li><a href="#">Bottega Verde</a></li>
+							<li><a href="#" class="best_brand">Caudalie</a></li>
+							<li><a href="#">Colorneer</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Jacob Hooy</a></li>
+							<li><a href="#">Korres</a></li>
+							<li><a href="#">La Colline</a></li>
+							<li><a href="#" class="best_brand">La Fresh</a></li>
+							<li><a href="#">LAINO</a></li>
+							<li><a href="#">LCB</a></li>
+							<li><a href="#">LCN</a></li>
+							<li><a href="#">Lea Journo</a></li>
+							<li><a href="#">Mandarina Duck</a></li>
+							<li><a href="#" class="best_brand">Bottega Verde</a></li>
+							<li><a href="#">Caudalie</a></li>
+							<li><a href="#">Colorneer</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Moonshot</a></li>
+							<li><a href="#">NARS</a></li>
+							<li><a href="#" class="best_brand">Omorovicza</a></li>
+							<li><a href="#">Sepai</a></li>
+							<li><a href="#">Swiss Perfection</a></li>
+							<li><a href="#">Z윤</a></li>
+							<li><a href="#" class="best_brand">시크릿 무코타 이지케어</a></li>
+							<li><a href="#">정구호</a></li>
+							<li><a href="#">한창서 팩</a></li>
+							<li><a href="#">Bottega Verde</a></li>
+							<li><a href="#">Caudalie</a></li>
+							<li><a href="#" class="best_brand">Colorneer</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Moonshot</a></li>
+							<li><a href="#" class="best_brand">NARS</a></li>
+							<li><a href="#">Omorovicza</a></li>
+							<li><a href="#">Sepai</a></li>
+							<li><a href="#">Swiss Perfection</a></li>
+							<li><a href="#">Z윤</a></li>
+							<li><a href="#">시크릿 무코타 이지케어</a></li>
+							<li><a href="#" class="best_brand">정구호</a></li>
+							<li><a href="#">한창서 팩</a></li>
+							<li><a href="#">Bottega Verde</a></li>
+							<li><a href="#">Caudalie</a></li>
+							<li><a href="#">Colorneer</a></li>
+						</ul>
+					</div>
+					<!-- // .bottom_sub -->
+				</li>
+				<li class="bottom_sitemap">
+					<a href="#">SITE MAP</a>
+					<div class="bottom_sub">
+						<div class="col">
+							<dl class="wide shop">
+								<dt><a href="#">SHOP</a></dt>
+								<dd>
+									<ul>
+										<li><a href="#">PICK &amp; FUN</a></li>
+										<li><a href="#">THEME SHOP</a></li>
+										<li><a href="#">LIMITED EDITION</a></li>
+										<li><a href="#">스킨케어</a></li>
+										<li><a href="#">메이크업</a></li>
+										<li><a href="#">바디&amp;헤어 케어</a></li>
+										<li><a href="#">맨즈케어</a></li>
+										<li><a href="#">기타</a></li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="wide">
+								<dt><a href="#">BRAND</a></dt>
+								<dd>
+									<ul>
+										<li><a href="#">SPOTLIGHT</a></li>
+										<li><a href="#">BRAND</a></li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="wide">
+								<dt><a href="#">EVENT</a></dt>
+								<dd>
+									<ul>
+										<li><a href="#">진행중 이벤트</a></li>
+										<li><a href="#">지난 이벤트</a></li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="wide">
+								<dt><a href="#">INSIDE B</a></dt>
+							</dl>
+						</div>
+						<div class="col">
+							<dl class="narrow">
+								<dt><a href="#">ABOUT BELPORT</a></dt>
+							</dl>
+							<dl class="narrow">
+								<dt><a href="#">고객센터</a></dt>
+							</dl>
+							<dl class="narrow">
+								<dt><a href="#">장바구니</a></dt>
+							</dl>
+							<dl class="narrow">
+								<dt><a href="#">주문/ 배송조회</a></dt>
+							</dl>
+							<dl class="narrow">
+								<dt><a href="#">회원가입</a></dt>
+							</dl>
+						</div>
+						<div class="col">
+							<dl class="narrow">
+								<dt><a href="#">로그인</a></dt>
+							</dl>
+							<dl class="narrow">
+								<dt><a href="#">통합검색</a></dt>
+							</dl>
+							<dl class="narrow">
+								<dt><a href="#">마이벨포트</a></dt>
+							</dl>
+							<dl class="narrow">
+								<dt><a href="#">개인정보 취급방침</a></dt>
+							</dl>
+							<dl class="narrow">
+								<dt><a href="#">이용 약관</a></dt>
+							</dl>
+						</div>
+					</div>
+					<!-- // .bottom_sub -->
+				</li>
+				<li class="bottom_location">
+					<a href="#">LOCATION</a>
+					<div class="bottom_sub">
+						<div class="bottom_maps">
+							<div class="garosu-gil">
+								<div class="col map">
+									<a href="http://me2.do/FSIY2juv" target="_blank"><img src="../images/temp/footer_nav_map.jpg" style="width:100%; height:100%;" /></a>
+								</div>
+								<div class="col photo">
+									<img src="../images/temp/footer_nav_photo.jpg" style="width:100%; height:100%;" />
+								</div>
+								<div class="col store">
+									<p>벨포트 가로수길점</p>
+								</div>
+								<div class="col location_info">
+									<dl>
+										<dt>주소</dt>
+										<dd>서울특별시 강남구 도산대로 13길 14</dd>
+									</dl>
+									<dl>
+										<dt>전화번호</dt>
+										<dd>02-514-9280~2</dd>
+									</dl>
+									<dl>
+										<dt>이용시간</dt>
+										<dd>오전 11시 ~ 오후 10시</dd>
+									</dl>
+									<dl>
+										<dt>찾아오는 길</dt>
+										<dd>지하철 3호선 신사역  8번 출구 도보 10분 거리</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="gwangbok">
+								<div class="col map">
+									<a href="http://goo.gl/CCeHLZ" target="_blank"><img src="../images/temp/footer_nav_map_busan.jpg" style="width:100%; height:100%;" /></a>
+								</div>
+								<div class="col photo">
+									<img src="../images/temp/footer_nav_photo_busan.jpg" style="width:100%; height:100%;" />
+								</div>
+								<div class="col store">
+									<p>벨포트 부산 광복점</p>
+								</div>
+								<div class="col location_info">
+									<dl>
+										<dt>주소</dt>
+										<dd>부산시 중구 광복로 53</dd>
+									</dl>
+									<dl>
+										<dt>전화번호</dt>
+										<dd>051-242-3544</dd>
+									</dl>
+									<dl>
+										<dt>이용시간</dt>
+										<dd>오전 11시 ~ 오후 10시</dd>
+									</dl>
+									<dl>
+										<dt>찾아오는 길</dt>
+										<dd>지하철 1호선 남포역 3번 출구 도보 5분 (중앙무대 근처)</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<p class="currentPage"><span>1</span> / 2</p>
+					</div>
+					<!-- // .bottom_sub -->
+				</li>
+			</ul>
+
+			<div class="sns_link">
+				<a href="#" title="페이스북으로 공유하기"><img src="../images/common/btn_fb.png" alt="페이스북으로 공유하기" /></a>
+				<!-- <a href="#" title="트위터로 공유하기"><img src="../images/common/btn_twitter.png" alt="트위터로 공유하기" /></a> -->
+			</div>
+		</nav>
+	</div>
+</div>
+
+<footer>
+	<img src="../images/common/logo.png" alt="Belport" />
+
+	<ul class="footer_links">
+		<li><a href="#">고객센터</a></li>
+		<li><a href="#">매장안내</a></li>
+		<li><a href="#">이용약관</a></li>
+		<li><a href="#"><strong>개인정보취급방침</strong></a></li>
+	</ul>
+
+	<div class="footer_info">
+		<p>서울특별시 강남구 삼성동 145-9 대한해운빌딩 9층 / 고객센터 : 080-508-6631 / 사업자등록번호 : 220-88-60804</p>
+		<!-- [D] 20141014 정보확인 링크 추가 -->
+		<p>/ 통신판매업신고번호 : 제2013-서울강남-02382호 <a href="#" class="link_pop">사업자정보 확인</a> / 이지스엔터프라이즈 구매안전서비스 <a href="#" class="link_pop">서비스 가입사실 확인</a></p>
+		<p>대표 : 민영훈 / 개인정보관리책임자 : 김덕영( help@popchoice.co.kr )</p>
+	</div>
+
+	<p class="copyright">Copyright 2013 Popchoice Co.,Ltd. All rights Reserved.</p>
+</footer>
+
+<!-- [D] showLpPop 함수 호출시 팝업표시됩니다. -->
+<!-- 
+<div id="little_prince_pop">
+	<div class="little_prince_pop_content">
+		<p>원활한 경품 배송을 위해<br /><span>“마이 벨포트”</span>에서 주소를 확인해 주세요.</p>
+		<a href="#" class="confirm">확인</a>
+		<a href="#" class="close"><img src="../images/event/btn_close.png" alt="안내팝업 닫기" /></a>
+	</div>
+</div>
+-->
+
+<!-- [D] showLpPop 함수 호출시 팝업표시됩니다. -->
+<div id="little_prince_pop_02">
+	<div class="little_prince_pop_content">
+		<img src="../images/event/little_prince_pop_info.png" alt="" usemap="#preview_link" />
+		<map id="preview_link" name="preview_link">
+			<area shape="rect" coords="782,28,803,49" href="#" alt="미리보기 팝업닫기" class="btn_close_letter" />
+		</map>
+	</div>
+</div>
+
+<!-- [D] 어린왕자 페이지 스크립트 -->
+<<script type="text/javascript">
+	(function() {
+		var layer = $('#little_prince_pop'),
+			btnCloseLayer = layer.find('.close, .confirm');
+
+		btnCloseLayer.on('click', function(e) {
+			layer.hide();
+			e.preventDefault();
+		});
+		
+		setInterval(function() {
+			$('.scroll').animate({top:470}, 500, function() {
+				$(this).animate({top:475}, 500);
+			});
+		}, 1100);
+		
+		window.showLpPop = function() {
+			$('#little_prince_pop').height($(document).height()).show();
+		};
+		
+		$('.preview_letter').on('click', function(e) {
+			$('#little_prince_pop_02').height($(document).height()).show();
+			e.preventDefault();
+		});
+		
+		$('.btn_close_letter').on('click', function(e){
+			$('#little_prince_pop_02').hide();
+			e.preventDefault();
+		});
+	})();
+</script>
+
+</body>
+</html>

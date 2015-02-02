@@ -516,6 +516,41 @@ function closeTodayPop(popupNo) {
 	
 </section>
 <!-- 20141105 renewal modify : End -->
+<!--
+<div class="fix_layer">
+	<a href="#" class="fix_close" onclick="javascript:closeFix();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
+	<div class="fix_logo"><img src="../../images/main/fix_event_logo.png" alt="" /></div>
+	<div class="fix_photo" onclick="javascript:closeFix();openVideo();"><img src="../../images/main/nj.png" alt="" /></div>
+	<a href="#" class="btn_no_more" onclick="noMore();return false;"><img src="../../images/main/btn_no_more.jpg" alt="다시 보지 않기"/></a>
+</div>
+<div class="fix_video">
+	<a href="#" class="fix_close" onclick="javascript:closeVideo();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
+	<iframe width="90%" height="275" src="//www.youtube.com/embed/UL8tdbE9lF4?autoplay=1&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+-->
+<div class="fix_layer">
+	<a href="#" class="fix_close" onclick="javascript:closeFix();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
+	<div class="pop_cont">
+		<img src="../../images/temp/concert_ticket_pop_01.png" alt="" />
+		<a href="#" onclick="closeFix(); return false;">
+			<img src="../../images/temp/concert_ticket_pop_02.png" alt="" />
+		</a>
+		<img src="../../images/temp/concert_ticket_pop_03.png" alt="" />
+	</div>
+	<a href="#" class="btn_no_more" onclick="noMore();return false;"><img src="../../images/main/btn_no_more.jpg" alt="다시 보지 않기"/></a>
+</div>
+<script type="text/javascript">
+	// 20141105 추가
+	(function() {
+		var ck = document.cookie;
+		console.log(ck);
+		if (ck.indexOf('nomore') > -1) {
+			$('.fix_video').remove();
+			$('.fix_layer').remove();
+		}
+	})();
+
+</script>
 
 <section id='footer'>
 	<div class='company'>
@@ -571,29 +606,7 @@ function closeTodayPop(popupNo) {
 <div class="dimm"> </div>
 <!-- 20141105 -->
 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> 98759450f4037524c4e16c2f12a9b0dc2806750b
-<div class="fix_layer">
-	<a href="#" class="fix_close" onclick="javascript:closeFix();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
-	<div class="fix_logo"><img src="../../images/main/fix_event_logo.png" alt="" /></div>
-	<div class="fix_photo" onclick="javascript:closeFix();openVideo();"><img src="../../images/main/nj.png" alt="" /></div>
-<<<<<<< HEAD
-</div>
-<div class="fix_video">
-	<a href="#" class="fix_close" onclick="javascript:closeVideo();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
-	<iframe width="90%" height="275" src="//www.youtube.com/embed/TGUGLNaJFig?autoplay=1&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
-</div>
-=======
-	<a href="#" class="btn_no_more" onclick="noMore();return false;"><img src="../../images/main/btn_no_more.jpg" alt="다시 보지 않기"/></a>
-</div>
-<div class="fix_video">
-	<a href="#" class="fix_close" onclick="javascript:closeVideo();" ><img src="../../images/main/fix_event_close.png" alt="" /></a>
-	<iframe width="90%" height="275" src="http://www.youtube.com/embed/TGUGLNaJFig?autoplay=1&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
->>>>>>> 98759450f4037524c4e16c2f12a9b0dc2806750b
 <iframe class="" id="ifrmHidden" name="ifrmHidden" src='/shop/blank.php'></iframe>
 </body>
 </html>

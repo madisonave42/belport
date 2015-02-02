@@ -67,7 +67,7 @@
 				<div class="slides">
 					<p>
 						<a href="#">
-							<img src="../images/index/now_banner_01.jpg" alt="3만원 이상 구매 시 벨포트 블랙 파우치 증정" style="margin-top:-14px;">
+							<img src="../images/index/b_1.jpg" alt="3만원 이상 구매 시 벨포트 블랙 파우치 증정">
 							<span class="hover"><span>자세히보기</span></span>
 						</a>
 					</p>
@@ -79,13 +79,13 @@
 				<ul>
 					<li>
 						<a href="#">
-							<img src="../images/index/main_event_01.png" alt="벨포트 매장에서 누리는 전문 약사의 뷰티 카운셀링 &amp; 무료 샘플 기프트">
+							<img src="../images/index/b_2.jpg" alt="벨포트 매장에서 누리는 전문 약사의 뷰티 카운셀링 &amp; 무료 샘플 기프트">
 							<span class="hover"><span>자세히보기</span></span>
 						</a>
 					</li>
 					<li>
 						<a href="#">
-							<img src="../images/index/main_event_02.jpg" alt="BRAND MUSE 가장 감동적인 감상 평을 남겨 주신 분들께 선물을 드립니다.">
+							<img src="../images/index/b_3.jpg" alt="BRAND MUSE 가장 감동적인 감상 평을 남겨 주신 분들께 선물을 드립니다.">
 							<span class="hover"><span>자세히보기</span></span>
 						</a>
 					</li>
@@ -98,13 +98,13 @@
 					<ul>
 						<li>
 							<a href="#">
-								<img src="../images/index/main_event_03.jpg" alt="Brand week 다음주 공개!">
+								<img src="../images/index/b_4.jpg" alt="Brand week 다음주 공개!">
 								<span class="hover"><span>자세히보기</span></span>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<img src="../images/index/main_event_04.jpg" alt="벨포트 공지사항 테스터박스 묻고 답하기">
+								<img src="../images/index/b_5.jpg" alt="벨포트 공지사항 테스터박스 묻고 답하기">
 								<span class="hover"><span>자세히보기</span></span>
 							</a>
 						</li>
@@ -114,7 +114,7 @@
 				<section class="new-brand">
 					<h1 class="hide">new brand</h1>
 					<a href="#">
-						<img src="../images/index/limited_edition.jpg" alt="cargo Makeup to move you - COMING SOON">
+						<img src="../images/index/b_6.jpg" alt="cargo Makeup to move you - COMING SOON">
 						<span class="hover"><span>자세히보기</span></span>
 					</a>
 				</section>
@@ -144,7 +144,7 @@
 			<section class="spotlight">
 				<h1 class="hide">Spotlight</h1>
 				<a href="#">
-					<img src="../images/index/spotlight.jpg" alt="에이뷰티 벨포트가 집중조명하는 이 달의 브랜드">
+					<img src="../images/index/b_8.jpg" alt="에이뷰티 벨포트가 집중조명하는 이 달의 브랜드">
 					<span class="hover"><span>자세히보기</span></span>
 				</a>
 			</section>
@@ -152,7 +152,7 @@
 			<section class="themeshop">
 				<h1 class="hide">THEME SHOP</h1>
 				<a href="#">
-					<img src="../images/index/themeshop.jpg" alt="아프리카 보습 열매 시어버터">
+					<img src="../images/index/b_9.jpg" alt="아프리카 보습 열매 시어버터">
 					<span class="hover"><span>자세히보기</span></span>
 				</a>
 			</section>
@@ -253,3 +253,38 @@
 
 	</section>
 </section>
+
+<div id="index_pop">
+	<div class="pop_cont">
+		<img src="../images/temp/concert_ticket_pop.jpg" alt="" usemap="#pop_link" />
+		<map name="pop_link">
+			<area shape="rect" coords="247,471,364,504" href="/shop/ddd" alt="자세히보기" />
+			<area shape="rect" coords="542,39,570,67" href="" alt="닫기" />
+		</map>
+	</div>
+	<script>
+		$(function() {
+			var ck = document.cookie;
+			if (ck.indexOf('ticket_info') < 0) {
+				console.log($(document).height());
+				$('#index_pop').height($(document).height()).show();
+			}
+		});
+		
+		$('#index_pop area').on('click', function(e) {
+			var link = $(this).attr('href'),
+				today = new Date();
+				expire = new Date();
+				
+			expire.setTime(today.getTime() + 3600000*24);
+			
+			setCookie('ticket_info', 'y', expire, '/');
+			
+			$('#index_pop').remove();
+			if ( link == '#' || link == '' ) {
+				e.preventDefault();
+			}
+		});
+		
+	</script>
+</div>

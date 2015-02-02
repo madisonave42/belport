@@ -5,7 +5,7 @@ section#main .shop a{float:left; width:50%;}
 section#main .event:after,
 section#main .shop:after{content:""; display:block; clear:both;}
 
-.fix_layer{position:fixed; width:100%; height:100%; top:0; left:0; background:url(../images/main/bg_fix_event.png); z-index:5000;}
+.fix_layer{position:fixed; width:100%; height:100%; top:0; left:0; background:url(../images/common/bg_curtain.png); z-index:5000;}
 
 .fix_layer .fix_close{display:block; position:absolute; top:15px; right:15px;}
 .fix_layer .fix_close img{width:20px;}
@@ -24,3 +24,7 @@ section#main .shop:after{content:""; display:block; clear:both;}
 
 .fix_video .fix_close{display:block; position:absolute; top:15px; right:15px;}
 .fix_video .fix_close img{width:20px;}
+
+.fix_layer img,
+.fix_layer a {display:block;}
+.fix_layer .pop_cont {margin-top:50px;}
