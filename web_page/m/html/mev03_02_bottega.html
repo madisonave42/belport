@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<head>
+<meta name="description" content="벨포트" />
+<meta name="keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<title>벨포트</title>
+
+<!-- 201411 renewal add : Start -->
+<link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=RixSGo+L:400|RixSGo+M:400|RixSGo+B:400">
+<link rel="stylesheet" type="text/css" href="../../css/brand.css" />
+<script src="../../js/lib/jquery-1.11.0.min.js"></script>
+
+
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/common.js"></script>
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/goods_list_action.js"></script>
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery-1.9.1.min.js"></script>
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery.mobile-1.1.1.js"></script>
+<script src="http://www.belport.co.kr//shop/data/skin_mobileV2/belport/common/js/jquery.cookie.js"></script>
+
+<script src="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/js/jquery.slides.min.js"></script>
+
+<script src="http://www.belport.co.kr/m2/lib/js/mobileAction.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/mobileCommon.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/mobileDisplay.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/swipe/swipe.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/iscroll/iscroll.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/mobileCommon2.js"></script>
+<script src="http://www.belport.co.kr/m2/lib/js/attendance.js"></script>
+
+<script type="text/javascript">
+function showSearchArea() {
+	if($(".search-area").is(':hidden') == true) {
+
+		$(".search-area").slideDown(30);
+	}
+	else {
+
+		$(".search-area").slideUp(0);
+	}
+}
+
+function showCateArea() {
+	
+	var now_cate = $("[name=now_cate]").val();
+
+	if($("#cate-area").is(':hidden') == true) {
+		$("#page_title").hide();
+		$(".content").hide();
+		$(".content_goods").hide();
+		//$("body").addClass('back_bg');
+		$("#cate-area").slideDown(30);
+		$('.top_path').show();
+		getCategoryData(now_cate);
+	}
+	else {
+		$("#cate-area").hide();
+		//$("body").removeClass('back_bg');
+		$("#page_title").show();
+		$(".content").show();
+
+	}
+}
+
+function goHome() {
+	document.location.href="/" + getMobileHomepath() + "/index.php";
+}
+
+function goMenu(page_nm) {
+	switch(page_nm) {
+		case "my" :
+			document.location.href="/" + getMobileHomepath() + "/myp/menu_list.php";
+			break;
+		case "cart" :
+			document.location.href="/" + getMobileHomepath() + "/goods/cart.php";
+			break;
+		case "wish" :
+			document.location.href="/" + getMobileHomepath() + "/myp/wishlist.php";
+			break;
+		case "login" :
+			document.location.href="/" + getMobileHomepath() + "/mem/login.php";
+			break;
+		case "logout" :
+				document.location.href="/" + getMobileHomepath() + "/mem/logout.php";
+			break;
+		case "viewgoods" :
+				document.location.href="/" + getMobileHomepath() + "/myp/viewgoods.php";
+			break;
+	}
+}
+
+function searchKw() {
+	if($("[name=search_key]").val()) {
+		document.location.href="/" + getMobileHomepath() + "/goods/list.php?kw=" + $("[name=search_key]").val();
+	}
+	else {
+		alert("검색 키워드를 입력해 주시기 바랍니다");
+		return;
+	}
+}
+
+function getMobileHomepath() {
+	//각 URL 최상위 홈PATH를 구한다. 모바일의 홈이 여러 종류일수 있으므로  2012-09-20 khs
+	var path1 = document.location.pathname;
+
+	if (path1.charAt(0) == '/')	{
+		path1 = path1.substring(1);
+	}
+	var x = path1.split("/");
+
+	return x[0];
+}
+
+function showCategoryMsg(message) {
+
+	var sec = 1000;
+
+	$("[id=goodsres-hide] .text_msg").text(message);
+	$("[id=goodsres-hide]").fadeIn(300);
+
+	setTimeout( function() {
+		$("[id=goodsres-hide]").fadeOut(300);
+	}, sec);
+}
+
+// 201411 추가
+function closeFix(){
+	$('.fix_layer').hide();
+}
+
+function openMenu(){
+	$('.sidemenu').stop().animate({left:0}, 200);
+	$('.dimm').show();
+}
+
+function closeMenu(){
+	$('.sidemenu').stop().animate({left:-260}, 200);
+	$('.dimm').hide();
+}
+
+$(document).ready(function(){
+	$.ajax({
+		"url" : "/m2/proc/mAjaxAction.php",
+		"type" : "post",
+		"data" : {
+			"mode" : "get_cart_item"
+		},
+		"cash" : false,
+		"dataType" : "json",
+		"success" : function(cartItem)
+		{
+			if (cartItem.quantity) {
+				$("#cart-btn .cart-item-quantity").text(" ("+cartItem.quantity.toString()+")");
+			}
+		}
+	});
+
+	try {
+		var todayGoodsMobileIdx = $.cookie('todayGoodsMobileIdx');
+		
+		if(todayGoodsMobileIdx != "undefined" && todayGoodsMobileIdx != "") {
+			
+			var goods_idx = todayGoodsMobileIdx.split(',');
+			var view_cnt = goods_idx.length - 1;
+			$("#viewgoods-btn .viewgoods-quantity").text(" ("+view_cnt.toString()+")");
+		}
+	}
+	catch(e) {}
+
+});
+
+</script>
+<link rel="stylesheet" type="text/css" href="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/css/style.css" />
+<link rel="stylesheet" type="text/css" href="http://www.belport.co.kr/shop/data/skin_mobileV2/belport/common/css/attendance.css" />
+<style type="text/css">
+.cart-item-quantity{font-weight:normal;}
+.viewgoods-quantity{font-weight:normal;}
+
+#goodsres-hide2 {display:none;} 
+.goodsres_wrap {position : fixed;left : 10%;width : 80%;background : #ffffff;display : block;border-radius:1em;box-shadow:2px 2px 4px #7f7f7f;z-index: 1000; bottom:20%;}
+.goodsres_wrap .goodsres_title {background:#313030;width:100%;border-top-left-radius:1em;border-top-right-radius:1em;height:45px;border-bottom:solid 1px #b2b2b2;margin-bottom:6px;}
+.goodsres_wrap .goodsres_title .title{padding-left:14px;line-height:45px;font-size:16px;font-weight:bold;color:#FFFFFF;font-family:dotum;}
+.goodsres_wrap .goodsres_msg { padding:15px; }
+.goodsres_wrap .goodsres_msg .text_msg{ font-size:12px; color:#353535;}
+
+</style>
+<!--<link rel="stylesheet" href="/shop/data/skin_mobileV2/belport/style_screen.css" type="text/css" media="screen and (min-width: 321px)"  />-->
+
+<!-- [D] 보테가베르데 브랜드 페이지 스타일-->
+<style type="text/css">
+	.hidden_text {position:absolute; top:-9999px;}
+	.bottega img {display:block; width:100%;}
+	.bottega .movie_list {overflow:hidden; background:url(../images/event/y2015/m03/bottega_05_bg.jpg) no-repeat; background-size:100%;}
+	.bottega .movie_list li {float:left;}
+	.bottega .movie_list .mon {width:43.59375%;}
+	.bottega .movie_list .tue {width:56.40625%;}
+	.bottega .movie_list .wed {width:62.34375%;}
+	.bottega .movie_list .thu {width:37.65625%;}
+	.bottega .movie_list .fri {width:43.59375%;}
+	.bottega .movie_list .sat {width:56.40625%;}
+	.bottega .movie_list .sun {width:100%;}
+	.movie_area {height:0; overflow:hidden;}
+	
+	.product_slides {position:relative;}
+	.product_slides .slidesjs-navigation {position:absolute; top:15%; display:block; width:15px; height:27px; background:url(../images/event/y2015/m03/bottega_arrow.png) no-repeat; background-size:30px; z-index:10; text-indent:-9999px;}
+	.slidesjs-pagination {display:none;}
+	.product_slides .slidesjs-previous {left:7px;}
+	.product_slides .slidesjs-next {right:7px; background-position:-15px 0;}
+	
+	.days_products .slidesjs-slide {display:block!important;}
+</style>
+
+</head>
+
+<body>
+
+<div id="dynamic"></div>
+
+<div id="wrap">
+
+<header>
+<div class="gnb">
+	<div class="btn_sidemenu" onclick="javascript:openMenu();"><img src="http://belport.co.kr/shop/data/skin_mobileV2/belport/new/images/main/btn_m_menu.png" /></div>
+	<div id="logo">
+		<a href="javascript:goHome();"><img src="http://belport.co.kr/shop/data/skin_mobileV2/belport/new/images/main/m_logo.png" alt="벨포트" title="벨포트" height="35px"/></a>
+	</div>
+	<div id="logo-right">
+		<!--<div id="search-btn" onClick="javascript:showSearchArea();"><img src="http://belport.co.kr/shop/data/skin_mobileV2/belport/new/images/main/seach.png" /></div>-->
+		<div class="top_global" >
+			<!--<span onClick="javascript:goMenu('my');" >마이페이지</span>-->
+			<span onClick="javascript:goMenu('login');" >로그인</span></div>
+	</div>
+</div>
+<!--
+<div class="search-area">
+	<div id="search-box">
+		<input type="text" name="search_key" placeholder="검색어를 입력해 주세요"/>
+	</div>
+	<div id="search-box-btn" onclick="javascript:searchKw();" >검색</div>
+</div>
+-->
+<div class="new-menu-area">
+	<div id="category-btn" onClick="javascript:showCateArea();">SHOP<div class="bar_area"></div></div>
+	<div id="cart-btn" onClick="javascript:goMenu('cart');">BRAND</div>
+	<div id="viewgoods-btn" onClick="javascript:location.href='/m2/event/event.php'">EVENT</div>
+	<div id="more-view-btn"><div class="bar_area"></div>INSIDE.B</div>
+	<div id="more-view-menu" style="display: none;">
+		<ul>
+			<li class="item wishlist">Wish List</li>
+			<li class="item goods-review">상품후기</li>
+			<li class="item goods-qna">상품문의</li>
+			<li class="item community">게시판</li>
+		</ul>
+	</div>
+</div>
+
+<div class="sidemenu">
+	
+	<ul class="top">
+		<li><a href="#">로그아웃</a></li>
+		<li><a href="#">마이벨포트</a></li>
+		<li><a href="#">장바구니</a></li>
+		<li><a href="#" onclick="javascript:closeMenu();"><img src="http://belport.co.kr/shop/data/skin_mobileV2/belport/new/images/main/menu_close.png" /></a></li>
+	</ul>
+	
+	<ul class="middle">
+		<li><a href="#">SHOP</a></li>
+		<li><a href="#">BRAND</a></li>
+		<li><a href="#">EVENT</a></li>
+		<li><a href="#">INSIDE.B</a></li>
+	</ul>
+	
+	<ul class="bottom">
+		<li><a href="#">ABOUT BELPORT</a></li>
+		<li><a href="#">공지사항</a></li>
+		<li><a href="#">고객센터</a></li>
+		<li><a href="#">매장안내</a></li>
+	</ul>
+	
+	<div class="tel"><a href="tel:080-508-6631">080-508-6631</a></div>
+	
+	
+</div>
+
+</header>
+<section id="cate-area">
+	<div class="top_title"><div class="title">카테고리</div></div>
+	<div class="top_path"><div class='now_path'><div class='pathitem activeitem allpath' onClick='javascript:cateSelect("");'>전체카테고리</div></div></div>
+	<div class="now_cate">
+
+		<input type="hidden" name="now_cate" value="" />
+	</div>
+	<div class="cate_path">
+	</div>
+	<div class="cate_list">
+	</div>
+
+</section>
+<div class="clearb"></div>
+
+<section id="goodsres-hide" class="content_goods">
+	<div class="pop_back">
+		<div class="pop_effect">
+			<div class="text_msg"></div>
+		</div>
+	</div>
+</section>
+
+<section id="goodsres-hide2" class="content_goods">
+	<div class="goodsres_wrap">
+		<div class="goodsres_title"><div class="title">알림</div></div>
+		<div class="goodsres_msg"><div class="text_msg"></div></div>
+	</div>
+</section>
+
+<!-- Start : 출석체크 템플릿 -->
+<section id="attendance-popup" style="display: none;" data-root-dir="/m2">
+	<h1 id="attendance-title"></h1>
+	<div id="attendance-close">닫기</div>
+	<div id="attendance-info-straight" class="condition-type">
+		<div class="attendance-period">
+			<span class="attendance-start-date"></span> ~ <span class="attendance-end-date"></span> 까지
+		</div>
+		<div class="attendance-description">
+			연속 <span class="attendance-condition-period"></span>일 이상 출석하면 적립금이 차곡차곡!
+		</div>
+	</div>
+	<div id="attendance-info-sum" class="condition-type">
+		<div class="attendance-period">
+			기간 : <span class="attendance-start-date"></span> ~ <span class="attendance-end-date"></span> 안에
+		</div>
+		<div class="attendance-description">
+			<span class="attendance-condition-period"></span>일 이상 출석하면 적립금이 차곡차곡!
+		</div>
+	</div>
+	<h2 id="attendance-calendar-title">
+		<button id="attendance-calendar-previous-month">이전 달</button>
+		<span id="attendance-calendar-month">
+			<span id="attendance-calendar-month-1">January</span>
+			<span id="attendance-calendar-month-2">February</span>
+			<span id="attendance-calendar-month-3">March</span>
+			<span id="attendance-calendar-month-4">April</span>
+			<span id="attendance-calendar-month-5">May</span>
+			<span id="attendance-calendar-month-6">June</span>
+			<span id="attendance-calendar-month-7">July</span>
+			<span id="attendance-calendar-month-8">August</span>
+			<span id="attendance-calendar-month-9">September</span>
+			<span id="attendance-calendar-month-10">October</span>
+			<span id="attendance-calendar-month-11">November</span>
+			<span id="attendance-calendar-month-12">December</span>
+		</span>
+		<span id="attendance-calendar-year"></span>
+		<button id="attendance-calendar-next-month">다음 달</button>
+	</h2>
+	<table id="attendance-date-list">
+		<tbody>
+			<tr class="attendance-calendar-date-floor">
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+				<td class="attendance-calendar-date-space"></td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+<!-- End : 출석체크 템플릿 -->
+
+<!-- [D] 보테가베르데 브랜드 페이지 : Start -->
+
+<section class="bottega">
+	<div class="header">
+		<img src="../images/event/y2015/m03/bottega_01.jpg" alt="from. 토스카나" />
+		<div class="hidden_text">
+			<h1>당신의 꽃은 무엇인가요?</h1>
+		</div>
+	</div>
+	
+	<div class="info_01">
+		<img src="../images/event/y2015/m03/bottega_02.jpg" alt="세상에서 가장 건강한 식물이 자라는 곳, 이탈리아 토스카나" />
+		<div class="hidden_text">
+			<p>토스카나의 따스한 햇살과 부드러운 흙이 다채로운 색채와 향기를 가진 최고의 식물을 키워냅니다.</p>
+			<p>지중해의 푸르고 따사로운 햇살, 유럽 어느 곳보다도 기름지고 비옥한 토스카나의 땅은 식물이 가진 본연의 에너지를 가득 채우게 합니다. 이렇게 건강한 토스카나의 식물들은 각양 각색의 개성을 마음껏 품고 자라 보테가 베르데의 좋은 원료가 됩니다.</p>
+		</div>
+	</div>
+	
+	<div class="info_02">
+		<img src="../images/event/y2015/m03/bottega_03.jpg" alt="식물을 닮은 사람 사람을 닮은 식물" />
+		<div class="hidden_text">
+			<p>사람의 피부가 착하게 자란 식물을 닮아 간다는 걸, 일찍이 보테가 베르데는 알고 있었습니다.</p>
+			<p>자연의 힘이 가득한 식물이 피부에 닿을 때 받는 좋은 기분을 화장품으로도 느낄 수 있게 하고 싶었던 보테가 베르데. 토스카나의 식물에 집중합니다.</p>
+		</div>
+	</div>
+	
+	<div class="days_movie">
+		<img src="../images/event/y2015/m03/bottega_04.jpg" alt="월.화.수.목.금.토.일" />
+		<div class="hidden_text">
+			<p>토스카나의 아름다움을 느껴 보세요.</p>
+			<p>매일매일 다른 개성으로 만날 수 있는 자연주의 화장품 보테가 베르데, 당신의 태어난 요일 별 다양한 라인들을 만나 보세요.</p>
+		</div>
+		<div class="movie_list">
+			<ul>
+				<li class="mon">
+					<a href="http://youtu.be/cssX08dx5Lo" data-id="cssX08dx5Lo" class="btn_movie_pop"><img src="../images/event/y2015/m03/bottega_05_01.jpg" alt="월요일 영상보기" /></a>
+				</li>
+				<li class="tue">
+					<a href="http://youtu.be/RFW2bM-nlxg" data-id="RFW2bM-nlxg" class="btn_movie_pop"><img src="../images/event/y2015/m03/bottega_05_02.jpg" alt="화요일 영상보기" /></a>
+				</li>
+				<li class="wed">
+					<a href="http://youtu.be/jCa_lUzsBW8" data-id="jCa_lUzsBW8" class="btn_movie_pop"><img src="../images/event/y2015/m03/bottega_05_03.jpg" alt="수요일 영상보기" /></a>
+				</li>
+				<li class="thu">
+					<a href="http://youtu.be/HspzccHyabg" data-id="HspzccHyabg" class="btn_movie_pop"><img src="../images/event/y2015/m03/bottega_05_04.jpg" alt="목요일 영상보기" /></a>
+				</li>
+				<li class="fri">
+					<a href="http://youtu.be/xPXMZq6Zp8A" data-id="xPXMZq6Zp8A" class="btn_movie_pop"><img src="../images/event/y2015/m03/bottega_05_05.jpg" alt="금요일 영상보기" /></a>
+				</li>
+				<li class="sat">
+					<a href="http://youtu.be/_cBig6RC1YU " data-id="_cBig6RC1YU" class="btn_movie_pop"><img src="../images/event/y2015/m03/bottega_05_06.jpg" alt="토요일 영상보기" /></a>
+				</li>
+				<li class="sun">
+					<a href="http://youtu.be/A-Vov66PCCQ" data-id="A-Vov66PCCQ" class="btn_movie_pop"><img src="../images/event/y2015/m03/bottega_05_07.jpg" alt="일요일 영상보기" /></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="movie_area">
+		<div class="movie">
+			<iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+	
+	<div class="days_products">
+		<div class="product_slides">
+			<div>
+				<img src="../images/event/y2015/m03/bottega_06_01.jpg" alt="" usemap="#mon_link" />
+				<map name="mon_link">
+					<area shape="rect" coords="13,588,89,664" href="/m2/goods/view.php?category=&goodsno=1149" target="_blank" alt="" />
+					<area shape="rect" coords="101,588,178,664" href="/m2/goods/view.php?category=&goodsno=1150" target="_blank" alt="" />
+					<area shape="rect" coords="192,588,267,664" href="/m2/goods/view.php?category=&goodsno=1151" target="_blank" alt="" />
+					<area shape="rect" coords="282,588,357,664" href="/m2/goods/view.php?category=&goodsno=1152" target="_blank" alt="" />
+					<area shape="rect" coords="372,588,447,664" href="/m2/goods/view.php?category=&goodsno=1154" target="_blank" alt="" />
+					<area shape="rect" coords="462,588,537,664" href="/m2/goods/view.php?category=&goodsno=1155" target="_blank" alt="" />
+					<area shape="rect" coords="552,588,628,664" href="/m2/goods/view.php?category=&goodsno=1148" target="_blank" alt="" />
+				</map>
+			</div>
+			<div>
+				<img src="../images/event/y2015/m03/bottega_06_02.jpg" alt="" usemap="#tue_link" />
+				<map name="tue_link">
+					<area shape="rect" coords="194,588,269,664" href="/m2/goods/view.php?category=&goodsno=1220" target="_blank" alt="" />
+					<area shape="rect" coords="284,588,358,664" href="/m2/goods/view.php?category=&goodsno=1219" target="_blank" alt="" />
+					<area shape="rect" coords="373,588,449,664" href="/m2/goods/view.php?category=&goodsno=1218" target="_blank" alt="" />
+				</map>
+			</div>
+			<div>
+				<img src="../images/event/y2015/m03/bottega_06_03.jpg" alt="" usemap="#wed_link" />
+				<map name="wed_link">
+					<area shape="rect" coords="57,504,132,579" href="/m2/goods/view.php?category=&goodsno=1232" target="_blank" alt="" />
+					<area shape="rect" coords="147,504,223,579" href="/m2/goods/view.php?category=&goodsno=1234" target="_blank" alt="" />
+					<area shape="rect" coords="237,504,311,579" href="/m2/goods/view.php?category=&goodsno=1226" target="_blank" alt="" />
+					<area shape="rect" coords="327,504,402,579" href="/m2/goods/view.php?category=&goodsno=1229" target="_blank" alt="" />
+					<area shape="rect" coords="416,504,492,579" href="/m2/goods/view.php?category=&goodsno=1230" target="_blank" alt="" />
+					<area shape="rect" coords="507,504,582,579" href="/m2/goods/view.php?category=&goodsno=1231" target="_blank" alt="" />
+					<area shape="rect" coords="190,588,266,663" href="/m2/goods/view.php?category=&goodsno=1228" target="_blank" alt="" />
+					<area shape="rect" coords="281,588,357,663" href="/m2/goods/view.php?category=&goodsno=1227" target="_blank" alt="" />
+					<area shape="rect" coords="370,588,446,663" href="/m2/goods/view.php?category=&goodsno=1233" target="_blank" alt="" />
+				</map>
+			</div>
+			<div>
+				<img src="../images/event/y2015/m03/bottega_06_04.jpg" alt="" usemap="#thu_link" />
+				<map name="thu_link">
+					<area shape="rect" coords="194,588,269,664" href="/m2/goods/view.php?category=&goodsno=1238" target="_blank" alt="" />
+					<area shape="rect" coords="284,588,358,664" href="/m2/goods/view.php?category=&goodsno=1235" target="_blank" alt="" />
+					<area shape="rect" coords="373,588,449,664" href="/m2/goods/view.php?category=&goodsno=1236" target="_blank" alt="" />
+				</map>
+			</div>
+			<div>
+				<img src="../images/event/y2015/m03/bottega_06_05.jpg" alt="" usemap="#fri_link" />
+				<map name="fri_link">
+					<area shape="rect" coords="147,588,222,664" href="/m2/goods/view.php?category=&goodsno=1224" target="_blank" alt="" />
+					<area shape="rect" coords="237,588,311,664" href="/m2/goods/view.php?category=&goodsno=1225" target="_blank" alt="" />
+					<area shape="rect" coords="327,588,402,664" href="/m2/goods/view.php?category=&goodsno=1221" target="_blank" alt="" />
+					<area shape="rect" coords="417,588,492,664" href="/m2/goods/view.php?category=&goodsno=1222" target="_blank" alt="" />
+				</map>
+			</div>
+			<div>
+				<img src="../images/event/y2015/m03/bottega_06_06.jpg" alt="" usemap="#sat_link" />
+				<map name="sat_link">
+					<area shape="rect" coords="149,588,225,664" href="/m2/goods/view.php?category=&goodsno=1258" target="_blank" alt="" />
+					<area shape="rect" coords="237,588,311,664" href="/m2/goods/view.php?category=&goodsno=1255" target="_blank" alt="" />
+					<area shape="rect" coords="327,588,402,664" href="/m2/goods/view.php?category=&goodsno=1256" target="_blank" alt="" />
+					<area shape="rect" coords="417,588,492,664" href="/m2/goods/view.php?category=&goodsno=1257" target="_blank" alt="" />
+				</map>
+			</div>
+			<div>
+				<img src="../images/event/y2015/m03/bottega_06_07.jpg" alt="" usemap="#sun_link" />
+				<map name="sun_link">
+					<area shape="rect" coords="56,588,131,664" href="/m2/goods/view.php?category=&goodsno=1253" target="_blank" alt="" />
+					<area shape="rect" coords="146,588,121,664" href="/m2/goods/view.php?category=&goodsno=1249" target="_blank" alt="" />
+					<area shape="rect" coords="235,588,312,664" href="/m2/goods/view.php?category=&goodsno=1250" target="_blank" alt="" />
+					<area shape="rect" coords="327,588,401,664" href="/m2/goods/view.php?category=&goodsno=1251" target="_blank" alt="" />
+					<area shape="rect" coords="416,588,491,664" href="/m2/goods/view.php?category=&goodsno=1248" target="_blank" alt="" />
+					<area shape="rect" coords="506,588,580,664" href="/m2/goods/view.php?category=&goodsno=1252" target="_blank" alt="" />
+				</map>
+			</div>
+		</div>
+	</div>
+	
+	<div class="info_03">
+		<img src="../images/event/y2015/m03/bottega_07.jpg" alt="작은 허브공방으로 시작해 이탈리아가 사랑하는 국민 브랜드가 된 보테가 베르데" />
+		<div class="hidden_text">
+			<p>이탈리아 소비자평가 내추럴 화장품 7년 연속 1위</p>
+			<p>이탈리아 여성이 좋아하는 페이스&amp;바디 스킨케어 1위</p>
+			<p>이탈리아 크리스마스 선물 1위</p>
+		</div>
+	</div>
+	
+	<div class="shop">
+		<img src="../images/event/y2015/m03/bottega_08_01.jpg" alt="비교하지 않아도 좋아요. 이탈리아 현지 가격으로 한국에서 만나볼 수 있으니까요." />
+		<a href="/m2/goods/goods_brand_story.php?brand=8"><img src="../images/event/y2015/m03/bottega_08_02.jpg" alt="SHOP NOW" /></a>
+		<img src="../images/event/y2015/m03/bottega_09.jpg" alt="" />
+	</div>
+		
+	<script type="text/javascript" src="http://belport.co.kr/shop/data/skin_mobileV2/belport/new/js/lib/jquery.rwdImageMaps.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			/* 동영상 팝업 */
+			$('.btn_movie_pop').on('click', function(e) {
+				var movieArea = $('.movie_area'),
+					moviePop = $('.movie'),
+					url = 'http://www.youtube.com/embed/' + $(this).attr('data-id') + '?rel=0&autoplay=1',
+					movieHeight = $(window).width() * 0.6,
+					scrollHeight = moviePop.offset().top - (($(window).height() - movieHeight) / 2);
+				
+				moviePop.css({
+					height: movieHeight
+				});
+				
+				moviePop.find('iframe').attr('src', url);
+				movieArea.animate({height: movieHeight});
+				$('html').stop().animate({scrollTop : scrollHeight}, 300);
+				$('body').stop().animate({scrollTop : scrollHeight}, 300);
+				
+				$('.slidesjs-pagination a').eq($('.btn_movie_pop').index(this)).trigger('click');
+			
+				e.preventDefault();
+			});
+			
+			/* 요일별 슬라이드 */
+			$(".product_slides").slidesjs({
+				width: 640,
+				height: 693,
+				callback: {
+					loaded: function() {
+						/* 요일별 제품 링크 */
+						$('img[usemap]').rwdImageMaps();
+					}
+				}
+			});
+			
+
+		});
+	</script>
+</section>
+<!-- [D] 보테가베르데 브랜드 페이지 : END -->
+
+<section id='footer'>
+	<div class='company'>
+		<div class="bottom_menu">
+			<div class="bottom_menu_contents">
+				<table>
+					<tr>
+						<td class="faq"><a href="/m2/proc/faq.php">FAQ</a></td>
+						<td><a href="/shop/?pc" title="PC버전으로 보기" class="btn_pcmode">PC버전</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class='lineinfo'>
+				<table>
+					<tr>
+						<td class='title_r'>상호</td>
+						<td>(주) 벨포트</td>
+					</tr>
+					<tr>
+						<td class='title_r'>대표이사</td>
+						<td>민영훈</td>
+					</tr>
+					<tr>
+						<td class='title_r'>주소</td>
+						<td>서울특별시 강남구  삼성로 570 (대한해운 사옥) 9층</td>
+					</tr>
+					<tr>
+						<td class='title_r'>고객센터</td>
+						<td class="num"><a href="/m2/service/customer.php">080-508-6631</a></td>
+					</tr>
+					<tr>
+						<td class='title_r'>사업자번호</td>
+						<td class="num">220-88-60804</td>
+					</tr>
+					<tr>
+						<td class='title_r'>통신판매업신고</td>
+						<td>제2013-서울강남-02382호</td>
+					</tr>
+				</table>
+		</div>
+	</div>
+	
+	<div class="copyright">
+		<div class='lineinfo'>COPYRIGHT (C) 벨포트 ALL RIGHTS RESERVED.</div>
+		<div class="service_menu">
+			<a href="/m2/service/agrmt.php">이용약관</a>
+			<a href="/m2/service/private.php">개인정보취급방침</a>
+		</div>
+	</div>
+</section>
+<div class="dimm"> </div>
+</div>
+
+<iframe class="" id="ifrmHidden" name="ifrmHidden" src='/shop/blank.php'></iframe>
+
+<div class="curtain"></div>
+
+</body>
+</html>
