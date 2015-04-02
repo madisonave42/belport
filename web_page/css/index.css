@@ -37,6 +37,14 @@
 .rich_banner.concert .rich_banner_large_text{display:block; position:absolute; top:105px; left:50%; margin-left:-480px;}
 .rich_banner.concert .rich_banner_small_text{display:none; position:absolute; top:25px; left:50%; margin-left:-110px;}
 
+.rich_banner.gold .rich_banner_image{height:100%; position:relative; left:50%; margin-left:-960px;}
+.rich_banner.gold .rich_banner_large_text{display:block; position:absolute; top:105px; left:50%; margin-left:-480px;}
+.rich_banner.gold .rich_banner_small_text{display:none; position:absolute; top:25px; left:50%; margin-left:-30px;}
+
+.rich_banner.jeju .rich_banner_image{height:100%; position:relative; left:50%; margin-left:-960px;}
+.rich_banner.jeju .rich_banner_large_text{display:block; position:absolute; top:126px; left:50%; margin-left:-462px;}
+.rich_banner.jeju .rich_banner_small_text{display:none; position:absolute; top:20px; left:50%; margin-left:-45px;}
+
 .rich_banner_wrap .btn_toggle{display:block; width:41px; height:41px; text-indent:-99999em;
 	background:url(../images/common/btn_toggle.png) no-repeat; position:absolute; top:0; left:50%; margin-left:427px;
 }

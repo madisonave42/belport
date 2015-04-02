@@ -1144,3 +1144,9 @@ ol.list-sub > li:after { content: attr(value); position: absolute; top: 0; left:
 .inquiry-pop .confirm a {color:#231f20;}
 
 .inquiry-pop > .btn-close-inquiry {position:absolute; top:30px; right:30px;}
+
+/*==================================================
+ * 임시 백그라운드
+ ===================================================*/
+#contents {background:url(../images/common/bg_body_jeju.jpg) repeat-x 50% 0;}
+/* #contents > h1 {color:#231F20;} */

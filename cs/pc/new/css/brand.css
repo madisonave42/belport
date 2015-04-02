@@ -1,0 +1,607 @@
+/*==================================================
+ * 브랜드 공통 스타일
+ ===================================================*/
+#contents .container .first-section {margin-top:0px; }
+
+/* 타이틀 */
+.container > hgroup {margin:0 auto; padding:47px 0 0 0; display:block; width:936px; height:81px; line-height:30px; }
+.container > hgroup > h1 {font-size:30px; color:#231f20;}
+.container > hgroup > p {font-size:14px; color:#777; font-weight:400; }
+
+/* 카테고리 종류 */
+aside.category-sub {margin-top:32px; margin-bottom:36px; padding-top:5px; padding-left:9px; background-color:#f3f3f4; }
+aside.category-sub a {position:relative; margin:0 11px; padding:0 10px;	display:inline-block; height:33px; font-size:12px; color:#767676; font-weight:400; line-height:33px; }
+aside.category-sub a:hover,
+aside.category-sub a.on {position:relative; color:#000;}
+aside.category-sub a:hover:after,
+aside.category-sub a.on:after {content:''; position:absolute; bottom:0; left:0px; right:0px; display:block; height:3px; background-color:#2b282a; }
+
+/* 브랜드 목록 */
+ul.list-brands {overflow:hidden; margin:0px -5px;}
+ul.list-brands li {float:left; margin:0 5px; padding:30px 0 14px; width:226px; border-bottom:1px solid #d3d0cf;}
+figure.brand{position:relative; cursor:pointer;}
+figure.brand .frame {height:93px; width:226px; text-align:center; background-color:#f5f5f5; }
+figure.brand .over_cover{position:absolute; top:0; left:0; display:none;}
+figure.brand figcaption {padding:17px 10px 0 6px; font-size:13px; line-height:18px; color:#231f20;}
+
+figure.brand p.name{font-family:'RixSGo B', sans-serif; font-size:14px;}
+figure.brand p.name_en {font-size:14px;}
+
+figure.brand p.toggle_like {margin-top:7px;}
+figure.brand p.toggle_like > a.btn-wish {float:left; display:inline-block; height:18px; width:18px; text-align:left; text-indent:-9999px; background:url(../images/brand/btn_like_01.png) left top no-repeat; }
+figure.brand p.toggle_like > a.btn-wish.on {background-position:-18px 0; }
+
+/* 상품 목록 */
+ul.list-products {overflow:hidden; margin:0px -5px; padding-bottom:30px;}
+ul.list-products li {float:left; padding:30px 5px 21px 5px; width:226px; }
+
+figure.product .frame {height:191px; width:226px; text-align:center; background-color:#f5f5f5; }
+figure.product figcaption {padding:0 10px 0 6px; font-size:13px; line-height:18px; }
+
+figure.product p.icons {margin-top:13px; margin-bottom:5px; height:20px; }
+figure.product p.icons span {position:relative; padding:0 4px; display:inline-block; font-size:10px; color:#fff; font-weight:400; line-height:12px; letter-spacing:-0.1em; background-color:#202020; }
+figure.product p.icons span:after {content:''; position:absolute; bottom:-4px; left:12px; display:block; height:4px; width:6px; background:url(../images/shop/bg_arrow04.png) left top no-repeat; }
+
+figure.product em.brand {color:#202020;font-family:'RixSGo B', sans-serif; font-weight:normal; font-style:normal; }
+figure.product p.title {height:45px; color:#777; }
+
+figure.product p.price {padding-right:7px; font-family:'Alegreya', serif; font-style:italic; text-align:right; }
+figure.product p.price > a.btn-wish {float:left; margin-top:2px; display:inline-block; height:18px; width:18px; text-align:left; text-indent:-9999px; background:url(../images/shop/btn_wish01.png) left top no-repeat; }
+figure.product p.price > a.btn-wish.on {background-position:-18px 0; }
+figure.product p.price > .dc-price {font-family:'Alegreya', serif; font-style:italic; font-weight:bold; font-size:20px; color:#2b282a; line-height:18px; }
+figure.product p.price > .price {margin-left:8px; font-size:20px; color:#b9b9b9; line-height:18px; }
+
+/* 상품 정렬 */
+div.sorting {padding:6px 12px 0 0; height:28px; text-align:right; border-bottom:1px solid #242424; }
+div.sorting a {margin:0 6px; display:inline-block; height:25px; cursor:pointer; font-size:11px; color:#777; font-weight:400; line-height:25px; }
+div.sorting a:hover,
+div.sorting a.on {position:relative; color:#000;}
+
+div.sorting a:hover:after,
+div.sorting a.on:after {content:''; z-index:10; position:absolute; right:-3px; bottom:-4px; left:-3px; display:block; height:3px; background-color:#2b282a; }
+div.sorting .cnt {position:relative; padding:0 0 0 20px; font-size:12px; color:#777; font-weight:400; line-height:26px; }
+div.sorting .cnt > em {font-size:12px; color:#231f20;font-family:'RixSGo B', sans-serif;  font-weight:normal; font-style:normal; }
+div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; display:block; font-size:9px; color:#c0c0c0; }
+
+/*==================================================
+ * 브랜드 메인
+ ===================================================*/
+.brand-banner .container-banner {float:left;}
+.brand-banner .second_banner {float:right;}
+
+.container-banner {overflow:hidden; position:relative; height:342px; width:694px; background-color:#000; }
+.container-banner ul.list-banner {position:absolute; top:0; left:0; }
+.container-banner ul.list-banner li {float:left; height:342px; width:694px; }
+
+.container-banner.long {width:936px;}
+.container-banner.long ul.list-banner li {width:936px;}
+
+.container-banner .positions {position:absolute; bottom:16px; left:0; display:block; width:100%; height:3px; text-align:center; }
+.container-banner .positions > a {float:none; margin-left:10px; display:inline-block; height:3px; width:21px; text-indent:-9999px; background:url(../images/shop/bg_position01.png) -21px 0px no-repeat; overflow:hidden;}
+.container-banner .positions > a:first-child{margin-left:0;}
+.container-banner .positions > a.current {background-position:0px 0px; }
+
+.container-banner a.btn-prev {position:absolute; top:50%; left:0; margin-top:-24px; display:block; height:48px; width:48px; text-indent:-9999px; background:url(../images/shop/btn_nav01.png) left 0px no-repeat; overflow:hidden;}
+.container-banner a.btn-next {position:absolute; top:50%; right:0; margin-top:-24px; display:block; height:48px; width:48px; text-indent:-9999px; background:url(../images/shop/btn_nav01.png) right 0px no-repeat; overflow:hidden;}
+
+.brand-sub-title {padding-bottom:6px; font-size:14px; color:#231f20; border-bottom:1px solid #231f20; }
+
+.sorting_brand {padding-right:12px; height:35px; border-bottom:1px solid #242424; }
+.sorting_brand select {width:180px; height:28px; border:1px solid #d3d0cf; color:#231f20; font-weight:400;}
+.sorting_brand .cnt {float:right; margin-top:15px; font-size:12px; color:#777; font-weight:400;}
+.sorting_brand .cnt > em {font-size:12px; color:#231f20; font-family:'RixSGo B', sans-serif;  font-weight:normal; font-style:normal; }
+
+/*==================================================
+ * 브랜드 스토리
+ ===================================================*/
+.brand_story .detail {margin-top:50px;}
+#contents.brand_story .container .choice{width:936px; height:101px; background:url(../images/brand/bg_choice.gif) no-repeat; position:relative; margin-top:0px;}
+.brand_story .choice .choice_description,
+.brand_story .choice .choice_icon{height:59px; float:left;}
+.brand_story .choice .choice_description{width:376px; padding:21px 46px; font-size:12px;}
+.brand_story .choice .choice_description>dt{font-size:20px; margin-bottom:8px; color:#231f20}
+.brand_story .choice .choice_description>dt>span{font-size:12px; margin-left:12px;}
+.brand_story .choice .choice_description>dd{line-height:1.4;}
+.brand_story .choice .choice_icon{width:300px; height:46px; position:relative; top:31px; left:84px;}
+.brand_story .choice .choice_icon>div{width:47px; height:46px; position:absolute; float:left; line-height:46px; overflow:hidden; cursor:pointer; margin-right:15px;}
+.brand_story .choice .choice_icon>div:last-child{margin-right:0;}
+.brand_story .choice .choice_icon>div:after{content:""; display:block; width:47px; height:46px; background:url(../images/brand/choice_icon.png) no-repeat; position:absolute; top:0; left:0;}
+.brand_story .choice .choice_icon>div>p{position:absolute; width:auto; white-space:nowrap; left:74px;}
+
+.brand_story .choice .choice_icon .resource{left:0}
+.brand_story .choice .choice_icon .tradition{left:62px;}
+.brand_story .choice .choice_icon .natural{left:124px;}
+.brand_story .choice .choice_icon .award{left:186px;}
+.brand_story .choice .choice_icon .sale{left:248px;}
+
+.brand_story .choice .choice_icon .resource:after{background-position:0px 0;}
+.brand_story .choice .choice_icon .tradition:after{background-position:-62px 0;}
+.brand_story .choice .choice_icon .natural:after{background-position:-125px 0;}
+.brand_story .choice .choice_icon .award:after{background-position:-188px 0;}
+.brand_story .choice .choice_icon .sale:after{background-position:-250px 0;}
+
+.brand_story .tab a {float:left; display:block; width:50%; height:46px; text-indent:-9999px; background:url(../images/brand/tab.gif) no-repeat; overflow:hidden;}
+.brand_story .tab a.tab_product {background-position:0 0}
+.brand_story .tab a.tab_product.on {background-position:0 -57px}
+.brand_story .tab a.tab_story {background-position:-468px -57px}
+.brand_story .tab a.tab_story.on {background-position:-468px 0}
+
+.brand_story #section_product, .brand_story #section_story {display:none;}
+.brand_story #section_product.on, .brand_story #section_story.on {display:block;}
+
+
+/*==================================================
+ * 스팟라이트
+ ===================================================*/
+.spotlight #list_container{border-top:1px solid #231F20; padding-top:30px;}
+.spotlight #list_container .item{border:1px solid #eee; padding:3px; width:218px; margin-bottom:15px;}
+.spotlight #list_container .item hgroup{margin:10px 0; padding:0 8px;}
+.spotlight #list_container .item hgroup h2{font-size:24px; color:#231f20; font-family:'RixSGo B', sans-serif;  font-weight:normal;}
+.spotlight #list_container .item hgroup p{color:#231f20; font-weight:500; margin-top:5px; font-size:14px;}
+.spotlight #list_container .item>p{padding:0 8px; line-height:1.6;}
+.spotlight #list_container .item>a{display:block; width:33px; float:right; margin-right:7px; text-align:center; border-bottom:1px solid #aba8a7; padding-bottom:3px; font-size:11px; margin-bottom:7px;}
+.spotlight .see_more{margin:50px auto 0; width:936px;}
+
+/*==================================================
+ * 개별 스팟라이트
+ ===================================================*/
+.spotlight_detail .main_content {padding-bottom:50px; border-bottom:1px solid #231f20;}
+.spotlight_detail .main_content img {display:block;}
+
+.brand_story .detail { position: relative; margin-top: 87px; color: #231f20; }
+.detail h1 { position: relative; margin-bottom: 35px; padding: 0 0 36px 0; width: 100%; font-size: 32px; text-align: center; font-weight: 400; line-height: 40px; }
+.detail h1 > .en { font-size: 44px; letter-spacing: -0.1em; }
+.detail h1:after { content: ''; position: absolute; bottom: 0; left: 50%; margin-left: -17px; display: block; height: 3px; width: 35px; background-color: #000; }
+.detail .desc { display: block; font-size: 16px; font-weight: 400; text-align: center; line-height: 25px; }
+.detail .photo { margin-top: 50px; }
+
+.detail.over {
+	color: #fff;
+}
+.detail.over .frame-vertical {
+	position: absolute; top: 50%; right: 0; left: 0; height: 30%; margin-top: -15%;
+}
+
+.detail.over h1 { color: #fff; }
+.detail.over h1:after { background-color: #fff; }
+
+
+/*==================================================
+ * 오모로비짜 단독페이지
+ ===================================================*/
+#contents .container > section.omorovicza {position:relative; margin:0; width:100%;}
+.omorovicza > div {position:relative; z-index:2;}
+.omorovicza > div .bg {width:100%; min-width:980px; overflow:hidden; text-align:center; z-index:10;}
+.omorovicza > div .bg img {position:relative; left:50%; display:block; width:100%; min-width:1600px;}
+
+.omorovicza .text > img {position:absolute; top:50%; left:50%;}
+
+.omorovicza #chapter_02 .t_01 {top:100px; margin-left:-333px;}
+.omorovicza #chapter_02 .effect {position:absolute; top:-385px; left:0; height:100%; width:100%; overflow:hidden;}
+.omorovicza #chapter_02 .effect > img {position:absolute;}
+.omorovicza #chapter_02 .c_01 {/* top:-385px; */top:0; right:0;}
+.omorovicza #chapter_02 .c_02 {/* top:224px; */top:609px; left:0;}
+.omorovicza #chapter_03 {position:relative;}
+.omorovicza #chapter_04 {z-index:1;}
+.omorovicza #chapter_04 .t_01 {top:100px; margin-left:-344px; z-index:2;}
+.omorovicza #chapter_04 .w_01 {position:absolute; top:50px; left:50%; margin-left:-27px; z-index:2;}
+/* .omorovicza #chapter_04 .w_02 {position:absolute; bottom:-50px; left:0; width:100%;} */
+
+.omorovicza #chapter_04 .w_02 {position:absolute; bottom:0; left:0; width:100%; z-index:1;}
+.omorovicza #chapter_04 .w_02.fixed {position:fixed; top:auto; /* bottom:-400px; */bottom:0; left:0; width:100%;}
+.omorovicza #chapter_04 .w_02.end {top:auto; bottom:0;}
+.omorovicza #chapter_05 .text {position:absolute; top:0; left:0; width:100%; font-size:0; text-align:center;}
+.omorovicza #chapter_05 .text > div {display:inline-block; width:30.625%; min-width:490px;}
+.omorovicza #chapter_05 .text > div a {display:block; position:relative; cursor:default;}
+.omorovicza #chapter_05 .text > div a img {width:100%;}
+.omorovicza #chapter_05 .text > div a .over {position:absolute; top:0; left:0; opacity:0; transition:opacity .5s ease;}
+.omorovicza #chapter_05 .text > div a:hover .over {opacity:1;}
+
+.omorovicza .btn_link a {display:block; margin:0 auto; width:198px;}
+
+#nav {position:fixed; top:50%; right:30px; margin-top:-85px; z-index:99;}
+#nav li {margin-bottom:14px; height:15px;}
+#nav li a {position:relative; display:block; width:100px; font-size:12px; color:#bccee7;}
+#nav li a:after {content:''; position:absolute; top:-1px; right:0; display:block; width:15px; height:15px; background:url(../images/brand/omo_nav.png) no-repeat 0 3px;}
+#nav li a.on:after {background-position:0 -31px;}
+#nav li a span{display:block; position:absolute; top:0; right:20px; width:0; white-space:nowrap; overflow:hidden; text-align:right; opacity:0; transition:all .7s cubic-bezier(0.11,0.66,0.46,1);}
+#nav li a.on span{width:80px; opacity:1;}
+
+/*==================================================
+ * 세파이 단독페이지
+ ===================================================*/
+#contents .container{min-width:980px;}
+#contents .container > section.sepai {position:relative; margin:0; width:100%;}
+#contents .container > section.sepai section.comments{width:980px; margin:10px auto 0;}
+#contents .container > section.sepai section.comments .paging{margin-top:60px;}
+.sepai #chapter_01{position:relative;}
+.sepai #chapter_01 .bg_movie_wrap{overflow:hidden;}
+.sepai #chapter_01 #bg_movie{width:100%; height:100%;}
+.sepai #chapter_01 .title{position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/brand/sepai_bg_pattern.png);}
+.sepai #chapter_01 .title img{position:absolute; top:50%; left:50%; width:217px; height:371px; margin:-185px 0 0 -103px;}
+.sepai #chapter_02{position:relative;}
+.sepai #chapter_02 .cover{position:absolute; top:0; left:0; width:100%; height:100%;}
+.sepai #chapter_02 img{width:100%;}
+.sepai #chapter_03{padding:105px 0;}
+.sepai #chapter_03 .interview_wrap{width:870px; margin:0 auto;}
+.sepai #chapter_03 .interview_wrap:after{content:""; display:block; clear:both;}
+.sepai #chapter_03 .interview_movie,
+.sepai #chapter_03 .text{display:block; float:left; padding:0 25px;}
+.sepai #chapter_03 .text{padding:33px 25px;}
+.sepai #chapter_04{position:relative;}
+.sepai #chapter_04 .bg_movie_wrap2{overflow:hidden;}
+.sepai #chapter_04 #bg_movie2{width:100%; height:100%;}
+.sepai #chapter_04 .title{position:absolute; top:0; left:0; width:100%; height:100%;}
+.sepai #chapter_04 .title img{position:absolute; top:50%; left:50%; width:707px; height:454px; margin:-227px 0 0 -353px;}
+.sepai #chapter_05 .top{padding:105px 0; text-align:center;}
+.sepai #chapter_05 .top img{display:inline-block;}
+.sepai #chapter_05 .bottom{text-align:center; background:url(../images/brand/sepai_bg_chap06.png) repeat-x;}
+.sepai #chapter_05 .bottom img{display:inline-block;}
+.sepai #chapter_06{height:805px; background:url(../images/brand/sepai_chap07_bg_step.jpg) no-repeat; background-size:cover; padding:120px 0;}
+.sepai #chapter_06 .step01{text-align:center; height:401px; overflow:hidden;}
+.sepai #chapter_06 .step01 img{display:inline-block;}
+.sepai #chapter_06 .step02{width:980px; height:400px; background:url(../images/brand/sepai_chap07_bg_step_02.png); margin:0 auto; position:relative;}
+.sepai #chapter_06 .step02 .text{padding:50px 0 40px 150px;}
+.sepai #chapter_06 .step02 .step_roll{width:686px; margin:0 auto;}
+.sepai #chapter_06 .step02 .message{text-align:center; margin-top:20px; color:#abaaaa; font-weight:bold; font-size:15px;}
+.sepai #chapter_06 .step02 .slidesjs-navigation{display:block; position:absolute; width:24px; height:40px; top:250px; background:url(../images/brand/sepai_chap07_step_02_arrow.png) no-repeat; z-index:990;}
+.sepai #chapter_06 .step02 .slidesjs-previous{left:150px;}
+.sepai #chapter_06 .step02 .slidesjs-next{right:150px; background-position:right top;}
+.sepai #chapter_07{position:relative;}
+.sepai #chapter_07 img{width:100%;}
+.sepai #chapter_07 .cover{position:absolute; top:0; left:0; width:100%; height:100%;}
+.sepai #chapter_08{padding:105px; background:#f4f4f4; position:relative;}
+.sepai #chapter_08 .text{text-align:center; padding-bottom:60px;}
+.sepai #chapter_08 .text img{display:inline-block;}
+.sepai #chapter_08 .roll_wrap{position:relative; width:980px; margin:0 auto;}
+.sepai #chapter_08 .product_roll{width:847px; margin:0 auto;}
+.sepai #chapter_08 .slidesjs-navigation{display:block; position:absolute; width:24px; height:40px; top:390px; background:url(../images/brand/sepai_bg_arrow.png) no-repeat;}
+.sepai #chapter_08 .slidesjs-previous{left:0;}
+.sepai #chapter_08 .slidesjs-next{right:0; background-position:right top;}
+.sepai #chapter_09 img{width:100%;}
+
+.sepai.comments{position:relative;}
+.sepai.comments .lp_cmts span{width:70px; height:25px; line-height:25px; font-size:14px;}
+.sepai.comments .question{font-size:16px; font-family:'RixSGo B', sans-serif; color:#333; padding-bottom:20px;}
+.sepai.comments .desc{font-size:13px; line-height:1.8;}
+.sepai.comments .comments_icon{position:absolute; top:140px; right:0;}
+.sepai.comments .form-comments{margin-top:20px; padding:20px 0;}
+.sepai.comments .form-comments textarea{margin-left:0; padding-left:0; width:830px;}
+
+.sepai #nav{position: fixed; top: 50%; right: 30px; margin-top: -250px; z-index: 99;}
+.sepai #nav .injector,
+.sepai #nav .jar{width:16px; background:url(../images/brand/sepai_nav_icon.png) no-repeat; position:absolute; right:0;}
+.sepai #nav .injector{height:50px; top:-60px;}
+.sepai #nav .jar{height:50px; bottom:-50px; background-position:0 -89px;}
+.sepai #nav li {margin-bottom:14px; height:25px;}
+.sepai #nav li a {position:relative; display:block; width:100px; font-size:12px; color:#bccee7;}
+.sepai #nav li a:after {content:''; position:absolute; top:0; right:0; display:block; width:16px; height:25px; background:url(../images/brand/sepai_nav.png) no-repeat 0 -37px;}
+.sepai #nav li a.on:after {background-position:0 0;}
+.sepai #nav li a span{display:block; position:absolute; top:5px; right:23px; width:0; white-space:nowrap; overflow:hidden; text-align:right; opacity:0; transition:all .7s cubic-bezier(0.11,0.66,0.46,1);}
+.sepai #nav li a.on span{width:80px; opacity:1;}
+}
+
+/*==================================================
+ * 카고 단독페이지
+ ===================================================*/
+
+#contents .container{min-width:980px;}
+#contents .container > section.cargo {position:relative; margin:0; width:100%;}
+#contents .container > section.cargo section.comments{width:980px; margin:10px auto 0;}
+#contents .container > section.cargo section.comments .paging{margin-top:60px;}
+
+.cargo #chapter_01 img,
+.cargo #chapter_02 img,
+.cargo #chapter_03 img,
+.cargo #chapter_04 img,
+.cargo #chapter_05 img,
+.cargo #chapter_06 img
+{
+	width:100%;
+}
+
+.cargo #chapter_07 .txt{
+	text-align:center;
+	padding:120px 0 60px 0;
+}
+.cargo #chapter_07 .txt img{
+	width:100%:
+	display:inline-block;
+
+}
+.cargo #chapter_07 .roll{
+	position:relative;
+}
+.cargo #chapter_07 .roll img{
+	width:100%;
+}
+
+.cargo #chapter_07 .roll .slidesjs-pagination{
+	position:absolute;
+	bottom:120px;
+	left:50%;
+	margin-left:-39px;
+	z-index:90;
+}
+
+.cargo #chapter_07 .roll .slidesjs-pagination:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.cargo #chapter_07 .roll .slidesjs-pagination .slidesjs-pagination-item{
+	float:left;
+	margin:0 10px;
+}
+
+.cargo #chapter_07 .roll .slidesjs-pagination .slidesjs-pagination-item a{
+	display:block;
+	width:15px;
+	height:15px;
+	background:url(../images/brand/cargo_chap07_page.png) no-repeat -25px 0;
+}
+
+.cargo #chapter_07 .roll .slidesjs-pagination .slidesjs-pagination-item a:hover,
+.cargo #chapter_07 .roll .slidesjs-pagination .slidesjs-pagination-item a.active
+{
+	background-position:0 0;
+}
+
+.cargo #chapter_08 {
+	height:935px;
+	text-align:center;
+	background:url(../images/brand/cargo_chap08_bg.jpg) repeat-x;
+	position:relative;
+}
+
+.cargo #chapter_08 .txt{
+	padding:100px 0 50px 0;
+}
+
+.cargo #chapter_08 .roll2{
+	position:relative;
+	width:980px;
+	margin:0 auto;
+}
+
+.cargo #chapter_08 .roll2 .slidesjs-navigation{
+	width:24px;
+	height:40px;
+	background:url(../images/brand/cargo_chap08_arrow.png) no-repeat 0px -41px;
+	z-index:900;
+	position:absolute;
+	top:160px;
+}
+
+.cargo #chapter_08 .roll2 .slidesjs-previous{
+	left:30px;
+}
+
+.cargo #chapter_08 .roll2 .slidesjs-previous:hover{
+	background-position:0px 0px;
+}
+
+.cargo #chapter_08 .roll2 .slidesjs-next{
+	right:30px;
+	background-position:-66px -41px;
+}
+
+.cargo #chapter_08 .roll2 .slidesjs-next:hover{
+	background-position:-66px 0px;
+}
+
+.cargo #chapter_08 .btn{
+	display:inline-block;
+	margin-top:40px;
+}
+
+.cargo #chapter_08 img{display:inline-block;}
+
+.cargo #chapter_08 .cargo-movie-wrap{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:url(../images/brand/cargo_chap08_movie_bg.png);
+	z-index:1000;
+	display:none;
+}
+
+.cargo #chapter_08 .cargo-movie{
+	position:absolute;
+	top:325px;
+	left:50%;
+	margin:0 0 0 -280px;
+}
+
+.cargo #chapter_08 .cargo-movie .close{
+	display:block;
+	position:absolute;
+	top:0;
+	right:-26px;
+}
+
+.cargo #chapter_09{
+	text-align:center;
+	background:#fff;
+	position:relative;
+}
+
+.cargo #chapter_09 .bg2{
+	background:#231f20;
+}
+
+.cargo #chapter_09 img{display:inline-block;}
+
+.cargo .comments{position:relative;}
+.cargo .comments .lp_cmts{padding-left:0; text-indent:0;}
+.cargo .comments .lp_cmts span{width:70px; height:25px; line-height:25px; font-size:14px;}
+.cargo .comments .question{font-size:16px; font-family:'RixSGo B', sans-serif; color:#333; padding:76px 0 7px 15px;}
+.cargo .comments .lp_cmts,
+.cargo .comments .question{float:left;}
+.cargo .comments .question-wrap:after{content:""; display:block; clear:both;}
+
+/*==================================================
+ * 모스키노 단독페이지
+ ===================================================*/
+
+.moschino-wrap{
+	position:relative;
+	width:100%;
+	height:100%;
+	height:1000px;
+	overflow:hidden;
+}
+
+.moschino-wrap .mc-full-image{width:100%;}
+
+.moschino{min-width:980px;}
+.moschino .mc-full-image,
+.moschino .mc-half-image{width:100%; height:100%; display:block;}
+
+.slidesjs-container,
+.slidesjs-control,
+.slidesjs-slide{height:100%!important;}
+
+.moschino #chapter_02 .bg_movie_wrap{overflow:hidden;}
+.moschino #chapter_02 #bg_movie{width:100%; height:100%;}
+
+.moschino #chapter_03 .half-wrap{position:relative; height:100%;}
+.moschino #chapter_03 .half-wrap:after{content:""; display:block; clear:both;}
+.moschino #chapter_03 .half-wrap .left,
+.moschino #chapter_03 .half-wrap .right{width:50%; height:100%; box-sizing:border-box; float:left;}
+.moschino #chapter_03 .slidesjs-pagination{
+	position:absolute;
+	bottom:30%;
+	left:10%;
+}
+.moschino #chapter_03 .slidesjs-pagination .slidesjs-pagination-item{
+	float:left;
+	margin:0 10px;
+}
+.moschino #chapter_03 .slidesjs-pagination .slidesjs-pagination-item a{
+	display:block;
+	width:16px;
+	height:16px;
+	background:url(../images/brand/mc_roll_paging.png) no-repeat -24px 0;
+}
+.moschino #chapter_03 .slidesjs-pagination .slidesjs-pagination-item a.active{
+	background-position:0 0;
+}
+.moschino #chapter_03 .slidesjs-navigation{
+	position:absolute;
+	width:33px;
+	height:56px;
+	background:url(../images/brand/mc_chap03_arrow.png) no-repeat;
+	top:50%;
+	z-index:90;
+}
+.moschino #chapter_03 .slidesjs-previous{
+	left:53%;
+}
+.moschino #chapter_03 .slidesjs-next{
+	background-position:-87px 0px;
+	right:3%;
+}
+
+.moschino #chapter_05 .half-wrap{position:relative; height:100%;}
+.moschino #chapter_05 .half-wrap:after{content:""; display:block; clear:both;}
+.moschino #chapter_05 .half-wrap .left,
+.moschino #chapter_05 .half-wrap .right{width:50%; height:100%; box-sizing:border-box; float:left;}
+
+.moschino #chapter_05 .slidesjs-pagination{
+	position:absolute;
+	bottom:30%;
+	left:10%;
+}
+.moschino #chapter_05 .slidesjs-pagination .slidesjs-pagination-item{
+	float:left;
+	margin:0 10px;
+}
+.moschino #chapter_05 .slidesjs-pagination .slidesjs-pagination-item a{
+	display:block;
+	width:16px;
+	height:16px;
+	background:url(../images/brand/mc_roll_paging.png) no-repeat -24px 0;
+}
+.moschino #chapter_05 .slidesjs-pagination .slidesjs-pagination-item a.active{
+	background-position:0 0;
+}
+.moschino #chapter_05 .slidesjs-navigation{
+	position:absolute;
+	width:33px;
+	height:56px;
+	background:url(../images/brand/mc_chap05_arrow.png) no-repeat;
+	top:50%;
+	z-index:90;
+}
+.moschino #chapter_05 .slidesjs-previous{
+	left:53%;
+}
+.moschino #chapter_05 .slidesjs-next{
+	background-position:-87px 0px;
+	right:3%;
+}
+
+.moschino #chapter_07{
+	background:#fff;
+}
+.moschino #chapter_07 .select-wrap{
+	height:140px;
+	padding-top:40px;
+	text-align:center;
+	background:#f4f4f4;
+	box-sizing:content-box;
+}
+
+.moschino #chapter_07 .select-wrap p{
+	font-size:20px;
+	font-family:'RixSGo B', sans-serif;
+	text-align:center;
+	margin-bottom:30px;
+}
+
+.moschino #chapter_07 .form{
+	display:inline-block;
+}
+
+.moschino #chapter_07 .form .box-size{
+	width:220px;
+	height:55px;
+	box-sizing:border-box;
+}
+
+.moschino #chapter_07 .form .choice-shop{
+	border:3px solid #231f20;
+	font-size:16px;
+	padding-left:10px;
+	color:#777;
+}
+
+.moschino #chapter_07 .form .apply{
+	background:#231f20;
+	color:#fff;
+	font-size:16px;
+	font-family:'RixSGo B', sans-serif;
+
+}
+
+.moschino #chapter_07 .form .apply-check{
+	background:#ff3591;
+	color:#fff;
+	font-size:16px;
+	font-family:'RixSGo B', sans-serif;
+}
+
+.moschino #chapter_07 .warnning{
+	text-align:center;
+	background:#ff3591;
+	color:#000;
+}
+
+.moschino #chapter_07 .warnning img{
+	display:inline-block;
+}
+

@@ -471,15 +471,15 @@
 					<h1>벨포트가 좋은 이유, 댓글로 표현해 주세요.</h1>
 					<p>댓글 작성자 중 <em>50분</em>을 추첨하여 영화 예매권 1인 2매를 드립니다.</p>
 				</div>
-				
+
 				<fieldset class="form-comments">
 				...
 				</fieldset>
 			</section>
-			
-			
+
+
 			<iframe style="height: 490px;" onload="resizeIFrame(this);" id="iframeComment" name="iframeComment" src="http://belport.co.kr/shop/evt/event_comment.php?e_no=4" scrolling="no" frameborder="0" height="1300" width="100%"></iframe>
-			
+
 
 		</section>
 
@@ -803,7 +803,7 @@
 			<area shape="rect" coords="912,16,943,47" href="" alt="팝업닫기" class="btn_close_layer" />
 		</map>
 	</div>
-	
+
 	<!-- [D] 요일별 영상 팝업 -->
 	<div class="movie layer_popup">
 		<!-- [D] 요일 체크값이 아래 input에 들어갑니다. 0:일 ~ 6:토 -->
@@ -821,7 +821,7 @@
 			<img src="../images/event/btn_share_close.png" alt="동영상 닫기"/>
 		</a>
 	</div>
-	
+
 	<!-- [D] 경품소개 팝업 -->
 	<!--
 	<div class="prize layer_popup">
@@ -829,7 +829,7 @@
 		<a href="#" class="btn_close_layer"><img src="../images/event/btn_close.png" alt="" class="팝업닫기" /></a>
 	</div>
 	-->
-	
+
 	<!-- [D] 기프트박스 오픈 팝업 -->
 	<!-- [D] span#gift_name의 텍스트를 상품에 맞게 변경후 openGiftBox 호출 -->
 	<div class="box_open layer_popup">
@@ -846,7 +846,7 @@
 			<a href="#" class="btn_close_layer"><img src="../images/event/btn_close.png" alt="" /></a>
 		</div>
 	</div>
-	
+
 	<!-- [D] 월페이퍼 팝업 -->
 	<div class="wallpaper layer_popup">
 		<a href="http://belport.co.kr/shop/evt/images/event/data/wall_wed.jpg" target="_blank" title="월페이퍼 보기" class="wall_link">
@@ -854,7 +854,7 @@
 		</a>
 		<a href="#" class="btn_close_layer"><img src="../images/event/btn_share_close.png" alt="닫기" /></a>
 	</div>
-	
+
 </div>
 
 <!-- [D] 음력을 양력으로 변환하는 스크립트 -->
@@ -880,9 +880,9 @@
 				'showinfo': 0,
 				'disablekb': 1,
 				'rel': 0,
-				'playlist': 'cssX08dx5Lo'
+				'playlist': 'G98MGB2VwJw'
 			},
-			videoId: 'cssX08dx5Lo',
+			videoId: 'G98MGB2VwJw',
 			events: {
 				'onReady': onPlayerReady,
 				'onStateChange': onPlayerChange
@@ -893,7 +893,7 @@
 	function onPlayerReady(event) {
 		event.target.mute();
 	}
-	
+
 	function onPlayerChange(event) {
 		console.log(player.getPlayerState())
 		if (player.getPlayerState() === -1) {
@@ -913,14 +913,14 @@
 	$(window).on('resize',function() {
 		resizeMovie();
 	});
-	
+
 	/* 기프트박스 오픈 애니메이션 */
 	function openGiftBox() {
 		var box = $('#bv_evt_02 .gift_box img');
 		$('.box_open').css({
 			top: box.offset().top - 180
 		});
-		
+
 		box.animate({
 			marginTop:20,
 			width:290
@@ -945,7 +945,7 @@
 					});
 				});
 	}
-	
+
 	/* 팝업열기 */
 	function showPopup(el) { // el은 제이쿼리 오브젝트
 		if (el) {
@@ -965,7 +965,7 @@
 				endYear = 2014,
 				isLunar = false,
 				dayText = '';
-				
+
 			while (currentYear <= endYear ) {
 				yearSelect.append($('<option>', {
 					value : currentYear,
@@ -974,21 +974,21 @@
 				currentYear++;
 			}
 			yearSelect.find('option:last-child').attr('selected','selected');
-			
+
 			for (var i = 1; i < 13; i++) {
 				monthSelect.append($('<option>', {
 					value : i,
 					text : i
 				}));
 			}
-			
+
 			for (var j = 1; j < 32; j++) {
 				daySelect.append($('<option>', {
 					value : j,
 					text : j
 				}));
 			}
-			
+
 			/* 요일 체크 */
 			btnCheckDay.on('click', function(e) {
 				var  target = {
@@ -1002,23 +1002,23 @@
 				if (checkDay.find('input:checked').attr('id') === 'check_day_l') {
 					target = Lunar.prototype.lunarToSolar(target.year, target.month, target.day, 0);
 				}
-				
+
 				targetDate = target.month + '/' + target.day + '/' + target.year;
-				
+
 				day = new Date(targetDate).getDay();
-				
+
 				$('input.day_of_week').val(day);
-				
-				
+
+
 				// 페이지상 요일순서는 월요일부터 시작이라 인덱스 변환
 				day--;
 				if (day < 0) {
 					day = 6;
 				}
-				
+
 				$('.movie_list').find('li').addClass('active').eq(day).removeClass('active').addClass('yourday');
 				$('.movie_list').find('.btn_full').addClass('active');
-				
+
 				// 요일별 팝업 열기
 				switch (day) {
 					case 0: dayText = '.mon';
@@ -1036,18 +1036,18 @@
 					case 6: dayText = '.sun';
 						break;
 				}
-				
+
 				dayText = $(dayText).css({
 					top: $(this).offset().top - 305
 				});
-				
+
 				showPopup(dayText);
-				
+
 				e.preventDefault();
 			});
-				
+
 		})();
-		
+
 		/* 양력, 음력버튼 */
 		(function() {
 			var area = $('.check_day > span'),
@@ -1057,24 +1057,24 @@
 				input.filter(':checked').parent().addClass('checked');
 			});
 		})();
-		
+
 		/* 동영상 팝업 */
 		$('.btn_movie_pop').on('click', function(e) {
 			var moviePop = $('.movie'),
 				url = 'http://www.youtube.com/embed/' + $(this).attr('data-id') + '?rel=0&autoplay=1';
-		
+
 			moviePop.css({
 				top: $('#bv_evt_01').offset().top + 65
 			});
-		
+
 			$('.layer_popup').hide();
 			moviePop.find('.movie_id').val($(this).attr('data-id'));
 			moviePop.find('iframe').attr('src', url);
 			showPopup(moviePop);
-		
+
 			e.preventDefault();
 		});
-		
+
 		/* 경품소개 팝업 */
 		/*
 		$('.btn_ev01_info').on('click', function(e){
@@ -1086,7 +1086,7 @@
 			e.preventDefault();
 		});
 		*/
-		
+
 		/* 갤러리 월페이퍼 */
 		$('.bottega_gallery .show_wall').on({
 			'click' : function(e) {
@@ -1113,7 +1113,7 @@
 				$(this).find('.over').stop().animate({opacity:0}, 300);
 			}
 		}).find('.over').css({opacity:0});
-		
+
 		/* 팝업닫기 공통 */
 		$('.btn_close_layer').on('click', function(e) {
 			$('.gallery_curtain').hide();
@@ -1122,7 +1122,7 @@
 			e.preventDefault();
 		});
 	});
-	
+
 </script>
 
 </body>

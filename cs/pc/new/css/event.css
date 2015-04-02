@@ -1,0 +1,774 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, img, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, table, caption, tbody, tfoot, thead, tr, th, td {
+	font-family:'RixSGo L', sans-serif;
+}
+
+/*==================================================
+ * EVENT 공통 스타일
+ ===================================================*/
+
+#contents .container section.first-section { margin-top: 0px; }
+#contents .container section.comments, #contents .container section.result { margin-top: 10px; }
+
+/* EVENT 타이틀 */
+.container > hgroup { margin: 0 auto; padding: 75px 0 0 0; display: block; width: 936px; line-height: 30px; }
+.container > hgroup > h1 { font-size: 30px; color: #231f20;}
+.container > hgroup > p { font-size: 14px; color: #777; font-weight: 400; }
+
+/* EVENT 서브 타이틀 */
+h1.sub-title { padding: 50px 0 6px 0; font-size: 15px; color: #231f20; font-weight: 400; }
+h1.sub-title > em { margin-left: 8px; font-size: 13px; color: #000; font-style: normal; }
+
+
+
+/* 대표 이벤트 & Tester's Box & POP! Choice */
+ul.list-special-event { overflow: hidden; margin: 30px -5px 0 -5px; }
+ul.list-special-event li { float: left; margin: 0 5px 10px 5px; width: 303px; border: 1px solid #d3d0cf; }
+
+.list-special-event figure.item { }
+.list-special-event figure.item.soldout > a { position: relative; display: block; }
+.list-special-event figure.item.soldout > a:after { content: 'Sold Out'; position: absolute; top: 0; right: 0; left: 0; padding-top: 89px; display: block; height: 109px; font-family: 'Alegreya', serif; font-size: 25px; color: #fff; font-weight: bold; text-align: center; background: url(../images/event/bg_soldout.png) left top repeat; }
+
+.list-special-event figure.item > figcaption { padding: 30px 15px 20px 16px; border-top: 1px solid #d3d0cf; }
+.list-special-event figure.item hgroup span { position: relative; margin-bottom: 5px; padding: 0 3px; display: inline-block; font-size: 10px; color: #fff; font-weight: 400; line-height: 12px; letter-spacing: -0.1em; background-color: #231f20; }
+.list-special-event figure.item hgroup span:after { content: ''; position: absolute; bottom: -4px; left: 12px; display: block; height: 4px; width: 6px; background: url(../images/shop/bg_arrow04.png) left top no-repeat; }
+.list-special-event figure.item h1 { font-size: 12px; color: #231f20; font-weight: 400; line-height: 17px; }
+.list-special-event figure.item p.desc { }
+.list-special-event figure.item p.desc > a { font-size: 14px; color: #231f20; font-weight: 400; line-height: 20px; }
+.list-special-event figure.item p.price { margin-top: 6px; font-family: 'Alegreya', serif; font-style: italic; text-align: right; }
+.list-special-event figure.item p.price > .dc-price { font-size: 18px; color: #231f20; font-weight: 400; line-height: 18px; }
+.list-special-event figure.item p.price > .price { margin-left: 8px; font-size: 18px; color: #b9b9b9; font-weight: 400; line-height: 18px; }
+.list-special-event figure.item p.price > .soldout { font-size: 18px; color: #ed6851; font-weight: 400; }
+
+.list-special-event figure.item p.info { overflow: hidden; margin-top: 18px; }
+.list-special-event figure.item p.info > a.btn-wish { float: left; margin-top: 2px; display: inline-block; height: 18px; width: 18px; text-align: left; text-indent: -9999px; background: url(../images/shop/btn_wish01.png) left top no-repeat; }
+.list-special-event figure.item p.info > a.btn-wish.on { background-position: -18px 0; }
+.list-special-event figure.item p.info > span.remain { float: right; font-size: 14px; color: #231f20; font-weight: 400; line-height: 18px; }
+.list-special-event figure.item p.info > span.remain > em {font-family:'RixSGo M', sans-serif;  font-weight:normal; font-style: normal; }
+
+.other figure.item > figcaption { padding: 15px 15px 15px 16px; }
+.other figure.item p.price { text-align: left; }
+
+
+/* 이벤트 목록 */
+.event .container .paging { margin-top: 60px; }
+
+.list-event { overflow: hidden; position: relative; margin: 0 -5px; width: 946px; }
+.list-event:after { content: ''; position: absolute; top: 0; right: 5px; left: 5px; display: block; height: 1px; background-color: #231f20; }
+.list-event li { float: left; margin: 0 5px; padding: 30px 0 0 0; display: block; width: 226px; border-bottom: 1px solid #d3d0cf; }
+
+.list-event figure.item { }
+.list-event figure.item > figcaption { padding: 20px 5px 18px 5px; height:52px;}
+.list-event figure.item .duration { font-size: 12px; color: #231f20; font-weight: 400; }
+.list-event figure.item h1 { margin-top: 4px; font-size: 14px; color: #231f20; font-weight: 400; line-height:1.4;}
+
+
+/* 이벤트 상세 댓글 작성 */
+fieldset.form-comments { position: relative; padding:20px 15px; border-top: 2px solid #231f20; border-bottom: 1px solid #d3d0cf;}
+fieldset.form-comments img {float:left; width:60px;}
+fieldset.form-comments textarea {margin:0;margin-left:10px;padding:5px; height: 48px; width: 696px; font-size: 13px; color: #777; line-height: 18px; border: 1px solid #d3d0cf; }
+fieldset.form-comments input[type=submit] { position: absolute; top: 20px; right: 15px; display: block; height: 60px; width: 125px; font-size: 13px; color: #fff; font-weight: 400; text-align: center; background-color: #231f20; }
+fieldset.form-comments input[type=button] { position: absolute; top: 20px; right: 15px; display: block; height: 60px; width: 125px; font-size: 13px; color: #fff; font-weight: 400; text-align: center; background-color: #231f20; border:0;}
+
+
+/* 자신이 작성한 댓글 표시 */
+.my_comment{position: relative; padding:20px 55px 20px 15px; display: block; border-bottom: 1px solid #d3d0cf;  border-top:1px solid #d3d0cf; margin:30px 0; background:#fafafc; min-height:95px;}
+.my_comment .my_comment_title{margin-left:0px; font-size:15px; font-family:RixSGo B, sans-serif; color:#231f20; padding-bottom:20px; }
+.my_comment a.btn-delete { position: absolute; top: 15px; right: 15px; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat; }
+.my_comment > img {float:left;width:60px;}
+.my_comment > div,
+.my_comment > p {margin-left:70px;}
+.my_comment .uid {font-size: 13px; color: #231f20; font-weight:600; margin-right:45px; }
+.my_comment .date { font-size: 13px; color: #231f20; }
+.my_comment p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
+.my_comment p a {color:#6896ea;}
+.my_comment #btn_del { position: absolute; top: 15px; right: 15px; display: block; height: 10px; width: 11px; text-indent: -9999em; background: url(../images/event/btn_delete01.png) left top no-repeat; cursor:pointer;}
+
+/* 이벤트 상세 댓글 목록 */
+ul.list-comments {border-top:1px solid #d3d0cf;}
+ul.list-comments li { position: relative; padding:20px 55px 20px 15px; display: block; border-bottom: 1px solid #d3d0cf; min-height:60px;}
+ul.list-comments li > img {float:left;width:60px;}
+ul.list-comments li > div,
+ul.list-comments li > p {margin-left:70px;}
+ul.list-comments li .uid {font-size: 13px; margin-right:45px;}
+ul.list-comments li .date {font-family:'RixSGo M', sans-serif; font-weight:normal; font-size: 13px; color: #231f20;}
+ul.list-comments li p {margin-top:10px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
+ul.list-comments li p a {color:#6896ea;}
+
+/* 오모로비짜 브랜드 위크 */
+.no-pic-cmt {width:100%;}
+.no-pic-cmt .my_comment{margin:15px 0;}
+.no-pic-cmt ul.list-comments li {padding:10px 55px 10px 20px;min-height:0;}
+.no-pic-cmt fieldset.form-comments textarea {width:755px;}
+.no-pic-cmt .my_comment > div,
+.no-pic-cmt .my_comment > p,
+.no-pic-cmt ul.list-comments li > div,
+.no-pic-cmt ul.list-comments li > p {margin-left:0px;}
+.no-pic-cmt ul.list-comments li p {margin-top:7px;}
+.sorting.omo-brand-week {margin-top:60px;}
+@media all and (max-width:640px){
+	h1.sub-title {width:85%; line-height:1.2;}
+	fieldset.form-comments {padding:10px;}
+	fieldset.form-comments textarea,
+	.no-pic-cmt fieldset.form-comments textarea {margin:0; padding:2%; width:96%; height:100px;}
+	fieldset.form-comments input[type=button] {position:static; display:block; margin-top:15px; width:100%; height:44px; -webkit-appearance: none;}
+	.no-pic-cmt ul.list-comments li {padding:10px;}
+	ul.list-comments li .date {float:right;}
+	.paging>a.arrow.first,
+	.paging>a.arrow.last {display:none;}
+}
+
+/* 이벤트 상세 당첨자 발표 */
+.result-content { padding: 18px 15px 40px 15px; border-top: 1px solid #231f20; border-bottom: 1px solid #d3d0cf; }
+.result-content p.content { font-size: 13px; color: #777; font-weight: 400; line-height: 19px; }
+.result-content p.winner { margin-top: 16px; padding: 20px 0 20px 20px; font-size: 13px; color: #777; font-weight: 400; line-height: 19px; background-color: #f3f3f4; }
+.result-content p.winner > span { display: inline-block; width: 145px; }
+
+
+.event .container .btns_wrap { overflow: hidden; position: static; left: auto; float: none; margin-top: 10px; }
+.event .container .btns_wrap .btns { position: static; float: right; margin: 0; }
+
+/* brand week */
+#contents.event .container .location {display:none;}
+
+#contents.about .container .location {top:-9999em;}
+#contents.about .container > section {margin-top:0; width:100%; min-width:980px;}
+#contents.about .container{padding-bottom:0;}
+#contents.about .container > section.comments {margin-top:50px; padding-bottom:30px; width:980px;}
+#contents.about .container > section.comments h1{font-weight:600;}
+#contents.about .container > section.comments .form-comments textarea {width:740px;}
+
+.intro{text-align:center; background:url(../images/event/bg_event_green.jpg) repeat-x;}
+.intro img{display:inline-block;}
+.btn_select_event:focus{outline:none;} /* tester box 공통 */
+
+
+.join {text-align:center; background:url(../images/event/bg_brandweek4-2.gif) repeat-x;}
+.join img{display:inline-block;}
+
+.product {text-align:center; background:url(../images/event/bg_brandweek4-3.png) no-repeat center top; background-size:contain; position:relative;}
+.product .bw4-3{display:inline-block; position:relative; z-index:1;}
+.product:after{content:""; display:block; width:100%; height:275px; background:#ececec; position:absolute; bottom:0; left:0;}
+.product .product_img{width:1055px; margin:0 auto; position:relative;}
+.product .product_img .tip{position:absolute; top:360px; z-index:2; cursor:pointer; display:none;}
+.product .product_img .tip-1{top:280px; left:39px; height:350px;}
+.product .product_img .tip-1 img{position:relative; top:80px;}
+.product .product_img .tip-2{left:204px; height:260px;}
+.product .product_img .tip-3{left:394px; height:285px;}
+.product .product_img .tip-4{left:559px; height:285px;}
+.product .product_img .tip-5{left:744px; height:285px;}
+@media all and (max-width:1600px){
+	.product {background-size:initial;}
+}
+
+.guide {text-align:center; background:#231f20;}
+.guide img{display:inline-block;}
+
+.layer-pop{position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/bg_layer_popup.png); z-index:5; display:none;}
+.layer-pop .pop{position:absolute; top:1400px; left:50%; margin-left:-448px; display:none;}
+
+.layer-pop .close{position:absolute; display:block; top:20px; right:20px;}
+
+.brandweek-complete {position:fixed; top:0; left:0; width:100%; height:100%; background:url(../images/event/bg_layer_popup.png); z-index:5;}
+.brandweek-complete .complete-msg{position:fixed; top:10%; left:50%; margin-left:-448px;}
+.brandweek-complete .close{position:absolute; display:block; top:20px; right:20px;}
+
+.testbox-complete {position:fixed; top:0; left:0; width:100%; height:100%; background:url(../images/event/bg_layer_popup.png); z-index:5;}
+.testbox-complete .pay-msg{position:fixed; top:20%; left:50%; margin-left:-300px;}
+.testbox-complete .close{position:absolute; display:block; top:20px; right:20px;}
+
+/* tester box */
+.tester_intro{text-align:center; background:url(../images/event/bg_event.jpg) repeat-x;}
+.tester_intro img{display:inline-block;}
+
+.tester_join {text-align:center;}
+.tester_join img{display:inline-block;}
+
+.tester_product{text-align:center; background:url(../images/event/bg_count.png) center top; background-size:cover;}
+.tester_product img{display:inline-block;}
+.tester_product .count{width:1180px; margin:0 auto; position:relative;}
+.tester_product .count .number{position:absolute; top:220px; left:205px;}
+.tester_product .count .number div{float:left; margin-right:112px; font-size:300px; font-family:RixSGO B, sans-serif; color:#231f20;}
+.tester_product .count .btn{position:absolute; bottom:70px; left:50%; margin-left:-220px; width:463px;}
+.tester_product .count .btn div{float:left; margin-right:6px; cursor:pointer;}
+.tester_product .count .btn div.btn_pay{margin-right:0;}
+
+.tester_guide{text-align:center; background:#231f20;}
+.tester_guide img{display:inline-block;}
+
+.layer-pop .tb_pop{position:absolute; top:1200px; left:50%; margin-left:-448px; display:none;}
+.layer-pop .tb_pop.pop-3 .textarea{width:806px; position:absolute; top:281px; left:44px; text-align:center;}
+.layer-pop .tb_pop.pop-3 textarea{width:744px; height:115px; font-family:RixSGo L, sans-serif; padding:30px; font-size:18px;}
+.layer-pop .tb_pop input[type=image]{margin-top:20px;}
+
+
+.layer-pop .tb_pop input[type=submit] {margin-top:20px; width:100px; height:40px; line-height:40px; color:#fff; background-color:#231f20; border:0; text-align:center; }
+.layer-pop .tb_alert{width:543px; height:276px; position:absolute; top:170px; left:175px;} 
+
+/* movie event */
+
+.movie_intro{text-align:center; background:url(../images/event/bg_me-1.jpg) repeat-x;}
+.movie_intro img{width:979px; margin:0 auto; padding-left:135px;}
+
+.movie{text-align:center; background:#231f20; position:relative;}
+.gift{text-align:center; background:url(../images/event/bg_me-2.png);}
+.movie img, .gift img{display:inline-block;}
+.movie_layer{position:absolute; top:70px; left:50%; margin-left:-435px; width:850px; height:500px; background:#000; padding:10px; display:none;}
+.movie_layer .m1,
+.movie_layer .m2{display:none}
+.movie_layer .m_close{display:block; position:absolute; top:10px; right:10px;}
+
+
+/* 어린왕자 이벤트 */
+#contents .container .little_prince {width:100%; margin:0 auto; font-family:'RixSGo L', sans-serif;}
+.little_prince .lp_header {position:relative; padding-top:165px; height:695px; background:url(../images/event/little_prince_01.jpg) no-repeat 50% 0; background-size:cover; text-align:center;}
+.little_prince .lp_header p {font-size:67px; color:#ffe001; line-height:1.2;}
+.little_prince .lp_header p span {display:block; font-size:73px; font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_header h1 {margin-top:375px; font-size:16px; color:#23456c; line-height:1.5;}
+.little_prince .lp_header h1 span {display:block; margin-bottom:10px; font-size:24px;}
+.little_prince .lp_header h1 span strong {color:#23456c;}
+.little_prince .lp_header .scroll {position:absolute; top:475px; left:50%; margin-left:-31px; width:63px; height:63px; font-size:10px; color:#2f5982; padding-top:18px; box-sizing:border-box; background:url(../images/event/little_prince_btn_scroll.png) no-repeat;}
+.little_prince .lp_apply {position:relative;padding-top:55px; height:595px; z-index:10;}
+.little_prince .lp_apply h2 {font-size:40px; text-align:center; color:#231f20; line-height:1.4; font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_apply .howto {margin:25px auto 0 auto; padding:45px 0 125px 580px; width:360px; background:url(../images/event/little_prince_card.png) no-repeat;}
+.little_prince .lp_apply .howto ul li {margin-bottom:20px; font-size:16px; padding-left:11px; background:url(../images/event/little_prince_bullet_01.png) no-repeat 0 2px; color:#231f20;}
+.little_prince .lp_apply .howto ul li span {margin-right:17px;}
+.little_prince .lp_apply .howto ul li em {font-style:normal; font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_apply .howto p {position:relative; margin-top:35px; padding-left:45px; color:#423f3f;}
+.little_prince .lp_apply .howto p:after {content:''; position:absolute; top:4px; left:0; display:block; width:35px; height:1px; background:#231f20;}
+.little_prince .lp_apply .howto p span {display:block; margin-top:5px; font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_apply .howto .preview_letter {display:block; margin:35px 0 0 50px; width:189px; height:53px;background:url(../images/event/little_prince_btn_info.png) no-repeat; text-indent:-9999px;}
+.little_prince .lp_apply .howto .send_letter {display:block; margin:10px 0 0 50px; width:189px; height:53px;background:url(../images/event/little_prince_btn_fb.png) no-repeat; text-indent:-9999px;}
+.little_prince .lp_apply .howto .share_info {margin:18px 0 0 50px;}
+.little_prince .lp_img {position:relative;}
+.little_prince .lp_img > p {padding:100px 0; background:#231f20; color:#fff; line-height:1.4; font-size:36px; text-align:center;}
+.little_prince .lp_img > p span {display:block; font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_img > p.gift {padding-top:810px; padding-bottom:0; height:50px; font-size:20px; color:#fff; text-align:center; background:url(../images/event/little_prince_02.jpg) 50% 0;}
+.little_prince .lp_img .img_msg {position:absolute; top:330px; right:30px; font-size:14px; color:#cacaca; text-shadow:0 0 3px rgba(0,0,0,.5);}
+.little_prince .lp_detail {padding:80px 0; background:#f9f9f9;}
+.little_prince .lp_detail > ul {margin:0 auto; width:940px;}
+.little_prince .lp_detail > ul:after {content:''; display:block; clear:both;}
+.little_prince .lp_detail > ul > li {float:left; font-size:15px; color:#312e2a; padding-left:13px; background:url(../images/event/little_prince_bullet_01.png) no-repeat 0 2px;}
+.little_prince .lp_detail > ul > li .title {font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_detail .inner {margin-top:10px;}
+.little_prince .lp_detail .inner li {margin-top:5px; padding-left:10px; color:#767676; background:url(../images/event/little_prince_bullet_02.png) no-repeat 0 10px; font-size:13px; line-height:1.4;}
+.little_prince .lp_detail .inner li:first-child {margin-top:0;}
+.little_prince .lp_detail > ul > li.price {float:right; width:470px;}
+.little_prince .lp_detail > ul > li.rule {clear:left; margin-top:70px; width:360px;}
+.little_prince .lp_detail .inner li span {display:block; font-family:'RixSGo B', sans-serif;}
+.little_prince .lp_detail > ul > li.price p {margin-top:40px; padding-left:15px; text-indent:-15px; color:#767676; line-height:1.4; font-size:13px;}
+.little_prince + #iframeComment {display:block; margin:0 auto; width:936px;}
+@media all and (max-width:1000px){
+	.little_prince + #iframeComment {width:90%;}
+}
+
+
+.lp_cmts {padding-top:70px; padding-left:115px; padding-bottom:7px; font-size:15px; text-indent:-115px;}
+.lp_cmts span {display:inline-block; margin-right:7px; width:105px; height:30px; line-height:30px; text-align:center; color:#fff; border-top:1px solid #d3d2d2; background:#231f20; vertical-align:middle; text-indent:0;}
+
+#little_prince_pop,
+#little_prince_pop_02 {position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/little_prince_bg_curtain.png); z-index:100; display:none;}
+#little_prince_pop .little_prince_pop_content {position:fixed; top:50%; left:50%; margin-top:-130px; margin-left:-265px; width:530px; height:260px; background:#fff; border:7px solid #363133;}
+#little_prince_pop_02 .little_prince_pop_content {position:absolute; top:1100px; left:50%; margin-left:-419px; width:839px; height:932px;}
+#little_prince_pop .little_prince_pop_content p {margin-top:70px; font-size:18px; line-height:1.6; text-align:center;}
+#little_prince_pop .little_prince_pop_content p span {color:#231f20;}
+#little_prince_pop .little_prince_pop_content .confirm {display:block; margin:30px auto 0 auto; width:96px; height:26px; line-height:26px; border:3px solid #333; color:#231f20; text-align:center;}
+#little_prince_pop .close{position:absolute; display:block; top:20px; right:20px;}
+
+/* 보테가베르데이벤트 */
+#contents .container .bottega {width:100%; margin:0 auto; font-family:'RixSGo L', sans-serif;}
+.bottega .header {position:relative}
+.bottega .header .bg_movie_wrap {width:100%; height:%; overflow:hidden; background:#000;}
+.bottega .header .bg_movie_wrap.no_movie {background:#000 url(../images/event/bottega_bg_poster.jpg) no-repeat 50% 0; background-size:cover}
+.bottega .header #bg_movie {width:100%; height:100%;}
+.bottega .header .title {position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/bottega_bg_pattern.png); z-index:1;}
+.bottega .header .title img {position:absolute; top:50%; left:50%; width:503px; height:245px; margin:-225px 0 0 -251px;}
+.bottega .header .list {position:absolute; bottom:0; left:0; width:100%; height:217px; background:url(../images/event/bottega_bg_header.png)}
+.bottega .header .list img {display:block; margin:68px auto 0 auto;}
+
+#bv_evt_01 {padding-top:65px;}
+#bv_evt_01 h1 {margin-bottom:35px; text-align:center;}
+#bv_evt_01 h1 img {display:inline;}
+
+#bv_evt_01 .birthday .check_day {text-align:center; font-size:20px; color:#231f20; line-height:53px; font-weight:bold; font-family:'RixSGo M', sans-serif;}
+#bv_evt_01 .birthday .check_day span {position:relative; font-size:0;vertical-align:middle;}
+#bv_evt_01 .birthday .check_day span input[type=radio] {position:absolute; opacity:0; z-index:-1;}
+#bv_evt_01 .birthday .check_day span label {display:inline-block; width:95px; height:53px; line-height:53px; text-align:center; font-size:20px; background:#f1f1f1; color:#b1b1b1; cursor:pointer;}
+#bv_evt_01 .birthday .check_day span.checked label {background:#231f20; color:#fff;}
+#bv_evt_01 .birthday .check_day select {margin:0 7px 0 15px; border:3px solid #231f20; width:95px; height:53px; box-sizing:border-box; font-size:20px; vertical-align:middle;}
+#bv_evt_01 .birthday .check_day select.year {width:190px;}
+#bv_evt_01 .birthday .check_day .btn_confirm {display:block; margin:30px auto 0 auto; width:115px;}
+
+#bv_evt_01 .birthday .movie_list {margin-top:70px; padding:20px 0 30px; background:#231f20; text-align:center;}
+#bv_evt_01 .birthday .movie_list ul {margin:0 6%; text-align:center; font-size:0;}
+#bv_evt_01 .birthday .movie_list ul li {position:relative; display:inline-block; margin:0 3px; margin-top:10px; width:135px; height:108px;}
+#bv_evt_01 .birthday .movie_list ul li > p {font-size:13px; color:#6f6f6f; text-align:center;}
+#bv_evt_01 .birthday .movie_list ul li a {position:absolute; bottom:0; left:0;z-index:1}
+#bv_evt_01 .birthday .movie_list ul li .cover {position:absolute; bottom:0; left:0; width:135px; height:82px; background:url(../images/event/bottega_bg_header.png); z-index:2}
+#bv_evt_01 .birthday .movie_list ul li.yourday > p,
+#bv_evt_01 .birthday .movie_list ul li.active > p {color:#f6f6f6;}
+#bv_evt_01 .birthday .movie_list ul li a { z-index:2}
+#bv_evt_01 .birthday .movie_list ul li.active .cover {display:none;}
+#bv_evt_01 .birthday .movie_list ul li.yourday .cover {bottom:-2px; left:-2px; width:139px; height:86px; background:#fff; z-index:1;}
+#bv_evt_01 .birthday .movie_list .btn_full {position:relative; display:inline-block; margin:24px 2px 0 2px; width:135px;}
+#bv_evt_01 .birthday .movie_list .btn_making {position:relative; display:inline-block; margin:24px 2px 0 2px; width:135px;}
+#bv_evt_01 .birthday .movie_list .btn_full .cover {position:absolute; bottom:0; left:0; width:135px; height:27px; background:url(../images/event/bottega_bg_header.png); z-index:2}
+#bv_evt_01 .birthday .movie_list .btn_full.active .cover {display:none;}
+#bv_evt_01 .birthday .movie_list .btn_making .cover {position:absolute; bottom:0; left:0; width:135px; height:27px; background:url(../images/event/bottega_bg_header.png); z-index:2}
+#bv_evt_01 .birthday .movie_list .btn_making.active .cover {display:none;}
+
+#bv_evt_01 .gift {padding-top:50px; height:430px; background:url(../images/event/bottega_bg_share.png) no-repeat 50% 0; background-size:cover; text-align:center;}
+#bv_evt_01 .gift img{display:inline;}
+#bv_evt_01 .gift_info img{margin:0 auto; width:980px;}
+
+#bv_evt_01 .gallery {position:relative;}
+#bv_evt_01 .gallery h2 {padding:65px 0; text-align:center; background:#f9f9f9;}
+#bv_evt_01 .gallery h2 img {display:inline;}
+#bv_evt_01 .gallery ul {overflow:hidden;}
+#bv_evt_01 .gallery ul li {float:left;}
+#bv_evt_01 .gallery ul li img {width:100%;}
+#bv_evt_01 .gallery ul li.mon {width:59.5625%;}
+#bv_evt_01 .gallery ul li.tue {width:40.4375%;}
+#bv_evt_01 .gallery ul li.wed {width:49.6875%;}
+#bv_evt_01 .gallery ul li.thu {width:50.3125%;}
+#bv_evt_01 .gallery ul li.fri {width:29.625%;}
+#bv_evt_01 .gallery ul li.sat {width:30.5625%;}
+#bv_evt_01 .gallery ul li.sun {width:39.8125%;}
+#bv_evt_01 .gallery ul li a {display:block; position:relative;}
+#bv_evt_01 .gallery ul li a .over {position:absolute; top:0; left:0; width:100%;}
+#bv_evt_01 .gallery .gallery_curtain {display:none;position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/event/bottega_bg_gallery.png); z-index:10;}
+
+#bv_evt_02 {text-align:center;}
+#bv_evt_02 h1 {padding-top:70px;}
+#bv_evt_02 > img {display:inline;}
+#bv_evt_02 h1 img {display:inline;}
+#bv_evt_02 .gift_box {position:relative; padding-top:10px; height:340px;}
+#bv_evt_02 .gift_box img {margin:0 auto; margin-top:30px; width:270px;}
+
+#bv_evt_02 .info_box {margin-top:70px; padding-top:60px; background:#f5f5f5;}
+#bv_evt_02 .info_box img {margin:0 auto; width:1019px;}
+
+#bv_evt_03 h1 {background:url(../images/event/bottega_bg_ev03.png)}
+#bv_evt_03 h1 img {margin:0 auto; width:980px;}
+#bv_evt_03 > div {padding-top:60px; text-align:center;}
+#bv_evt_03 > div img {display:inline;}
+
+.bottega iframe {display:block; margin:0 auto; margin-bottom:30px; width:90%;}
+
+.layer_popup {display:none; position:absolute; left:50%; z-index:20;}
+.layer_popup p,
+.layer_popup span { font-family:'RixSGo L', sans-serif;}
+.layer_popup img {display:block;}
+.btn_close_layer {position:absolute; top:10px; right:10px;}
+
+.day_pop {top:1013px; margin-left:-480px; width:960px;}
+
+.box_open {top:3000px; margin-left:-279px; width:558px; height:583px; background:url(../images/event/bottega_box_open.png) no-repeat 50% 0;}
+.box_open .gift_paper {position:absolute; top:50%; left:50%; margin-left:-259px; margin-top:-80px; width:517px; height:281px; background:url(../images/event/bottega_box_paper.png) no-repeat; text-align:center;}
+.box_open .gift_paper .title {padding-top:30px; font-size:23px; color:#231f20; line-height:1.4;}
+.box_open .gift_paper .title > span {font-size:30px;}
+.box_open .gift_paper .title > span span {position:relative; top:-3px; font-weight:bold;}
+.box_open .gift_paper .check_gift {font-weight:bold;}
+.box_open .gift_paper p {margin-top:15px; color:#717171; font-size:13px;}
+.box_open .gift_paper p.coution {margin-top:15px; font-weight:bold;}
+.box_open .gift_paper p a {display:inline-block; margin-left:5px; padding:3px 7px; border:1px solid #717171;}
+.box_open .gift_paper .check_gift {display:block; margin:15px auto 0; width:105px; height:35px; line-height:35px; background:#231f20; color:#fff; text-align:center;}
+.box_open .gift_paper .btn_close_layer {position:absolute; top:15px; right:15px;}
+
+.movie {top:1056px; margin-left:-382px; width:764px; height:430px;}
+.movie a {position:absolute; top:-46px; left:50%;}
+/* .movie .btn_share_ks {margin-left:-60px;} */
+.movie .btn_share_fb {margin-left:-40px;}
+.movie .btn_close_layer {margin-left:4px;}
+
+.prize {top:1745px; margin-left:-347px; width:695px;}
+
+.wallpaper {margin-left:-132px; padding-top:66px; width:264px; height:477px; background:url(../images/event/bottega_bg_phone.png) no-repeat 50%; text-align:center;}
+.wallpaper img {display:inline;}
+.wallpaper .btn_close_layer {top:-20px; right:-25px;}
+
+.bv_cmts {padding-top:70px; width:445px; background:url(../images/event/bottega_bg_reply.png) no-repeat 100% 90%;}
+.bv_cmts h1 {margin-bottom:5px; font-size:15px; font-weight:bold;}
+.bv_cmts p {padding:0 102px 12px 0; font-size:13px; line-height:1.4;}
+.bv_cmts p em {font-style:normal; color:#ff0901;}
+
+.bv_login img {display:inline;}
+.bv_login .close {cursor:pointer;}
+
+
+@media all and (max-width:480px){
+	.bv_cmts {width:auto; background-position:100% 95%;}
+}
+
+/* 제품리스트 */
+ul.list-products {overflow:hidden; padding-bottom:30px;}
+ul.list-products li {float:left; padding:30px 5px 21px 5px; width:226px; }
+ul.list-products li figure.product:after {display:none;}
+
+figure.product {text-align:left; background:none;}
+figure.product .frame {height:191px; width:226px; text-align:center; background-color:#f5f5f5;}
+figure.product figcaption {padding:0 10px 0 6px; font-size:13px; line-height:18px; }
+
+figure.product em.brand {display:block; color:#202020;font-family:'RixSGo B', sans-serif; font-weight:normal; font-style:normal;}
+figure.product p.title {height:45px; color:#777; }
+
+figure.product p.price {text-align:right;}
+figure.product p.price .btn_cart{position:relative; top:-3px; float:left; display:block; width:90px; height:31px; line-height:31px; text-align:center; color:#fff; background:#767676;}
+
+figure.product p.price > .dc-price {font-family:'Alegreya', serif; font-style:italic; font-weight:bold; font-size:20px; color:#2b282a; line-height:18px; }
+
+/* 상품 상세 특징 */
+section.spec { position: relative; padding: 0 0 0 295px; width: 641px; }
+section.spec header { position: absolute; top: 0; left: 16px; padding: 0; min-width: inherit; width: 200px; background-color: transparent; }
+section.spec header h1 { position: relative; margin: 0; padding: 26px 0 0 0; width: 100%; font-size: 12px; color: #231f20; text-align: left; background-color: transparent; }
+section.spec header h1 > span { position: absolute; top: 0; left: 0; display: block; font-size: 12px; color: #ed6851; font-weight: 400; }
+section.spec header h1 > span:after { content: ''; position: absolute; bottom: -7px; left: 0; display: block; height: 1px; width: 8px; background-color: #d3d0cf; }
+section.spec header .rules { padding-top: 19px; }
+section.spec header .rules > span { margin-right: 5px; display: block; height: 27px; width: 27px; text-indent: -9999em; }
+section.spec header .rule01 { background: url(./images/shop/icon_rules01.png) left top no-repeat; }
+
+section.spec-content { margin: 0; padding: 11px 0 60px 0px; width: 641px; border-top: 1px solid #d3d0cf; }
+section.spec-content > h1 { margin-top: 12px; font-size: 18px; color: #231f20; line-height: 24px; }
+section.spec-content > .desc { margin-top: 6px; font-size: 13px; color: #777; font-weight: 300; line-height: 19px; }
+section.spec-content > .images { margin-top: 20px; }
+section.spec-content > table.info { margin-top: 14px; border-top: 2px solid #231f20; }
+table.info tbody th { padding: 20px 0 20px 15px; font-size: 12px; color: #231f20;  font-family:'RixSGo B', sans-serif; font-weight:normal; text-align: left; border-bottom: 1px solid #d3d0cf; background-color: #f3f3f4; }
+table.info tbody td { padding: 20px 10px 20px 15px; font-size: 12px; color: #777; font-weight: 400; line-height: 20px; border-bottom: 1px solid #d3d0cf; }
+
+
+/* 더 맑음 콘서트 */
+#contents .container > section.concert {position:relative; margin:0; width:100%;}
+.concert > div {position:relative;}
+.concert > div .bg {width:100%; min-width:980px; overflow:hidden; text-align:center; z-index:10;}
+.concert > div .bg img {position:relative; left:50%; display:block; width:100%; min-width:1600px;}
+.concert > div .text {position:absolute; top:0; left:0; width:100%; height:100%; z-index:20;}
+
+.concert .text > img {position:absolute; top:50%; left:50%;}
+
+.concert .scroll {display:none; position:absolute; bottom:35px; left:50%; margin-left:-37px; width:74px; height:74px; background:url(../images/event/y2015/m01/concert_scroll_down.png) no-repeat;}
+
+.concert .section_01 .t_01 {margin-top:-380px; margin-left:-313px;}
+.concert .section_01 .t_02 {top:auto; bottom:72px; margin-left:-512px;}
+
+.concert .section_02 .t_01 {top:16.5%; margin-left:-227px;}
+.concert .section_02 .t_02 {margin-top:-52px; margin-left:-344px;}
+.concert .section_02 .t_03 {top:auto; bottom:12.5%; margin-left:76px;}
+
+.concert .section_03 .t_01 {top:13%; margin-left:-246px;}
+.concert .section_03 .t_02 {margin-top:-21px; margin-left:-208px;}
+.concert .section_03 .t_03 {top:auto; bottom:1%; margin-left:-624px;}
+
+.concert .section_04 .t_01 {margin-top:-436px; margin-left:-508px;}
+
+.concert .section_05 .t_01 {margin-top:-210px; margin-left:-436px;}
+
+.concert .section_06 .t_01 {margin-top:-253px; margin-left:-352px;}
+
+.concert .section_banner .t_01 {margin-top:-49px; margin-left:-506px;}
+
+.concert .slidesjs-navigation {position:absolute; width:21px; height:32px; background:url(../images/event/y2015/m01/concert_arrow.png) no-repeat; z-index:10; text-indent:-9999px;}
+
+.concert .section_07 .howto {position:absolute; top:50%; left:50%; margin-top:-335px; margin-left:-481px; width:962px; height:568px;}
+.concert .section_07 .howto > img {display:block; margin:0 auto 18px auto;}
+.concert .section_07 .howto .howto_slides {position:relative; margin:0 auto; width:960px;}
+.concert .section_07 .howto .howto_slides > div {padding:0 45px;}
+.concert .section_07 .howto .howto_slides .slidesjs-previous {top:140px; left:0;}
+.concert .section_07 .howto .howto_slides .slidesjs-next {top:140px; right:0; background-position:-60px 0;}
+
+.concert .section_08 .faq {position:absolute; top:50%; left:50%; margin-top:-155px; margin-left:-578px; width:1156px; height:466px;}
+.concert .section_08 .faq .faq_slides {position:relative; margin:0 auto; width:1156px;}
+.concert .section_08 .faq .faq_slides > div {padding:0 45px;}
+.concert .section_08 .faq .faq_slides .slidesjs-previous {top:148px; left:0;}
+.concert .section_08 .faq .faq_slides .slidesjs-next {top:148px; right:0; background-position:-60px 0;}
+
+.concert .section_09 .top_products {margin:0 auto; width:980px;}
+.concert .section_09 .top_products .product_tab {margin:45px 100px 0; padding:0 30px; border-bottom:1px solid #231f20;}
+.concert .section_09 .top_products .product_tab ul {overflow:hidden;}
+.concert .section_09 .top_products .product_tab ul li {float:left; width:25%;}
+.concert .section_09 .top_products .product_tab ul li a {display:block; height:45px; line-height:45px; text-align:center; border-bottom:4px solid #fff; font-size:16px; color:#231f20;}
+.concert .section_09 .top_products .product_tab ul li a:hover,
+.concert .section_09 .top_products .product_tab ul li a.on {border-bottom-color:#231f20;}
+.concert .list-products li {margin:60px 9px 0; padding:0; padding-bottom:5px; border-bottom:1px solid #e2e2e2;}
+.concert .list-products li figure.product .frame {position:relative; height:auto;}
+.concert .list-products li figure.product .frame a img {width:100%; height:auto;}
+.concert .list-products li figure.product .frame a .over {display:none; position:absolute; top:0; left:0; box-sizing:border-box; width:100%; height:100%; border:1px solid #E2E2E2; background:url(../images/event/y2015/m01/concert_list_over.png) no-repeat 50% 50%; text-indent:-9999px;}
+.concert .list-products li figure.product .frame a:hover .over {display:block;}
+.concert .list-products li figure.product p.title {color:#202020; font-weight:600; font-family:'RixSGO M', sans-serif; height:40px;}
+.concert .list-products li figure.product p.desc {height:35px; color:##777; font-size:12px; font-family:'RixSGO M', sans-serif;}
+.concert .list-products li figure.product p.size {margin-top:10px; color:#202020;  font-family:'RixSGO B', sans-serif;}
+.concert .list-products li figure.product p.price {text-align:left; font-size:20px; height:20px;}
+.concert .list-products li figure.product p.price .original {font-family: "Alegreya",serif; font-style: italic; font-size: 20px; color: #777;}
+.concert .list-products li figure.product p.price a {float:right; margin-top:1px; font-size:12px; color:#231f20; font-weight:600; text-decoration:underline;}
+
+.concert .product em.brand {margin-top:20px;}
+
+.concert .section_10 .t_01 {margin-top:-140px; margin-left:-585px;}
+.concert .section_10 .set_links {position:absolute; top:50%; left:50%; margin-top:-140px; margin-left:-585px; width:1171px; height:375px;}
+.concert .section_10 .set_links a {position:absolute; top:0; width:375px; height:375px; background:url(../images/event/y2015/m01/concert_blank.png); text-indent:-9999px;}
+.concert .section_10 .set_links a:hover {background:url(../images/event/y2015/m01/concert_text_10_over.png) no-repeat 50% 50%;}
+.concert .section_10 .set_link_01 {left:0;}
+.concert .section_10 .set_link_02 {left:398px;}
+.concert .section_10 .set_link_03 {left:795px;}
+
+.concert .section_11 .t_01 {margin-top:-122px; margin-left:-432px;}
+
+.concert .concert_pop {position:fixed; top:-9999px; left:50%; margin:-325px 0 0 -355px; z-index:101;}
+.concert .concert_pop .btn_close {position:absolute; top:0; right:-48px;}
+
+.curtain {display:none; position:absolute!important; top:0; left:0; width:100%; height:100%; background:url(../images/event/y2015/m01/concert_bg_curtain.png); z-index:100;}
+
+#concert_side {position:fixed; top:113px; right:0; z-index:10000;}
+
+#pop_where .map_frame {width:710px; height:645px;}
+#pop_where .map_frame iframe {width:100%; height:100%;}
+
+#centerLayer {z-index:99999;}
+
+/* 콘서트 - 밸류 페이지 */
+.concert.value .value_section_02 .t_01 {margin-top:-232px; margin-left:-412px;}
+
+.concert.value .value_section_03 .t_01 {margin-top:-140px; margin-left:-585px;}
+.concert.value .value_section_03 .voucher_links {position:absolute; top:50%; left:0; margin-top:-20px; width:100%; min-width:980px; text-align:center;}
+.concert.value .value_section_03 .voucher_links li {position:relative; display:inline-block; margin:0 45px;}
+
+.concert.value .value_section_03 .select-numb{margin:20px auto 0; width:70px; height:22px; position:relative; border:1px solid #ccc;}
+.concert.value .value_section_03 .select-numb input{width:30px; height:22px; line-height:22px; margin:0; padding:0; border:0; font-size:12px; text-align:center;}
+.concert.value .value_section_03 .select-numb button{
+	position:absolute; top:0; border:0; padding:0; width:20px; height:22px; text-indent:-99999em;
+	background:url(../images/event/y2015/m01/value_plus_minus.gif) no-repeat;
+}
+.concert.value .value_section_03 .select-numb button.minus{left:0; border-right:1px solid #ccc; background-position:-20px 0;}
+.concert.value .value_section_03 .select-numb button.plus{right:0; border-left:1px solid #ccc;}
+
+.concert.value .value_section_link {height:275px;}
+.concert.value .value_section_link .t_01 {top:0; margin-left:-194px;}
+
+#concert_order {padding:2px; box-shadow: 0 0 10px rgba(0,0,0,0.3); border:0;}
+#concert_order #contents .container > form section {margin-top:0; padding-top:30px; width:910px;}
+#concert_order.layPop .close {top:20px; right:20px; width:21px; height:21px; background:url(../images/event/y2015/m01/value_close_pop.png) no-repeat; cursor:pointer;}
+#concert_order.layPop .close img {display:none;}
+
+#concert_order_list {padding:2px; box-shadow: 0 0 10px rgba(0,0,0,0.3); border:0;}
+#concert_order_list #contents .container > form section {margin-top:0; padding-top:30px; width:910px;}
+#concert_order_list.layPop .close {top:20px; right:20px; width:21px; height:21px; background:url(../images/event/y2015/m01/value_close_pop.png) no-repeat; cursor:pointer;}
+#concert_order_list.layPop .close img {display:none;}
+
+#value_pop {position:absolute; top:0; left:0; width:100%; background:url(../images/common/bg_curtain.png); z-index:999; display:none;}
+#value_pop .pop_cont {position:absolute; top:200px; left:50%; margin-left:-305px; width:611px;}
+
+/* 이승기 프로포즈 */
+#contents .container > section.propose {margin-top:0; width:100%; min-width:1100px;}
+.propose .title_img,
+.propose .detail,
+.propose .text {text-align:center;}
+.propose .title_img img,
+.propose .detail img,
+.propose .text img {display:block; margin:0 auto; width:1100px;}
+.propose .title_img {padding-top:50px; background:url(../images/event/y2015/m01/propose_bg.jpg) no-repeat 50% 0; background-size:cover;}
+.propose .detail {background:#e8728b;}
+.propose .text {background:#fafafa;}
+.propose .input_section {margin:0 auto; width:980px; padding-top:100px; overflow:hidden;}
+.propose .input_section > div {position:relative; float:left; box-sizing:border-box; margin-bottom:20px;}
+.propose .input_section .name,
+.propose .input_section .contact {width:50%;}
+.propose .input_section .text,
+.propose .input_section .attach {width:100%;}
+.propose .input_section .name {padding-right:10px;}
+.propose .input_section .contact {padding-left:10px;}
+.propose .input_section input,
+.propose .input_section textarea {box-sizing:border-box; width:100%; background-color:#fafafa; border:0;}
+.propose .input_section input {padding:0 30px 0 200px; height:100px; font-size:30px;}
+.propose .input_section textarea {padding:30px; font-size:16px; font-family:'RixSGO L', sans-serif; height:500px;}
+.propose .input_section label {position:absolute; top:33px; left:35px; font-size:30px;}
+.propose .input_section .attach {position:relative;padding:35px 100px 35px 300px; background:#fafafa;}
+.propose .input_section .attach .icon {display:none; position:absolute; top:30px; right:30px; width:44px; height:45px; background:url(../images/event/y2015/m01/propose_icon_clip.png) no-repeat;}
+.propose .input_section .attach input {box-sizing:content-box; font-size:20px; width:100%; height:30px; background:none; padding:0;}
+
+.propose .input_section .submit {float:none; clear:both; padding-bottom:100px; padding-top:70px; text-align:center;}
+.propose .input_section .submit input,
+.propose .input_section .submit img {padding:0; width:auto; height:auto;}
+.propose .input_section .submit input,
+.propose .input_section .submit a {display:inline-block; margin:0 14px; vertical-align:middle;}
+
+.propose .popup {position:fixed; top:-9999px; left:50%; margin:-325px 0 0 -355px; z-index:101;}
+.propose .popup .btn_close {position:absolute; top:0; right:-48px;}
+
+#pop_preview {margin:-350px 0 0 -350px; padding:50px; width:600px; height:600px; background:#fff; border-width:9px;}
+#pop_preview > div {padding-right:10px; height:600px; overflow-y:auto; overflow-x:hidden;}
+#pop_preview p {margin-top:20px; font-size:20px; font-family:'RixSGO B', sans-serif; color:#333; font-weight:bold;}
+#pop_preview p span {display:block; margin-top:10px; padding:20px; box-sizing:border-box; width:100%; color:#333; background:#fafafa; font-size:15px; font-weight:normal;}
+#pop_preview .msg {margin-top:10px; padding:20px; box-sizing:border-box; width:100%; color:#333; background:#fafafa;}
+#pop_preview .msg pre {line-height:1.2; width:100%; word-break:break-all; font-family:'RixSGO L', sans-serif; font-size:15px;
+ white-space: pre-wrap;       /* CSS 3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word; }
+#pop_preview .img {margin-top:20px;}
+
+#pop_preview p:first-child {margin-top:0;}
+
+/* 20150226 */
+/* white_day 이벤트 */
+#contents .container .white_day {width:100%; margin:0 auto; font-family:'RixSGo L', sans-serif;}
+.white_day .header {position:relative; padding-top:165px; height:844px; background:url(../images/event/y2015/m02/white_day_01.jpg) no-repeat 50% 0; background-size:cover; text-align:center;}
+.white_day .header .small-slogan {font-size:26px; color:#231f20; padding-bottom:20px;}
+.white_day .header .big-slogan {font-size:61px; color:#231f20; font-family:'RixSGo B', sans-serif; padding-bottom:50px;}
+.white_day .header .big-slogan .em{font-family:'RixSGo B', sans-serif; color:#f883ad;}
+.white_day .header .event-guide{font-size:18px; line-height:2; color:#231f20;}
+.white_day .header .event-detail{text-align:center; background:url(../images/event/y2015/m02/white_day_03.png); margin-top:140px;}
+.white_day .header .event-detail img{display:inline-block;}
+.white_day .header .select-wrap{margin-top:70px; color:#231f20;}
+.white_day .header .select-wrap:after{content:""; display:block; clear:both;}
+.white_day .header .select-wrap .select-guide{font-size:22px; font-family:'RixSGo B', sans-serif; margin-bottom:20px;}
+.white_day .header .select-wrap .select-item{display:inline-block; margin:0 40px;}
+.white_day .header .select-wrap .select-item .select-item-radio{width:15px; height:15px; margin-right:5px;}
+.white_day .header .select-wrap .select-item .select-item-label{font-size:15px; font-family:'RixSGo B', sans-serif; margin-right:20px;}
+.white_day .header .select-wrap .select-item .select-item-select{width:189px; height:45px; border:3px solid #231f20; font-family:'RixSGo B', sans-serif;}
+
+.white_day + #iframeComment {display:block; margin:0 auto; width:936px;}
+@media all and (max-width:1000px){
+	.white_day + #iframeComment {width:90%;}
+}
+
+.comments{position:relative;}
+
+.layer_popup {display:none; position:absolute; left:50%; z-index:100;}
+.layer_popup p,
+.layer_popup span { font-family:'RixSGo L', sans-serif;}
+.layer_popup img {display:block;}
+.btn_close_layer {position:absolute; top:10px; right:10px;}
+
+.day_pop {top:1013px; margin-left:-480px; width:960px;}
+
+.layer_popup.white-day {top:0px; margin-left:-258px; width:517px; height:281px; background:url(../images/event/y2015/m02/bottega_box_paper.png) no-repeat; text-align:center;}
+.layer_popup.white-day .title {padding-top:45px; font-size:24px; color:#231f20; line-height:1.4;}
+.layer_popup.white-day .title.strong{font-family:'RixSGo B', sans-serif; margin-bottom:15px;}
+.layer_popup.white-day .title .em {display:block; font-size:24px; margin-top:10px;}
+.layer_popup.white-day .title .em .strong{font-family:'RixSGo B', sans-serif;}
+.layer_popup.white-day .caution{font-size:18px; font-family:'RixSGo B', sans-serif; color:#231f20; margin-top:20px;}
+.layer_popup.white-day .notify{font-size:22px; line-height:1.6; color:#231f20;}
+
+.layer_popup.white-day .apply,
+.layer_popup.white-day .again {display:inline-block; margin:15px auto 0; width:105px; height:35px; line-height:35px; background:#231f20; color:#fff; text-align:center;}
+.layer_popup.white-day .btn_close_layer {position:absolute; top:15px; right:15px;}
+
+/* test */
+.layer_popup.white-day.pub-test-left{margin-left:-700px;}
+.layer_popup.white-day.pub-test-right{margin-left:100px;}
+
+/* 20150303 */
+#contents .container .bottega2 {width:100%; margin:0 auto; font-family:'RixSGo L', sans-serif;}
+.bg-obj{width:100%; position:relative;}
+.text-obj{width:100%; position:absolute; top:0; left:0; z-index:50;}
+.text-obj-part{width:100%;}
+
+.botte2-header .header-slogan{text-align:center; position:relative;}
+.botte2-header .header-slogan-heading{color:#fff; font-size:75px; font-family:'RixSGo B', sans-serif; padding-top:80px;}
+.botte2-header .header-slogan-heading .super{display:inline-block; font-size:26px; font-family:'RixSGo B', sans-serif; margin-bottom:20px;}
+.botte2-header .header-slogan-logo{text-align:right; padding:300px 10% 0 0;}
+
+.botte2-header .header-slogan.second{color:#3a483d;}
+.botte2-header .header-slogan-heading.second{font-size:55px; line-height:1.2; color:#3a483d;}
+.botte2-header .header-slogan-sub-heading{font-size:26px; font-family:'RixSGo B', sans-serif; padding:30px 0; line-height:1.4;}
+.botte2-header .header-slogan-paragraph{font-size:17px; padding-bottom:15px;}
+.botte2-header .header-slogan-paragraph.end{margin-bottom:20px;}
+
+.botte2-header .particle{position:absolute; top:0; left:0;}
+
+.botte2-mid{position:relative;}
+.botte2-daily-movie{overflow:hidden;}
+.botte2-daily-movie:after{content:""; display:block; clear:both;}
+.botte2-daily-movie-list{float:left; height:0; overflow:hidden;}
+.botte2-daily-movie-list.mon{width:33.375%;}
+.botte2-daily-movie-list.tue{width:33.3125%;}
+.botte2-daily-movie-list.wed{width:33.3125%;}
+.botte2-daily-movie-list.thu{width:25%;}
+.botte2-daily-movie-list.fri{width:25%;}
+.botte2-daily-movie-list.sat{width:25%;}
+.botte2-daily-movie-list.sun{width:25%;}
+
+.botte2-daily-movie-list .show_wall{display:block; width:100%; height:100%; position:relative;}
+.botte2-daily-movie-list .show_wall .over{position:absolute; top:50%; left:50%; margin:-52px 0 0 -52px; display:none;}
+
+.botte2-daily-movie-frame .movie-frame{width:100%; position:relative;}
+
+.botte2-daily-prd{position:relative;}
+.botte2-daily-prd .daily-prd-thumb{width:100%; height:136px; text-align:center; position:absolute; bottom:0; left:0; background:url(../images/event/y2015/m03/bottega2_bg_daily_prd_thumb.png);}
+.botte2-daily-prd .daily-prd-thumb-list{display:inline-block; margin:30px 10px 0;}
+.botte2-daily-prd .daily-prd-thumb-link{display:block; position:relative;}
+.botte2-daily-prd .daily-prd-thumb-link .over{position:absolute; top:50%; left:50%; margin:-38px 0 0 -38px; display:none;}
+
+.botte2-daily-prd .slidesjs-previous,
+.botte2-daily-prd .slidesjs-next{position:absolute; width:28px; height:49px; background:url(../images/event/y2015/m03/btn_roll.png) no-repeat; z-index:900;}
+
+.botte2-daily-prd .slidesjs-previous{top:15%; left:10%;}
+.botte2-daily-prd .slidesjs-next{top:15%; right:10%; background-position:right 0px}
+.botte2-daily-prd .slidesjs-pagination{display:none;}
+.botte2-map{position:relative;}
+
+.botte2-shop{position:relative;}
+.botte2-shop-text{display:block;}
+
+.text-motion{display:none;}
+
+#contents .container .jeju {width:100%; margin:0 auto; font-family:'RixSGo L', sans-serif; position:relative;}
+#contents .container .jeju .jeju-inner{width:980px; margin:0 auto; position:relative;}
+.jeju-header{height:737px; background:url(../images/event/y2015/m03/jeju_title.jpg) no-repeat; background-size:cover; text-align:center;}
+
+.jeju-header .jeju-title{position:relative; top:140px;}
+.jeju-header .small-slogan{font-size:24px; color:#3d3239; padding-top:50px; background:url(../images/event/y2015/m03/jeju_air.png) no-repeat 500px top; margin-bottom:20px;}
+.jeju-header .small-slogan .em{font-family:'RixSGo B', sans-serif;}
+.jeju-header .big-slogan{font-size:65px; color:#fff; line-height:1.2;}
+.jeju-header .big-slogan .em{font-size:70px; font-family:'RixSGo B', sans-serif;}
+.jeju-header .event-guide{font-size:20px; color:#3d3239; margin:35px 0;}
+.jeju-header .event-guide .under-em{font-family:'RixSGo B', sans-serif; border-bottom:1px solid #3d3239;}
+.jeju-header .event-present{font-size:16px; color:#fff; padding:20px; background:url(../images/event/y2015/m03/jeju_bg_list.png); text-align:center;}
+.jeju-header .event-present:after{content:""; display:block; clear:both;}
+.jeju-header .event-present .event-present-item{display:inline-block; margin:0 10px; padding-left:10px; background:url(../images/event/y2015/m03/jeju_bullet_list.png) no-repeat left center;}
+.jeju-header .event-desc{color:#3d3239; margin-top:20px;}
+
+.jeju-supply.online{position:relative; background:#efefef; overflow:hidden;}
+.jeju-supply-heading{font-size:36px; color:#52444d; height:130px; line-height:130px; background:url(../images/event/y2015/m03/jeju_more.png) no-repeat right -420px; cursor:pointer;}
+.jeju-supply-heading.open{background-position:right 50px;}
+.jeju-supply-heading .strong{font-family:'RixSGo B', sans-serif;}
+.jeju-supply-fold{display:none; border-top:1px solid #cdc9cb; padding-bottom:20px;}
+.jeju-supply.online .jeju-supply-fold{padding-bottom:50px;}
+.jeju-supply-question{font-family:'RixSGo B', sans-serif; font-size:30px; color:#52444d; margin:30px 0 20px;}
+
+.jeju-supply-input-guide{font-size:20px; color:#52444d; font-family:'RixSGo M', sans-serif; margin-bottom:30px;}
+
+.jeju-field{color:#52444d;}
+.jeju-field .input-apply{display:block; width:157px; height:46px; border:3px solid #52444d; font-family:'RixSGo B', sans-serif; font-size:22px; color:#52444d; float:left;}
+.jeju-supply.online .jeju-field .input-apply{background:#efefef;}
+.jeju-field .dash{display:block; height:52px; padding:0 10px; background:url(../images/event/y2015/m03/jeju_dash.png) no-repeat center; float:left;}
+.jeju-field{display:block;}
+.jeju-field:after{content:""; display:block; clear:both;}
+.jeju-field .item{float:left;}
+.jeju-field .label{display:block; font-size:22px; font-family:'RixSGo B', sans-serif; height:52px; line-height:52px; float:left; margin-right:10px;}
+.jeju-field .rear-label{display:block; font-size:22px; font-family:'RixSGo B', sans-serif; height:52px; line-height:52px; float:right; margin-left:10px;}
+.jeju-field .rear-label.slash{padding-right:40px; margin-right:20px; background:url(../images/event/y2015/m03/jeju_slash.png) no-repeat right center;}
+.jeju-field .btn-apply{display:block; float:left; width:163px; height:52px; margin-left:20px; background:#ff85a4; font-family:'RixSGo B', sans-serif; font-size:22px; color:#fff;}
+.jeju-supply-desc{margin-top:20px; color:#52444d;}
+
+.jeju-supply-confirm{width:100%; height:130px; background:#4d4349; text-align:center;}
+.jeju-supply-confirm .btn-confirm{display:inline-block; width:290px; height:50px; background:#ff85a4; font-family:'RixSGo B', sans-serif; font-size:22px; color:#fff; margin-top:38px;}
+
+.jeju-event-caution{width:980px; margin:0 auto;}
+
+.jeju-supply.online .cover{display:none;}
+.jeju-supply.online.nobuy .cover{display:block; width:100%; height:233px; position:absolute; top:130px; left:0; background:url(../images/event/y2015/m03/bg_wrong.png); text-align:center; font-size:36px; line-height:233px; color:#52444d; font-family:'RixSGo B', sans-serif;}
+
+.layer_popup.jeju-pop {top:740px; margin-left:-258px; width:517px; height:281px; background:url(../images/event/y2015/m02/bottega_box_paper.png) no-repeat; text-align:center;}
+.layer_popup.jeju-pop .title {padding-top:45px; font-size:24px; color:#231f20; line-height:1.4;}
+.layer_popup.jeju-pop .title.strong{font-family:'RixSGo B', sans-serif; margin-bottom:15px;}
+.layer_popup.jeju-pop .title.top-margin{margin-top:30px;}
+.layer_popup.jeju-pop .title .em {display:block; font-size:24px; margin-top:10px;}
+.layer_popup.jeju-pop .title .em .strong{font-family:'RixSGo B', sans-serif;}
+.layer_popup.jeju-pop .caution{font-size:18px; font-family:'RixSGo B', sans-serif; color:#231f20; margin-top:20px;}
+.layer_popup.jeju-pop .notify{font-size:22px; line-height:1.6; color:#231f20;}
+
+.layer_popup.jeju-pop .apply,
+.layer_popup.jeju-pop .again,
+.layer_popup.jeju-pop .confirm {display:inline-block; margin:15px auto 0; width:105px; height:35px; line-height:35px; background:#231f20; color:#fff; text-align:center;}
+.layer_popup.jeju-pop .btn_close_layer {position:absolute; top:15px; right:15px;}
+
