@@ -1,14 +1,14 @@
 /*==================================================
- * 브랜드 공통 스타일
+ * �귣�� ���� ��Ÿ��
  ===================================================*/
 #contents .container .first-section {margin-top:0px; }
 
-/* 타이틀 */
+/* Ÿ��Ʋ */
 .container > hgroup {margin:0 auto; padding:47px 0 0 0; display:block; width:936px; height:81px; line-height:30px; }
 .container > hgroup > h1 {font-size:30px; color:#231f20;}
 .container > hgroup > p {font-size:14px; color:#777; font-weight:400; }
 
-/* 카테고리 종류 */
+/* ī�װ� ���� */
 aside.category-sub {margin-top:32px; margin-bottom:36px; padding-top:5px; padding-left:9px; background-color:#f3f3f4; }
 aside.category-sub a {position:relative; margin:0 11px; padding:0 10px;	display:inline-block; height:33px; font-size:12px; color:#767676; font-weight:400; line-height:33px; }
 aside.category-sub a:hover,
@@ -16,7 +16,7 @@ aside.category-sub a.on {position:relative; color:#000;}
 aside.category-sub a:hover:after,
 aside.category-sub a.on:after {content:''; position:absolute; bottom:0; left:0px; right:0px; display:block; height:3px; background-color:#2b282a; }
 
-/* 브랜드 목록 */
+/* �귣�� ��� */
 ul.list-brands {overflow:hidden; margin:0px -5px;}
 ul.list-brands li {float:left; margin:0 5px; padding:30px 0 14px; width:226px; border-bottom:1px solid #d3d0cf;}
 figure.brand{position:relative; cursor:pointer;}
@@ -31,7 +31,7 @@ figure.brand p.toggle_like {margin-top:7px;}
 figure.brand p.toggle_like > a.btn-wish {float:left; display:inline-block; height:18px; width:18px; text-align:left; text-indent:-9999px; background:url(../images/brand/btn_like_01.png) left top no-repeat; }
 figure.brand p.toggle_like > a.btn-wish.on {background-position:-18px 0; }
 
-/* 상품 목록 */
+/* ��ǰ ��� */
 ul.list-products {overflow:hidden; margin:0px -5px; padding-bottom:30px;}
 ul.list-products li {float:left; padding:30px 5px 21px 5px; width:226px; }
 
@@ -51,7 +51,7 @@ figure.product p.price > a.btn-wish.on {background-position:-18px 0; }
 figure.product p.price > .dc-price {font-family:'Alegreya', serif; font-style:italic; font-weight:bold; font-size:20px; color:#2b282a; line-height:18px; }
 figure.product p.price > .price {margin-left:8px; font-size:20px; color:#b9b9b9; line-height:18px; }
 
-/* 상품 정렬 */
+/* ��ǰ ���� */
 div.sorting {padding:6px 12px 0 0; height:28px; text-align:right; border-bottom:1px solid #242424; }
 div.sorting a {margin:0 6px; display:inline-block; height:25px; cursor:pointer; font-size:11px; color:#777; font-weight:400; line-height:25px; }
 div.sorting a:hover,
@@ -64,7 +64,7 @@ div.sorting .cnt > em {font-size:12px; color:#231f20;font-family:'RixSGo B', san
 div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; display:block; font-size:9px; color:#c0c0c0; }
 
 /*==================================================
- * 브랜드 메인
+ * �귣�� ����
  ===================================================*/
 .brand-banner .container-banner {float:left;}
 .brand-banner .second_banner {float:right;}
@@ -92,7 +92,7 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 .sorting_brand .cnt > em {font-size:12px; color:#231f20; font-family:'RixSGo B', sans-serif;  font-weight:normal; font-style:normal; }
 
 /*==================================================
- * 브랜드 스토리
+ * �귣�� ���丮
  ===================================================*/
 .brand_story .detail {margin-top:50px;}
 #contents.brand_story .container .choice{width:936px; height:101px; background:url(../images/brand/bg_choice.gif) no-repeat; position:relative; margin-top:0px;}
@@ -131,8 +131,8 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 
 
 /*==================================================
- * 스팟라이트
- ===================================================*/
+ * ���̶���Ʈ
+ ===================================================*/ 
 .spotlight #list_container{border-top:1px solid #231F20; padding-top:30px;}
 .spotlight #list_container .item{border:1px solid #eee; padding:3px; width:218px; margin-bottom:15px;}
 .spotlight #list_container .item hgroup{margin:10px 0; padding:0 8px;}
@@ -140,10 +140,10 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 .spotlight #list_container .item hgroup p{color:#231f20; font-weight:500; margin-top:5px; font-size:14px;}
 .spotlight #list_container .item>p{padding:0 8px; line-height:1.6;}
 .spotlight #list_container .item>a{display:block; width:33px; float:right; margin-right:7px; text-align:center; border-bottom:1px solid #aba8a7; padding-bottom:3px; font-size:11px; margin-bottom:7px;}
-.spotlight .see_more{margin:50px auto 0; width:936px;}
+.spotlight .see_more{margin:50px auto 0; width:936px;} 
 
 /*==================================================
- * 개별 스팟라이트
+ * ���� ���̶���Ʈ
  ===================================================*/
 .spotlight_detail .main_content {padding-bottom:50px; border-bottom:1px solid #231f20;}
 .spotlight_detail .main_content img {display:block;}
@@ -167,7 +167,7 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 
 
 /*==================================================
- * 오모로비짜 단독페이지
+ * ����κ�¥ �ܵ�������
  ===================================================*/
 #contents .container > section.omorovicza {position:relative; margin:0; width:100%;}
 .omorovicza > div {position:relative; z-index:2;}
@@ -208,7 +208,7 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 #nav li a.on span{width:80px; opacity:1;}
 
 /*==================================================
- * 세파이 단독페이지
+ * ������ �ܵ�������
  ===================================================*/
 #contents .container{min-width:980px;}
 #contents .container > section.sepai {position:relative; margin:0; width:100%;}
@@ -228,45 +228,40 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 .sepai #chapter_03 .interview_movie,
 .sepai #chapter_03 .text{display:block; float:left; padding:0 25px;}
 .sepai #chapter_03 .text{padding:33px 25px;}
-.sepai #chapter_04{position:relative;}
-.sepai #chapter_04 .bg_movie_wrap2{overflow:hidden;}
-.sepai #chapter_04 #bg_movie2{width:100%; height:100%;}
-.sepai #chapter_04 .title{position:absolute; top:0; left:0; width:100%; height:100%;}
-.sepai #chapter_04 .title img{position:absolute; top:50%; left:50%; width:707px; height:454px; margin:-227px 0 0 -353px;}
-.sepai #chapter_05 .top{padding:105px 0; text-align:center;}
-.sepai #chapter_05 .top img{display:inline-block;}
-.sepai #chapter_05 .bottom{text-align:center; background:url(../images/brand/sepai_bg_chap06.png) repeat-x;}
-.sepai #chapter_05 .bottom img{display:inline-block;}
-.sepai #chapter_06{height:805px; background:url(../images/brand/sepai_chap07_bg_step.jpg) no-repeat; background-size:cover; padding:120px 0;}
-.sepai #chapter_06 .step01{text-align:center; height:401px; overflow:hidden;}
-.sepai #chapter_06 .step01 img{display:inline-block;}
-.sepai #chapter_06 .step02{width:980px; height:400px; background:url(../images/brand/sepai_chap07_bg_step_02.png); margin:0 auto; position:relative;}
-.sepai #chapter_06 .step02 .text{padding:50px 0 40px 150px;}
-.sepai #chapter_06 .step02 .step_roll{width:686px; margin:0 auto;}
-.sepai #chapter_06 .step02 .message{text-align:center; margin-top:20px; color:#abaaaa; font-weight:bold; font-size:15px;}
-.sepai #chapter_06 .step02 .slidesjs-navigation{display:block; position:absolute; width:24px; height:40px; top:250px; background:url(../images/brand/sepai_chap07_step_02_arrow.png) no-repeat; z-index:990;}
-.sepai #chapter_06 .step02 .slidesjs-previous{left:150px;}
-.sepai #chapter_06 .step02 .slidesjs-next{right:150px; background-position:right top;}
-.sepai #chapter_07{position:relative;}
-.sepai #chapter_07 img{width:100%;}
-.sepai #chapter_07 .cover{position:absolute; top:0; left:0; width:100%; height:100%;}
-.sepai #chapter_08{padding:105px; background:#f4f4f4; position:relative;}
-.sepai #chapter_08 .text{text-align:center; padding-bottom:60px;}
-.sepai #chapter_08 .text img{display:inline-block;}
-.sepai #chapter_08 .roll_wrap{position:relative; width:980px; margin:0 auto;}
-.sepai #chapter_08 .product_roll{width:847px; margin:0 auto;}
-.sepai #chapter_08 .slidesjs-navigation{display:block; position:absolute; width:24px; height:40px; top:390px; background:url(../images/brand/sepai_bg_arrow.png) no-repeat;}
-.sepai #chapter_08 .slidesjs-previous{left:0;}
-.sepai #chapter_08 .slidesjs-next{right:0; background-position:right top;}
-.sepai #chapter_09 img{width:100%;}
+.sepai #chapter_04 img{width:100%;}
+.sepai #chapter_05{padding:105px 0; text-align:center;}
+.sepai #chapter_05 img{display:inline-block;}
+.sepai #chapter_06{text-align:center; background:url(../images/brand/sepai_bg_chap06.png) repeat-x;}
+.sepai #chapter_06 img{display:inline-block;}
+.sepai #chapter_07{height:805px; background:url(../images/brand/sepai_chap07_bg_step.jpg) no-repeat; background-size:cover; padding:120px 0;}
+.sepai #chapter_07 .step01{text-align:center; height:401px; overflow:hidden;}
+.sepai #chapter_07 .step01 img{display:inline-block;}
+.sepai #chapter_07 .step02{width:980px; height:400px; background:url(../images/brand/sepai_chap07_bg_step_02.png); margin:0 auto; position:relative;}
+.sepai #chapter_07 .step02 .text{padding:50px 0 40px 150px;}
+.sepai #chapter_07 .step02 .step_roll{width:681px; margin:0 auto;}
+.sepai #chapter_07 .step02 .slidesjs-navigation{display:block; position:absolute; width:24px; height:40px; top:250px; background:url(../images/brand/sepai_chap07_step_02_arrow.png) no-repeat; z-index:990;}
+.sepai #chapter_07 .step02 .slidesjs-previous{left:150px;}
+.sepai #chapter_07 .step02 .slidesjs-next{right:150px; background-position:right top;}
+.sepai #chapter_08{position:relative;}
+.sepai #chapter_08 img{width:100%;}
+.sepai #chapter_08 .cover{position:absolute; top:0; left:0; width:100%; height:100%;}
+.sepai #chapter_09{padding:105px; background:#f4f4f4; position:relative;}
+.sepai #chapter_09 .text{text-align:center; padding-bottom:60px;}
+.sepai #chapter_09 .text img{display:inline-block;}
+.sepai #chapter_09 .roll_wrap{position:relative; width:980px; margin:0 auto;}
+.sepai #chapter_09 .product_roll{width:847px; margin:0 auto;}
+.sepai #chapter_09 .slidesjs-navigation{display:block; position:absolute; width:24px; height:40px; top:390px; background:url(../images/brand/sepai_bg_arrow.png) no-repeat;}
+.sepai #chapter_09 .slidesjs-previous{left:0;}
+.sepai #chapter_09 .slidesjs-next{right:0; background-position:right top;}
+.sepai #chapter_10 img{width:100%;}
 
-.sepai.comments{position:relative;}
-.sepai.comments .lp_cmts span{width:70px; height:25px; line-height:25px; font-size:14px;}
-.sepai.comments .question{font-size:16px; font-family:'RixSGo B', sans-serif; color:#333; padding-bottom:20px;}
-.sepai.comments .desc{font-size:13px; line-height:1.8;}
-.sepai.comments .comments_icon{position:absolute; top:140px; right:0;}
-.sepai.comments .form-comments{margin-top:20px; padding:20px 0;}
-.sepai.comments .form-comments textarea{margin-left:0; padding-left:0; width:830px;}
+.sepai .comments{position:relative;}
+.sepai .comments .lp_cmts span{width:70px; height:25px; line-height:25px; font-size:14px;}
+.sepai .comments .question{font-size:16px; font-family:'RixSGo B', sans-serif; color:#333; padding-bottom:20px;}
+.sepai .comments .desc{font-size:13px; line-height:1.8;}
+.sepai .comments .comments_icon{position:absolute; top:140px; right:0;}
+.sepai .comments .form-comments{margin-top:20px; padding:20px 0;}
+.sepai .comments .form-comments textarea{margin-left:0; padding-left:0; width:830px;}
 
 .sepai #nav{position: fixed; top: 50%; right: 30px; margin-top: -250px; z-index: 99;}
 .sepai #nav .injector,
@@ -279,10 +274,9 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 .sepai #nav li a.on:after {background-position:0 0;}
 .sepai #nav li a span{display:block; position:absolute; top:5px; right:23px; width:0; white-space:nowrap; overflow:hidden; text-align:right; opacity:0; transition:all .7s cubic-bezier(0.11,0.66,0.46,1);}
 .sepai #nav li a.on span{width:80px; opacity:1;}
-}
 
 /*==================================================
- * 카고 단독페이지
+ * ī�� �ܵ�������
  ===================================================*/
 
 #contents .container{min-width:980px;}
@@ -307,7 +301,7 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 .cargo #chapter_07 .txt img{
 	width:100%:
 	display:inline-block;
-
+	
 }
 .cargo #chapter_07 .roll{
 	position:relative;
@@ -444,7 +438,7 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 .cargo .comments .question-wrap:after{content:""; display:block; clear:both;}
 
 /*==================================================
- * 모스키노 단독페이지
+ * ��Ű�� �ܵ�������
  ===================================================*/
 
 .moschino-wrap{
@@ -465,8 +459,11 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 .slidesjs-control,
 .slidesjs-slide{height:100%!important;}
 
+.moschino #chapter_02{position:relative;}
 .moschino #chapter_02 .bg_movie_wrap{overflow:hidden;}
 .moschino #chapter_02 #bg_movie{width:100%; height:100%;}
+.moschino #chapter_02 .bg_movie_cover{width:100%; height:100%; background:url(../images/brand/sepai_bg_pattern.png); position:absolute; top:0; left:0;}
+.moschino #chapter_02 .bg_movie_wrap.no_movie{background:url(../images/brand/mc_chap02.jpg) no-repeat;}
 
 .moschino #chapter_03 .half-wrap{position:relative; height:100%;}
 .moschino #chapter_03 .half-wrap:after{content:""; display:block; clear:both;}
@@ -585,14 +582,14 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 	color:#fff;
 	font-size:16px;
 	font-family:'RixSGo B', sans-serif;
-
+	
 }
 
 .moschino #chapter_07 .form .apply-check{
 	background:#ff3591;
 	color:#fff;
 	font-size:16px;
-	font-family:'RixSGo B', sans-serif;
+	font-family:'RixSGo B', sans-serif;	
 }
 
 .moschino #chapter_07 .warnning{
@@ -604,4 +601,137 @@ div.sorting .cnt:after {content:'|'; position:absolute; top:-6px; left:5px; disp
 .moschino #chapter_07 .warnning img{
 	display:inline-block;
 }
+
+/*
+ * brightning
+ */
+
+header.brightning{
+	min-width:1280px;
+}
+
+#bottom_nav.brightning{
+	min-width:1280px;
+}
+
+footer.brightning{
+	min-width:1280px;
+}
+
+#contents .container{min-width:1280px;}
+#contents .container > section.brightning {position:relative; margin:0; width:100%;}
+#contents .container > section.brightning .text{width:1280px; margin:0 auto;}
+
+.brightning #chapter_01{
+	height:916px;
+	background:url(../images/brand/br_chap01_bg.png) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_02{
+	height:564px;
+	background:url(../images/brand/br_chap02_bg.png) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_03{
+	height:1022px;
+	background:url(../images/brand/br_chap03_bg.jpg) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_05{
+	height:847px;
+	background:#563a35;
+}
+
+.brightning #chapter_06{
+	height:827px;
+	background:#e8dfdd;
+}
+
+.brightning .motion{
+	height:145px;
+	position:relative;
+	overflow:hidden;
+}
+
+.brightning .motion .back{
+	height:347px;
+}
+
+.brightning .motion .cover{
+	width:100%;
+	height:145px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.brightning #chapter_08 .back{
+	background:url(../images/brand/br_chap08_bg.jpg) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_08 .cover{
+	background:url(../images/brand/br_chap08_cover_bg.png) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_09 .back{
+	background:url(../images/brand/br_chap09_bg.jpg) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_09 .cover{
+	background:url(../images/brand/br_chap09_cover_bg.png) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_10 .back{
+	background:url(../images/brand/br_chap10_bg.jpg) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_10 .cover{
+	background:url(../images/brand/br_chap10_cover_bg.png) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_11 .back{
+	background:url(../images/brand/br_chap11_bg.jpg) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_11 .cover{
+	background:url(../images/brand/br_chap11_cover_bg.png) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_12 .back{
+	background:url(../images/brand/br_chap12_bg.jpg) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_12 .cover{
+	background:url(../images/brand/br_chap12_cover_bg.png) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_13 .back{
+	background:url(../images/brand/br_chap13_bg.jpg) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_13 .cover{
+	background:url(../images/brand/br_chap13_cover_bg.png) no-repeat;
+	background-size:cover;
+}
+
+.brightning #chapter_14{
+	background:#efebea;
+}
+
+
+
 

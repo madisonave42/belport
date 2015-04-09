@@ -395,11 +395,53 @@ $(document).ready(function(){
 	<h1>모스키노</h1>
 	<div id="chapter01">
 		<img src="../new/images/brand/moschino/moschino01.jpg" alt="" />
+
+		<img src="../new/images/brand/moschino/moschino10_01.jpg" alt="" />
+		<a href="#">
+			<img src="../new/images/brand/moschino/moschino10_02.jpg" alt="" />
+		</a>
+		<img src="../new/images/brand/moschino/moschino10_03.jpg" alt="" />
+
 		<div class="video-wrap">
 			<a href="#" class="cover">
 				<img src="../new/images/brand/moschino/bear_cover.jpg" alt="" />
 			</a>
 			<div id="video"></div>
+
+			<script type="text/javascript">
+				var tag = document.createElement('script');
+				tag.src = "http://www.youtube.com/player_api";
+				var firstScriptTag = document.getElementsByTagName('script')[0];
+				firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+				var player;
+				function onYouTubePlayerAPIReady() {
+					player = new YT.Player('video', {
+						playerVars: {
+							'controls': 0,
+							'autohide':1,
+							'wmode':'opaque',
+							'showinfo': 0,
+							'disablekb': 1,
+							'rel': 0
+						},
+						videoId: 'tsBMGSzI82A',
+						events: {
+							'onStateChange': onPlayerChange
+						}
+					});
+				}
+
+				function onPlayerChange(event) {
+					setTimeout(function() {
+						if (player.getPlayerState() === 0) {
+							$('.video-wrap a').show();
+						}
+					}, 300);
+				}
+			</script>
+
+
 		</div>
 	</div>
 
@@ -458,40 +500,9 @@ $(document).ready(function(){
 
 	<script type="text/javascript">
 
-		var tag = document.createElement('script');
-		tag.src = "http://www.youtube.com/player_api";
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-		var player;
-		function onYouTubePlayerAPIReady() {
-			player = new YT.Player('video', {
-				playerVars: {
-					'controls': 0,
-					'autohide':1,
-					'wmode':'opaque',
-					'showinfo': 0,
-					'disablekb': 1,
-					'rel': 0
-				},
-				videoId: 'tsBMGSzI82A',
-				events: {
-					'onStateChange': onPlayerChange
-				}
-			});
-		}
-
-		function onPlayerChange(event) {
-			setTimeout(function() {
-				if (player.getPlayerState() === 0) {
-					$('.video-wrap a').show();
-				}
-			}, 300);
-		}
-
 		$('.video-wrap a').on('click', function(e) {
 			$('.video-wrap a').hide();
-			player.playVideo();
+			//player.playVideo();
 			e.preventDefault();
 		});
 
