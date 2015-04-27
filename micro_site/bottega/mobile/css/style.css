@@ -1,0 +1,244 @@
+/* ===========================================================================================
+ *	 http://meyerweb.com/eric/tools/css/reset/
+ *  v2.0 | 20110126
+ *  License: none (public domain)
+ *  Reset Css
+ * =========================================================================================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	overflow-y:scroll;
+}
+body {
+	font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom Adding Css Code */
+a {
+	font-family: 'RixSGo L', sans-serif; font-size:13px; font-weight:300; color:#777;
+	text-decoration: none;
+}
+.blind {position:absolute; top:-9999px;}
+
+.header {
+	position:relative;
+	height:48px;
+	background-color:#fff;
+	z-index:20;
+	box-shadow:0 0 10px rgba(0,0,0,.5);
+}
+.header-logo {
+	float:left;
+	margin-top:12px;
+	margin-left:12px;
+}
+.header-logo img {
+	width:105px;
+}
+.btn-gnb {
+	float:right;
+	margin:0;
+	padding:0;
+	width:48px;
+	height:48px;
+	background:url(../images/btn_gnb.png) no-repeat 50% 17px;
+	background-size:23px;
+	border:0;
+	text-indent:-9999px;
+}
+.btn-gnb.on {
+	background-color:#231f20;
+	background-position:50% -53px;
+}
+
+.gnb {
+	display:none;
+	position:absolute;
+	top:48px;
+	left:0;
+	padding:20px 0;
+	width:100%;
+	background-color:rgba(35,31,32,.8);
+	z-index:999;
+}
+.gnb.on {
+	display:block;
+}
+.gnb-item a {
+	display:block;
+	margin:20px 0;
+	font-family: 'RixSGo M', sans-serif;
+	font-size:14px;
+	text-align:center;
+	color:#fff;
+}
+
+.main > img {
+	display:block;
+	width:100%;
+}
+
+/* brand story */
+.brand-story img {display:block; width:100%;}
+.brand-story .movie_list {overflow:hidden; background:url(../images/brand_story/bottega_05_bg.jpg) no-repeat; background-size:100%;}
+.brand-story .movie_list li {float:left;}
+.brand-story .movie_list .mon {width:43.59375%;}
+.brand-story .movie_list .tue {width:56.40625%;}
+.brand-story .movie_list .wed {width:62.34375%;}
+.brand-story .movie_list .thu {width:37.65625%;}
+.brand-story .movie_list .fri {width:43.59375%;}
+.brand-story .movie_list .sat {width:56.40625%;}
+.brand-story .bottega .movie_list .sun {width:100%;}
+.brand-story .movie_area {height:0; overflow:hidden;}
+.brand-story .product_slides {position:relative;}
+.brand-story .product_slides .slidesjs-navigation {position:absolute; top:15%; display:block; width:15px; height:27px; background:url(../images/brand_story/bottega_arrow.png) no-repeat; background-size:30px; z-index:10; text-indent:-9999px;}
+.brand-story .slidesjs-pagination {display:none;}
+.brand-story .product_slides .slidesjs-previous {left:7px;}
+.brand-story .product_slides .slidesjs-next {right:7px; background-position:-15px 0;}
+
+.brand-story .days_products .slidesjs-slide {display:block!important;}
+
+/* shop info */
+.monoshop {
+	position:relative;
+}
+.monoshop > img {
+	display:block;
+	width:100%;
+}
+.shop-slide {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+}
+.shop-slide-item {
+	box-sizing:border-box;
+	padding:0 12%;
+}
+.shop-item {
+	float:left;
+	position:relative;
+	margin:0;
+	padding:0;
+	width:49%;
+	background:none;
+	border:0;
+}
+.shop-item:first-child {
+	margin-right:2%;
+}
+.shop-item img {
+	width:100%;
+}
+.shop-item .on-img {
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+}
+.shop-item.on .on-img {
+	display:block;
+}
+
+.monoshop .slidesjs-navigation {position:absolute; top:50%; display:block; margin-top:-40px; width:35px; height:60px; background:url(../images/shop_info/shop_info_arrow.png) no-repeat; background-size:100px; z-index:10; text-indent:-9999px;}
+.monoshop .slidesjs-previous {left:0; background-position:0 50%;}
+.monoshop .slidesjs-next {right:0; background-position:-64px 50%;}
+
+#footer {float:left; width:100%; min-height:100%; margin-top:0px;padding-top:0px; background:#323031;}
+#footer .button {padding:6px 0; text-align:center; font-weight:bold;}
+#footer .button a.btn_pcmode {display:inline-block; width:101px; height:26px; background:url('../img/btn_pc_view.gif') no-repeat;}
+#footer .company {width:100%; text-align:center;}
+#footer .company .company { height:24px; }
+#footer .company .lineinfo { font-size:12px; color:#aaa;  font-family:RixSGo L, sans-serif; clear:both;}
+#footer .company .lineinfo table{width:93%; margin:50px auto 0; color:#f3f3f4;}
+#footer .company .lineinfo table td{text-align:left; color:#aaa; padding:3px 0;}
+#footer .company .lineinfo table td.title_r{width:30%;}
+#footer .company .lineinfo table td.num,
+#footer .company .lineinfo table td.num a{/* color:#f3f3f4; */color:#aaa;}
+#footer .company .lineinfo .info_title{float:left; margin-left:25px; width:27%; line-height:17px; color:#9e9e9e; text-align:left;}
+#footer .company .lineinfo .info_content{float:left; line-height:17px; color:#676767; text-align:left;}
+#footer .copyright {width:93%; margin:20px auto 60px; color:#aaa; font-size:14px; font-family:RixSGo M, sans-serif; position:relative;}
+#footer nav.bottom {margin-bottom: 15px;}
+#footer .company .lineinfo .info_content_name{float:left; line-height:17px; text-align:left; font-weight:bold; color:#F00}
+#footer .company .lineinfo .info_content_cs{float:left; line-height:17px; text-align:left; font-weight:bold; color:#F00; !important}
+#footer .company .lineinfo .info_content_business_number{float:left; line-height:17px; text-align:left; font-weight:bold;}
+
+#footer .bottom_menu {height:72px; line-height:72px; color:#f3f3f4; font-size:22px;  text-align:center; background:#231f20; font-family:RixSGo B, sans-serif;}
+#footer .bottom_menu .bottom_menu_contents { padding:0 30px; }
+#footer .bottom_menu .bottom_menu_contents table{width:100%;}
+#footer .bottom_menu .bottom_menu_contents td{width:50%;}
+#footer .bottom_menu .bottom_menu_contents td.faq{position:relative;}
+#footer .bottom_menu .bottom_menu_contents td a{display:block; color:#f3f3f4; position:relative;}
+#footer .bottom_menu .bottom_menu_contents td.faq a:after{content:""; display:block; width:1px; height:20px; background:#f3f3f4; position:absolute; top:50%; margin-top:-10px; right:0;}
+#footer .bottom_menu .bottom_menu_contents .bottom_menu_left {width:33%; float:left; text-align:center;}
+#footer .bottom_menu .bottom_menu_contents .bottom_menu_center {width:33%; float:left; text-align:center;}
+#footer .bottom_menu .bottom_menu_contents .bottom_menu_last {width:33%; float:left; text-align:center;}
+#footer .bottom_menu .bar_area {height:11px; width:2px; float:right; margin-top:2px; }
+
+#footer .service_menu {color:#f3f3f4; position:absolute; top:0; right:0;}
+#footer .service_menu a{color:#f3f3f4; font-size:14px; padding:7px 13px; background:#4c4b4c; border-radius:30px; margin:0 3px;}
+
+#footer .bottom_menu{
+	font-size:13px;
+	height:40px;
+	line-height:40px;
+}
+#footer .company .lineinfo table{
+	width:80%;
+}
+#footer .company .lineinfo table td.title_r{
+	width:40%;
+}
+
+#footer .company .lineinfo{
+	font-size:12px;
+}
+#footer .copyright{
+	font-size:12px;
+	margin-top:50px;
+	text-align:center;
+}
+#footer .service_menu{
+	top:-35px;
+	left:50%; margin-left:-92px;
+	right:auto;
+}
+#footer .service_menu a{
+	font-size:12px;
+	padding:5px 10px;
+}
+
+

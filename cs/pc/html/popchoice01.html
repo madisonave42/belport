@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>popchoice | BELPORT</title>
+	<link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=RixSGo+L:400|RixSGo+M:400|RixSGo+B:400" />
+
+	<script src="../js/lib/jquery-1.11.0.min.js"></script>
+	<script src="../js/lib/jquery-ui-1.10.4.custom.min.js"></script>
+	<style>
+		body {margin:0; padding:0}
+		img {display:block; border:0;}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<img src="../images/event/y2015/m04/popchoice_top.png" alt="" usemap="#close" />
+	<img src="../images/event/y2015/m04/popchoice01_01.png" alt="" />
+	<img src="../images/event/y2015/m04/popchoice01_02.png" alt="" usemap="#links01" />
+	<img src="../images/event/y2015/m04/popchoice01_03.png" alt="" usemap="#links02" />
+	<img src="../images/event/y2015/m04/popchoice01_04.png" alt="" usemap="#review" />
+	
+	<map name="close">
+		<area shape="rect" coords="944,74,964,93" href="" alt="" class="close_popchoice" />
+	</map>
+
+	<map name="links01">
+		<area shape="rect" coords="136,552,383,596" href="http://www.royalskin.com/" alt="" target="_blank" />
+		<area shape="rect" coords="672,552,919,596" href="http://www.mavie.co.kr/" alt="" target="_blank" />
+	</map>
+
+	<map name="links02">
+		<area shape="rect" coords="136,552,383,596" href="http://www.mywellage.com" alt="" target="_blank" />
+		<area shape="rect" coords="404,552,651,596" href="http://www.lkjcos.com/product06" alt="" target="_blank" />
+		<area shape="rect" coords="672,552,919,596" href="http://www.nmckorea.co.kr/" alt="" target="_blank" />
+	</map>
+
+	<map name="review">
+		<area shape="rect" coords="434,307,622,359" href="popchoice02.html" alt="" class="write-review" />
+	</map>
+	
+	<script>
+		$('.write-review').on('click', function(e) {
+			parent.iframePop._scrollTop();
+		});
+		
+		$('.close_popchoice').on('click', function(e) {
+			parent.iframePop.hide();
+			e.preventDefault();
+		});
+	</script>
+</div>
+
+</body>
+</html>
