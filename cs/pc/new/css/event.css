@@ -202,7 +202,7 @@ ul.list-comments li p a {color:#6896ea;}
 
 
 .layer-pop .tb_pop input[type=submit] {margin-top:20px; width:100px; height:40px; line-height:40px; color:#fff; background-color:#231f20; border:0; text-align:center; }
-.layer-pop .tb_alert{width:543px; height:276px; position:absolute; top:170px; left:175px;} 
+.layer-pop .tb_alert{width:543px; height:276px; position:absolute; top:170px; left:175px;}
 
 /* movie event */
 
@@ -772,3 +772,28 @@ table.info tbody td { padding: 20px 10px 20px 15px; font-size: 12px; color: #777
 .layer_popup.jeju-pop .confirm {display:inline-block; margin:15px auto 0; width:105px; height:35px; line-height:35px; background:#231f20; color:#fff; text-align:center;}
 .layer_popup.jeju-pop .btn_close_layer {position:absolute; top:15px; right:15px;}
 
+/* love is a journey */
+#contents .container .love-journey {width:100%; margin:0 auto; font-family:'RixSGo L', sans-serif; position:relative;}
+.love-journey-cont {margin:0 auto; width:1280px; text-align:center;}
+.love-journey-title {background:#f48c8b;}
+
+.love-journey-slide-wrap {position:relative; min-width:1280px;}
+.love-journey-slide {margin:0 auto; width:1280px;}
+.slidesjs-navigation,
+.slidesjs-navigation:active {position:absolute; top:50%; margin-top:-65px; display:block; width:130px; height:130px; background:url(../../images/event/y2015/m05/love_journey_arrow.png) no-repeat; z-index:10; text-indent:-9999px;}
+.slidesjs-previous,
+.slidesjs-previous:active {left:0;}
+.slidesjs-next,
+.slidesjs-next:active {right:0; background-position:-130px 0;}
+
+#love_journey01 {background:url(../../images/event/y2015/m05/bg_love_journey01.jpg) 50% 0; background-size:cover;}
+#love_journey04 {background:#f4f4f4;}
+#love_journey05 {padding-bottom:130px; background:#0a0a0a;}
+#love_journey06 {margin:0 auto; width:980px;}
+
+/* Pink Color Experience */
+#contents .container .pink-exp {width:100%; margin:0 auto; font-family:'RixSGo L', sans-serif; position:relative;}
+.pink-exp-cont {margin:0 auto; width:1280px; text-align:center;}
+
+#pink-exp01 {padding-bottom:160px; background:url(../../images/event/y2015/m05/pink_exp_bg01.jpg) 50% 0; background-size:cover;}
+#pink-exp02 {background:#f4f4f4;}
