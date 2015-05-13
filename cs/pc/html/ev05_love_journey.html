@@ -300,6 +300,7 @@
 						<img src="../images/event/y2015/m05/love_journey02.png" alt="" />
 					</div>
 				</div>
+
 				<div class="love-journey-slide-wrap">
 					<div class="love-journey-slide love-journey-slide01">
 						<div class="love-journey-cont">
@@ -334,6 +335,25 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="love-journey-brand">
+					<a href="#" class="btn-brand01-01 on">
+						<img src="../images/event/y2015/m05/love_journey_brand01_01.jpg" alt="" />
+						<span class="selected"></span>
+					</a>
+					<a href="#" class="btn-brand01-02">
+						<img src="../images/event/y2015/m05/love_journey_brand01_02.jpg" alt="" />
+						<span class="selected"></span>
+					</a>
+					<a href="#" class="btn-brand01-03">
+						<img src="../images/event/y2015/m05/love_journey_brand01_03.jpg" alt="" />
+						<span class="selected"></span>
+					</a>
+					<a href="#" class="btn-brand01-04">
+						<img src="../images/event/y2015/m05/love_journey_brand01_04.jpg" alt="" />
+						<span class="selected"></span>
+					</a>
+				</div>
 			</div>
 
 			<div id="love_journey03">
@@ -342,6 +362,7 @@
 						<img src="../images/event/y2015/m05/love_journey03.png" alt="" />
 					</div>
 				</div>
+
 				<div class="love-journey-slide-wrap">
 					<div class="love-journey-slide love-journey-slide02">
 						<div class="love-journey-cont">
@@ -442,6 +463,37 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="love-journey-brand">
+					<a href="#" class="btn-brand02-01 on">
+						<img src="../images/event/y2015/m05/love_journey_brand02_01.jpg" alt="" />
+						<span class="selected"></span>
+					</a>
+					<a href="#" class="btn-brand02-02">
+						<img src="../images/event/y2015/m05/love_journey_brand02_02.jpg" alt="" />
+						<span class="selected"></span>
+					</a>
+					<a href="#" class="btn-brand02-03">
+						<img src="../images/event/y2015/m05/love_journey_brand02_03.jpg" alt="" />
+						<span class="selected"></span>
+					</a>
+					<a href="#" class="btn-brand02-04">
+						<img src="../images/event/y2015/m05/love_journey_brand02_04.jpg" alt="" />
+						<span class="selected"></span>
+					</a>
+					<a href="#" class="btn-brand02-05">
+						<img src="../images/event/y2015/m05/love_journey_brand02_05.jpg" alt="" />
+						<span class="selected"></span>
+					</a>
+					<a href="#" class="btn-brand02-06">
+						<img src="../images/event/y2015/m05/love_journey_brand02_06.jpg" alt="" />
+						<span class="selected"></span>
+					</a>
+					<a href="#" class="btn-brand02-07">
+						<img src="../images/event/y2015/m05/love_journey_brand02_07.jpg" alt="" />
+						<span class="selected"></span>
+					</a>
+				</div>
 			</div>
 
 			<div id="love_journey04">
@@ -476,17 +528,144 @@
 				$('.love-journey-slide01').slidesjs({
 					width: 1280,
 					height: 860,
-					pagination: {
-			      active: false
-			    }
+					callback: {
+			      complete: function(number) {
+			        checkCurrent1(number);
+			      }
+		  	  }
 				});
 
 				$('.love-journey-slide02').slidesjs({
 					width: 1280,
 					height: 860,
-					pagination: {
-			      active: false
-			    }
+					callback: {
+			      complete: function(number) {
+			        checkCurrent2(number);
+			      }
+		  	  }
+				});
+
+				function checkCurrent1(itemNum) {
+					itemNum -= 1;
+					switch (itemNum) {
+						case 0:
+							$('#love_journey02 .love-journey-brand a').removeClass('on').eq(0).addClass('on');
+							break;
+						case 1:
+						case 2:
+							$('#love_journey02 .love-journey-brand a').removeClass('on').eq(1).addClass('on');
+							break;
+						case 3:
+							$('#love_journey02 .love-journey-brand a').removeClass('on').eq(2).addClass('on');
+							break;
+						case 4:
+							$('#love_journey02 .love-journey-brand a').removeClass('on').eq(3).addClass('on');
+							break;
+					}
+				}
+
+				function checkCurrent2(itemNum) {
+					itemNum -= 1;
+					switch (itemNum) {
+						case 0:
+						case 1:
+						case 2:
+						case 3:
+							$('#love_journey03 .love-journey-brand a').removeClass('on').eq(0).addClass('on');
+							break;
+						case 4:
+							$('#love_journey03 .love-journey-brand a').removeClass('on').eq(1).addClass('on');
+							break;
+						case 5:
+							$('#love_journey03 .love-journey-brand a').removeClass('on').eq(2).addClass('on');
+							break;
+						case 6:
+							$('#love_journey03 .love-journey-brand a').removeClass('on').eq(3).addClass('on');
+							break;
+						case 7:
+						case 8:
+							$('#love_journey03 .love-journey-brand a').removeClass('on').eq(4).addClass('on');
+							break;
+						case 9:
+						case 10:
+						case 11:
+						case 12:
+							$('#love_journey03 .love-journey-brand a').removeClass('on').eq(5).addClass('on');
+							break;
+						case 13:
+						case 14:
+						case 15:
+							$('#love_journey03 .love-journey-brand a').removeClass('on').eq(6).addClass('on');
+							break;
+					}
+				}
+
+				$('.btn-brand01-01').on('click', function(e){
+					$('#love_journey02 .love-journey-brand a').removeClass('on');
+					$(this).addClass('on');
+					$('.love-journey-slide01 .slidesjs-pagination a').eq(0).click();
+					e.preventDefault();
+				});
+				$('.btn-brand01-02').on('click', function(e){
+					$('#love_journey02 .love-journey-brand a').removeClass('on');
+					$(this).addClass('on');
+					$('.love-journey-slide01 .slidesjs-pagination a').eq(1).click();
+					e.preventDefault();
+				});
+				$('.btn-brand01-03').on('click', function(e){
+					$('#love_journey02 .love-journey-brand a').removeClass('on');
+					$(this).addClass('on');
+					$('.love-journey-slide01 .slidesjs-pagination a').eq(3).click();
+					e.preventDefault();
+				});
+				$('.btn-brand01-04').on('click', function(e){
+					$('#love_journey02 .love-journey-brand a').removeClass('on');
+					$(this).addClass('on');
+					$('.love-journey-slide01 .slidesjs-pagination a').eq(4).click();
+					e.preventDefault();
+				});
+
+				$('.btn-brand02-01').on('click', function(e){
+					$('#love_journey03 .love-journey-brand a').removeClass('on');
+					$(this).addClass('on');
+					$('.love-journey-slide02 .slidesjs-pagination a').eq(0).click();
+					e.preventDefault();
+				});
+				$('.btn-brand02-02').on('click', function(e){
+					$('#love_journey03 .love-journey-brand a').removeClass('on');
+					$(this).addClass('on');
+					$('.love-journey-slide02 .slidesjs-pagination a').eq(4).click();
+					e.preventDefault();
+				});
+				$('.btn-brand02-03').on('click', function(e){
+					$('#love_journey03 .love-journey-brand a').removeClass('on');
+					$(this).addClass('on');
+					$('.love-journey-slide02 .slidesjs-pagination a').eq(5).click();
+					e.preventDefault();
+				});
+				$('.btn-brand02-04').on('click', function(e){
+					$('#love_journey03 .love-journey-brand a').removeClass('on');
+					$(this).addClass('on');
+					$('.love-journey-slide02 .slidesjs-pagination a').eq(6).click();
+					e.preventDefault();
+				});
+				$('.btn-brand02-05').on('click', function(e){
+					$('#love_journey03 .love-journey-brand a').removeClass('on');
+					$(this).addClass('on');
+					$('.love-journey-slide02 .slidesjs-pagination a').eq(7).click();
+					e.preventDefault();
+				});
+				$('.btn-brand02-06').on('click', function(e){
+					$('#love_journey03 .love-journey-brand a').removeClass('on');
+					$(this).addClass('on');
+					$('.love-journey-slide02 .slidesjs-pagination a').eq(9).click();
+					e.preventDefault();
+				});
+				$('.btn-brand02-07').on('click', function(e){
+					$('#love_journey03 .love-journey-brand a').removeClass('on');
+					$(this).addClass('on');
+					$('.love-journey-slide02 .slidesjs-pagination a').eq(13).click();
+					e.preventDefault();
 				});
 			</script>
 
