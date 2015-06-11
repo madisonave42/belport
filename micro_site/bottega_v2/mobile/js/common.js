@@ -71,16 +71,18 @@ $(function() {
 		$('.curtain').show();
 	});
 
-	$('.close-movie-pop').on('click', function(e){
+	$('.close-pop').on('click', function(e){
 		e.preventDefault();
 
 		$('.movie-pop-frame').hide().find('.movie-iframe').remove();
+		$('.img-pop-frame').hide();
 		$('.curtain').hide();
 	});
 
-	/* 인덱스 영상 */
-	// if ($('.bg-index').length > 0) {
-	// 	$('.show-pop').trigger('click');
-	// }
+	/* 인덱스 팝업 */
+	if ($('.index').length > 0) {
+		$('.curtain').show();
+		$('.img-pop-frame').show();
+	}
 
 });
